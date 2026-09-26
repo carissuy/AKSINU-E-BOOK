@@ -1,0 +1,8 @@
+# Abaikan folder ebook lokal karena semua buku sudah ada di Google Drive
+# Ini mencegah penolakan (error) dari GitHub akibat file melebihi 100 MB
+ebook/
+
+# File sistem dan sementara
+.DS_Store
+Thumbs.db
+*.log

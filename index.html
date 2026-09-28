@@ -3,9 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AKSINU — Pustaka Digital & Ebook</title>
-  <meta name="description" content="Katalog buku digital terbuka AKSINU untuk pemrograman, data science, dan ilmu komputer.">
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%234F46E5' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5Z'/><path d='M6 6h10'/><path d='M6 10h10'/></svg>">
+  <title>AKSINU — Pustaka Kampus Digital | Akademi Sistem Informasi NU Purworejo</title>
+  <meta name="description" content="Katalog dan repositori digital resmi AKSINU (Akademi Sistem Informasi NU Purworejo). Koleksi ebook sistem informasi, jaringan, pemrograman, data science, dan riset.">
+  
+  <!-- PWA & Mobile Web App Meta -->
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#0b4626">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="AKSINU Pustaka">
+
+  <!-- Favicon dari Logo Resmi AKSINU -->
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="apple-touch-icon" href="Logo/favicon-192.png">
   
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -16,13 +26,24 @@
         extend: {
           colors: {
             brand: {
-              50: '#eef2ff',
-              100: '#e0e7ff',
-              500: '#6366f1',
-              600: '#4f46e5',
-              700: '#4338ca',
-              800: '#3730a3',
-              900: '#312e81',
+              50: '#f0f7ec',
+              100: '#e1f0da',
+              200: '#c5e2b7',
+              300: '#a3cf8d',
+              400: '#6ea01e', // AKSINU Tech Lime Green
+              500: '#4e8519',
+              600: '#1e6833',
+              700: '#0f5228',
+              800: '#0b4626', // AKSINU Primary Forest Green
+              900: '#07361d',
+              950: '#032010',
+            },
+            aksinu: {
+              green: '#0b4626',
+              lime: '#6ea01e',
+              gold: '#c29737',
+              dark: '#052915',
+              light: '#f4f8f1'
             }
           }
         }
@@ -36,44 +57,60 @@
   <!-- Custom CSS -->
   <link rel="stylesheet" href="css/custom.css">
 </head>
-<body class="bg-slate-50 text-slate-800 dark:bg-slate-950 dark:text-slate-100 min-h-screen flex flex-col antialiased selection:bg-indigo-500 selection:text-white">
+<body class="bg-slate-50 text-slate-800 dark:bg-slate-950 dark:text-slate-100 min-h-screen flex flex-col antialiased selection:bg-emerald-700 selection:text-white">
 
   <!-- NAVBAR -->
-  <nav class="sticky top-0 z-40 bg-white/90 dark:bg-slate-900/90 backdrop-blur border-b border-slate-200 dark:border-slate-800 transition-colors">
+  <nav class="sticky top-0 z-40 bg-white/95 dark:bg-slate-900/95 backdrop-blur border-b border-emerald-100 dark:border-slate-800 transition-colors shadow-sm">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex items-center justify-between h-16">
+      <div class="flex items-center justify-between h-16 sm:h-20">
         
-        <!-- Logo / Brand -->
-        <div class="flex items-center gap-3">
-          <div class="w-10 h-10 rounded-lg bg-indigo-600 flex items-center justify-center text-white shadow-sm font-bold">
-            <i data-lucide="book-open" class="w-5 h-5"></i>
+        <!-- Logo / Brand AKSINU -->
+        <a href="index.html" class="flex items-center gap-3 group" title="Pustaka Digital AKSINU">
+          <div class="w-11 h-11 sm:w-12 sm:h-12 rounded-xl bg-white dark:bg-slate-800 p-1 shadow-sm border border-slate-200 dark:border-slate-700 flex items-center justify-center overflow-hidden transition group-hover:scale-105">
+            <img src="Logo/logo-aksinu-transparent.png" alt="Logo AKSINU" class="w-full h-full object-contain">
           </div>
           <div>
-            <span class="text-xl font-extrabold tracking-tight text-slate-900 dark:text-white">AKSINU</span>
-            <span class="hidden sm:inline-block ml-2 px-2 py-0.5 text-xs font-semibold rounded bg-indigo-100 text-indigo-700 dark:bg-indigo-950 dark:text-indigo-300">Pustaka Digital</span>
+            <div class="flex items-center gap-2">
+              <span class="text-xl sm:text-2xl font-black tracking-tight text-emerald-950 dark:text-white">AKSINU</span>
+              <span class="px-2 py-0.5 text-[10px] sm:text-xs font-bold rounded-md bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-300 border border-emerald-300 dark:border-emerald-800">
+                Pustaka Kampus
+              </span>
+            </div>
+            <p class="text-[11px] font-semibold text-slate-500 dark:text-slate-400 hidden sm:block">
+              Akademi Sistem Informasi NU Purworejo
+            </p>
           </div>
-        </div>
+        </a>
 
         <!-- Right Controls -->
-        <div class="flex items-center gap-2 sm:gap-4">
+        <div class="flex items-center gap-2 sm:gap-3">
           <!-- Total Books Badge -->
-          <div class="hidden md:flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-xs font-semibold text-slate-600 dark:text-slate-300">
-            <i data-lucide="library" class="w-3.5 h-3.5 text-indigo-500"></i>
-            <span id="badge-total-books">224 Koleksi</span>
+          <div class="hidden lg:flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-emerald-50 dark:bg-emerald-950/60 border border-emerald-200 dark:border-emerald-800/80 text-xs font-semibold text-emerald-800 dark:text-emerald-300">
+            <i data-lucide="library" class="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400"></i>
+            <span id="badge-total-books">377 Koleksi</span>
           </div>
 
+          <!-- Buku Favorit Badge / Button -->
+          <button id="favorites-nav-btn" type="button"
+                  class="flex items-center gap-1.5 px-2.5 sm:px-3 py-1.5 rounded-lg bg-amber-50 dark:bg-amber-950/60 border border-amber-200 dark:border-amber-800/80 text-amber-800 dark:text-amber-300 text-xs font-semibold hover:bg-amber-100 dark:hover:bg-amber-900/60 transition"
+                  title="Lihat Buku Favorit Tersimpan">
+            <i data-lucide="bookmark" class="w-3.5 h-3.5 text-amber-600 dark:text-amber-400 fill-amber-500"></i>
+            <span class="hidden sm:inline">Favorit</span>
+            <span id="badge-favorites-count" class="px-1.5 py-0.2 rounded-full bg-amber-200 dark:bg-amber-900 text-amber-900 dark:text-amber-100 text-[10px] font-bold">0</span>
+          </button>
+
           <!-- Live Sync Status -->
-          <div id="sync-indicator" class="hidden items-center gap-1.5 px-2.5 py-1 rounded-lg text-xs font-medium bg-indigo-50 dark:bg-indigo-950/60 text-indigo-700 dark:text-indigo-300 border border-indigo-200 dark:border-indigo-800">
+          <div id="sync-indicator" class="hidden items-center gap-1.5 px-2.5 py-1 rounded-lg text-xs font-medium bg-emerald-50 dark:bg-emerald-950/60 text-emerald-700 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800">
             <i id="sync-icon" data-lucide="refresh-cw" class="w-3.5 h-3.5"></i>
             <span id="sync-text">Live Sync</span>
           </div>
 
           <!-- Google Drive Folder Link -->
           <a href="https://drive.google.com/drive/folders/19M35WV6fIe-Ia4zZNej1_Y8MtWVFj_tV?usp=sharing" target="_blank" rel="noopener noreferrer" 
-             class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-emerald-50 dark:bg-emerald-950/60 border border-emerald-200 dark:border-emerald-800 text-emerald-700 dark:text-emerald-300 text-xs font-semibold hover:bg-emerald-100 dark:hover:bg-emerald-900/60 transition"
-             title="Buka Folder Google Drive Resmi">
+             class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-emerald-800 hover:bg-emerald-900 text-white text-xs font-bold shadow-sm transition"
+             title="Buka Folder Google Drive Resmi Kampus AKSINU">
             <i data-lucide="folder-symlink" class="w-4 h-4"></i>
-            <span class="hidden sm:inline">Folder Drive</span>
+            <span class="hidden md:inline">Drive Resmi</span>
           </a>
 
           <!-- Dark Mode Toggle Button -->
@@ -94,18 +131,18 @@
 
     <!-- HERO SECTION -->
     <section class="text-center max-w-3xl mx-auto mb-10">
-      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-50 dark:bg-indigo-950/80 border border-indigo-200 dark:border-indigo-800 text-indigo-700 dark:text-indigo-300 text-xs font-semibold mb-4">
-        <i data-lucide="sparkles" class="w-3.5 h-3.5"></i>
-        <span>Koleksi Ebook Lengkap & Akses Terbuka</span>
+      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-50 dark:bg-emerald-950/80 border border-emerald-300 dark:border-emerald-800 text-emerald-800 dark:text-emerald-300 text-xs font-semibold mb-4 shadow-sm">
+        <img src="Logo/logo-aksinu-transparent.png" alt="" class="w-4 h-4 object-contain">
+        <span>Perpustakaan Digital Akademi Sistem Informasi NU Purworejo</span>
       </div>
       <h1 class="text-3xl sm:text-5xl font-black text-slate-900 dark:text-white tracking-tight mb-3">
-        Jelajahi & Unduh Buku di <span class="text-indigo-600 dark:text-indigo-400">AKSINU</span>
+        Pustaka Digital & Ebook <span class="text-emerald-700 dark:text-emerald-400">AKSINU</span>
       </h1>
       <p class="text-base sm:text-lg text-slate-600 dark:text-slate-300 leading-relaxed font-normal">
-        Akses cepat puluhan literatur teknologi, pemrograman, ilmu komputer, data science, dan metodologi riset. Baca daring atau unduh gratis tanpa batasan.
+        Repositori literatur akademik kampus AKSINU: Sistem Informasi, Jaringan Komputer, Rekayasa Perangkat Lunak, Basis Data, AI, dan Metodologi Riset. Bebas diakses dan siap unduh.
       </p>
 
-      <!-- SEARCH BOX -->
+      <!-- SEARCH BOX (Mendukung Judul, Penulis, Topik, ISBN, DDC) -->
       <div class="mt-8 relative max-w-2xl mx-auto">
         <div class="relative flex items-center">
           <div class="absolute left-4 pointer-events-none text-slate-400 dark:text-slate-500">
@@ -114,8 +151,8 @@
           <input 
             type="text" 
             id="search-input"
-            placeholder="Cari judul buku, penulis, topik (misal: Python, Dart, Java, SQL, Sugiyono)..." 
-            class="w-full pl-12 pr-12 py-3.5 sm:py-4 rounded-xl bg-white dark:bg-slate-900 border-2 border-slate-200 dark:border-slate-800 focus:border-indigo-600 dark:focus:border-indigo-500 text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-slate-500 shadow-sm focus:outline-none transition text-base"
+            placeholder="Cari judul, penulis, topik, ISBN, atau kode DDC (misal: 005.7, Sugiyono, Python)..." 
+            class="w-full pl-12 pr-12 py-3.5 sm:py-4 rounded-xl bg-white dark:bg-slate-900 border-2 border-slate-200 dark:border-slate-800 focus:border-emerald-600 dark:focus:border-emerald-500 text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-slate-500 shadow-sm focus:outline-none transition text-base"
           >
           <button 
             id="clear-search-btn" 
@@ -131,8 +168,11 @@
     <!-- CATEGORY FILTER CHIPS -->
     <section class="mb-8">
       <div class="flex items-center justify-between mb-3">
-        <h2 class="text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400">Pilih Kategori</h2>
-        <span id="active-filter-indicator" class="text-xs font-medium text-indigo-600 dark:text-indigo-400">Semua Kategori</span>
+        <h2 class="text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400 flex items-center gap-1.5">
+          <i data-lucide="filter" class="w-3.5 h-3.5 text-emerald-600"></i>
+          <span>Pilih Kategori Bidang Ilmu</span>
+        </h2>
+        <span id="active-filter-indicator" class="text-xs font-semibold text-emerald-700 dark:text-emerald-400">Semua Kategori</span>
       </div>
       <div id="category-pills" class="flex flex-wrap gap-2 items-center">
         <!-- Rendered dynamically via app.js -->
@@ -142,17 +182,19 @@
     <!-- CONTROLS & COUNTERS BAR -->
     <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 mb-6 border-b border-slate-200 dark:border-slate-800">
       <div class="text-sm font-semibold text-slate-700 dark:text-slate-300">
-        Menampilkan <span id="filtered-count" class="text-indigo-600 dark:text-indigo-400 font-bold">0</span> dari <span id="total-count">0</span> buku
+        Menampilkan <span id="filtered-count" class="text-emerald-700 dark:text-emerald-400 font-bold">0</span> dari <span id="total-count">0</span> buku
       </div>
 
       <!-- Sorting Controls -->
       <div class="flex items-center gap-2">
         <label for="sort-select" class="text-xs font-medium text-slate-500 dark:text-slate-400">Urutkan:</label>
-        <select id="sort-select" class="text-xs sm:text-sm font-medium px-3 py-1.5 rounded-lg bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-800 dark:text-slate-200 focus:outline-none focus:border-indigo-500 transition">
+        <select id="sort-select" class="text-xs sm:text-sm font-medium px-3 py-1.5 rounded-lg bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-800 dark:text-slate-200 focus:outline-none focus:border-emerald-600 transition">
           <option value="default">Rekomendasi</option>
           <option value="title-asc">Judul (A — Z)</option>
           <option value="title-desc">Judul (Z — A)</option>
           <option value="category">Berdasarkan Kategori</option>
+          <option value="favorites">Buku Favorit Saya</option>
+          <option value="callnumber">Kode Klasifikasi DDC</option>
         </select>
       </div>
     </div>
@@ -168,11 +210,11 @@
         <div class="w-16 h-16 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-400 mx-auto flex items-center justify-center mb-4">
           <i data-lucide="book-x" class="w-8 h-8"></i>
         </div>
-        <h3 class="text-lg font-bold text-slate-800 dark:text-slate-100 mb-1">Buku Tidak Ditemukan</h3>
-        <p class="text-sm text-slate-500 dark:text-slate-400 max-w-md mx-auto mb-6">
-          Tidak ada buku yang cocok dengan kata kunci pencarian Anda. Coba periksa ejaan atau ganti pilihan kategori.
+        <h3 id="empty-state-title" class="text-lg font-bold text-slate-800 dark:text-slate-100 mb-1">Buku Tidak Ditemukan</h3>
+        <p id="empty-state-desc" class="text-sm text-slate-500 dark:text-slate-400 max-w-md mx-auto mb-6">
+          Tidak ada buku yang cocok dengan kriteria pencarian Anda. Coba periksa ejaan atau ganti pilihan kategori bidang ilmu.
         </p>
-        <button id="reset-filter-btn" class="px-4 py-2 rounded-lg bg-indigo-600 hover:bg-indigo-700 text-white text-xs font-semibold transition">
+        <button id="reset-filter-btn" class="px-4 py-2 rounded-lg bg-emerald-800 hover:bg-emerald-900 text-white text-xs font-semibold transition">
           Reset Filter & Pencarian
         </button>
       </div>
@@ -186,12 +228,15 @@
       
       <!-- Modal Header -->
       <div class="px-6 py-4 border-b border-slate-200 dark:border-slate-800 flex items-center justify-between">
-        <div class="flex items-center gap-2">
-          <span id="modal-category" class="px-2.5 py-1 text-xs font-semibold rounded-md bg-indigo-100 text-indigo-700 dark:bg-indigo-950 dark:text-indigo-300">
+        <div class="flex items-center gap-2 flex-wrap">
+          <span id="modal-category" class="px-2.5 py-1 text-xs font-semibold rounded-md bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-300">
             Kategori
           </span>
           <span id="modal-size" class="px-2.5 py-1 text-xs font-semibold rounded-md bg-slate-100 text-slate-600 dark:bg-slate-800 dark:text-slate-300">
             PDF
+          </span>
+          <span id="modal-ddc" class="px-2.5 py-1 text-xs font-mono font-semibold rounded-md bg-slate-100 text-slate-600 dark:bg-slate-800 dark:text-slate-300 border border-slate-200 dark:border-slate-700">
+            DDC
           </span>
         </div>
         <button id="modal-close-btn" class="p-1.5 text-slate-400 hover:text-slate-700 dark:hover:text-slate-200 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition">
@@ -205,9 +250,11 @@
           <h2 id="modal-title" class="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white leading-tight">
             Judul Buku Lengkap
           </h2>
-          <p id="modal-author" class="text-sm font-medium text-slate-500 dark:text-slate-400 mt-1">
-            Penulis
-          </p>
+          <div class="flex items-center gap-3 mt-1.5 flex-wrap text-sm text-slate-500 dark:text-slate-400">
+            <span id="modal-author" class="font-medium">Penulis</span>
+            <span>•</span>
+            <span id="modal-catalog" class="font-mono text-xs text-slate-400">ID: AKSINU</span>
+          </div>
         </div>
 
         <div class="border-t border-slate-100 dark:border-slate-800 pt-3">
@@ -226,7 +273,7 @@
         <div id="modal-preview-wrapper" class="hidden border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden mt-3">
           <div class="bg-slate-100 dark:bg-slate-800 px-4 py-2 text-xs font-semibold flex items-center justify-between text-slate-600 dark:text-slate-300">
             <span>Pratinjau Dokumen</span>
-            <button id="modal-close-preview" class="text-xs text-indigo-600 dark:text-indigo-400 hover:underline">Tutup Pratinjau</button>
+            <button id="modal-close-preview" class="text-xs text-emerald-700 dark:text-emerald-400 hover:underline">Tutup Pratinjau</button>
           </div>
           <iframe id="modal-iframe" src="" class="w-full h-80 border-0" title="Pratinjau Ebook"></iframe>
         </div>
@@ -234,17 +281,23 @@
 
       <!-- Modal Footer / Actions -->
       <div class="px-6 py-4 bg-slate-50 dark:bg-slate-950/60 border-t border-slate-200 dark:border-slate-800 flex flex-wrap items-center justify-between gap-3">
-        <button id="modal-toggle-preview-btn" class="px-4 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 text-slate-700 dark:text-slate-200 text-xs font-semibold hover:bg-slate-100 dark:hover:bg-slate-800 transition flex items-center gap-1.5">
-          <i data-lucide="eye" class="w-4 h-4 text-indigo-500"></i>
-          <span>Pratinjau Cepat</span>
-        </button>
+        <div class="flex items-center gap-2">
+          <button id="modal-fav-btn" type="button" class="px-3.5 py-2.5 rounded-xl border border-amber-300 dark:border-amber-800/80 text-amber-800 dark:text-amber-300 text-xs font-semibold hover:bg-amber-50 dark:hover:bg-amber-950/60 transition flex items-center gap-1.5">
+            <i id="modal-fav-icon" data-lucide="bookmark" class="w-4 h-4"></i>
+            <span id="modal-fav-text">Simpan Favorit</span>
+          </button>
+          <button id="modal-toggle-preview-btn" class="px-3.5 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 text-slate-700 dark:text-slate-200 text-xs font-semibold hover:bg-slate-100 dark:hover:bg-slate-800 transition flex items-center gap-1.5">
+            <i data-lucide="eye" class="w-4 h-4 text-emerald-600"></i>
+            <span>Pratinjau Cepat</span>
+          </button>
+        </div>
 
         <div class="flex items-center gap-2">
-          <a id="modal-read-link" href="#" target="_blank" rel="noopener noreferrer" class="px-4 py-2.5 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white text-xs font-semibold transition flex items-center gap-1.5">
+          <a id="modal-read-link" href="#" target="_blank" rel="noopener noreferrer" class="px-4 py-2.5 rounded-xl bg-emerald-50 dark:bg-emerald-950/70 hover:bg-emerald-100 dark:hover:bg-emerald-900/60 text-emerald-800 dark:text-emerald-200 border border-emerald-300 dark:border-emerald-800 text-xs font-semibold transition flex items-center gap-1.5">
             <i data-lucide="external-link" class="w-4 h-4"></i>
             <span>Buka Tab Baru</span>
           </a>
-          <a id="modal-download-link" href="#" target="_blank" rel="noopener noreferrer" class="px-4 py-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-white dark:bg-slate-100 dark:text-slate-900 dark:hover:bg-white text-xs font-bold transition flex items-center gap-1.5">
+          <a id="modal-download-link" href="#" target="_blank" rel="noopener noreferrer" class="px-4 py-2.5 rounded-xl bg-emerald-900 hover:bg-emerald-950 text-white dark:bg-emerald-600 dark:hover:bg-emerald-500 text-xs font-bold transition flex items-center gap-1.5 shadow-sm">
             <i data-lucide="download" class="w-4 h-4"></i>
             <span>Unduh Ebook</span>
           </a>
@@ -258,14 +311,19 @@
   <footer class="bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 transition-colors mt-16">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
       <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
-        <div class="flex items-center gap-2 text-center sm:text-left">
-          <span class="text-base font-black tracking-tight text-slate-900 dark:text-white">AKSINU</span>
-          <span class="text-xs text-slate-500 dark:text-slate-400">© 2026. Literasi Terbuka untuk Kemajuan Teknologi & Pendidikan.</span>
+        <div class="flex items-center gap-3 text-center sm:text-left">
+          <img src="Logo/logo-aksinu-transparent.png" alt="Logo AKSINU" class="w-9 h-9 object-contain flex-shrink-0">
+          <div>
+            <span class="text-base font-black tracking-tight text-emerald-950 dark:text-white">AKSINU</span>
+            <span class="text-xs text-slate-500 dark:text-slate-400 block sm:inline sm:ml-2">
+              Akademi Sistem Informasi NU Purworejo • Literasi Terbuka untuk Kemajuan Teknologi & Pendidikan.
+            </span>
+          </div>
         </div>
         <div class="flex items-center gap-4 text-xs font-medium text-slate-500 dark:text-slate-400">
-          <a href="https://drive.google.com/drive/folders/19M35WV6fIe-Ia4zZNej1_Y8MtWVFj_tV?usp=sharing" target="_blank" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition">Koleksi Google Drive</a>
+          <a href="https://drive.google.com/drive/folders/19M35WV6fIe-Ia4zZNej1_Y8MtWVFj_tV?usp=sharing" target="_blank" class="hover:text-emerald-700 dark:hover:text-emerald-400 transition">Koleksi Google Drive</a>
           <span>•</span>
-          <span>Web Statis Siap Deploy</span>
+          <span>Web Statis GitHub Pages</span>
         </div>
       </div>
     </div>

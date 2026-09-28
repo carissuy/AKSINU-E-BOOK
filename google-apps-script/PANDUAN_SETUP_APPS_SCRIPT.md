@@ -52,6 +52,9 @@ Dengan mengikuti panduan 2 menit ini, setiap kali Anda **menambah, mengedit, ata
 
 ### 🎉 Selesai!
 Sekarang website **AKSINU** Anda terhubung secara *real-time* dengan Google Drive:
-- Saat ada buku ke-223, 224, 225 diunggah ke Google Drive, website akan otomatis memuatnya!
-- Di navbar atas akan muncul indikator hijau: **"Live: 222+ Buku"**.
-- Jika sewaktu-waktu koneksi internet Google Apps Script lambat, website otomatis menggunakan 222 data lokal cadangan sehingga website tidak akan pernah kosong atau macet!
+- Saat ada buku baru diunggah ke Google Drive, website akan otomatis memuatnya!
+- **Pencegah Duplikat Otomatis**: Jika Anda tidak sengaja mengunggah file yang sama dua kali atau ada file *Salinan*, sistem otomatis mendeteksi dan mengabaikan duplikatnya sehingga hanya 1 buku yang masuk.
+- Judul buku baru akan dibersihkan secara otomatis dari angka scraper atau watermark.
+- Buku baru langsung diklasifikasikan ke kategori yang sesuai (Sistem Informasi, AI, Python, Jaringan, dll) lengkap dengan kode DDC.
+- Di navbar atas akan muncul indikator hijau: **"Live: 377+ Buku"**.
+- Jika sewaktu-waktu koneksi internet Google Apps Script lambat, website otomatis menggunakan 377 data lokal cadangan sehingga website tidak akan pernah kosong atau macet!

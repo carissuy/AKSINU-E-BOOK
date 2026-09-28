@@ -1,24 +1,33 @@
-// Basis Data Koleksi Buku Digital - AKSINU
-// Total Koleksi: 224 Buku Terverifikasi Google Drive (Live API Terhubung)
-// Masukkan URL Google Apps Script Web App di bawah ini untuk mengaktifkan pembaruan otomatis:
-const GOOGLE_APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwetf1m8iaINDcgqDYfThZSR87uFl8msBlx7kHgZDib5rq1t_q7R90lTtdsO4yL7zmW/exec";
+/**
+ * Basis Data Ebook AKSINU - Pustaka Kampus Digital
+ * Akademi Sistem Informasi NU Purworejo
+ * Koleksi Lengkap Ebook Google Drive Terverifikasi (377 Judul Unik Tanpa Duplikat)
+ */
+
+// Masukkan Web App URL dari Google Apps Script jika ingin sinkronisasi live otomatis
+const GOOGLE_APPS_SCRIPT_URL = "";
 
 const BOOKS_DATA = [
   {
     "id": "book-1xxjtqn68vl-",
-    "title": "21st Century Corporate Learning Development",
-    "author": "Teknologi & Komputasi",
-    "category": "Dasar Pemrograman",
+    "title": "21st Century Corporate Learning & Development",
+    "author": "Pustaka Bisnis & SDM",
+    "category": "Manajemen & Bisnis",
     "tags": [
-      "teknologi",
-      "komputer"
+      "learning and development",
+      "corporate training",
+      "manajemen sdm"
     ],
     "size": "PDF",
-    "description": "Buku panduan dan referensi komprehensif mengenai 21st Century Corporate Learning Development untuk memperdalam pemahaman teknologi informasi dan rekayasa perangkat lunak.",
+    "description": "Strategi pengembangan sumber daya manusia (SDM), pelatihan korporat, dan adaptasi kompetensi teknologi abad ke-21.",
     "googleDriveId": "1XXJtQN68Vl-DSoG2iC2pcQFjfCqAJGUN",
     "previewUrl": "https://drive.google.com/file/d/1XXJtQN68Vl-DSoG2iC2pcQFjfCqAJGUN/preview",
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1XXJtQN68Vl-DSoG2iC2pcQFjfCqAJGUN",
-    "localFile": null
+    "localFile": null,
+    "callNumber": "DDC 658.4038",
+    "catalogId": "AKSINU-LIB-001",
+    "isbn": "AKSINU-REF-001",
+    "ddc": "658.4038"
   },
   {
     "id": "book-1s7jcy3x4fjp",
@@ -36,25 +45,11 @@ const BOOKS_DATA = [
     "googleDriveId": "1s7jCY3x4FJpdSXGkV1tAbv3RDy_oVfcM",
     "previewUrl": "https://drive.google.com/file/d/1s7jCY3x4FJpdSXGkV1tAbv3RDy_oVfcM/preview",
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1s7jCY3x4FJpdSXGkV1tAbv3RDy_oVfcM",
-    "localFile": null
-  },
-  {
-    "id": "book-1mohi5itswbt",
-    "title": "Ai",
-    "author": "Teknologi & Komputasi",
-    "category": "AI & Machine Learning",
-    "tags": [
-      "ai",
-      "machine learning",
-      "deep learning",
-      "data science"
-    ],
-    "size": "PDF",
-    "description": "Eksplorasi mendalam kecerdasan buatan, pemodelan data, dan algoritma pembelajaran mesin melalui Ai.",
-    "googleDriveId": "1MoHI5iTsWBT1unYWw5R2uxXqS2Z_8IlJ",
-    "previewUrl": "https://drive.google.com/file/d/1MoHI5iTsWBT1unYWw5R2uxXqS2Z_8IlJ/preview",
-    "downloadUrl": "https://drive.google.com/uc?export=download&id=1MoHI5iTsWBT1unYWw5R2uxXqS2Z_8IlJ",
-    "localFile": null
+    "localFile": null,
+    "callNumber": "DDC 005.276",
+    "catalogId": "AKSINU-LIB-002",
+    "isbn": "AKSINU-REF-002",
+    "ddc": "005.276"
   },
   {
     "id": "book-1wep82vdse0r",
@@ -72,25 +67,142 @@ const BOOKS_DATA = [
     "googleDriveId": "1wEp82vdSe0ReHz_-xeOpw_jihWg8WLts",
     "previewUrl": "https://drive.google.com/file/d/1wEp82vdSe0ReHz_-xeOpw_jihWg8WLts/preview",
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1wEp82vdSe0ReHz_-xeOpw_jihWg8WLts",
-    "localFile": null
+    "localFile": null,
+    "callNumber": "DDC 006.3",
+    "catalogId": "AKSINU-LIB-003",
+    "isbn": "AKSINU-REF-003",
+    "ddc": "006.3"
   },
   {
     "id": "book-1obwtwro4vos",
-    "title": "Ai Agents Unleashed Playbook for 2025 Success",
-    "author": "Teknologi & Komputasi",
+    "title": "AI Agents Unleashed Playbook for Success",
+    "author": "Pustaka AI",
     "category": "AI & Machine Learning",
     "tags": [
-      "ai",
-      "machine learning",
-      "deep learning",
-      "data science"
+      "ai agents",
+      "autonomous agents",
+      "artificial intelligence"
     ],
     "size": "PDF",
-    "description": "Eksplorasi mendalam kecerdasan buatan, pemodelan data, dan algoritma pembelajaran mesin melalui Ai Agents Unleashed Playbook for 2025 Success.",
+    "description": "Strategi penerapan agen kecerdasan buatan otonom untuk otomatisasi alur kerja dan produktivitas bisnis modern.",
     "googleDriveId": "1OBWtWro4vOSQL1_Ic3cMK5sNGwT-zlp8",
     "previewUrl": "https://drive.google.com/file/d/1OBWtWro4vOSQL1_Ic3cMK5sNGwT-zlp8/preview",
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1OBWtWro4vOSQL1_Ic3cMK5sNGwT-zlp8",
-    "localFile": null
+    "localFile": null,
+    "callNumber": "DDC 006.3",
+    "catalogId": "AKSINU-LIB-004",
+    "isbn": "AKSINU-REF-004",
+    "ddc": "006.3"
+  },
+  {
+    "id": "book-1v2nppfc5fmk",
+    "title": "Algoritma dan Pemrograman",
+    "author": "Pustaka AKSINU",
+    "category": "Struktur Data & Algoritma",
+    "callNumber": "DDC 005.13",
+    "catalogId": "AKSINU-LIB-005",
+    "isbn": "AKSINU-REF-005",
+    "tags": [
+      "struktur data",
+      "algoritma",
+      "efisiensi",
+      "komputasi"
+    ],
+    "size": "PDF",
+    "description": "Konsep struktur data esensial dan teknik algoritma optimal untuk pemrosesan data komputer.",
+    "googleDriveId": "1v2NPPFC5FmKd8SS6pr2bZuSH13536e38",
+    "previewUrl": "https://drive.google.com/file/d/1v2NPPFC5FmKd8SS6pr2bZuSH13536e38/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=1v2NPPFC5FmKd8SS6pr2bZuSH13536e38",
+    "localFile": null,
+    "ddc": "005.13"
+  },
+  {
+    "id": "book-1wlmn9rj6cz1",
+    "title": "Algoritma dan Pemrograman (Edisi 2022)",
+    "author": "Tim Pengajar Algoritma AKSINU",
+    "category": "Struktur Data & Algoritma",
+    "tags": [
+      "algoritma",
+      "pemrograman",
+      "flowchart",
+      "pseudocode"
+    ],
+    "size": "PDF",
+    "description": "Panduan logika perancangan algoritma, struktur perulangan, percabangan, fungsi rekursif, dan notasi pseudocode.",
+    "googleDriveId": "1WlMn9rJ6cZ1mXuYbGX06mayPGt7McjvH",
+    "previewUrl": "https://drive.google.com/file/d/1WlMn9rJ6cZ1mXuYbGX06mayPGt7McjvH/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=1WlMn9rJ6cZ1mXuYbGX06mayPGt7McjvH",
+    "localFile": null,
+    "callNumber": "DDC 005.13",
+    "catalogId": "AKSINU-LIB-006",
+    "isbn": "AKSINU-REF-006",
+    "ddc": "005.13"
+  },
+  {
+    "id": "book-1fr0ctkqpuoa",
+    "title": "Algoritma dan Pemrograman Dasar",
+    "author": "Alifya NFH",
+    "category": "Struktur Data & Algoritma",
+    "callNumber": "DDC 005.13",
+    "catalogId": "AKSINU-LIB-007",
+    "isbn": "AKSINU-REF-007",
+    "tags": [
+      "struktur data",
+      "algoritma",
+      "efisiensi",
+      "komputasi"
+    ],
+    "size": "PDF",
+    "description": "Konsep struktur data esensial dan teknik algoritma optimal untuk pemrosesan data komputer.",
+    "googleDriveId": "1FR0CTkqpuOalPyzVLVJYbl9hbspm-qfm",
+    "previewUrl": "https://drive.google.com/file/d/1FR0CTkqpuOalPyzVLVJYbl9hbspm-qfm/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=1FR0CTkqpuOalPyzVLVJYbl9hbspm-qfm",
+    "localFile": null,
+    "ddc": "005.13"
+  },
+  {
+    "id": "book-1kjjnw6psnpa",
+    "title": "Algoritma dan Struktur Data 1",
+    "author": "Pustaka AKSINU",
+    "category": "Struktur Data & Algoritma",
+    "callNumber": "DDC 005.13",
+    "catalogId": "AKSINU-LIB-008",
+    "isbn": "AKSINU-REF-008",
+    "tags": [
+      "struktur data",
+      "algoritma",
+      "efisiensi",
+      "komputasi"
+    ],
+    "size": "PDF",
+    "description": "Konsep struktur data esensial dan teknik algoritma optimal untuk pemrosesan data komputer.",
+    "googleDriveId": "1kjjnW6psNPankjrAflyhcrIyP2GmtEKf",
+    "previewUrl": "https://drive.google.com/file/d/1kjjnW6psNPankjrAflyhcrIyP2GmtEKf/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=1kjjnW6psNPankjrAflyhcrIyP2GmtEKf",
+    "localFile": null,
+    "ddc": "005.13"
+  },
+  {
+    "id": "book-15vaenc9th0f",
+    "title": "Algoritma dan Struktur Data untuk Pengolahan Informasi",
+    "author": "Pustaka AKSINU",
+    "category": "Struktur Data & Algoritma",
+    "callNumber": "DDC 005.13",
+    "catalogId": "AKSINU-LIB-009",
+    "isbn": "AKSINU-REF-009",
+    "tags": [
+      "struktur data",
+      "algoritma",
+      "efisiensi",
+      "komputasi"
+    ],
+    "size": "PDF",
+    "description": "Konsep struktur data esensial dan teknik algoritma optimal untuk pemrosesan data komputer.",
+    "googleDriveId": "15VaEnC9TH0fbNEUj1sFbrXRWNNWyu9UO",
+    "previewUrl": "https://drive.google.com/file/d/15VaEnC9TH0fbNEUj1sFbrXRWNNWyu9UO/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=15VaEnC9TH0fbNEUj1sFbrXRWNNWyu9UO",
+    "localFile": null,
+    "ddc": "005.13"
   },
   {
     "id": "book-1bk2iqey7ypd",
@@ -108,31 +220,17 @@ const BOOKS_DATA = [
     "googleDriveId": "1BK2IQey7YpdgdrqIDim9JQlmkL-6qCMU",
     "previewUrl": "https://drive.google.com/file/d/1BK2IQey7YpdgdrqIDim9JQlmkL-6qCMU/preview",
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1BK2IQey7YpdgdrqIDim9JQlmkL-6qCMU",
-    "localFile": null
-  },
-  {
-    "id": "book-1wlmn9rj6cz1",
-    "title": "Algoritmapemrogramanversi2022",
-    "author": "Teknologi & Komputasi",
-    "category": "Struktur Data & Algoritma",
-    "tags": [
-      "struktur data",
-      "algoritma",
-      "efisiensi",
-      "komputasi"
-    ],
-    "size": "PDF",
-    "description": "Konsep struktur data esensial dan teknik algoritma optimal untuk efisiensi pemrosesan data.",
-    "googleDriveId": "1WlMn9rJ6cZ1mXuYbGX06mayPGt7McjvH",
-    "previewUrl": "https://drive.google.com/file/d/1WlMn9rJ6cZ1mXuYbGX06mayPGt7McjvH/preview",
-    "downloadUrl": "https://drive.google.com/uc?export=download&id=1WlMn9rJ6cZ1mXuYbGX06mayPGt7McjvH",
-    "localFile": null
+    "localFile": null,
+    "callNumber": "DDC 005.13",
+    "catalogId": "AKSINU-LIB-010",
+    "isbn": "AKSINU-REF-010",
+    "ddc": "005.13"
   },
   {
     "id": "book-1tdxpwo3ulwu",
     "title": "All in One Computer Programming",
     "author": "Teknologi & Komputasi",
-    "category": "Dasar Pemrograman",
+    "category": "Sistem Informasi",
     "tags": [
       "teknologi",
       "komputer"
@@ -142,39 +240,142 @@ const BOOKS_DATA = [
     "googleDriveId": "1tdXPwO3UlWurLAoYZtz8gUgAbP4YsKb_",
     "previewUrl": "https://drive.google.com/file/d/1tdXPwO3UlWurLAoYZtz8gUgAbP4YsKb_/preview",
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1tdXPwO3UlWurLAoYZtz8gUgAbP4YsKb_",
-    "localFile": null
+    "localFile": null,
+    "callNumber": "DDC 004.068",
+    "catalogId": "AKSINU-LIB-011",
+    "isbn": "AKSINU-REF-011",
+    "ddc": "004.068"
   },
   {
-    "id": "book-1otsefvkzjc6",
-    "title": "Analisis dan Perancangan Sistem Informasi Ilka Zufria 2022 for Repo",
-    "author": "Teknologi & Komputasi",
-    "category": "Dasar Pemrograman",
+    "id": "book-1_mntwd48bum",
+    "title": "Analisa dan Perancangan Sistem",
+    "author": "Pustaka AKSINU",
+    "category": "Sistem Informasi",
+    "callNumber": "DDC 004.068",
+    "catalogId": "AKSINU-LIB-012",
+    "isbn": "AKSINU-REF-012",
     "tags": [
-      "teknologi",
-      "komputer"
+      "sistem informasi",
+      "analisis sistem",
+      "manajemen sistem",
+      "ti kampus"
     ],
     "size": "PDF",
-    "description": "Buku panduan dan referensi komprehensif mengenai Analisis dan Perancangan Sistem Informasi Ilka Zufria 2022 for Repo untuk memperdalam pemahaman teknologi informasi dan rekayasa perangkat lunak.",
-    "googleDriveId": "1otSeFvKzjc6MPT32XiQvQ-WjG6A3pDGC",
-    "previewUrl": "https://drive.google.com/file/d/1otSeFvKzjc6MPT32XiQvQ-WjG6A3pDGC/preview",
-    "downloadUrl": "https://drive.google.com/uc?export=download&id=1otSeFvKzjc6MPT32XiQvQ-WjG6A3pDGC",
-    "localFile": null
+    "description": "Buku kajian sistem informasi, analisis kebutuhan, dan perancangan sistem informasi modern: Analisa dan Perancangan Sistem.",
+    "googleDriveId": "1_mNTwd48BUmTYfczdnBYJDsJAkorekEQ",
+    "previewUrl": "https://drive.google.com/file/d/1_mNTwd48BUmTYfczdnBYJDsJAkorekEQ/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=1_mNTwd48BUmTYfczdnBYJDsJAkorekEQ",
+    "localFile": null,
+    "ddc": "004.068"
+  },
+  {
+    "id": "book-1mi8y3fkwa0a",
+    "title": "Analisis & Perancangan Sistem Informasi Terapan",
+    "author": "Weiskhy Steven Dharmawan, M.Kom.",
+    "category": "Sistem Informasi",
+    "callNumber": "DDC 004.068",
+    "catalogId": "AKSINU-LIB-013",
+    "isbn": "AKSINU-REF-013",
+    "tags": [
+      "sistem informasi",
+      "analisis sistem",
+      "manajemen sistem",
+      "ti kampus"
+    ],
+    "size": "PDF",
+    "description": "Buku kajian sistem informasi, analisis kebutuhan, dan perancangan sistem informasi modern: Weiskhy Analisis Perancangan Sistem Informasi.",
+    "googleDriveId": "1MI8Y3FkwA0aYcyWKmFfT43b3JonLndNY",
+    "previewUrl": "https://drive.google.com/file/d/1MI8Y3FkwA0aYcyWKmFfT43b3JonLndNY/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=1MI8Y3FkwA0aYcyWKmFfT43b3JonLndNY",
+    "localFile": null,
+    "ddc": "004.068"
   },
   {
     "id": "book-1mfhofe1h8vl",
-    "title": "Analisis dan Perancangan Sistem Preview",
-    "author": "Teknologi & Komputasi",
-    "category": "Dasar Pemrograman",
+    "title": "Analisis dan Perancangan Sistem",
+    "author": "Pustaka AKSINU",
+    "category": "Sistem Informasi",
     "tags": [
-      "teknologi",
-      "komputer"
+      "sistem informasi",
+      "analisis sistem",
+      "perancangan"
     ],
     "size": "PDF",
-    "description": "Buku panduan dan referensi komprehensif mengenai Analisis dan Perancangan Sistem Preview untuk memperdalam pemahaman teknologi informasi dan rekayasa perangkat lunak.",
+    "description": "Panduan tahapan rekayasa analisis dan perancangan sistem informasi berbasis metode berorientasi objek dan terstruktur.",
     "googleDriveId": "1mFhOfe1H8VlHYwblFFNQZ5Dd7RRYKj7f",
     "previewUrl": "https://drive.google.com/file/d/1mFhOfe1H8VlHYwblFFNQZ5Dd7RRYKj7f/preview",
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1mFhOfe1H8VlHYwblFFNQZ5Dd7RRYKj7f",
-    "localFile": null
+    "localFile": null,
+    "callNumber": "DDC 004.068",
+    "catalogId": "AKSINU-LIB-014",
+    "isbn": "AKSINU-REF-014",
+    "ddc": "004.068"
+  },
+  {
+    "id": "book-1yqbnit9bzqm",
+    "title": "Analisis dan Perancangan Sistem Informasi",
+    "author": "Ilka Zufria, M.Kom.",
+    "category": "Sistem Informasi",
+    "callNumber": "DDC 004.068",
+    "catalogId": "AKSINU-LIB-015",
+    "isbn": "AKSINU-REF-015",
+    "tags": [
+      "sistem informasi",
+      "analisis sistem",
+      "manajemen sistem",
+      "ti kampus"
+    ],
+    "size": "PDF",
+    "description": "Buku kajian sistem informasi, analisis kebutuhan, dan perancangan sistem informasi modern: Analisis dan Perancangan Sistem Informasi Ilka Zufria 2022 for Repo.",
+    "googleDriveId": "1yQbniT9bZQm9yCwYmJhEFL5k0XVekif7",
+    "previewUrl": "https://drive.google.com/file/d/1yQbniT9bZQm9yCwYmJhEFL5k0XVekif7/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=1yQbniT9bZQm9yCwYmJhEFL5k0XVekif7",
+    "localFile": null,
+    "ddc": "004.068"
+  },
+  {
+    "id": "book-1rxcc2t1hdeq",
+    "title": "Analisis dan Perancangan Sistem Informasi Modern",
+    "author": "Pustaka AKSINU",
+    "category": "Sistem Informasi",
+    "callNumber": "DDC 004.068",
+    "catalogId": "AKSINU-LIB-016",
+    "isbn": "AKSINU-REF-016",
+    "tags": [
+      "sistem informasi",
+      "analisis sistem",
+      "manajemen sistem",
+      "ti kampus"
+    ],
+    "size": "PDF",
+    "description": "Buku kajian sistem informasi, analisis kebutuhan, dan perancangan sistem informasi modern: Analisis dan Perancangan Sistem Informas.",
+    "googleDriveId": "1RxcC2T1HdEQDtPK-fe8dx8FFimGm2YqX",
+    "previewUrl": "https://drive.google.com/file/d/1RxcC2T1HdEQDtPK-fe8dx8FFimGm2YqX/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=1RxcC2T1HdEQDtPK-fe8dx8FFimGm2YqX",
+    "localFile": null,
+    "ddc": "004.068"
+  },
+  {
+    "id": "book-1q745xcclzgz",
+    "title": "Analisis Kinerja Jaringan Komputer & Kualitas Layanan",
+    "author": "Pustaka AKSINU",
+    "category": "Jaringan Komputer",
+    "callNumber": "DDC 004.6",
+    "catalogId": "AKSINU-LIB-017",
+    "isbn": "AKSINU-REF-017",
+    "tags": [
+      "jaringan komputer",
+      "networking",
+      "protokol",
+      "infrastruktur"
+    ],
+    "size": "PDF",
+    "description": "Panduan arsitektur jaringan komputer, protokol komunikasi data, dan administrasi infrastruktur jaringan.",
+    "googleDriveId": "1q745xCClzGzrXIv6g1nmUShRQkX0diiy",
+    "previewUrl": "https://drive.google.com/file/d/1q745xCClzGzrXIv6g1nmUShRQkX0diiy/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=1q745xCClzGzrXIv6g1nmUShRQkX0diiy",
+    "localFile": null,
+    "ddc": "004.6"
   },
   {
     "id": "book-168c-xymlu8j",
@@ -192,7 +393,11 @@ const BOOKS_DATA = [
     "googleDriveId": "168c-xymLu8JSkFdpCiSp8nDUrRFHSXmJ",
     "previewUrl": "https://drive.google.com/file/d/168c-xymLu8JSkFdpCiSp8nDUrRFHSXmJ/preview",
     "downloadUrl": "https://drive.google.com/uc?export=download&id=168c-xymLu8JSkFdpCiSp8nDUrRFHSXmJ",
-    "localFile": null
+    "localFile": null,
+    "callNumber": "DDC 005.268",
+    "catalogId": "AKSINU-LIB-018",
+    "isbn": "AKSINU-REF-018",
+    "ddc": "005.268"
   },
   {
     "id": "book-1wh2pnrurztg",
@@ -210,25 +415,34 @@ const BOOKS_DATA = [
     "googleDriveId": "1wH2pNRUrzTGMoutdxubCRRSMZ_CeB8xs",
     "previewUrl": "https://drive.google.com/file/d/1wH2pNRUrzTGMoutdxubCRRSMZ_CeB8xs/preview",
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1wH2pNRUrzTGMoutdxubCRRSMZ_CeB8xs",
-    "localFile": null
+    "localFile": null,
+    "callNumber": "DDC 005.268",
+    "catalogId": "AKSINU-LIB-019",
+    "isbn": "AKSINU-REF-019",
+    "ddc": "005.268"
   },
   {
     "id": "book-1frxydv5wbjs",
-    "title": "Arcgis for JavaScript Developers by Example Sample Chapter",
-    "author": "Teknologi & Komputasi",
+    "title": "ArcGIS for JavaScript Developers by Example",
+    "author": "Pustaka Web GIS",
     "category": "JavaScript & Web",
     "tags": [
+      "arcgis",
+      "gis",
       "javascript",
-      "web",
-      "frontend",
-      "fullstack"
+      "mapping",
+      "web"
     ],
     "size": "PDF",
-    "description": "Pelajari arsitektur dan sintaks modern ekosistem web interaktif melalui buku Arcgis for JavaScript Developers by Example Sample Chapter.",
+    "description": "Pengembangan aplikasi peta interaktif dan Geographic Information System (GIS) berbasis pustaka ArcGIS JavaScript API.",
     "googleDriveId": "1FRxydV5WBjSoTs0oM_R0mgLG6_nB0h7A",
     "previewUrl": "https://drive.google.com/file/d/1FRxydV5WBjSoTs0oM_R0mgLG6_nB0h7A/preview",
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1FRxydV5WBjSoTs0oM_R0mgLG6_nB0h7A",
-    "localFile": null
+    "localFile": null,
+    "callNumber": "DDC 005.276",
+    "catalogId": "AKSINU-LIB-020",
+    "isbn": "AKSINU-REF-020",
+    "ddc": "005.276"
   },
   {
     "id": "book-1mmiebe8uzvd",
@@ -247,23 +461,76 @@ const BOOKS_DATA = [
     "googleDriveId": "1mMIebE8UzVdg_wQMgrXibv0q6ZmEqxTs",
     "previewUrl": "https://drive.google.com/file/d/1mMIebE8UzVdg_wQMgrXibv0q6ZmEqxTs/preview",
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1mMIebE8UzVdg_wQMgrXibv0q6ZmEqxTs",
-    "localFile": null
+    "localFile": null,
+    "callNumber": "DDC 004.6782",
+    "catalogId": "AKSINU-LIB-021",
+    "isbn": "AKSINU-REF-021",
+    "ddc": "004.6782"
+  },
+  {
+    "id": "book-1od9l2-mlynz",
+    "title": "Arsitektur Jaringan Komputer Modern",
+    "author": "Pustaka AKSINU",
+    "category": "Jaringan Komputer",
+    "tags": [
+      "jaringan komputer",
+      "arsitektur jaringan",
+      "cloud networking"
+    ],
+    "size": "PDF",
+    "description": "Kajian struktur dan arsitektur jaringan skala menengah hingga enterprise dengan standar komunikasi internet.",
+    "googleDriveId": "1oD9l2-MlyNzc7KuN1Hk7RRzLUweHJJB3",
+    "previewUrl": "https://drive.google.com/file/d/1oD9l2-MlyNzc7KuN1Hk7RRzLUweHJJB3/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=1oD9l2-MlyNzc7KuN1Hk7RRzLUweHJJB3",
+    "localFile": null,
+    "callNumber": "DDC 004.6",
+    "catalogId": "AKSINU-LIB-022",
+    "isbn": "AKSINU-REF-022",
+    "ddc": "004.6"
+  },
+  {
+    "id": "book-10t6xq142hpz",
+    "title": "Artificial Intelligence a Modern Approach (3rd Edition)",
+    "author": "Pustaka AKSINU",
+    "category": "AI & Machine Learning",
+    "callNumber": "DDC 006.3",
+    "catalogId": "AKSINU-LIB-023",
+    "isbn": "AKSINU-REF-023",
+    "tags": [
+      "ai",
+      "machine learning",
+      "kecerdasan buatan",
+      "deep learning"
+    ],
+    "size": "PDF",
+    "description": "Eksplorasi kecerdasan buatan, pemodelan data tingkat lanjut, dan algoritma pembelajaran mesin: Artificial Intelligence a Modern Approach (3rd Edition).",
+    "googleDriveId": "10t6xq142HpZeVf0xTDfLLO70Rbszl-iw",
+    "previewUrl": "https://drive.google.com/file/d/10t6xq142HpZeVf0xTDfLLO70Rbszl-iw/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=10t6xq142HpZeVf0xTDfLLO70Rbszl-iw",
+    "localFile": null,
+    "ddc": "006.3"
   },
   {
     "id": "book-1haqrs2cii5n",
-    "title": "As Computer Science",
-    "author": "Teknologi & Komputasi",
-    "category": "Dasar Pemrograman",
+    "title": "AS & A Level Computer Science",
+    "author": "Cambridge Educational Press",
+    "category": "Ilmu Komputer",
     "tags": [
-      "teknologi",
-      "komputer"
+      "computer science",
+      "cambridge",
+      "a level",
+      "dasar komputer"
     ],
     "size": "PDF",
-    "description": "Buku panduan dan referensi komprehensif mengenai As Computer Science untuk memperdalam pemahaman teknologi informasi dan rekayasa perangkat lunak.",
+    "description": "Materi komprehensif kurikulum Computer Science tingkat lanjut meliputi perangkat keras, representasi biner, dan arsitektur prosesor.",
     "googleDriveId": "1HaQRs2CiI5NJoiLoIqvnAAWEcMGU2yQU",
     "previewUrl": "https://drive.google.com/file/d/1HaQRs2CiI5NJoiLoIqvnAAWEcMGU2yQU/preview",
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1HaQRs2CiI5NJoiLoIqvnAAWEcMGU2yQU",
-    "localFile": null
+    "localFile": null,
+    "callNumber": "DDC 004",
+    "catalogId": "AKSINU-LIB-024",
+    "isbn": "AKSINU-REF-024",
+    "ddc": "004"
   },
   {
     "id": "book-1nbzt8gpuymt",
@@ -282,111 +549,139 @@ const BOOKS_DATA = [
     "googleDriveId": "1NBzt8gPUYMtRnnDHmPBZv-MybUGzpgaM",
     "previewUrl": "https://drive.google.com/file/d/1NBzt8gPUYMtRnnDHmPBZv-MybUGzpgaM/preview",
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1NBzt8gPUYMtRnnDHmPBZv-MybUGzpgaM",
-    "localFile": null
+    "localFile": null,
+    "callNumber": "DDC 004.6782",
+    "catalogId": "AKSINU-LIB-025",
+    "isbn": "AKSINU-REF-025",
+    "ddc": "004.6782"
   },
   {
-    "id": "book-1p0saur_7uag",
+    "id": "book-1fugm0doxhro",
     "title": "Basis Data",
-    "author": "Teknologi & Komputasi",
-    "category": "Dasar Pemrograman",
+    "author": "Pustaka AKSINU",
+    "category": "Database & SQL",
+    "callNumber": "DDC 005.74",
+    "catalogId": "AKSINU-LIB-026",
+    "isbn": "AKSINU-REF-026",
     "tags": [
-      "teknologi",
-      "komputer"
+      "basis data",
+      "database",
+      "sql",
+      "dbms"
     ],
     "size": "PDF",
-    "description": "Buku panduan dan referensi komprehensif mengenai Basis Data untuk memperdalam pemahaman teknologi informasi dan rekayasa perangkat lunak.",
-    "googleDriveId": "1P0SAUR_7uagXtvP40mJJeuhAUMVh_ggN",
-    "previewUrl": "https://drive.google.com/file/d/1P0SAUR_7uagXtvP40mJJeuhAUMVh_ggN/preview",
-    "downloadUrl": "https://drive.google.com/uc?export=download&id=1P0SAUR_7uagXtvP40mJJeuhAUMVh_ggN",
-    "localFile": null
+    "description": "Pengelolaan basis data, pemodelan data relasional, dan optimasi kueri untuk pemrosesan skala besar.",
+    "googleDriveId": "1FugM0doxhROIyu4P3f4Jh_8rd82Kkbal",
+    "previewUrl": "https://drive.google.com/file/d/1FugM0doxhROIyu4P3f4Jh_8rd82Kkbal/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=1FugM0doxhROIyu4P3f4Jh_8rd82Kkbal",
+    "localFile": null,
+    "ddc": "005.74"
   },
   {
     "id": "book-1atwg6hvhrfe",
-    "title": "Beginner S Guide to Game Development Programming Concepts Publishing Punky 2024 03065f0986eb4308d095341e048d7844 Anna S Archive",
-    "author": "Teknologi & Komputasi",
+    "title": "Beginner's Guide to Game Development Programming Concepts",
+    "author": "Punky Publishing",
     "category": "Dasar Pemrograman",
     "tags": [
-      "teknologi",
-      "komputer"
+      "game development",
+      "programming concepts",
+      "dasar pemrograman"
     ],
     "size": "PDF",
-    "description": "Buku panduan dan referensi komprehensif mengenai Beginner S Guide to Game Development Programming Concepts Publishing Punky 2024 03065f0986eb4308d095341e048d7844 Anna S Archive untuk memperdalam pemahaman teknologi informasi dan rekayasa perangkat lunak.",
+    "description": "Konsep dasar logika pemrograman game, mekanika interaktif, dan arsitektur pengembangan game untuk pemula.",
     "googleDriveId": "1aTWg6hvhrFe2oEIn0tSXnBQ_JbSmCy4H",
     "previewUrl": "https://drive.google.com/file/d/1aTWg6hvhrFe2oEIn0tSXnBQ_JbSmCy4H/preview",
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1aTWg6hvhrFe2oEIn0tSXnBQ_JbSmCy4H",
-    "localFile": null
+    "localFile": null,
+    "callNumber": "DDC 005.1",
+    "catalogId": "AKSINU-LIB-027",
+    "isbn": "AKSINU-REF-027",
+    "ddc": "005.1"
   },
   {
     "id": "book-1pleu0dp64ma",
-    "title": "Beginning Android Development",
-    "author": "Teknologi & Komputasi",
+    "title": "Beginning Android Development (Fundamentals)",
+    "author": "Pustaka Mobile Dev",
     "category": "Mobile Development",
     "tags": [
-      "mobile",
       "android",
-      "ios",
-      "aplikasi seluler"
+      "mobile dev",
+      "java",
+      "kotlin"
     ],
     "size": "PDF",
-    "description": "Pengembangan aplikasi perangkat seluler modern, responsif, dan berperforma tinggi melalui Beginning Android Development.",
+    "description": "Dasar-dasar perancangan Activity, Fragment, Intent, dan arsitektur aplikasi Android.",
     "googleDriveId": "1Pleu0dP64MaUO4YPQkEafYfdl1YuK9A4",
     "previewUrl": "https://drive.google.com/file/d/1Pleu0dP64MaUO4YPQkEafYfdl1YuK9A4/preview",
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1Pleu0dP64MaUO4YPQkEafYfdl1YuK9A4",
-    "localFile": null
+    "localFile": null,
+    "callNumber": "DDC 005.268",
+    "catalogId": "AKSINU-LIB-028",
+    "isbn": "AKSINU-REF-028",
+    "ddc": "005.268"
   },
   {
     "id": "book-1jgwldpvzi9s",
-    "title": "Beginning Android Development",
-    "author": "Teknologi & Komputasi",
+    "title": "Beginning Android Development: Hands-On Guide",
+    "author": "Pustaka Mobile Dev",
     "category": "Mobile Development",
     "tags": [
-      "mobile",
       "android",
-      "ios",
-      "aplikasi seluler"
+      "hands-on",
+      "mobile"
     ],
     "size": "PDF",
-    "description": "Pengembangan aplikasi perangkat seluler modern, responsif, dan berperforma tinggi melalui Beginning Android Development.",
+    "description": "Proyek praktis pengembangan aplikasi Android native dari antarmuka XML hingga integrasi database lokal SQLite.",
     "googleDriveId": "1jGwLdpvZI9S5BjJZJldmUET0X9osk4It",
     "previewUrl": "https://drive.google.com/file/d/1jGwLdpvZI9S5BjJZJldmUET0X9osk4It/preview",
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1jGwLdpvZI9S5BjJZJldmUET0X9osk4It",
-    "localFile": null
+    "localFile": null,
+    "callNumber": "DDC 005.268",
+    "catalogId": "AKSINU-LIB-029",
+    "isbn": "AKSINU-REF-029",
+    "ddc": "005.268"
   },
   {
     "id": "book-1oafhyfh6ovd",
-    "title": "Beginning Modern JavaScript a Step by Step Gentle Guide to Learn",
-    "author": "Teknologi & Komputasi",
+    "title": "Beginning Modern JavaScript",
+    "author": "Pustaka Web",
     "category": "JavaScript & Web",
     "tags": [
       "javascript",
-      "web",
       "frontend",
-      "fullstack"
+      "es6"
     ],
     "size": "PDF",
-    "description": "Pelajari arsitektur dan sintaks modern ekosistem web interaktif melalui buku Beginning Modern JavaScript a Step by Step Gentle Guide to Learn.",
+    "description": "Panduan bertahap dan ramah untuk menguasai JavaScript modern ES6+, asinkron, dan manipulasi DOM.",
     "googleDriveId": "1oaFHyfH6ovDmBK7VlJVnkXE9PRahhmig",
     "previewUrl": "https://drive.google.com/file/d/1oaFHyfH6ovDmBK7VlJVnkXE9PRahhmig/preview",
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1oaFHyfH6ovDmBK7VlJVnkXE9PRahhmig",
-    "localFile": null
+    "localFile": null,
+    "callNumber": "DDC 005.276",
+    "catalogId": "AKSINU-LIB-030",
+    "isbn": "AKSINU-REF-030",
+    "ddc": "005.276"
   },
   {
     "id": "book-12zhvmis9agz",
-    "title": "Beginning React 2024",
-    "author": "Teknologi & Komputasi",
+    "title": "Beginning React (Modern Edition)",
+    "author": "Pustaka Web",
     "category": "JavaScript & Web",
     "tags": [
-      "javascript",
-      "web",
+      "react",
       "frontend",
-      "fullstack"
+      "javascript"
     ],
     "size": "PDF",
-    "description": "Pelajari arsitektur dan sintaks modern ekosistem web interaktif melalui buku Beginning React 2024.",
+    "description": "Pengantar ramah pemula memahami React, Virtual DOM, JSX, props, state, dan React Hooks.",
     "googleDriveId": "12zHvmIS9aGzEKhC5Endypoa2H8pDzleZ",
     "previewUrl": "https://drive.google.com/file/d/12zHvmIS9aGzEKhC5Endypoa2H8pDzleZ/preview",
     "downloadUrl": "https://drive.google.com/uc?export=download&id=12zHvmIS9aGzEKhC5Endypoa2H8pDzleZ",
-    "localFile": null
+    "localFile": null,
+    "callNumber": "DDC 005.276",
+    "catalogId": "AKSINU-LIB-031",
+    "isbn": "AKSINU-REF-031",
+    "ddc": "005.276"
   },
   {
     "id": "book-19mwnkbzhjvu",
@@ -404,7 +699,32 @@ const BOOKS_DATA = [
     "googleDriveId": "19MWNKbZhJvU1Tcg0dJtyPLJYwaGkue0Y",
     "previewUrl": "https://drive.google.com/file/d/19MWNKbZhJvU1Tcg0dJtyPLJYwaGkue0Y/preview",
     "downloadUrl": "https://drive.google.com/uc?export=download&id=19MWNKbZhJvU1Tcg0dJtyPLJYwaGkue0Y",
-    "localFile": null
+    "localFile": null,
+    "callNumber": "DDC 005.133",
+    "catalogId": "AKSINU-LIB-032",
+    "isbn": "AKSINU-REF-032",
+    "ddc": "005.133"
+  },
+  {
+    "id": "book-1fapl2mgdfgu",
+    "title": "Big Data Analytics Konsep Implementasi D",
+    "author": "Pustaka AKSINU",
+    "category": "Python & Data Science",
+    "callNumber": "DDC 005.133",
+    "catalogId": "AKSINU-LIB-033",
+    "isbn": "AKSINU-REF-033",
+    "tags": [
+      "python",
+      "data science",
+      "analitika data"
+    ],
+    "size": "PDF",
+    "description": "Panduan praktis penguasaan bahasa pemrograman Python dan teknik komputasi modern untuk analitika data.",
+    "googleDriveId": "1fapL2mGDfGuet0EBXubQqhawnHJ-aVZZ",
+    "previewUrl": "https://drive.google.com/file/d/1fapL2mGDfGuet0EBXubQqhawnHJ-aVZZ/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=1fapL2mGDfGuet0EBXubQqhawnHJ-aVZZ",
+    "localFile": null,
+    "ddc": "005.133"
   },
   {
     "id": "book-1u-18_wl3nqp",
@@ -422,25 +742,75 @@ const BOOKS_DATA = [
     "googleDriveId": "1U-18_Wl3NqP7v9179OnveNoCXgXiSCa4",
     "previewUrl": "https://drive.google.com/file/d/1U-18_Wl3NqP7v9179OnveNoCXgXiSCa4/preview",
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1U-18_Wl3NqP7v9179OnveNoCXgXiSCa4",
-    "localFile": null
+    "localFile": null,
+    "callNumber": "DDC 006.3",
+    "catalogId": "AKSINU-LIB-034",
+    "isbn": "AKSINU-REF-034",
+    "ddc": "006.3"
+  },
+  {
+    "id": "book-1wjdhlpiz4ck",
+    "title": "Big Data di Era Revolusi Industri 4.0 dan Society 5.0",
+    "author": "Pustaka AKSINU",
+    "category": "Python & Data Science",
+    "callNumber": "DDC 005.133",
+    "catalogId": "AKSINU-LIB-035",
+    "isbn": "AKSINU-REF-035",
+    "tags": [
+      "teknologi",
+      "komputer"
+    ],
+    "size": "PDF",
+    "description": "Buku panduan dan referensi mengenai Big Data di Era Revolusi 40 dan Society untuk memperdalam literasi teknologi informasi.",
+    "googleDriveId": "1wJdHLPiZ4CK8hvUxmhKWi8mGmN1myU--",
+    "previewUrl": "https://drive.google.com/file/d/1wJdHLPiZ4CK8hvUxmhKWi8mGmN1myU--/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=1wJdHLPiZ4CK8hvUxmhKWi8mGmN1myU--",
+    "localFile": null,
+    "ddc": "005.133"
+  },
+  {
+    "id": "book-10ybrt73xr-d",
+    "title": "Bisnis Digital dan Inteligensi Bisnis",
+    "author": "Pustaka AKSINU",
+    "category": "Manajemen & Bisnis",
+    "callNumber": "DDC 658.4038",
+    "catalogId": "AKSINU-LIB-036",
+    "isbn": "AKSINU-REF-036",
+    "tags": [
+      "manajemen",
+      "bisnis",
+      "kewirausahaan",
+      "technopreneurship"
+    ],
+    "size": "PDF",
+    "description": "Kajian manajemen operasional, technopreneurship, kepemimpinan organisasi, dan dinamika bisnis TI.",
+    "googleDriveId": "10yBRt73xR-dPHC1vYDG-Q3YYmMNPnULs",
+    "previewUrl": "https://drive.google.com/file/d/10yBRt73xR-dPHC1vYDG-Q3YYmMNPnULs/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=10yBRt73xR-dPHC1vYDG-Q3YYmMNPnULs",
+    "localFile": null,
+    "ddc": "658.4038"
   },
   {
     "id": "book-130ovfpul9qb",
-    "title": "Build 10 Flutter 3 0 Apps in 100 Days a Step by Step Guide to Build Apps and Master Flutter Sanjib Sinha Z Library",
-    "author": "Teknologi & Komputasi",
+    "title": "Build 10 Flutter 3.0 Apps in 100 Days",
+    "author": "Sanjib Sinha",
     "category": "Mobile Development",
     "tags": [
-      "mobile",
-      "android",
-      "ios",
-      "aplikasi seluler"
+      "flutter",
+      "dart",
+      "mobile dev",
+      "100 days"
     ],
     "size": "PDF",
-    "description": "Pengembangan aplikasi perangkat seluler modern, responsif, dan berperforma tinggi melalui Build 10 Flutter 3 0 Apps in 100 Days a Step by Step Guide to Build Apps and Master Flutter Sanjib Sinha Z Library.",
+    "description": "Panduan aplikatif langkah demi langkah membangun 10 aplikasi nyata berbasis Flutter 3.0 untuk menguasai pengembangan cross-platform.",
     "googleDriveId": "130OVfpUL9qbyz-OtQdpVi-mjnM6cQ3bS",
     "previewUrl": "https://drive.google.com/file/d/130OVfpUL9qbyz-OtQdpVi-mjnM6cQ3bS/preview",
     "downloadUrl": "https://drive.google.com/uc?export=download&id=130OVfpUL9qbyz-OtQdpVi-mjnM6cQ3bS",
-    "localFile": null
+    "localFile": null,
+    "callNumber": "DDC 005.268",
+    "catalogId": "AKSINU-LIB-037",
+    "isbn": "AKSINU-REF-037",
+    "ddc": "005.268"
   },
   {
     "id": "book-15z-h3rlcio3",
@@ -458,227 +828,805 @@ const BOOKS_DATA = [
     "googleDriveId": "15Z-h3rlcIO3SIXBjP9MqniZbgO9rq56j",
     "previewUrl": "https://drive.google.com/file/d/15Z-h3rlcIO3SIXBjP9MqniZbgO9rq56j/preview",
     "downloadUrl": "https://drive.google.com/uc?export=download&id=15Z-h3rlcIO3SIXBjP9MqniZbgO9rq56j",
-    "localFile": null
+    "localFile": null,
+    "callNumber": "DDC 005.276",
+    "catalogId": "AKSINU-LIB-038",
+    "isbn": "AKSINU-REF-038",
+    "ddc": "005.276"
   },
   {
     "id": "book-1elz36h3jeps",
-    "title": "Building Applications with Ai Agents 2026",
-    "author": "Teknologi & Komputasi",
+    "title": "Building Applications with AI Agents",
+    "author": "Pustaka AI",
     "category": "AI & Machine Learning",
     "tags": [
-      "ai",
-      "machine learning",
-      "deep learning",
-      "data science"
+      "ai agents",
+      "llm",
+      "genai",
+      "arsitektur software"
     ],
     "size": "PDF",
-    "description": "Eksplorasi mendalam kecerdasan buatan, pemodelan data, dan algoritma pembelajaran mesin melalui Building Applications with Ai Agents 2026.",
+    "description": "Panduan arsitektur rekayasa software terintegrasi dengan multi-agen cerdas berbasis LLM.",
     "googleDriveId": "1Elz36h3jepS7V_PcclmXkYpmlZYAVjIr",
     "previewUrl": "https://drive.google.com/file/d/1Elz36h3jepS7V_PcclmXkYpmlZYAVjIr/preview",
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1Elz36h3jepS7V_PcclmXkYpmlZYAVjIr",
-    "localFile": null
+    "localFile": null,
+    "callNumber": "DDC 006.3",
+    "catalogId": "AKSINU-LIB-039",
+    "isbn": "AKSINU-REF-039",
+    "ddc": "006.3"
+  },
+  {
+    "id": "book-1ogjnzs6gewm",
+    "title": "Buku Ajar Analisis dan Perancangan Sistem Informasi",
+    "author": "Pustaka AKSINU",
+    "category": "Sistem Informasi",
+    "callNumber": "DDC 004.068",
+    "catalogId": "AKSINU-LIB-040",
+    "isbn": "AKSINU-REF-040",
+    "tags": [
+      "teknologi",
+      "komputer"
+    ],
+    "size": "PDF",
+    "description": "Buku panduan dan referensi mengenai Buku+ajar+analisis+perancangan+sistem+informasi untuk memperdalam literasi teknologi informasi.",
+    "googleDriveId": "1oGJnzs6geWMwsOwktQNs6N9JRKx-FCco",
+    "previewUrl": "https://drive.google.com/file/d/1oGJnzs6geWMwsOwktQNs6N9JRKx-FCco/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=1oGJnzs6geWMwsOwktQNs6N9JRKx-FCco",
+    "localFile": null,
+    "ddc": "004.068"
+  },
+  {
+    "id": "book-1phw11mwjnm-",
+    "title": "Buku Ajar Dasar Dasar Statistik Penelitian",
+    "author": "Pustaka AKSINU",
+    "category": "Python & Data Science",
+    "callNumber": "DDC 005.133",
+    "catalogId": "AKSINU-LIB-041",
+    "isbn": "AKSINU-REF-041",
+    "tags": [
+      "metode penelitian",
+      "riset",
+      "kualitatif",
+      "kuantitatif"
+    ],
+    "size": "PDF",
+    "description": "Buku pedoman metodologi penelitian dan penyusunan karya ilmiah akademis mengenai Buku Ajar Dasar Dasar Statistik Penelitian.",
+    "googleDriveId": "1PHw11MwjNm-Jq3CDDSJXK5Mn26_mVXeF",
+    "previewUrl": "https://drive.google.com/file/d/1PHw11MwjNm-Jq3CDDSJXK5Mn26_mVXeF/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=1PHw11MwjNm-Jq3CDDSJXK5Mn26_mVXeF",
+    "localFile": null,
+    "ddc": "005.133"
+  },
+  {
+    "id": "book-1stuhitd8kq8",
+    "title": "Buku Ajar Inteligensi Bisnis dan Data Analitik",
+    "author": "Dr. Rina Fitriana",
+    "category": "Sistem Informasi",
+    "callNumber": "DDC 004.068",
+    "catalogId": "AKSINU-LIB-042",
+    "isbn": "AKSINU-REF-042",
+    "tags": [
+      "manajemen",
+      "bisnis",
+      "kewirausahaan",
+      "technopreneurship"
+    ],
+    "size": "PDF",
+    "description": "Kajian manajemen operasional, technopreneurship, kepemimpinan organisasi, dan dinamika bisnis TI.",
+    "googleDriveId": "1StuHitd8kQ8LuftRlHTuSXdHxcqmUB1Y",
+    "previewUrl": "https://drive.google.com/file/d/1StuHitd8kQ8LuftRlHTuSXdHxcqmUB1Y/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=1StuHitd8kQ8LuftRlHTuSXdHxcqmUB1Y",
+    "localFile": null,
+    "ddc": "004.068"
+  },
+  {
+    "id": "book-1ph6uj5f1rij",
+    "title": "Buku Ajar Interaksi Manusia dan Komputer",
+    "author": "Pustaka AKSINU",
+    "category": "UI/UX & Desain",
+    "callNumber": "DDC 006.6",
+    "catalogId": "AKSINU-LIB-043",
+    "isbn": "AKSINU-REF-043",
+    "tags": [
+      "ui/ux",
+      "user interface",
+      "user experience",
+      "desain"
+    ],
+    "size": "PDF",
+    "description": "Prinsip perancangan antarmuka pengguna, kemudahan interaksi, dan metodologi desain modern: Buku Ajar Interaksi Manusia dan Komputer.",
+    "googleDriveId": "1PH6uj5F1RiJDogYB45G7vSZSEnpmIqAJ",
+    "previewUrl": "https://drive.google.com/file/d/1PH6uj5F1RiJDogYB45G7vSZSEnpmIqAJ/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=1PH6uj5F1RiJDogYB45G7vSZSEnpmIqAJ",
+    "localFile": null,
+    "ddc": "006.6"
+  },
+  {
+    "id": "book-17xjd0cuab6x",
+    "title": "Buku Ajar Kewirausahaan",
+    "author": "Pustaka AKSINU",
+    "category": "Manajemen & Bisnis",
+    "callNumber": "DDC 658.4038",
+    "catalogId": "AKSINU-LIB-044",
+    "isbn": "AKSINU-REF-044",
+    "tags": [
+      "manajemen",
+      "bisnis",
+      "kewirausahaan",
+      "technopreneurship"
+    ],
+    "size": "PDF",
+    "description": "Kajian manajemen operasional, technopreneurship, kepemimpinan organisasi, dan dinamika bisnis TI.",
+    "googleDriveId": "17XJd0cuAB6X6gxuxL1R7VKhdB57bjmUt",
+    "previewUrl": "https://drive.google.com/file/d/17XJd0cuAB6X6gxuxL1R7VKhdB57bjmUt/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=17XJd0cuAB6X6gxuxL1R7VKhdB57bjmUt",
+    "localFile": null,
+    "ddc": "658.4038"
+  },
+  {
+    "id": "book-1pfdkkylhqlk",
+    "title": "Buku Ajar Konsep Sistem Informasi",
+    "author": "Pustaka AKSINU",
+    "category": "Sistem Informasi",
+    "callNumber": "DDC 004.068",
+    "catalogId": "AKSINU-LIB-045",
+    "isbn": "AKSINU-REF-045",
+    "tags": [
+      "sistem informasi",
+      "analisis sistem",
+      "manajemen sistem",
+      "ti kampus"
+    ],
+    "size": "PDF",
+    "description": "Buku kajian sistem informasi, analisis kebutuhan, dan perancangan sistem informasi modern: Buku Ajar Konsep Sistem Informasi.",
+    "googleDriveId": "1pFdKKylhqlk6y3TwYtEOzEwkzSqazXGb",
+    "previewUrl": "https://drive.google.com/file/d/1pFdKKylhqlk6y3TwYtEOzEwkzSqazXGb/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=1pFdKKylhqlk6y3TwYtEOzEwkzSqazXGb",
+    "localFile": null,
+    "ddc": "004.068"
+  },
+  {
+    "id": "book-19-w3hv8obnt",
+    "title": "Buku Ajar Matematika Diskrit",
+    "author": "Tim Dosen Matematika Komputasi",
+    "category": "Struktur Data & Algoritma",
+    "tags": [
+      "matematika diskrit",
+      "logika",
+      "aljabar boolean"
+    ],
+    "size": "PDF",
+    "description": "Materi ajar logika proposisi, aljabar Boolean, dan algoritma matematika diskrit untuk mahasiswa ilmu komputer.",
+    "googleDriveId": "19-W3hV8ObNT_hmeuOjGwKKvsdh3FyP95",
+    "previewUrl": "https://drive.google.com/file/d/19-W3hV8ObNT_hmeuOjGwKKvsdh3FyP95/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=19-W3hV8ObNT_hmeuOjGwKKvsdh3FyP95",
+    "localFile": null,
+    "callNumber": "DDC 005.13",
+    "catalogId": "AKSINU-LIB-046",
+    "isbn": "AKSINU-REF-046",
+    "ddc": "005.13"
+  },
+  {
+    "id": "book-1yn_t7akg8r8",
+    "title": "Buku Ajar Pemrograman Aplikasi Mobile",
+    "author": "Pustaka AKSINU",
+    "category": "Mobile Development",
+    "callNumber": "DDC 005.268",
+    "catalogId": "AKSINU-LIB-047",
+    "isbn": "AKSINU-REF-047",
+    "tags": [
+      "teknologi",
+      "komputer"
+    ],
+    "size": "PDF",
+    "description": "Buku panduan dan referensi mengenai Buku Ajar Aplikasi Mobile Mobile Program untuk memperdalam literasi teknologi informasi.",
+    "googleDriveId": "1yn_T7Akg8R86UXorykXJzusTZYO0t4II",
+    "previewUrl": "https://drive.google.com/file/d/1yn_T7Akg8R86UXorykXJzusTZYO0t4II/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=1yn_T7Akg8R86UXorykXJzusTZYO0t4II",
+    "localFile": null,
+    "ddc": "005.268"
+  },
+  {
+    "id": "book-1lvskiuvud6a",
+    "title": "Buku Ajar Pemrograman Berorientasi Objek (PBO)",
+    "author": "Pustaka AKSINU",
+    "category": "Java & OOP",
+    "callNumber": "DDC 005.133",
+    "catalogId": "AKSINU-LIB-048",
+    "isbn": "AKSINU-REF-048",
+    "tags": [
+      "teknologi",
+      "komputer"
+    ],
+    "size": "PDF",
+    "description": "Buku panduan dan referensi mengenai Buku+ajar+pemrograman+berorientasi+objek+(pbo)rev untuk memperdalam literasi teknologi informasi.",
+    "googleDriveId": "1LVsKiUVuD6aUE1SZLqlwJvf-jKe-B5Qz",
+    "previewUrl": "https://drive.google.com/file/d/1LVsKiUVuD6aUE1SZLqlwJvf-jKe-B5Qz/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=1LVsKiUVuD6aUE1SZLqlwJvf-jKe-B5Qz",
+    "localFile": null,
+    "ddc": "005.133"
+  },
+  {
+    "id": "book-1rquutrwhcjq",
+    "title": "Buku Ajar Pemrograman Web Dasar",
+    "author": "Pustaka AKSINU",
+    "category": "JavaScript & Web",
+    "callNumber": "DDC 005.276",
+    "catalogId": "AKSINU-LIB-049",
+    "isbn": "AKSINU-REF-049",
+    "tags": [
+      "javascript",
+      "web",
+      "frontend",
+      "fullstack"
+    ],
+    "size": "PDF",
+    "description": "Pelajari arsitektur dan sintaks modern ekosistem web interaktif melalui Buku Ajar Pemrograman Web Dasar.",
+    "googleDriveId": "1RQuUTRwHcjQJrhN-p0V3Ma5sHafRhBJ3",
+    "previewUrl": "https://drive.google.com/file/d/1RQuUTRwHcjQJrhN-p0V3Ma5sHafRhBJ3/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=1RQuUTRwHcjQJrhN-p0V3Ma5sHafRhBJ3",
+    "localFile": null,
+    "ddc": "005.276"
   },
   {
     "id": "book-1oswv9fvw0ja",
     "title": "Buku Ajar Pengantar Sistem Informasi",
-    "author": "Teknologi & Komputasi",
-    "category": "Dasar Pemrograman",
+    "author": "Program Studi Sistem Informasi AKSINU",
+    "category": "Sistem Informasi",
     "tags": [
-      "teknologi",
-      "komputer"
+      "sistem informasi",
+      "pengantar sistem informasi",
+      "it kampus"
     ],
     "size": "PDF",
-    "description": "Buku panduan dan referensi komprehensif mengenai Buku Ajar Pengantar Sistem Informasi untuk memperdalam pemahaman teknologi informasi dan rekayasa perangkat lunak.",
+    "description": "Buku ajar fundamental mengenai peran teknologi informasi, komponen sistem informasi, dan keunggulan strategis organisasi.",
     "googleDriveId": "1OSwv9Fvw0JAAs8iEMTSDSTaAD46kQEqU",
     "previewUrl": "https://drive.google.com/file/d/1OSwv9Fvw0JAAs8iEMTSDSTaAD46kQEqU/preview",
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1OSwv9Fvw0JAAs8iEMTSDSTaAD46kQEqU",
-    "localFile": null
+    "localFile": null,
+    "callNumber": "DDC 004.068",
+    "catalogId": "AKSINU-LIB-050",
+    "isbn": "AKSINU-REF-050",
+    "ddc": "004.068"
   },
   {
     "id": "book-15yq5yrsuwoi",
-    "title": "Buku Ajar Sim Soft File",
-    "author": "Teknologi & Komputasi",
-    "category": "Dasar Pemrograman",
+    "title": "Buku Ajar Sistem Informasi Manajemen (SIM)",
+    "author": "Tim Dosen Sistem Informasi",
+    "category": "Sistem Informasi",
     "tags": [
-      "teknologi",
-      "komputer"
+      "sistem informasi manajemen",
+      "sim",
+      "manajemen informasi",
+      "pengambilan keputusan"
     ],
     "size": "PDF",
-    "description": "Buku panduan dan referensi komprehensif mengenai Buku Ajar Sim Soft File untuk memperdalam pemahaman teknologi informasi dan rekayasa perangkat lunak.",
+    "description": "Buku ajar yang mengulas pemanfaatan sistem informasi manajemen dalam menunjang operasi harian dan pengambilan keputusan manajerial.",
     "googleDriveId": "15YQ5YRsUWOiMuGa9R5bC1CQFWezplXVp",
     "previewUrl": "https://drive.google.com/file/d/15YQ5YRsUWOiMuGa9R5bC1CQFWezplXVp/preview",
     "downloadUrl": "https://drive.google.com/uc?export=download&id=15YQ5YRsUWOiMuGa9R5bC1CQFWezplXVp",
-    "localFile": null
+    "localFile": null,
+    "callNumber": "DDC 004.068",
+    "catalogId": "AKSINU-LIB-051",
+    "isbn": "AKSINU-REF-051",
+    "ddc": "004.068"
+  },
+  {
+    "id": "book-1r0v_plhw_o-",
+    "title": "Buku Ajar Sistem Informasi Terpadu",
+    "author": "Novia & Nuril",
+    "category": "Sistem Informasi",
+    "callNumber": "DDC 004.068",
+    "catalogId": "AKSINU-LIB-052",
+    "isbn": "AKSINU-REF-052",
+    "tags": [
+      "teknologi",
+      "komputer"
+    ],
+    "size": "PDF",
+    "description": "Buku ajar komprehensif sistem informasi, arsitektur modul sistem, dan studi kasus sistem terpadu.",
+    "googleDriveId": "1R0V_pLHW_o-vMNZiPTW9pa68cCEHtjTa",
+    "previewUrl": "https://drive.google.com/file/d/1R0V_pLHW_o-vMNZiPTW9pa68cCEHtjTa/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=1R0V_pLHW_o-vMNZiPTW9pa68cCEHtjTa",
+    "localFile": null,
+    "ddc": "004.068"
+  },
+  {
+    "id": "book-1nvgbnl2d2b3",
+    "title": "Buku Ajar Sistem Operasi: Konsep & Implementasi",
+    "author": "Pustaka AKSINU",
+    "category": "Sistem Operasi & Arsitektur",
+    "callNumber": "DDC 005.43",
+    "catalogId": "AKSINU-LIB-053",
+    "isbn": "AKSINU-REF-053",
+    "tags": [
+      "sistem operasi",
+      "os",
+      "manajemen memori",
+      "kernel"
+    ],
+    "size": "PDF",
+    "description": "Konsep dasar dan desain sistem operasi, manajemen proses, penjadwalan CPU, dan sistem berkas.",
+    "googleDriveId": "1nvgBNL2d2B3pqnrRa4aOZfimH1bTYSq2",
+    "previewUrl": "https://drive.google.com/file/d/1nvgBNL2d2B3pqnrRa4aOZfimH1bTYSq2/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=1nvgBNL2d2B3pqnrRa4aOZfimH1bTYSq2",
+    "localFile": null,
+    "ddc": "005.43"
+  },
+  {
+    "id": "book-1bxrntsv_09m",
+    "title": "Buku Ajar Sistem Operasi: Konsep dan Desain Sistem",
+    "author": "Pustaka AKSINU",
+    "category": "Sistem Operasi & Arsitektur",
+    "callNumber": "DDC 005.43",
+    "catalogId": "AKSINU-LIB-054",
+    "isbn": "AKSINU-REF-054",
+    "tags": [
+      "sistem operasi",
+      "os",
+      "manajemen memori",
+      "kernel"
+    ],
+    "size": "PDF",
+    "description": "Konsep dasar dan desain sistem operasi, manajemen proses, penjadwalan CPU, dan sistem berkas.",
+    "googleDriveId": "1bxrNTSV_09mjYo_TP9_ojO5UeeVcceN3",
+    "previewUrl": "https://drive.google.com/file/d/1bxrNTSV_09mjYo_TP9_ojO5UeeVcceN3/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=1bxrNTSV_09mjYo_TP9_ojO5UeeVcceN3",
+    "localFile": null,
+    "ddc": "005.43"
   },
   {
     "id": "book-1xis6gcpyvbv",
-    "title": "Buku Ajar Sistem Pendukung Keputusan",
-    "author": "Teknologi & Komputasi",
-    "category": "Dasar Pemrograman",
+    "title": "Buku Ajar Sistem Pendukung Keputusan (SPK)",
+    "author": "Tim Dosen Sistem Informasi",
+    "category": "Struktur Data & Algoritma",
     "tags": [
-      "teknologi",
-      "komputer"
+      "sistem pendukung keputusan",
+      "spk",
+      "dss",
+      "ahp",
+      "topsis"
     ],
     "size": "PDF",
-    "description": "Buku panduan dan referensi komprehensif mengenai Buku Ajar Sistem Pendukung Keputusan untuk memperdalam pemahaman teknologi informasi dan rekayasa perangkat lunak.",
+    "description": "Membahas teori dan metode algoritma SPK seperti AHP, TOPSIS, SAW untuk perancangan Decision Support System modern.",
     "googleDriveId": "1xIs6GcpyvbVqMaHUjh3AeMBxHBiNe4iq",
     "previewUrl": "https://drive.google.com/file/d/1xIs6GcpyvbVqMaHUjh3AeMBxHBiNe4iq/preview",
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1xIs6GcpyvbVqMaHUjh3AeMBxHBiNe4iq",
-    "localFile": null
+    "localFile": null,
+    "callNumber": "DDC 005.13",
+    "catalogId": "AKSINU-LIB-055",
+    "isbn": "AKSINU-REF-055",
+    "ddc": "005.13"
+  },
+  {
+    "id": "book-1kneuwnqfldh",
+    "title": "Buku Ajar Statistika Dasar untuk Komputasi",
+    "author": "Tim Dosen Statistika",
+    "category": "Python & Data Science",
+    "callNumber": "DDC 005.133",
+    "catalogId": "AKSINU-LIB-056",
+    "isbn": "AKSINU-REF-056",
+    "tags": [
+      "teknologi",
+      "komputer"
+    ],
+    "size": "PDF",
+    "description": "Buku materi perkuliahan statistika dasar, probabilitas, pengujian hipotesis, dan komputasi data saintifik.",
+    "googleDriveId": "1kNEuwNQFlDHlfojqQHc_AezX1OkTfKlN",
+    "previewUrl": "https://drive.google.com/file/d/1kNEuwNQFlDHlfojqQHc_AezX1OkTfKlN/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=1kNEuwNQFlDHlfojqQHc_AezX1OkTfKlN",
+    "localFile": null,
+    "ddc": "005.133"
+  },
+  {
+    "id": "book-1-bi-dae_aam",
+    "title": "Buku Ajar User Experience (UX) Design: Metode dan Praktik",
+    "author": "Pustaka AKSINU",
+    "category": "UI/UX & Desain",
+    "callNumber": "DDC 006.6",
+    "catalogId": "AKSINU-LIB-057",
+    "isbn": "AKSINU-REF-057",
+    "tags": [
+      "ui/ux",
+      "user interface",
+      "user experience",
+      "desain"
+    ],
+    "size": "PDF",
+    "description": "Prinsip perancangan antarmuka pengguna, kemudahan interaksi, dan metodologi desain modern: Buku Ajar User Experience UX Design Meto.",
+    "googleDriveId": "1-bI-dae_AaM2wFGslilllIPbKWR2MD7S",
+    "previewUrl": "https://drive.google.com/file/d/1-bI-dae_AaM2wFGslilllIPbKWR2MD7S/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=1-bI-dae_AaM2wFGslilllIPbKWR2MD7S",
+    "localFile": null,
+    "ddc": "006.6"
+  },
+  {
+    "id": "book-1pd8ai_bw5e-",
+    "title": "Buku Algoritma dan Pemrograman",
+    "author": "Pustaka AKSINU",
+    "category": "Struktur Data & Algoritma",
+    "callNumber": "DDC 005.13",
+    "catalogId": "AKSINU-LIB-058",
+    "isbn": "AKSINU-REF-058",
+    "tags": [
+      "struktur data",
+      "algoritma",
+      "efisiensi",
+      "komputasi"
+    ],
+    "size": "PDF",
+    "description": "Konsep struktur data esensial dan teknik algoritma optimal untuk pemrosesan data komputer.",
+    "googleDriveId": "1Pd8Ai_Bw5E-Stgm9ByUQU481fp3v9Ri7",
+    "previewUrl": "https://drive.google.com/file/d/1Pd8Ai_Bw5E-Stgm9ByUQU481fp3v9Ri7/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=1Pd8Ai_Bw5E-Stgm9ByUQU481fp3v9Ri7",
+    "localFile": null,
+    "ddc": "005.13"
   },
   {
     "id": "book-1zmrl2lizwxe",
-    "title": "Buku Algoritma dan Pemrograman",
-    "author": "Teknologi & Komputasi",
+    "title": "Buku Algoritma dan Pemrograman (Edisi Praktis)",
+    "author": "Tim Dosen AKSINU",
     "category": "Struktur Data & Algoritma",
     "tags": [
-      "struktur data",
       "algoritma",
-      "efisiensi",
-      "komputasi"
+      "pemrograman",
+      "flowchart"
     ],
     "size": "PDF",
-    "description": "Konsep struktur data esensial dan teknik algoritma optimal untuk efisiensi pemrosesan data.",
+    "description": "Buku materi dasar logika komputasi, penyusunan flowchart, dan implementasi algoritma pemrograman terstruktur.",
     "googleDriveId": "1ZMrl2liZWXEZfRLGPnkDPas1T4BAysNB",
     "previewUrl": "https://drive.google.com/file/d/1ZMrl2liZWXEZfRLGPnkDPas1T4BAysNB/preview",
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1ZMrl2liZWXEZfRLGPnkDPas1T4BAysNB",
-    "localFile": null
+    "localFile": null,
+    "callNumber": "DDC 005.13",
+    "catalogId": "AKSINU-LIB-059",
+    "isbn": "AKSINU-REF-059",
+    "ddc": "005.13"
   },
   {
     "id": "book-1mbdbffqnztl",
-    "title": "Buku Algoritma dan Pemrograman",
-    "author": "Teknologi & Komputasi",
+    "title": "Buku Algoritma dan Pemrograman (Struktur Logika)",
+    "author": "Tim Dosen AKSINU",
     "category": "Struktur Data & Algoritma",
     "tags": [
-      "struktur data",
       "algoritma",
-      "efisiensi",
-      "komputasi"
+      "logika komputasi"
     ],
     "size": "PDF",
-    "description": "Konsep struktur data esensial dan teknik algoritma optimal untuk efisiensi pemrosesan data.",
+    "description": "Pembahasan struktur logika percabangan majemuk, perulangan bertingkat, dan modularisasi fungsi algoritma.",
     "googleDriveId": "1mbdbFFQNZtLMxn7IRL-OpPRPz8HvRLsk",
     "previewUrl": "https://drive.google.com/file/d/1mbdbFFQNZtLMxn7IRL-OpPRPz8HvRLsk/preview",
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1mbdbFFQNZtLMxn7IRL-OpPRPz8HvRLsk",
-    "localFile": null
+    "localFile": null,
+    "callNumber": "DDC 005.13",
+    "catalogId": "AKSINU-LIB-060",
+    "isbn": "AKSINU-REF-060",
+    "ddc": "005.13"
   },
   {
-    "id": "book-1w2ujsdlifoj",
-    "title": "Buku Jozef Raco Metode Penelitian Kualitatif",
-    "author": "Teknologi & Komputasi",
-    "category": "Dasar Pemrograman",
+    "id": "book-1vmeikfcjmog",
+    "title": "Buku Analisa Proyek Sistem Informasi",
+    "author": "Pustaka AKSINU",
+    "category": "Sistem Informasi",
+    "callNumber": "DDC 004.068",
+    "catalogId": "AKSINU-LIB-061",
+    "isbn": "AKSINU-REF-061",
     "tags": [
-      "teknologi",
-      "komputer"
+      "sistem informasi",
+      "analisis sistem",
+      "manajemen sistem",
+      "ti kampus"
     ],
     "size": "PDF",
-    "description": "Buku panduan dan referensi komprehensif mengenai Buku Jozef Raco Metode Penelitian Kualitatif untuk memperdalam pemahaman teknologi informasi dan rekayasa perangkat lunak.",
-    "googleDriveId": "1W2ujsdLIFoJG9c9TAk2cFcM4jxz4SfyZ",
-    "previewUrl": "https://drive.google.com/file/d/1W2ujsdLIFoJG9c9TAk2cFcM4jxz4SfyZ/preview",
-    "downloadUrl": "https://drive.google.com/uc?export=download&id=1W2ujsdLIFoJG9c9TAk2cFcM4jxz4SfyZ",
-    "localFile": null
+    "description": "Buku kajian sistem informasi, analisis kebutuhan, dan perancangan sistem informasi modern: Buku Analisa Proyek Sistem Informasi.",
+    "googleDriveId": "1VMeiKfcjMog5QsdN2o18ptXLxB9aH8L2",
+    "previewUrl": "https://drive.google.com/file/d/1VMeiKfcjMog5QsdN2o18ptXLxB9aH8L2/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=1VMeiKfcjMog5QsdN2o18ptXLxB9aH8L2",
+    "localFile": null,
+    "ddc": "004.068"
+  },
+  {
+    "id": "book-1kefzanfgonk",
+    "title": "Buku Jaringan Komputer Dasar",
+    "author": "Pustaka AKSINU",
+    "category": "Jaringan Komputer",
+    "callNumber": "DDC 004.6",
+    "catalogId": "AKSINU-LIB-062",
+    "isbn": "AKSINU-REF-062",
+    "tags": [
+      "jaringan komputer",
+      "networking",
+      "protokol",
+      "infrastruktur"
+    ],
+    "size": "PDF",
+    "description": "Panduan arsitektur jaringan komputer, protokol komunikasi data, dan administrasi infrastruktur jaringan.",
+    "googleDriveId": "1KEFZANFGoNKK-DOQ8zKqaSqv0JZL9-eu",
+    "previewUrl": "https://drive.google.com/file/d/1KEFZANFGoNKK-DOQ8zKqaSqv0JZL9-eu/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=1KEFZANFGoNKK-DOQ8zKqaSqv0JZL9-eu",
+    "localFile": null,
+    "ddc": "004.6"
+  },
+  {
+    "id": "book-11wruih0mcr3",
+    "title": "Buku Kewirausahaan",
+    "author": "Pustaka AKSINU",
+    "category": "Manajemen & Bisnis",
+    "callNumber": "DDC 658.4038",
+    "catalogId": "AKSINU-LIB-063",
+    "isbn": "AKSINU-REF-063",
+    "tags": [
+      "manajemen",
+      "bisnis",
+      "kewirausahaan",
+      "technopreneurship"
+    ],
+    "size": "PDF",
+    "description": "Kajian manajemen operasional, technopreneurship, kepemimpinan organisasi, dan dinamika bisnis TI.",
+    "googleDriveId": "11WRuIh0Mcr3OdFqcoa-sBANDFvc4eUg-",
+    "previewUrl": "https://drive.google.com/file/d/11WRuIh0Mcr3OdFqcoa-sBANDFvc4eUg-/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=11WRuIh0Mcr3OdFqcoa-sBANDFvc4eUg-",
+    "localFile": null,
+    "ddc": "658.4038"
+  },
+  {
+    "id": "book-1ff04-opkrsq",
+    "title": "Buku Kewirausahaan Teori dan Praktek",
+    "author": "Pustaka AKSINU",
+    "category": "Manajemen & Bisnis",
+    "callNumber": "DDC 658.4038",
+    "catalogId": "AKSINU-LIB-064",
+    "isbn": "AKSINU-REF-064",
+    "tags": [
+      "manajemen",
+      "bisnis",
+      "kewirausahaan",
+      "technopreneurship"
+    ],
+    "size": "PDF",
+    "description": "Kajian manajemen operasional, technopreneurship, kepemimpinan organisasi, dan dinamika bisnis TI.",
+    "googleDriveId": "1fF04-OPkRsqF2GXOdb5vQ09ukKXRBxK3",
+    "previewUrl": "https://drive.google.com/file/d/1fF04-OPkRsqF2GXOdb5vQ09ukKXRBxK3/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=1fF04-OPkRsqF2GXOdb5vQ09ukKXRBxK3",
+    "localFile": null,
+    "ddc": "658.4038"
+  },
+  {
+    "id": "book-11wpqig4gmlw",
+    "title": "Buku Lengkap Konsep Sistem Informasi (Edisi Lanjutan)",
+    "author": "Tim Dosen AKSINU",
+    "category": "Sistem Informasi",
+    "tags": [
+      "sistem informasi",
+      "analisis sistem"
+    ],
+    "size": "PDF",
+    "description": "Pembahasan komprehensif sistem informasi lanjutan yang mencakup arsitektur sistem terintegrasi dan sistem pendukung operasional.",
+    "googleDriveId": "11WPQIG4gmLwWXZATgqnaCT2Nw0L7OykV",
+    "previewUrl": "https://drive.google.com/file/d/11WPQIG4gmLwWXZATgqnaCT2Nw0L7OykV/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=11WPQIG4gmLwWXZATgqnaCT2Nw0L7OykV",
+    "localFile": null,
+    "callNumber": "DDC 004.068",
+    "catalogId": "AKSINU-LIB-065",
+    "isbn": "AKSINU-REF-065",
+    "ddc": "004.068"
+  },
+  {
+    "id": "book-1bkg4pckrlso",
+    "title": "Buku Lengkap Pengantar Jaringan Komputer",
+    "author": "Tim Laboratorium Jaringan",
+    "category": "Jaringan Komputer",
+    "tags": [
+      "jaringan komputer",
+      "networking",
+      "ip address",
+      "subnetting"
+    ],
+    "size": "PDF",
+    "description": "Panduan fundamental jaringan komputer yang mencakup pengalamatan IP, subnetting, perangkat keras jaringan, dan keamanan dasar.",
+    "googleDriveId": "1bKG4PCKrLSOGZUOAzgtrClSRNa6hM1p1",
+    "previewUrl": "https://drive.google.com/file/d/1bKG4PCKrLSOGZUOAzgtrClSRNa6hM1p1/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=1bKG4PCKrLSOGZUOAzgtrClSRNa6hM1p1",
+    "localFile": null,
+    "callNumber": "DDC 004.6",
+    "catalogId": "AKSINU-LIB-066",
+    "isbn": "AKSINU-REF-066",
+    "ddc": "004.6"
   },
   {
     "id": "book-1xx6lowv_lu1",
-    "title": "Buku Manajemen Bisnis",
-    "author": "Teknologi & Komputasi",
-    "category": "Dasar Pemrograman",
+    "title": "Buku Manajemen Bisnis untuk TI",
+    "author": "Pustaka Manajemen",
+    "category": "Manajemen & Bisnis",
     "tags": [
-      "teknologi",
-      "komputer"
+      "manajemen bisnis",
+      "bisnis",
+      "startup",
+      "ekonomi digital"
     ],
     "size": "PDF",
-    "description": "Buku panduan dan referensi komprehensif mengenai Buku Manajemen Bisnis untuk memperdalam pemahaman teknologi informasi dan rekayasa perangkat lunak.",
+    "description": "Konsep manajemen organisasi, strategi pemasaran digital, operasional usaha, dan manajemen keuangan untuk pelaku bisnis teknologi.",
     "googleDriveId": "1xX6LoWV_Lu15A-uRM_lOmAgks5OUFZeB",
     "previewUrl": "https://drive.google.com/file/d/1xX6LoWV_Lu15A-uRM_lOmAgks5OUFZeB/preview",
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1xX6LoWV_Lu15A-uRM_lOmAgks5OUFZeB",
-    "localFile": null
+    "localFile": null,
+    "callNumber": "DDC 658.4038",
+    "catalogId": "AKSINU-LIB-067",
+    "isbn": "AKSINU-REF-067",
+    "ddc": "658.4038"
   },
   {
-    "id": "book-19-w3hv8obnt",
-    "title": "Buku Matematika Diskrited",
-    "author": "Teknologi & Komputasi",
-    "category": "Dasar Pemrograman",
+    "id": "book-17usy4s8w9t7",
+    "title": "Buku Manajemen Proyek Teknologi Informatika",
+    "author": "Pustaka AKSINU",
+    "category": "Sistem Informasi",
+    "callNumber": "DDC 004.068",
+    "catalogId": "AKSINU-LIB-068",
+    "isbn": "AKSINU-REF-068",
+    "tags": [
+      "sistem informasi",
+      "analisis sistem",
+      "manajemen sistem",
+      "ti kampus"
+    ],
+    "size": "PDF",
+    "description": "Buku kajian sistem informasi, analisis kebutuhan, dan perancangan sistem informasi modern: Buku Manajemen Proyek Teknologi Informatika.",
+    "googleDriveId": "17UsY4s8W9T7mDKtH02Wt7A3ud6F7KeVu",
+    "previewUrl": "https://drive.google.com/file/d/17UsY4s8W9T7mDKtH02Wt7A3ud6F7KeVu/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=17UsY4s8W9T7mDKtH02Wt7A3ud6F7KeVu",
+    "localFile": null,
+    "ddc": "004.068"
+  },
+  {
+    "id": "book-1wmbo8yfj-c6",
+    "title": "Buku Matematika Diskrit",
+    "author": "Pustaka AKSINU",
+    "category": "Struktur Data & Algoritma",
+    "callNumber": "DDC 005.13",
+    "catalogId": "AKSINU-LIB-069",
+    "isbn": "AKSINU-REF-069",
     "tags": [
       "teknologi",
       "komputer"
     ],
     "size": "PDF",
-    "description": "Buku panduan dan referensi komprehensif mengenai Buku Matematika Diskrited untuk memperdalam pemahaman teknologi informasi dan rekayasa perangkat lunak.",
-    "googleDriveId": "19-W3hV8ObNT_hmeuOjGwKKvsdh3FyP95",
-    "previewUrl": "https://drive.google.com/file/d/19-W3hV8ObNT_hmeuOjGwKKvsdh3FyP95/preview",
-    "downloadUrl": "https://drive.google.com/uc?export=download&id=19-W3hV8ObNT_hmeuOjGwKKvsdh3FyP95",
-    "localFile": null
+    "description": "Buku panduan dan referensi mengenai Buku Matematika Diskrit untuk memperdalam literasi teknologi informasi.",
+    "googleDriveId": "1wmBO8yFJ-c6DLQWrkiVhcmX8dysrZfQy",
+    "previewUrl": "https://drive.google.com/file/d/1wmBO8yFJ-c6DLQWrkiVhcmX8dysrZfQy/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=1wmBO8yFJ-c6DLQWrkiVhcmX8dysrZfQy",
+    "localFile": null,
+    "ddc": "005.13"
   },
   {
-    "id": "book-1dpuqlqrfcsb",
-    "title": "Buku Metode Penelitian Kualitatif Kuantitatif Press",
-    "author": "Teknologi & Komputasi",
-    "category": "Dasar Pemrograman",
+    "id": "book-1cyepuf6savy",
+    "title": "Buku Panduan Konsep Sistem Informasi",
+    "author": "Tim Dosen AKSINU",
+    "category": "Sistem Informasi",
     "tags": [
-      "teknologi",
-      "komputer"
+      "sistem informasi",
+      "konsep dasar",
+      "kurikulum kampus"
     ],
     "size": "PDF",
-    "description": "Buku panduan dan referensi komprehensif mengenai Buku Metode Penelitian Kualitatif Kuantitatif Press untuk memperdalam pemahaman teknologi informasi dan rekayasa perangkat lunak.",
-    "googleDriveId": "1DPUQlqrfcSbxUX9d-3hvs5NQu1Y5mVme",
-    "previewUrl": "https://drive.google.com/file/d/1DPUQlqrfcSbxUX9d-3hvs5NQu1Y5mVme/preview",
-    "downloadUrl": "https://drive.google.com/uc?export=download&id=1DPUQlqrfcSbxUX9d-3hvs5NQu1Y5mVme",
-    "localFile": null
+    "description": "Referensi lengkap konsep sistem informasi, tata kelola data, dan peranan analis sistem dalam rekayasa teknologi.",
+    "googleDriveId": "1CYepUF6sAVYOe-IdhIUVGfdQAulteJjo",
+    "previewUrl": "https://drive.google.com/file/d/1CYepUF6sAVYOe-IdhIUVGfdQAulteJjo/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=1CYepUF6sAVYOe-IdhIUVGfdQAulteJjo",
+    "localFile": null,
+    "callNumber": "DDC 004.068",
+    "catalogId": "AKSINU-LIB-070",
+    "isbn": "AKSINU-REF-070",
+    "ddc": "004.068"
   },
   {
-    "id": "book-1emhdo2qe6av",
-    "title": "Buku Metode Penelitian Sugiyono",
-    "author": "Prof. Dr. Sugiyono",
-    "category": "Metodologi Riset",
+    "id": "book-16z7reqq1krz",
+    "title": "Buku Panduan SDLC (Software Development Life Cycle)",
+    "author": "Pustaka Rekayasa Perangkat Lunak",
+    "category": "Sistem Informasi",
     "tags": [
-      "metode penelitian",
-      "riset",
-      "sugiyono",
-      "kuantitatif",
-      "kualitatif",
-      "skripsi",
-      "tesis",
-      "r&d"
+      "sdlc",
+      "waterfall",
+      "agile",
+      "scrum",
+      "rekayasa perangkat lunak"
     ],
     "size": "PDF",
-    "description": "Buku rujukan utama akademis untuk penyusunan metodologi penelitian kuantitatif, kualitatif, dan Research and Development (R&D).",
-    "googleDriveId": "1EMhDO2QE6AV8csym7aKKCby0X9rcL8ma",
-    "previewUrl": "https://drive.google.com/file/d/1EMhDO2QE6AV8csym7aKKCby0X9rcL8ma/preview",
-    "downloadUrl": "https://drive.google.com/uc?export=download&id=1EMhDO2QE6AV8csym7aKKCby0X9rcL8ma",
-    "localFile": "ebook/Buku-Metode-Penelitian-Sugiyono.pdf"
+    "description": "Panduan model siklus hidup pengembangan sistem dan perangkat lunak: Waterfall, Agile, Scrum, Spiral, dan V-Model.",
+    "googleDriveId": "16Z7reQq1kRzYMYA9DnNw5UaAeTpxMERZ",
+    "previewUrl": "https://drive.google.com/file/d/16Z7reQq1kRzYMYA9DnNw5UaAeTpxMERZ/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=16Z7reQq1kRzYMYA9DnNw5UaAeTpxMERZ",
+    "localFile": null,
+    "callNumber": "DDC 004.068",
+    "catalogId": "AKSINU-LIB-071",
+    "isbn": "AKSINU-REF-071",
+    "ddc": "004.068"
+  },
+  {
+    "id": "book-1ggc65pp9mwf",
+    "title": "Buku Panduan Sistem Pendukung Keputusan (SPK)",
+    "author": "Tim Dosen AKSINU",
+    "category": "Sistem Informasi",
+    "tags": [
+      "sistem pendukung keputusan",
+      "spk",
+      "dss",
+      "metode keputusan"
+    ],
+    "size": "PDF",
+    "description": "Panduan konseptual dan implementasi praktis algoritma pengambilan keputusan multi-kriteria untuk sistem informasi.",
+    "googleDriveId": "1GGc65PP9MWFzaCHPS6HgMX1RN5sb33Zj",
+    "previewUrl": "https://drive.google.com/file/d/1GGc65PP9MWFzaCHPS6HgMX1RN5sb33Zj/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=1GGc65PP9MWFzaCHPS6HgMX1RN5sb33Zj",
+    "localFile": null,
+    "callNumber": "DDC 004.068",
+    "catalogId": "AKSINU-LIB-072",
+    "isbn": "AKSINU-REF-072",
+    "ddc": "004.068"
   },
   {
     "id": "book-1yrjo5sqlkdn",
     "title": "Buku Pengantar Jaringan Komputer",
-    "author": "Teknologi & Komputasi",
-    "category": "Dasar Pemrograman",
+    "author": "Pustaka AKSINU",
+    "category": "Jaringan Komputer",
     "tags": [
-      "teknologi",
-      "komputer"
+      "jaringan komputer",
+      "osi model",
+      "tcp/ip",
+      "lan",
+      "wan"
     ],
     "size": "PDF",
-    "description": "Buku panduan dan referensi komprehensif mengenai Buku Pengantar Jaringan Komputer untuk memperdalam pemahaman teknologi informasi dan rekayasa perangkat lunak.",
+    "description": "Pengenalan konsep dasar jaringan komputer, model referensi OSI 7 layer, protokol TCP/IP, dan topologi jaringan lokal.",
     "googleDriveId": "1yrJO5SqLkdNklGQKnw0mWe9ldkkXxd5r",
     "previewUrl": "https://drive.google.com/file/d/1yrJO5SqLkdNklGQKnw0mWe9ldkkXxd5r/preview",
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1yrJO5SqLkdNklGQKnw0mWe9ldkkXxd5r",
-    "localFile": null
+    "localFile": null,
+    "callNumber": "DDC 004.6",
+    "catalogId": "AKSINU-LIB-073",
+    "isbn": "AKSINU-REF-073",
+    "ddc": "004.6"
   },
   {
-    "id": "book-16z7reqq1krz",
-    "title": "Buku Sdlc",
-    "author": "Teknologi & Komputasi",
-    "category": "Dasar Pemrograman",
+    "id": "book-1jtvnlipq2vh",
+    "title": "Buku Pengantar Teknologi Informasi",
+    "author": "Pustaka AKSINU",
+    "category": "Ilmu Komputer",
+    "callNumber": "DDC 004",
+    "catalogId": "AKSINU-LIB-074",
+    "isbn": "AKSINU-REF-074",
+    "tags": [
+      "computer science",
+      "ilmu komputer",
+      "etika profesi"
+    ],
+    "size": "PDF",
+    "description": "Dasar-dasar ilmu komputer, etika profesi teknologi informasi, dan arsitektur sistem komputasi.",
+    "googleDriveId": "1JTVNLiPq2vHCzez_CqekHvtQFmxGHXgG",
+    "previewUrl": "https://drive.google.com/file/d/1JTVNLiPq2vHCzez_CqekHvtQFmxGHXgG/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=1JTVNLiPq2vHCzez_CqekHvtQFmxGHXgG",
+    "localFile": null,
+    "ddc": "004"
+  },
+  {
+    "id": "book-1yyjzqbhehag",
+    "title": "Buku Statistika Dasar",
+    "author": "Pustaka AKSINU",
+    "category": "Python & Data Science",
+    "callNumber": "DDC 005.133",
+    "catalogId": "AKSINU-LIB-075",
+    "isbn": "AKSINU-REF-075",
     "tags": [
       "teknologi",
       "komputer"
     ],
     "size": "PDF",
-    "description": "Buku panduan dan referensi komprehensif mengenai Buku Sdlc untuk memperdalam pemahaman teknologi informasi dan rekayasa perangkat lunak.",
-    "googleDriveId": "16Z7reQq1kRzYMYA9DnNw5UaAeTpxMERZ",
-    "previewUrl": "https://drive.google.com/file/d/16Z7reQq1kRzYMYA9DnNw5UaAeTpxMERZ/preview",
-    "downloadUrl": "https://drive.google.com/uc?export=download&id=16Z7reQq1kRzYMYA9DnNw5UaAeTpxMERZ",
-    "localFile": null
+    "description": "Buku panduan dan referensi mengenai Buku Statistika Dasar untuk memperdalam literasi teknologi informasi.",
+    "googleDriveId": "1yyJzqbhEhagRiDrFicXxe4shYek6SzZj",
+    "previewUrl": "https://drive.google.com/file/d/1yyJzqbhEhagRiDrFicXxe4shYek6SzZj/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=1yyJzqbhEhagRiDrFicXxe4shYek6SzZj",
+    "localFile": null,
+    "ddc": "005.133"
   },
   {
     "id": "book-1qyvi2wqqgi-",
@@ -696,61 +1644,164 @@ const BOOKS_DATA = [
     "googleDriveId": "1Qyvi2wqQGi-yNznZiLUwwcHcgUFcFQV6",
     "previewUrl": "https://drive.google.com/file/d/1Qyvi2wqQGi-yNznZiLUwwcHcgUFcFQV6/preview",
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1Qyvi2wqQGi-yNznZiLUwwcHcgUFcFQV6",
-    "localFile": null
+    "localFile": null,
+    "callNumber": "DDC 005.13",
+    "catalogId": "AKSINU-LIB-076",
+    "isbn": "AKSINU-REF-076",
+    "ddc": "005.13"
+  },
+  {
+    "id": "book-1qvr3fideqcu",
+    "title": "Buku Technopreneurship",
+    "author": "Pustaka AKSINU",
+    "category": "Manajemen & Bisnis",
+    "callNumber": "DDC 658.4038",
+    "catalogId": "AKSINU-LIB-077",
+    "isbn": "AKSINU-REF-077",
+    "tags": [
+      "manajemen",
+      "bisnis",
+      "kewirausahaan",
+      "technopreneurship"
+    ],
+    "size": "PDF",
+    "description": "Kajian manajemen operasional, technopreneurship, kepemimpinan organisasi, dan dinamika bisnis TI.",
+    "googleDriveId": "1QVR3FiDeqcUzhmmoVwbBh5r6q2ZDhunm",
+    "previewUrl": "https://drive.google.com/file/d/1QVR3FiDeqcUzhmmoVwbBh5r6q2ZDhunm/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=1QVR3FiDeqcUzhmmoVwbBh5r6q2ZDhunm",
+    "localFile": null,
+    "ddc": "658.4038"
+  },
+  {
+    "id": "book-1cfxofpccwh1",
+    "title": "Buku Teks Pemrograman Web Dasar",
+    "author": "Pustaka AKSINU",
+    "category": "JavaScript & Web",
+    "callNumber": "DDC 005.276",
+    "catalogId": "AKSINU-LIB-078",
+    "isbn": "AKSINU-REF-078",
+    "tags": [
+      "javascript",
+      "web",
+      "frontend",
+      "fullstack"
+    ],
+    "size": "PDF",
+    "description": "Pelajari arsitektur dan sintaks modern ekosistem web interaktif melalui Book Pemrograman Web Dasar.",
+    "googleDriveId": "1CFXOFPCcwh1YYq8qLuVRmxa9B86PSKqC",
+    "previewUrl": "https://drive.google.com/file/d/1CFXOFPCcwh1YYq8qLuVRmxa9B86PSKqC/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=1CFXOFPCcwh1YYq8qLuVRmxa9B86PSKqC",
+    "localFile": null,
+    "ddc": "005.276"
   },
   {
     "id": "book-1ayeooz6tqr-",
-    "title": "Business Information Systems 3rd Edition Beynon Davies",
-    "author": "Teknologi & Komputasi",
-    "category": "Dasar Pemrograman",
+    "title": "Business Information Systems (3rd Edition)",
+    "author": "Paul Beynon-Davies",
+    "category": "Sistem Informasi",
     "tags": [
-      "teknologi",
-      "komputer"
+      "business information systems",
+      "sistem informasi",
+      "enterprise",
+      "e-business"
     ],
     "size": "PDF",
-    "description": "Buku panduan dan referensi komprehensif mengenai Business Information Systems 3rd Edition Beynon Davies untuk memperdalam pemahaman teknologi informasi dan rekayasa perangkat lunak.",
+    "description": "Buku teks standar internasional mengenai integrasi sistem informasi ke dalam proses bisnis dan ekosistem enterprise.",
     "googleDriveId": "1ayEoOZ6TqR-RGzPJ7dv_uBNDmW87I-pG",
     "previewUrl": "https://drive.google.com/file/d/1ayEoOZ6TqR-RGzPJ7dv_uBNDmW87I-pG/preview",
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1ayEoOZ6TqR-RGzPJ7dv_uBNDmW87I-pG",
-    "localFile": null
+    "localFile": null,
+    "callNumber": "DDC 004.068",
+    "catalogId": "AKSINU-LIB-079",
+    "isbn": "AKSINU-REF-079",
+    "ddc": "004.068"
   },
   {
-    "id": "book-1walujwkyvf7",
-    "title": "C Game Development Book",
-    "author": "Teknologi & Komputasi",
-    "category": "Dasar Pemrograman",
+    "id": "book-1zwfzjhrbx0k",
+    "title": "Business Intelligence & Data Warehousing Terpadu",
+    "author": "Pustaka AKSINU",
+    "category": "Sistem Informasi",
+    "callNumber": "DDC 004.068",
+    "catalogId": "AKSINU-LIB-080",
+    "isbn": "AKSINU-REF-080",
     "tags": [
       "teknologi",
       "komputer"
     ],
     "size": "PDF",
-    "description": "Buku panduan dan referensi komprehensif mengenai C Game Development Book untuk memperdalam pemahaman teknologi informasi dan rekayasa perangkat lunak.",
-    "googleDriveId": "1WALUjwkyVF7yQ6noTDyZUVRlJKED8NYY",
-    "previewUrl": "https://drive.google.com/file/d/1WALUjwkyVF7yQ6noTDyZUVRlJKED8NYY/preview",
-    "downloadUrl": "https://drive.google.com/uc?export=download&id=1WALUjwkyVF7yQ6noTDyZUVRlJKED8NYY",
-    "localFile": null
+    "description": "Buku panduan dan referensi mengenai Draft+buku+ +business+intelligence+ +halaman+isi untuk memperdalam literasi teknologi informasi.",
+    "googleDriveId": "1zWfZJHRbX0kvCHjSovw8uquD94HiB4tx",
+    "previewUrl": "https://drive.google.com/file/d/1zWfZJHRbX0kvCHjSovw8uquD94HiB4tx/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=1zWfZJHRbX0kvCHjSovw8uquD94HiB4tx",
+    "localFile": null,
+    "ddc": "004.068"
+  },
+  {
+    "id": "book-1nak7_txnx8z",
+    "title": "Business Intelligence: Konsep dan Aplikasi Sistem Informasi",
+    "author": "Pustaka AKSINU",
+    "category": "Sistem Informasi",
+    "callNumber": "DDC 004.068",
+    "catalogId": "AKSINU-LIB-081",
+    "isbn": "AKSINU-REF-081",
+    "tags": [
+      "teknologi",
+      "komputer"
+    ],
+    "size": "PDF",
+    "description": "Buku panduan dan referensi mengenai Isbn Business Intelligence Fix Isbn untuk memperdalam literasi teknologi informasi.",
+    "googleDriveId": "1Nak7_txnX8ZI41aUSC5m-70Qka2jSJjk",
+    "previewUrl": "https://drive.google.com/file/d/1Nak7_txnX8ZI41aUSC5m-70Qka2jSJjk/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=1Nak7_txnX8ZI41aUSC5m-70Qka2jSJjk",
+    "localFile": null,
+    "ddc": "004.068"
+  },
+  {
+    "id": "book-1j286tggbtj6",
+    "title": "Business Process Management (BPM)",
+    "author": "IPQI Research",
+    "category": "Manajemen & Bisnis",
+    "callNumber": "DDC 658.4038",
+    "catalogId": "AKSINU-LIB-082",
+    "isbn": "AKSINU-REF-082",
+    "tags": [
+      "teknologi",
+      "komputer"
+    ],
+    "size": "PDF",
+    "description": "Buku panduan dan referensi mengenai Ebook Ipqi Business Process Management untuk memperdalam literasi teknologi informasi.",
+    "googleDriveId": "1J286TggBTj6Sq-AU4acgPdNMXCuntVRW",
+    "previewUrl": "https://drive.google.com/file/d/1J286TggBTj6Sq-AU4acgPdNMXCuntVRW/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=1J286TggBTj6Sq-AU4acgPdNMXCuntVRW",
+    "localFile": null,
+    "ddc": "658.4038"
   },
   {
     "id": "book-1pmcs_x4k2kl",
-    "title": "Coding for Beginners the Simplified Guide to Learn Coding Step by Step and Become an Expert Quickly",
-    "author": "Teknologi & Komputasi",
-    "category": "Dasar Pemrograman",
+    "title": "Coding for Beginners: A Simplified Guide",
+    "author": "Pustaka Pemrograman",
+    "category": "Sistem Informasi",
     "tags": [
-      "teknologi",
-      "komputer"
+      "coding for beginners",
+      "dasar pemrograman",
+      "logika"
     ],
     "size": "PDF",
-    "description": "Buku panduan dan referensi komprehensif mengenai Coding for Beginners the Simplified Guide to Learn Coding Step by Step and Become an Expert Quickly untuk memperdalam pemahaman teknologi informasi dan rekayasa perangkat lunak.",
+    "description": "Panduan terstruktur untuk pemula yang ingin memulai karier di bidang rekayasa perangkat lunak tanpa latar belakang teknis.",
     "googleDriveId": "1Pmcs_x4K2kln9bnHPTCjIB0ML8OG1P8u",
     "previewUrl": "https://drive.google.com/file/d/1Pmcs_x4K2kln9bnHPTCjIB0ML8OG1P8u/preview",
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1Pmcs_x4K2kln9bnHPTCjIB0ML8OG1P8u",
-    "localFile": null
+    "localFile": null,
+    "callNumber": "DDC 004.068",
+    "catalogId": "AKSINU-LIB-083",
+    "isbn": "AKSINU-REF-083",
+    "ddc": "004.068"
   },
   {
     "id": "book-1awbko8amnzy",
     "title": "Coding Games from Scratch",
     "author": "Teknologi & Komputasi",
-    "category": "Dasar Pemrograman",
+    "category": "Sistem Informasi",
     "tags": [
       "teknologi",
       "komputer"
@@ -760,7 +1811,11 @@ const BOOKS_DATA = [
     "googleDriveId": "1awBkO8AMNzyk7zmoJgzv9zrE0LrMebQb",
     "previewUrl": "https://drive.google.com/file/d/1awBkO8AMNzyk7zmoJgzv9zrE0LrMebQb/preview",
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1awBkO8AMNzyk7zmoJgzv9zrE0LrMebQb",
-    "localFile": null
+    "localFile": null,
+    "callNumber": "DDC 004.068",
+    "catalogId": "AKSINU-LIB-084",
+    "isbn": "AKSINU-REF-084",
+    "ddc": "004.068"
   },
   {
     "id": "book-1kfylug8l0tn",
@@ -778,31 +1833,38 @@ const BOOKS_DATA = [
     "googleDriveId": "1KFylug8L0TNvV0GKxgZl5hMTaonUU-0S",
     "previewUrl": "https://drive.google.com/file/d/1KFylug8L0TNvV0GKxgZl5hMTaonUU-0S/preview",
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1KFylug8L0TNvV0GKxgZl5hMTaonUU-0S",
-    "localFile": null
+    "localFile": null,
+    "callNumber": "DDC 005.133",
+    "catalogId": "AKSINU-LIB-085",
+    "isbn": "AKSINU-REF-085",
+    "ddc": "005.133"
   },
   {
     "id": "book-1c8wcfg97m9y",
-    "title": "Computer Fundamental by Goel Anita",
+    "title": "Computer Fundamentals",
     "author": "Anita Goel",
-    "category": "Dasar Komputer",
+    "category": "Sistem Operasi & Arsitektur",
     "tags": [
       "computer fundamentals",
-      "hardware",
-      "arsitektur komputer",
-      "sistem"
+      "anita goel",
+      "dasar komputer"
     ],
     "size": "PDF",
-    "description": "Fondasi ilmu komputer, pengantar arsitektur hardware, sistem operasi, dan konsep dasar teknologi komputasi.",
+    "description": "Buku teks pengantar komprehensif arsitektur komputer, komponen CPU, memori, input-output, dan sistem operasi.",
     "googleDriveId": "1C8wcfg97M9YXl7CAAhqNX0bmQvno-fAY",
     "previewUrl": "https://drive.google.com/file/d/1C8wcfg97M9YXl7CAAhqNX0bmQvno-fAY/preview",
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1C8wcfg97M9YXl7CAAhqNX0bmQvno-fAY",
-    "localFile": null
+    "localFile": null,
+    "callNumber": "DDC 005.43",
+    "catalogId": "AKSINU-LIB-086",
+    "isbn": "978-8131733097",
+    "ddc": "005.43"
   },
   {
     "id": "book-1yj4pz1wjjmz",
     "title": "Computer Programming 1",
     "author": "Teknologi & Komputasi",
-    "category": "Dasar Pemrograman",
+    "category": "Sistem Informasi",
     "tags": [
       "teknologi",
       "komputer"
@@ -812,29 +1874,17 @@ const BOOKS_DATA = [
     "googleDriveId": "1YJ4pZ1WjjmzEYbkq-VS7jUrDKkqO4mLE",
     "previewUrl": "https://drive.google.com/file/d/1YJ4pZ1WjjmzEYbkq-VS7jUrDKkqO4mLE/preview",
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1YJ4pZ1WjjmzEYbkq-VS7jUrDKkqO4mLE",
-    "localFile": null
-  },
-  {
-    "id": "book-1shkot20zgvu",
-    "title": "Computer Science",
-    "author": "Teknologi & Komputasi",
-    "category": "Dasar Pemrograman",
-    "tags": [
-      "teknologi",
-      "komputer"
-    ],
-    "size": "PDF",
-    "description": "Buku panduan dan referensi komprehensif mengenai Computer Science untuk memperdalam pemahaman teknologi informasi dan rekayasa perangkat lunak.",
-    "googleDriveId": "1Shkot20zGvuenqkYYRA-uojby9fQTSS6",
-    "previewUrl": "https://drive.google.com/file/d/1Shkot20zGvuenqkYYRA-uojby9fQTSS6/preview",
-    "downloadUrl": "https://drive.google.com/uc?export=download&id=1Shkot20zGvuenqkYYRA-uojby9fQTSS6",
-    "localFile": "ebook/595679242-Computer-Science.pdf"
+    "localFile": null,
+    "callNumber": "DDC 004.068",
+    "catalogId": "AKSINU-LIB-087",
+    "isbn": "AKSINU-REF-087",
+    "ddc": "004.068"
   },
   {
     "id": "book-1xd4xpdngklp",
     "title": "Concepts in Programming Languages",
     "author": "Teknologi & Komputasi",
-    "category": "Dasar Pemrograman",
+    "category": "Sistem Informasi",
     "tags": [
       "teknologi",
       "komputer"
@@ -844,13 +1894,39 @@ const BOOKS_DATA = [
     "googleDriveId": "1Xd4XpDNGKlPeUHT3HfnypbUTavCe48xh",
     "previewUrl": "https://drive.google.com/file/d/1Xd4XpDNGKlPeUHT3HfnypbUTavCe48xh/preview",
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1Xd4XpDNGKlPeUHT3HfnypbUTavCe48xh",
-    "localFile": null
+    "localFile": null,
+    "callNumber": "DDC 004.068",
+    "catalogId": "AKSINU-LIB-088",
+    "isbn": "AKSINU-REF-088",
+    "ddc": "004.068"
+  },
+  {
+    "id": "book-1shkot20zgvu",
+    "title": "Core Computer Science for the IB Diploma Program",
+    "author": "Kostas Dimitriou, Ph.D. & Markos Hatzitaskos, M.Sc.",
+    "category": "Jaringan Komputer",
+    "tags": [
+      "computer science",
+      "ib diploma",
+      "komputasi",
+      "dasar pemrograman"
+    ],
+    "size": "PDF",
+    "description": "Buku panduan kurikulum Computer Science internasional yang mencakup arsitektur sistem, jaringan, logika komputasi, dan rekayasa perangkat lunak.",
+    "googleDriveId": "1Shkot20zGvuenqkYYRA-uojby9fQTSS6",
+    "previewUrl": "https://drive.google.com/file/d/1Shkot20zGvuenqkYYRA-uojby9fQTSS6/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=1Shkot20zGvuenqkYYRA-uojby9fQTSS6",
+    "localFile": "ebook/Core-Computer-Science-IB-Diploma.pdf",
+    "callNumber": "DDC 004.6",
+    "catalogId": "AKSINU-LIB-089",
+    "isbn": "978-1780983110",
+    "ddc": "004.6"
   },
   {
     "id": "book-1ehylw3ra7qz",
     "title": "CSS Programing Web",
     "author": "Teknologi & Komputasi",
-    "category": "Dasar Web & Desain",
+    "category": "JavaScript & Web",
     "tags": [
       "html",
       "css",
@@ -862,13 +1938,17 @@ const BOOKS_DATA = [
     "googleDriveId": "1Ehylw3RA7QzPutX_8LodphOLhYOmxLc2",
     "previewUrl": "https://drive.google.com/file/d/1Ehylw3RA7QzPutX_8LodphOLhYOmxLc2/preview",
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1Ehylw3RA7QzPutX_8LodphOLhYOmxLc2",
-    "localFile": null
+    "localFile": null,
+    "callNumber": "DDC 005.276",
+    "catalogId": "AKSINU-LIB-090",
+    "isbn": "AKSINU-REF-090",
+    "ddc": "005.276"
   },
   {
     "id": "book-1qxzyj8l9cz3",
     "title": "CSS Tutorial",
     "author": "Teknologi & Komputasi",
-    "category": "Dasar Web & Desain",
+    "category": "JavaScript & Web",
     "tags": [
       "html",
       "css",
@@ -880,45 +1960,61 @@ const BOOKS_DATA = [
     "googleDriveId": "1qXzYJ8L9Cz3rFm857Vj26Dfa52qApFqs",
     "previewUrl": "https://drive.google.com/file/d/1qXzYJ8L9Cz3rFm857Vj26Dfa52qApFqs/preview",
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1qXzYJ8L9Cz3rFm857Vj26Dfa52qApFqs",
-    "localFile": null
+    "localFile": null,
+    "callNumber": "DDC 005.276",
+    "catalogId": "AKSINU-LIB-091",
+    "isbn": "AKSINU-REF-091",
+    "ddc": "005.276"
   },
   {
-    "id": "book-1vncc9faueht",
-    "title": "Daniel T Larose Discovering Knowledge in Data an Introduction to Data Mining Wiley Interscience 2004 1",
-    "author": "Teknologi & Komputasi",
-    "category": "Dasar Pemrograman",
+    "id": "book-16xc1yz40qet",
+    "title": "Cyber Security Governance Web",
+    "author": "Pustaka AKSINU",
+    "category": "JavaScript & Web",
+    "callNumber": "DDC 005.276",
+    "catalogId": "AKSINU-LIB-092",
+    "isbn": "AKSINU-REF-092",
     "tags": [
-      "teknologi",
-      "komputer"
+      "javascript",
+      "web",
+      "frontend",
+      "fullstack"
     ],
     "size": "PDF",
-    "description": "Buku panduan dan referensi komprehensif mengenai Daniel T Larose Discovering Knowledge in Data an Introduction to Data Mining Wiley Interscience 2004 1 untuk memperdalam pemahaman teknologi informasi dan rekayasa perangkat lunak.",
-    "googleDriveId": "1VNCc9FAUehtUnPKxrBszamC4NVoyUO9C",
-    "previewUrl": "https://drive.google.com/file/d/1VNCc9FAUehtUnPKxrBszamC4NVoyUO9C/preview",
-    "downloadUrl": "https://drive.google.com/uc?export=download&id=1VNCc9FAUehtUnPKxrBszamC4NVoyUO9C",
-    "localFile": null
+    "description": "Pelajari arsitektur dan sintaks modern ekosistem web interaktif melalui Cyber Security Governance Web.",
+    "googleDriveId": "16Xc1Yz40qETQ_llOHFjCUcSYoVw10p9T",
+    "previewUrl": "https://drive.google.com/file/d/16Xc1Yz40qETQ_llOHFjCUcSYoVw10p9T/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=16Xc1Yz40qETQ_llOHFjCUcSYoVw10p9T",
+    "localFile": null,
+    "ddc": "005.276"
   },
   {
-    "id": "book-1ukcizu7iafh",
-    "title": "Dasar Manajemen Bisnis",
-    "author": "Teknologi & Komputasi",
-    "category": "Dasar Pemrograman",
+    "id": "book-1cixue6dbply",
+    "title": "Dart Apprentice: Beyond the Basics",
+    "author": "Jonathan Sande",
+    "category": "Mobile Development",
     "tags": [
-      "teknologi",
-      "komputer"
+      "dart",
+      "flutter",
+      "oop",
+      "functional programming"
     ],
     "size": "PDF",
-    "description": "Buku panduan dan referensi komprehensif mengenai Dasar Manajemen Bisnis untuk memperdalam pemahaman teknologi informasi dan rekayasa perangkat lunak.",
-    "googleDriveId": "1UKCIZu7iAFHZI9gAL9Ic8JMrr6d7wEU9",
-    "previewUrl": "https://drive.google.com/file/d/1UKCIZu7iAFHZI9gAL9Ic8JMrr6d7wEU9/preview",
-    "downloadUrl": "https://drive.google.com/uc?export=download&id=1UKCIZu7iAFHZI9gAL9Ic8JMrr6d7wEU9",
-    "localFile": null
+    "description": "Eksplorasi mendalam bahasa Dart tingkat lanjut: generics, asynchronous programming, concurrency, dan metakoding.",
+    "googleDriveId": "1CIXue6DBply2J3Xvmzg142ut96E66Ymd",
+    "previewUrl": "https://drive.google.com/file/d/1CIXue6DBply2J3Xvmzg142ut96E66Ymd/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=1CIXue6DBply2J3Xvmzg142ut96E66Ymd",
+    "localFile": null,
+    "callNumber": "DDC 005.268",
+    "catalogId": "AKSINU-LIB-093",
+    "isbn": "AKSINU-REF-093",
+    "ddc": "005.268"
   },
   {
     "id": "book-1q0hhwsslrwc",
     "title": "Dasar Pemograman Golang",
     "author": "Teknologi & Komputasi",
-    "category": "Dasar Pemrograman",
+    "category": "Sistem Informasi",
     "tags": [
       "teknologi",
       "komputer"
@@ -928,11 +2024,165 @@ const BOOKS_DATA = [
     "googleDriveId": "1Q0HhwSslRwCpfWI7ItoUNPrslRgU4PBV",
     "previewUrl": "https://drive.google.com/file/d/1Q0HhwSslRwCpfWI7ItoUNPrslRgU4PBV/preview",
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1Q0HhwSslRwCpfWI7ItoUNPrslRgU4PBV",
-    "localFile": null
+    "localFile": null,
+    "callNumber": "DDC 004.068",
+    "catalogId": "AKSINU-LIB-094",
+    "isbn": "AKSINU-REF-094",
+    "ddc": "004.068"
+  },
+  {
+    "id": "book-1-rd7rfkogi2",
+    "title": "Dasar Pemrograman Mobile dengan Kotlin",
+    "author": "Pustaka AKSINU",
+    "category": "Mobile Development",
+    "callNumber": "DDC 005.268",
+    "catalogId": "AKSINU-LIB-095",
+    "isbn": "AKSINU-REF-095",
+    "tags": [
+      "mobile dev",
+      "aplikasi seluler",
+      "android",
+      "ios"
+    ],
+    "size": "PDF",
+    "description": "Pengembangan aplikasi mobile modern, antarmuka responsif, dan performa tinggi untuk Android & iOS.",
+    "googleDriveId": "1-RD7rFKOGi2XBQZSmTx0vhpukpHroIbf",
+    "previewUrl": "https://drive.google.com/file/d/1-RD7rFKOGi2XBQZSmTx0vhpukpHroIbf/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=1-RD7rFKOGi2XBQZSmTx0vhpukpHroIbf",
+    "localFile": null,
+    "ddc": "005.268"
+  },
+  {
+    "id": "book-1eesm37jsnz2",
+    "title": "Dasar Pemrograman Web Terpadu (HTML, CSS & JavaScript)",
+    "author": "Pustaka AKSINU",
+    "category": "JavaScript & Web",
+    "callNumber": "DDC 005.276",
+    "catalogId": "AKSINU-LIB-096",
+    "isbn": "AKSINU-REF-096",
+    "tags": [
+      "javascript",
+      "web",
+      "frontend",
+      "fullstack"
+    ],
+    "size": "PDF",
+    "description": "Pelajari arsitektur dan sintaks modern ekosistem web interaktif melalui Ojs+pemrograman+web.",
+    "googleDriveId": "1eeSM37JSNz2pMrjodc12y8NX5n3oVBTl",
+    "previewUrl": "https://drive.google.com/file/d/1eeSM37JSNz2pMrjodc12y8NX5n3oVBTl/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=1eeSM37JSNz2pMrjodc12y8NX5n3oVBTl",
+    "localFile": null,
+    "ddc": "005.276"
+  },
+  {
+    "id": "book-1ukcizu7iafh",
+    "title": "Dasar-Dasar Manajemen Bisnis Modern",
+    "author": "Pustaka Manajemen",
+    "category": "Manajemen & Bisnis",
+    "tags": [
+      "manajemen bisnis",
+      "dasar bisnis"
+    ],
+    "size": "PDF",
+    "description": "Prinsip POAC (Planning, Organizing, Actuating, Controlling) dalam mengelola unit bisnis di era ekonomi informasi.",
+    "googleDriveId": "1UKCIZu7iAFHZI9gAL9Ic8JMrr6d7wEU9",
+    "previewUrl": "https://drive.google.com/file/d/1UKCIZu7iAFHZI9gAL9Ic8JMrr6d7wEU9/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=1UKCIZu7iAFHZI9gAL9Ic8JMrr6d7wEU9",
+    "localFile": null,
+    "callNumber": "DDC 658.4038",
+    "catalogId": "AKSINU-LIB-097",
+    "isbn": "AKSINU-REF-097",
+    "ddc": "658.4038"
+  },
+  {
+    "id": "book-1dokb8mw9b6b",
+    "title": "Dasar-Dasar Pemrograman Mobile: Pengembangan Aplikasi Seluler",
+    "author": "Pustaka AKSINU",
+    "category": "Mobile Development",
+    "callNumber": "DDC 005.268",
+    "catalogId": "AKSINU-LIB-098",
+    "isbn": "AKSINU-REF-098",
+    "tags": [
+      "mobile dev",
+      "aplikasi seluler",
+      "android",
+      "ios"
+    ],
+    "size": "PDF",
+    "description": "Pengembangan aplikasi mobile modern, antarmuka responsif, dan performa tinggi untuk Android & iOS.",
+    "googleDriveId": "1Dokb8mW9B6BcLdI1halTvG9B_mvK6JUM",
+    "previewUrl": "https://drive.google.com/file/d/1Dokb8mW9B6BcLdI1halTvG9B_mvK6JUM/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=1Dokb8mW9B6BcLdI1halTvG9B_mvK6JUM",
+    "localFile": null,
+    "ddc": "005.268"
+  },
+  {
+    "id": "book-1serti6tt-8n",
+    "title": "Dasar-Dasar Sistem Basis Data Relasional",
+    "author": "Pustaka AKSINU",
+    "category": "Database & SQL",
+    "callNumber": "DDC 005.74",
+    "catalogId": "AKSINU-LIB-099",
+    "isbn": "AKSINU-REF-099",
+    "tags": [
+      "basis data",
+      "database",
+      "sql",
+      "dbms"
+    ],
+    "size": "PDF",
+    "description": "Pengelolaan basis data, pemodelan data relasional, dan optimasi kueri untuk pemrosesan skala besar.",
+    "googleDriveId": "1SERTI6Tt-8nYR3GotONlFjLRu_4zmUjx",
+    "previewUrl": "https://drive.google.com/file/d/1SERTI6Tt-8nYR3GotONlFjLRu_4zmUjx/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=1SERTI6Tt-8nYR3GotONlFjLRu_4zmUjx",
+    "localFile": null,
+    "ddc": "005.74"
+  },
+  {
+    "id": "book-1wrqo8j2-g3-",
+    "title": "Dasar-Dasar Statistika untuk Penelitian",
+    "author": "Anisa, M.Si.",
+    "category": "Python & Data Science",
+    "callNumber": "DDC 005.133",
+    "catalogId": "AKSINU-LIB-100",
+    "isbn": "AKSINU-REF-100",
+    "tags": [
+      "metode penelitian",
+      "riset",
+      "kualitatif",
+      "kuantitatif"
+    ],
+    "size": "PDF",
+    "description": "Buku pedoman metodologi penelitian dan penyusunan karya ilmiah akademis mengenai Anisa , Buku Dasar Dasar Statistika untuk Penelitian.",
+    "googleDriveId": "1wrqo8j2-g3-GpFlVHha5Jz3CcMq4eQEt",
+    "previewUrl": "https://drive.google.com/file/d/1wrqo8j2-g3-GpFlVHha5Jz3CcMq4eQEt/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=1wrqo8j2-g3-GpFlVHha5Jz3CcMq4eQEt",
+    "localFile": null,
+    "ddc": "005.133"
+  },
+  {
+    "id": "book-1xx6y1hp2zlm",
+    "title": "Dasar-Dasar Statistika: Konsep dan Metode Analisis",
+    "author": "Nurhayati",
+    "category": "Python & Data Science",
+    "callNumber": "DDC 005.133",
+    "catalogId": "AKSINU-LIB-101",
+    "isbn": "AKSINU-REF-101",
+    "tags": [
+      "teknologi",
+      "komputer"
+    ],
+    "size": "PDF",
+    "description": "Buku panduan dan referensi mengenai Buku Nurhayati Dasar Dasar Statistika Konsep dan Metode Analisis untuk memperdalam literasi teknologi informasi.",
+    "googleDriveId": "1XX6y1hp2ZLm-xP8sU5hqjv0vsqGmIJD6",
+    "previewUrl": "https://drive.google.com/file/d/1XX6y1hp2ZLm-xP8sU5hqjv0vsqGmIJD6/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=1XX6y1hp2ZLm-xP8sU5hqjv0vsqGmIJD6",
+    "localFile": null,
+    "ddc": "005.133"
   },
   {
     "id": "book-19rdegryad-m",
-    "title": "Data Analytics and Ai",
+    "title": "Data Analytics and Artificial Intelligence",
     "author": "Teknologi & Komputasi",
     "category": "AI & Machine Learning",
     "tags": [
@@ -946,12 +2196,16 @@ const BOOKS_DATA = [
     "googleDriveId": "19rDEGRyad-MH-nQ4n5B2DfN917wDDBiR",
     "previewUrl": "https://drive.google.com/file/d/19rDEGRyad-MH-nQ4n5B2DfN917wDDBiR/preview",
     "downloadUrl": "https://drive.google.com/uc?export=download&id=19rDEGRyad-MH-nQ4n5B2DfN917wDDBiR",
-    "localFile": null
+    "localFile": null,
+    "callNumber": "DDC 006.3",
+    "catalogId": "AKSINU-LIB-102",
+    "isbn": "AKSINU-REF-102",
+    "ddc": "006.3"
   },
   {
     "id": "book-1btkisk2ney1",
-    "title": "Data Analytics and Machine Learning Pushpa Singh Asha Rani Mishra Payal Garg",
-    "author": "Teknologi & Komputasi",
+    "title": "Data Analytics and Machine Learning: Theoretical Frameworks",
+    "author": "Pushpa Singh, Asha Rani Mishra & Payal Garg",
     "category": "AI & Machine Learning",
     "tags": [
       "ai",
@@ -964,13 +2218,40 @@ const BOOKS_DATA = [
     "googleDriveId": "1BtkiSk2nEY1fMidochA26-h5_8-JQhDY",
     "previewUrl": "https://drive.google.com/file/d/1BtkiSk2nEY1fMidochA26-h5_8-JQhDY/preview",
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1BtkiSk2nEY1fMidochA26-h5_8-JQhDY",
-    "localFile": null
+    "localFile": null,
+    "callNumber": "DDC 006.3",
+    "catalogId": "AKSINU-LIB-103",
+    "isbn": "AKSINU-REF-103",
+    "ddc": "006.3"
+  },
+  {
+    "id": "book-1q2qdcejkopg",
+    "title": "Data Analytics using Python",
+    "author": "Bharti Motwani",
+    "category": "Python & Data Science",
+    "tags": [
+      "python",
+      "data analytics",
+      "data science",
+      "pandas",
+      "visualisasi"
+    ],
+    "size": "PDF",
+    "description": "Panduan analitika data terapan menggunakan Python untuk pemrosesan dataset, analisis statistik, visualisasi, dan pemodelan prediktif.",
+    "googleDriveId": "1Q2qDCEJkopG6tcbeTucJ0Ci4Vr2dEzVk",
+    "previewUrl": "https://drive.google.com/file/d/1Q2qDCEJkopG6tcbeTucJ0Ci4Vr2dEzVk/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=1Q2qDCEJkopG6tcbeTucJ0Ci4Vr2dEzVk",
+    "localFile": "ebook/Data-Analytics-using-Python.pdf",
+    "callNumber": "DDC 005.133",
+    "catalogId": "AKSINU-LIB-104",
+    "isbn": "978-9389520446",
+    "ddc": "005.133"
   },
   {
     "id": "book-1mv7a-xiteay",
-    "title": "Data Analytics Concepts Techniques and a 1",
+    "title": "Data Analytics: Concepts, Techniques, and Applications",
     "author": "Teknologi & Komputasi",
-    "category": "AI & Machine Learning",
+    "category": "Python & Data Science",
     "tags": [
       "ai",
       "machine learning",
@@ -982,25 +2263,71 @@ const BOOKS_DATA = [
     "googleDriveId": "1Mv7a-XitEAYXs8G5GDP7yOU3qo9k-yt7",
     "previewUrl": "https://drive.google.com/file/d/1Mv7a-XitEAYXs8G5GDP7yOU3qo9k-yt7/preview",
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1Mv7a-XitEAYXs8G5GDP7yOU3qo9k-yt7",
-    "localFile": null
+    "localFile": null,
+    "callNumber": "DDC 005.133",
+    "catalogId": "AKSINU-LIB-105",
+    "isbn": "AKSINU-REF-105",
+    "ddc": "005.133"
   },
   {
-    "id": "book-1q2qdcejkopg",
-    "title": "Data Analytics using Python",
-    "author": "Teknologi & Komputasi",
+    "id": "book-1dzkdit4tb7s",
+    "title": "Data Mining & Pola Komputasi Data",
+    "author": "Pustaka AKSINU",
     "category": "Python & Data Science",
+    "callNumber": "DDC 005.133",
+    "catalogId": "AKSINU-LIB-106",
+    "isbn": "AKSINU-REF-106",
     "tags": [
-      "python",
-      "data science",
-      "pemrograman",
-      "analisis data"
+      "teknologi",
+      "komputer"
     ],
     "size": "PDF",
-    "description": "Panduan praktis penguasaan bahasa pemrograman Python dan teknik analisis komputasi modern melalui Data Analytics using Python.",
-    "googleDriveId": "1Q2qDCEJkopG6tcbeTucJ0Ci4Vr2dEzVk",
-    "previewUrl": "https://drive.google.com/file/d/1Q2qDCEJkopG6tcbeTucJ0Ci4Vr2dEzVk/preview",
-    "downloadUrl": "https://drive.google.com/uc?export=download&id=1Q2qDCEJkopG6tcbeTucJ0Ci4Vr2dEzVk",
-    "localFile": "ebook/733034218-Data-Analytics-using-Python.pdf"
+    "description": "Buku panduan dan referensi mengenai Bc Data Mining untuk memperdalam literasi teknologi informasi.",
+    "googleDriveId": "1dZkDit4tb7SePz41VXDnNtri2LxSJ8OZ",
+    "previewUrl": "https://drive.google.com/file/d/1dZkDit4tb7SePz41VXDnNtri2LxSJ8OZ/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=1dZkDit4tb7SePz41VXDnNtri2LxSJ8OZ",
+    "localFile": null,
+    "ddc": "005.133"
+  },
+  {
+    "id": "book-1io7zd_zzgdk",
+    "title": "Data Mining dan Penerapan Metode",
+    "author": "Pustaka AKSINU",
+    "category": "Python & Data Science",
+    "callNumber": "DDC 005.133",
+    "catalogId": "AKSINU-LIB-107",
+    "isbn": "AKSINU-REF-107",
+    "tags": [
+      "teknologi",
+      "komputer"
+    ],
+    "size": "PDF",
+    "description": "Buku panduan dan referensi mengenai Data Mining dan Penerapan Metode untuk memperdalam literasi teknologi informasi.",
+    "googleDriveId": "1io7Zd_ZZgDk4BSUkw83142AslptogiBv",
+    "previewUrl": "https://drive.google.com/file/d/1io7Zd_ZZgDk4BSUkw83142AslptogiBv/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=1io7Zd_ZZgDk4BSUkw83142AslptogiBv",
+    "localFile": null,
+    "ddc": "005.133"
+  },
+  {
+    "id": "book-1pos1yulhmth",
+    "title": "Data Mining: Memahami Pola di Balik Angka",
+    "author": "Pustaka AKSINU",
+    "category": "Python & Data Science",
+    "callNumber": "DDC 005.133",
+    "catalogId": "AKSINU-LIB-108",
+    "isbn": "AKSINU-REF-108",
+    "tags": [
+      "teknologi",
+      "komputer"
+    ],
+    "size": "PDF",
+    "description": "Buku panduan dan referensi mengenai 24 06 37 Ebook Data Mining (memahami Pola di Balik Angka) untuk memperdalam literasi teknologi informasi.",
+    "googleDriveId": "1poS1YuLHMTHS7QLgk5toXPqDQYsqi_wu",
+    "previewUrl": "https://drive.google.com/file/d/1poS1YuLHMTHS7QLgk5toXPqDQYsqi_wu/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=1poS1YuLHMTHS7QLgk5toXPqDQYsqi_wu",
+    "localFile": null,
+    "ddc": "005.133"
   },
   {
     "id": "book-1qgfxcziswin",
@@ -1018,7 +2345,11 @@ const BOOKS_DATA = [
     "googleDriveId": "1QGFxcZIsWinp2AWk9tCw56K0vmbBdblp",
     "previewUrl": "https://drive.google.com/file/d/1QGFxcZIsWinp2AWk9tCw56K0vmbBdblp/preview",
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1QGFxcZIsWinp2AWk9tCw56K0vmbBdblp",
-    "localFile": null
+    "localFile": null,
+    "callNumber": "DDC 005.13",
+    "catalogId": "AKSINU-LIB-109",
+    "isbn": "AKSINU-REF-109",
+    "ddc": "005.13"
   },
   {
     "id": "book-1l7tygfju1kp",
@@ -1036,59 +2367,78 @@ const BOOKS_DATA = [
     "googleDriveId": "1l7tYGFJu1kpQl8qAYielJcRafc8lL9-g",
     "previewUrl": "https://drive.google.com/file/d/1l7tYGFJu1kpQl8qAYielJcRafc8lL9-g/preview",
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1l7tYGFJu1kpQl8qAYielJcRafc8lL9-g",
-    "localFile": null
+    "localFile": null,
+    "callNumber": "DDC 005.268",
+    "catalogId": "AKSINU-LIB-110",
+    "isbn": "AKSINU-REF-110",
+    "ddc": "005.268"
   },
   {
     "id": "book-1q0ofr-qnhxx",
-    "title": "Data Structures and Algorithms Made Easy Data Structures and Algorithmic Puzzles",
-    "author": "Teknologi & Komputasi",
+    "title": "Data Structures and Algorithms Made Easy",
+    "author": "Narasimha Karumanchi",
     "category": "Struktur Data & Algoritma",
     "tags": [
       "struktur data",
       "algoritma",
-      "efisiensi",
-      "komputasi"
+      "coding interview",
+      "karumanchi"
     ],
     "size": "PDF",
-    "description": "Konsep struktur data esensial dan teknik algoritma optimal untuk efisiensi pemrosesan data.",
+    "description": "Panduan legendaris pemecahan masalah algoritma, kompleksitas waktu/ruang, dan struktur data komprehensif untuk wawancara teknis.",
     "googleDriveId": "1q0OFr-QNhxX6nWsRoVP3qwQEuY8AR6bX",
     "previewUrl": "https://drive.google.com/file/d/1q0OFr-QNhxX6nWsRoVP3qwQEuY8AR6bX/preview",
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1q0OFr-QNhxX6nWsRoVP3qwQEuY8AR6bX",
-    "localFile": "ebook/559719565-Data-Structures-and-Algorithms-Made-Easy-Data-Structures-and-Algorithmic-Puzzles-PDFDrive-com.pdf"
+    "localFile": "ebook/Data-Structures-and-Algorithms-Made-Easy.pdf",
+    "callNumber": "DDC 005.13",
+    "catalogId": "AKSINU-LIB-111",
+    "isbn": "978-8192107516",
+    "ddc": "005.13"
   },
   {
     "id": "book-1jl_kolox6ji",
-    "title": "Data Structures and Algorithms with Python 100 Coding Q a Code of Code by Cakal Yasin 1",
-    "author": "Teknologi & Komputasi",
+    "title": "Data Structures and Algorithms with Python: 100 Coding Q&A",
+    "author": "Yasin Cakal",
     "category": "Python & Data Science",
     "tags": [
       "python",
-      "data science",
-      "pemrograman",
-      "analisis data"
+      "struktur data",
+      "algoritma",
+      "coding challenge"
     ],
     "size": "PDF",
-    "description": "Panduan praktis penguasaan bahasa pemrograman Python dan teknik analisis komputasi modern melalui Data Structures and Algorithms with Python 100 Coding Q a Code of Code by Cakal Yasin 1.",
+    "description": "Kompilasi 100 soal latihan dan pembahasan algoritma serta struktur data menggunakan bahasa Python.",
     "googleDriveId": "1JL_kOLox6JIvcth5CDsX8gsKyVYwLXY1",
     "previewUrl": "https://drive.google.com/file/d/1JL_kOLox6JIvcth5CDsX8gsKyVYwLXY1/preview",
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1JL_kOLox6JIvcth5CDsX8gsKyVYwLXY1",
-    "localFile": null
+    "localFile": null,
+    "callNumber": "DDC 005.133",
+    "catalogId": "AKSINU-LIB-112",
+    "isbn": "AKSINU-REF-112",
+    "ddc": "005.133"
   },
   {
     "id": "book-1udeccefgwgt",
-    "title": "Data Warehousing Data Mining",
-    "author": "Teknologi & Komputasi",
-    "category": "Dasar Pemrograman",
+    "title": "Data Warehousing & Data Mining",
+    "author": "Pustaka AKSINU",
+    "category": "Python & Data Science",
     "tags": [
-      "teknologi",
-      "komputer"
+      "data warehouse",
+      "data mining",
+      "olap",
+      "etl",
+      "business intelligence"
     ],
     "size": "PDF",
-    "description": "Buku panduan dan referensi komprehensif mengenai Data Warehousing Data Mining untuk memperdalam pemahaman teknologi informasi dan rekayasa perangkat lunak.",
+    "description": "Konsep arsitektur data warehouse, skema bintang/snowflake, proses ETL, dan teknik penggalian data untuk analitika bisnis.",
     "googleDriveId": "1UdeCCEfGwgtAn25cfr5B6kmZje-QEQuI",
     "previewUrl": "https://drive.google.com/file/d/1UdeCCEfGwgtAn25cfr5B6kmZje-QEQuI/preview",
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1UdeCCEfGwgtAn25cfr5B6kmZje-QEQuI",
-    "localFile": null
+    "localFile": null,
+    "callNumber": "DDC 005.133",
+    "catalogId": "AKSINU-LIB-113",
+    "isbn": "AKSINU-REF-113",
+    "ddc": "005.133"
   },
   {
     "id": "book-1g-lfdfoymgc",
@@ -1106,7 +2456,11 @@ const BOOKS_DATA = [
     "googleDriveId": "1G-lfdFOYMgC6bWwNNwsL3Dx9FRNa3K9p",
     "previewUrl": "https://drive.google.com/file/d/1G-lfdFOYMgC6bWwNNwsL3Dx9FRNa3K9p/preview",
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1G-lfdFOYMgC6bWwNNwsL3Dx9FRNa3K9p",
-    "localFile": null
+    "localFile": null,
+    "callNumber": "DDC 005.276",
+    "catalogId": "AKSINU-LIB-114",
+    "isbn": "AKSINU-REF-114",
+    "ddc": "005.276"
   },
   {
     "id": "book-1bvsohremxuf",
@@ -1124,7 +2478,31 @@ const BOOKS_DATA = [
     "googleDriveId": "1bvSoHremxUf4nkFVJi6MWTF4X7vvssnX",
     "previewUrl": "https://drive.google.com/file/d/1bvSoHremxUf4nkFVJi6MWTF4X7vvssnX/preview",
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1bvSoHremxUf4nkFVJi6MWTF4X7vvssnX",
-    "localFile": null
+    "localFile": null,
+    "callNumber": "DDC 006.3",
+    "catalogId": "AKSINU-LIB-115",
+    "isbn": "AKSINU-REF-115",
+    "ddc": "006.3"
+  },
+  {
+    "id": "book-11gbsrrhuzma",
+    "title": "Design Thinking UI/UX: Teori dan Praktik Antarmuka Pengguna",
+    "author": "Pustaka AKSINU",
+    "category": "UI/UX & Desain",
+    "callNumber": "DDC 006.6",
+    "catalogId": "AKSINU-LIB-116",
+    "isbn": "AKSINU-REF-116",
+    "tags": [
+      "teknologi",
+      "komputer"
+    ],
+    "size": "PDF",
+    "description": "Buku panduan dan referensi mengenai Design+thinking+uiux+teori+dan+praktik+preview untuk memperdalam literasi teknologi informasi.",
+    "googleDriveId": "11gbSrrHuzMaxqnyv5cxlru_ZpxEAqc60",
+    "previewUrl": "https://drive.google.com/file/d/11gbSrrHuzMaxqnyv5cxlru_ZpxEAqc60/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=11gbSrrHuzMaxqnyv5cxlru_ZpxEAqc60",
+    "localFile": null,
+    "ddc": "006.6"
   },
   {
     "id": "book-1mbmtic9tj5e",
@@ -1142,113 +2520,185 @@ const BOOKS_DATA = [
     "googleDriveId": "1MbMtIc9Tj5Ektp7tX8UHgwSHOE4xRD30",
     "previewUrl": "https://drive.google.com/file/d/1MbMtIc9Tj5Ektp7tX8UHgwSHOE4xRD30/preview",
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1MbMtIc9Tj5Ektp7tX8UHgwSHOE4xRD30",
-    "localFile": null
+    "localFile": null,
+    "callNumber": "DDC 005.268",
+    "catalogId": "AKSINU-LIB-117",
+    "isbn": "AKSINU-REF-117",
+    "ddc": "005.268"
+  },
+  {
+    "id": "book-1vncc9faueht",
+    "title": "Discovering Knowledge in Data: An Introduction to Data Mining",
+    "author": "Daniel T. Larose",
+    "category": "AI & Machine Learning",
+    "tags": [
+      "data mining",
+      "data science",
+      "machine learning",
+      "analytics"
+    ],
+    "size": "PDF",
+    "description": "Buku teks komprehensif Wiley mengenai teknik data mining, eksplorasi pola data, regresi, clustering, dan pohon keputusan.",
+    "googleDriveId": "1VNCc9FAUehtUnPKxrBszamC4NVoyUO9C",
+    "previewUrl": "https://drive.google.com/file/d/1VNCc9FAUehtUnPKxrBszamC4NVoyUO9C/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=1VNCc9FAUehtUnPKxrBszamC4NVoyUO9C",
+    "localFile": null,
+    "callNumber": "DDC 006.3",
+    "catalogId": "AKSINU-LIB-118",
+    "isbn": "978-0470908747",
+    "ddc": "006.3"
   },
   {
     "id": "book-1ajdoksszkan",
-    "title": "Doing Math with Python En",
-    "author": "Teknologi & Komputasi",
+    "title": "Doing Math with Python",
+    "author": "Amit Saha",
     "category": "Python & Data Science",
     "tags": [
       "python",
-      "data science",
-      "pemrograman",
-      "analisis data"
+      "matematika",
+      "sympy",
+      "kalkulus"
     ],
     "size": "PDF",
-    "description": "Panduan praktis penguasaan bahasa pemrograman Python dan teknik analisis komputasi modern melalui Doing Math with Python En.",
+    "description": "Pemanfaatan Python untuk eksplorasi aljabar, statistik, kalkulus, dan visualisasi grafik matematika interaktif.",
     "googleDriveId": "1AjdOKsSZkaNoXTsmqjr03VmX3Tv_oCUt",
     "previewUrl": "https://drive.google.com/file/d/1AjdOKsSZkaNoXTsmqjr03VmX3Tv_oCUt/preview",
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1AjdOKsSZkaNoXTsmqjr03VmX3Tv_oCUt",
-    "localFile": null
+    "localFile": null,
+    "callNumber": "DDC 005.133",
+    "catalogId": "AKSINU-LIB-119",
+    "isbn": "AKSINU-REF-119",
+    "ddc": "005.133"
   },
   {
-    "id": "book-175qal7-w2fd",
-    "title": "Dokumen Pub JavaScript for Impatient Programmers Z 5657019",
-    "author": "Teknologi & Komputasi",
-    "category": "JavaScript & Web",
-    "tags": [
-      "javascript",
-      "web",
-      "frontend",
-      "fullstack"
-    ],
-    "size": "PDF",
-    "description": "Pelajari arsitektur dan sintaks modern ekosistem web interaktif melalui buku Dokumen Pub JavaScript for Impatient Programmers Z 5657019.",
-    "googleDriveId": "175qal7-W2FDzri1I95FNi6kcaGuo-AyZ",
-    "previewUrl": "https://drive.google.com/file/d/175qal7-W2FDzri1I95FNi6kcaGuo-AyZ/preview",
-    "downloadUrl": "https://drive.google.com/uc?export=download&id=175qal7-W2FDzri1I95FNi6kcaGuo-AyZ",
-    "localFile": null
-  },
-  {
-    "id": "book-11qakpnmhvau",
-    "title": "E Book Pemrograman Berbasis Web",
-    "author": "Teknologi & Komputasi",
-    "category": "Dasar Pemrograman",
+    "id": "book-1ocp_awh5bkh",
+    "title": "English for Information Systems",
+    "author": "Pustaka AKSINU",
+    "category": "Sistem Informasi",
+    "callNumber": "DDC 004.068",
+    "catalogId": "AKSINU-LIB-120",
+    "isbn": "AKSINU-REF-120",
     "tags": [
       "teknologi",
       "komputer"
     ],
     "size": "PDF",
-    "description": "Buku panduan dan referensi komprehensif mengenai E Book Pemrograman Berbasis Web untuk memperdalam pemahaman teknologi informasi dan rekayasa perangkat lunak.",
-    "googleDriveId": "11QAKpnMhVaUwUua_WsswxktBXkt8MJk8",
-    "previewUrl": "https://drive.google.com/file/d/11QAKpnMhVaUwUua_WsswxktBXkt8MJk8/preview",
-    "downloadUrl": "https://drive.google.com/uc?export=download&id=11QAKpnMhVaUwUua_WsswxktBXkt8MJk8",
-    "localFile": null
+    "description": "Buku panduan dan referensi mengenai Buku English for Hotel Information Systems (all) untuk memperdalam literasi teknologi informasi.",
+    "googleDriveId": "1ocp_AWH5BKhHSYkZ8DzD62S5uUBqvvC2",
+    "previewUrl": "https://drive.google.com/file/d/1ocp_AWH5BKhHSYkZ8DzD62S5uUBqvvC2/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=1ocp_AWH5BKhHSYkZ8DzD62S5uUBqvvC2",
+    "localFile": null,
+    "ddc": "004.068"
   },
   {
-    "id": "book-1h6w61zr-k3h",
-    "title": "Ebenezer D Simplified JavaScript for Very Important Programmers 2023",
-    "author": "Teknologi & Komputasi",
-    "category": "JavaScript & Web",
+    "id": "book-1lzrftza2qs7",
+    "title": "Etika Profesi Informatika di Era Digital",
+    "author": "Pustaka AKSINU",
+    "category": "Ilmu Komputer",
+    "callNumber": "DDC 004",
+    "catalogId": "AKSINU-LIB-121",
+    "isbn": "AKSINU-REF-121",
     "tags": [
-      "javascript",
-      "web",
-      "frontend",
-      "fullstack"
+      "computer science",
+      "ilmu komputer",
+      "etika profesi"
     ],
     "size": "PDF",
-    "description": "Pelajari arsitektur dan sintaks modern ekosistem web interaktif melalui buku Ebenezer D Simplified JavaScript for Very Important Programmers 2023.",
-    "googleDriveId": "1H6w61zR-k3huIoLIVNLGYDkeMbaTLfJ3",
-    "previewUrl": "https://drive.google.com/file/d/1H6w61zR-k3huIoLIVNLGYDkeMbaTLfJ3/preview",
-    "downloadUrl": "https://drive.google.com/uc?export=download&id=1H6w61zR-k3huIoLIVNLGYDkeMbaTLfJ3",
-    "localFile": null
+    "description": "Dasar-dasar ilmu komputer, etika profesi teknologi informasi, dan arsitektur sistem komputasi.",
+    "googleDriveId": "1LzrfTZA2qS72bmCvTl8lDLUFJ97I1eTS",
+    "previewUrl": "https://drive.google.com/file/d/1LzrfTZA2qS72bmCvTl8lDLUFJ97I1eTS/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=1LzrfTZA2qS72bmCvTl8lDLUFJ97I1eTS",
+    "localFile": null,
+    "ddc": "004"
   },
   {
-    "id": "book-1giq14ekkkfa",
-    "title": "Ebook Keamanan Sistem Informasi",
-    "author": "Teknologi & Komputasi",
-    "category": "Dasar Pemrograman",
-    "tags": [
-      "teknologi",
-      "komputer"
-    ],
-    "size": "PDF",
-    "description": "Buku panduan dan referensi komprehensif mengenai Ebook Keamanan Sistem Informasi untuk memperdalam pemahaman teknologi informasi dan rekayasa perangkat lunak.",
-    "googleDriveId": "1giq14EkKkFax7qJt9f1EPsxFUqhtp_aQ",
-    "previewUrl": "https://drive.google.com/file/d/1giq14EkKkFax7qJt9f1EPsxFUqhtp_aQ/preview",
-    "downloadUrl": "https://drive.google.com/uc?export=download&id=1giq14EkKkFax7qJt9f1EPsxFUqhtp_aQ",
-    "localFile": null
-  },
-  {
-    "id": "book-1xedqk-yhzhx",
-    "title": "Ebook Sistem Informasi",
-    "author": "Teknologi & Komputasi",
-    "category": "Dasar Pemrograman",
+    "id": "book-1z-m_fjhlt21",
+    "title": "Etika Profesi Teknologi Informasi & Komunikasi (EPTIK)",
+    "author": "Pustaka AKSINU",
+    "category": "Ilmu Komputer",
+    "callNumber": "DDC 004",
+    "catalogId": "AKSINU-LIB-122",
+    "isbn": "AKSINU-REF-122",
     "tags": [
       "teknologi",
       "komputer"
     ],
     "size": "PDF",
-    "description": "Buku panduan dan referensi komprehensif mengenai Ebook Sistem Informasi untuk memperdalam pemahaman teknologi informasi dan rekayasa perangkat lunak.",
-    "googleDriveId": "1xEDQk-yHZHxJdxmeTol2Su5QKYBPLeXy",
-    "previewUrl": "https://drive.google.com/file/d/1xEDQk-yHZHxJdxmeTol2Su5QKYBPLeXy/preview",
-    "downloadUrl": "https://drive.google.com/uc?export=download&id=1xEDQk-yHZHxJdxmeTol2Su5QKYBPLeXy",
-    "localFile": null
+    "description": "Buku panduan dan referensi mengenai Ebook Eptik Ok untuk memperdalam literasi teknologi informasi.",
+    "googleDriveId": "1z-M_fJhLt21724K_jaY_Bd5adu6TbXf8",
+    "previewUrl": "https://drive.google.com/file/d/1z-M_fJhLt21724K_jaY_Bd5adu6TbXf8/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=1z-M_fJhLt21724K_jaY_Bd5adu6TbXf8",
+    "localFile": null,
+    "ddc": "004"
+  },
+  {
+    "id": "book-1vasutxwpl8x",
+    "title": "Etika Profesi Teknologi Informasi dan Komunikasi",
+    "author": "Tim Dosen UBSI",
+    "category": "Ilmu Komputer",
+    "callNumber": "DDC 004",
+    "catalogId": "AKSINU-LIB-123",
+    "isbn": "AKSINU-REF-123",
+    "tags": [
+      "teknologi",
+      "komputer"
+    ],
+    "size": "PDF",
+    "description": "Buku materi etika profesi teknologi informasi, kode etik profesional TI, cyber law, dan tanggung jawab sosial informatika.",
+    "googleDriveId": "1vASUtXWpl8X8ceGrCSErqolEGSpQ21h_",
+    "previewUrl": "https://drive.google.com/file/d/1vASUtXWpl8X8ceGrCSErqolEGSpQ21h_/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=1vASUtXWpl8X8ceGrCSErqolEGSpQ21h_",
+    "localFile": null,
+    "ddc": "004"
+  },
+  {
+    "id": "book-19t-ki2emypy",
+    "title": "Etika, Privasi, dan Keamanan Sistem Informasi",
+    "author": "Tim Akademik AKSINU",
+    "category": "Sistem Informasi",
+    "tags": [
+      "etika profesi",
+      "privasi data",
+      "keamanan sistem informasi",
+      "cyber security"
+    ],
+    "size": "PDF",
+    "description": "Kajian etika profesi teknologi, perlindungan privasi data pengguna, dan tata kelola keamanan sistem informasi modern.",
+    "googleDriveId": "19T-KI2EmYPYbZy9QoGvKJO5rCWZf50Ke",
+    "previewUrl": "https://drive.google.com/file/d/19T-KI2EmYPYbZy9QoGvKJO5rCWZf50Ke/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=19T-KI2EmYPYbZy9QoGvKJO5rCWZf50Ke",
+    "localFile": null,
+    "callNumber": "DDC 004.068",
+    "catalogId": "AKSINU-LIB-124",
+    "isbn": "AKSINU-REF-124",
+    "ddc": "004.068"
+  },
+  {
+    "id": "book-16qn-vhdqzhj",
+    "title": "Flutter & Dart: Complete Guide for Building Native iOS & Android Apps",
+    "author": "Pustaka AKSINU",
+    "category": "Mobile Development",
+    "tags": [
+      "flutter",
+      "dart",
+      "ios",
+      "android",
+      "cross-platform"
+    ],
+    "size": "PDF",
+    "description": "Panduan lengkap arsitektur Flutter SDK dan bahasa Dart untuk menciptakan aplikasi mobile native berkualitas tinggi.",
+    "googleDriveId": "16qN-VhdQzhJK7vWmnS_z6clHhc7pq51H",
+    "previewUrl": "https://drive.google.com/file/d/16qN-VhdQzhJK7vWmnS_z6clHhc7pq51H/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=16qN-VhdQzhJK7vWmnS_z6clHhc7pq51H",
+    "localFile": null,
+    "callNumber": "DDC 005.268",
+    "catalogId": "AKSINU-LIB-125",
+    "isbn": "AKSINU-REF-125",
+    "ddc": "005.268"
   },
   {
     "id": "book-1j7krxlvlpp5",
-    "title": "Flutter Begginer Guide",
+    "title": "Flutter Beginner's Guide: Cross-Platform Mobile Development",
     "author": "Teknologi & Komputasi",
     "category": "Mobile Development",
     "tags": [
@@ -1262,43 +2712,34 @@ const BOOKS_DATA = [
     "googleDriveId": "1j7KrxLvlPP5f_Aq5JKSb2xtG7v5kGIhB",
     "previewUrl": "https://drive.google.com/file/d/1j7KrxLvlPP5f_Aq5JKSb2xtG7v5kGIhB/preview",
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1j7KrxLvlPP5f_Aq5JKSb2xtG7v5kGIhB",
-    "localFile": null
+    "localFile": null,
+    "callNumber": "DDC 005.268",
+    "catalogId": "AKSINU-LIB-126",
+    "isbn": "AKSINU-REF-126",
+    "ddc": "005.268"
   },
   {
-    "id": "book-16qn-vhdqzhj",
-    "title": "Flutter Dart a Complete Guide to the Flutter Sdk Flutter Framework for Building Native Ios and Android Apps Booksrack Net",
-    "author": "Teknologi & Komputasi",
+    "id": "book-1-o_ote6hnfm",
+    "title": "Flutter Engineering",
+    "author": "Majid Hajian",
     "category": "Mobile Development",
     "tags": [
-      "mobile",
-      "android",
-      "ios",
-      "aplikasi seluler"
+      "flutter",
+      "dart",
+      "mobile dev",
+      "arsitektur",
+      "state management"
     ],
     "size": "PDF",
-    "description": "Pengembangan aplikasi perangkat seluler modern, responsif, dan berperforma tinggi melalui Flutter Dart a Complete Guide to the Flutter Sdk Flutter Framework for Building Native Ios and Android Apps Booksrack Net.",
-    "googleDriveId": "16qN-VhdQzhJK7vWmnS_z6clHhc7pq51H",
-    "previewUrl": "https://drive.google.com/file/d/16qN-VhdQzhJK7vWmnS_z6clHhc7pq51H/preview",
-    "downloadUrl": "https://drive.google.com/uc?export=download&id=16qN-VhdQzhJK7vWmnS_z6clHhc7pq51H",
-    "localFile": null
-  },
-  {
-    "id": "book-1cyprm6ll1_c",
-    "title": "Flutter Nettrain",
-    "author": "Teknologi & Komputasi",
-    "category": "Mobile Development",
-    "tags": [
-      "mobile",
-      "android",
-      "ios",
-      "aplikasi seluler"
-    ],
-    "size": "PDF",
-    "description": "Pengembangan aplikasi perangkat seluler modern, responsif, dan berperforma tinggi melalui Flutter Nettrain.",
-    "googleDriveId": "1CyprM6lL1_CsvOQbkLIKB9NGoxD3YKul",
-    "previewUrl": "https://drive.google.com/file/d/1CyprM6lL1_CsvOQbkLIKB9NGoxD3YKul/preview",
-    "downloadUrl": "https://drive.google.com/uc?export=download&id=1CyprM6lL1_CsvOQbkLIKB9NGoxD3YKul",
-    "localFile": null
+    "description": "Buku rekayasa perangkat lunak tingkat mahir untuk merancang arsitektur aplikasi mobile Flutter yang modular, scalable, dan maintainable.",
+    "googleDriveId": "1-O_OtE6hnfMMGslVZR_26BVfO2HE-pnK",
+    "previewUrl": "https://drive.google.com/file/d/1-O_OtE6hnfMMGslVZR_26BVfO2HE-pnK/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=1-O_OtE6hnfMMGslVZR_26BVfO2HE-pnK",
+    "localFile": "ebook/Flutter-Engineering-2024.pdf",
+    "callNumber": "DDC 005.268",
+    "catalogId": "AKSINU-LIB-127",
+    "isbn": "978-1837637836",
+    "ddc": "005.268"
   },
   {
     "id": "book-14-7b1hq6knt",
@@ -1316,119 +2757,140 @@ const BOOKS_DATA = [
     "googleDriveId": "14-7b1hQ6KntVk9hpSdMGy4GJu1eIrhAl",
     "previewUrl": "https://drive.google.com/file/d/14-7b1hQ6KntVk9hpSdMGy4GJu1eIrhAl/preview",
     "downloadUrl": "https://drive.google.com/uc?export=download&id=14-7b1hQ6KntVk9hpSdMGy4GJu1eIrhAl",
-    "localFile": null
+    "localFile": null,
+    "callNumber": "DDC 006.3",
+    "catalogId": "AKSINU-LIB-128",
+    "isbn": "AKSINU-REF-128",
+    "ddc": "006.3"
   },
   {
     "id": "book-1g3ojqaygydy",
-    "title": "Full Stack Web Development",
-    "author": "Teknologi & Komputasi",
-    "category": "Dasar Pemrograman",
+    "title": "Full-Stack Web Development Essentials",
+    "author": "Pustaka AKSINU",
+    "category": "JavaScript & Web",
     "tags": [
-      "teknologi",
-      "komputer"
+      "fullstack",
+      "web development",
+      "frontend",
+      "backend"
     ],
     "size": "PDF",
-    "description": "Buku panduan dan referensi komprehensif mengenai Full Stack Web Development untuk memperdalam pemahaman teknologi informasi dan rekayasa perangkat lunak.",
+    "description": "Eksplorasi ekosistem web full-stack terintegrasi: desain frontend interaktif, REST API backend, dan manajemen database.",
     "googleDriveId": "1g3OjQaYGYdyxIdWWLZK97LUfLxp2PAPH",
     "previewUrl": "https://drive.google.com/file/d/1g3OjQaYGYdyxIdWWLZK97LUfLxp2PAPH/preview",
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1g3OjQaYGYdyxIdWWLZK97LUfLxp2PAPH",
-    "localFile": null
+    "localFile": null,
+    "callNumber": "DDC 005.276",
+    "catalogId": "AKSINU-LIB-129",
+    "isbn": "AKSINU-REF-129",
+    "ddc": "005.276"
   },
   {
-    "id": "book-1cyepuf6savy",
-    "title": "Fullbook Konsep Sistem Informasi",
-    "author": "Teknologi & Komputasi",
-    "category": "Dasar Pemrograman",
+    "id": "book-1qd2gypaskug",
+    "title": "Fundamental Data Science & Analitika Komputasi Modern",
+    "author": "Pustaka AKSINU",
+    "category": "Python & Data Science",
+    "callNumber": "DDC 005.133",
+    "catalogId": "AKSINU-LIB-130",
+    "isbn": "AKSINU-REF-130",
     "tags": [
-      "teknologi",
-      "komputer"
+      "python",
+      "data science",
+      "analitika data"
     ],
     "size": "PDF",
-    "description": "Buku panduan dan referensi komprehensif mengenai Fullbook Konsep Sistem Informasi untuk memperdalam pemahaman teknologi informasi dan rekayasa perangkat lunak.",
-    "googleDriveId": "1CYepUF6sAVYOe-IdhIUVGfdQAulteJjo",
-    "previewUrl": "https://drive.google.com/file/d/1CYepUF6sAVYOe-IdhIUVGfdQAulteJjo/preview",
-    "downloadUrl": "https://drive.google.com/uc?export=download&id=1CYepUF6sAVYOe-IdhIUVGfdQAulteJjo",
-    "localFile": null
+    "description": "Panduan praktis penguasaan bahasa pemrograman Python dan teknik komputasi modern untuk analitika data.",
+    "googleDriveId": "1QD2gypaSkuG_x7U4GphzB3bfk99rmjjt",
+    "previewUrl": "https://drive.google.com/file/d/1QD2gypaSkuG_x7U4GphzB3bfk99rmjjt/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=1QD2gypaSkuG_x7U4GphzB3bfk99rmjjt",
+    "localFile": null,
+    "ddc": "005.133"
   },
   {
-    "id": "book-11wpqig4gmlw",
-    "title": "Fullbook Konsep Sistem Informasi",
-    "author": "Teknologi & Komputasi",
-    "category": "Dasar Pemrograman",
+    "id": "book-1m8b8culzo3d",
+    "title": "Fundamental Jaringan Komputer",
+    "author": "Pustaka AKSINU",
+    "category": "Jaringan Komputer",
     "tags": [
-      "teknologi",
-      "komputer"
+      "jaringan komputer",
+      "protokol",
+      "lan",
+      "wifi"
     ],
     "size": "PDF",
-    "description": "Buku panduan dan referensi komprehensif mengenai Fullbook Konsep Sistem Informasi untuk memperdalam pemahaman teknologi informasi dan rekayasa perangkat lunak.",
-    "googleDriveId": "11WPQIG4gmLwWXZATgqnaCT2Nw0L7OykV",
-    "previewUrl": "https://drive.google.com/file/d/11WPQIG4gmLwWXZATgqnaCT2Nw0L7OykV/preview",
-    "downloadUrl": "https://drive.google.com/uc?export=download&id=11WPQIG4gmLwWXZATgqnaCT2Nw0L7OykV",
-    "localFile": null
+    "description": "Konsep esensial cara kerja konektivitas komputer, transmisi data kabel dan nirkabel, serta konfigurasi router dan switch.",
+    "googleDriveId": "1m8b8CulZo3d5ab7w7CXMTk0b86btyJv6",
+    "previewUrl": "https://drive.google.com/file/d/1m8b8CulZo3d5ab7w7CXMTk0b86btyJv6/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=1m8b8CulZo3d5ab7w7CXMTk0b86btyJv6",
+    "localFile": null,
+    "callNumber": "DDC 004.6",
+    "catalogId": "AKSINU-LIB-131",
+    "isbn": "AKSINU-REF-131",
+    "ddc": "004.6"
   },
   {
-    "id": "book-1bkg4pckrlso",
-    "title": "Fullbook Pengantar Jaringan Komputer",
+    "id": "book-1cyavduxgabi",
+    "title": "Fundamental SQL & Basis Data Relasional",
     "author": "Teknologi & Komputasi",
-    "category": "Dasar Pemrograman",
+    "category": "Database & SQL",
     "tags": [
-      "teknologi",
-      "komputer"
+      "sql",
+      "database",
+      "basis data",
+      "query"
     ],
     "size": "PDF",
-    "description": "Buku panduan dan referensi komprehensif mengenai Fullbook Pengantar Jaringan Komputer untuk memperdalam pemahaman teknologi informasi dan rekayasa perangkat lunak.",
-    "googleDriveId": "1bKG4PCKrLSOGZUOAzgtrClSRNa6hM1p1",
-    "previewUrl": "https://drive.google.com/file/d/1bKG4PCKrLSOGZUOAzgtrClSRNa6hM1p1/preview",
-    "downloadUrl": "https://drive.google.com/uc?export=download&id=1bKG4PCKrLSOGZUOAzgtrClSRNa6hM1p1",
-    "localFile": null
-  },
-  {
-    "id": "book-1ggc65pp9mwf",
-    "title": "Fullbook Sistem Pendukung Keputusan",
-    "author": "Teknologi & Komputasi",
-    "category": "Dasar Pemrograman",
-    "tags": [
-      "teknologi",
-      "komputer"
-    ],
-    "size": "PDF",
-    "description": "Buku panduan dan referensi komprehensif mengenai Fullbook Sistem Pendukung Keputusan untuk memperdalam pemahaman teknologi informasi dan rekayasa perangkat lunak.",
-    "googleDriveId": "1GGc65PP9MWFzaCHPS6HgMX1RN5sb33Zj",
-    "previewUrl": "https://drive.google.com/file/d/1GGc65PP9MWFzaCHPS6HgMX1RN5sb33Zj/preview",
-    "downloadUrl": "https://drive.google.com/uc?export=download&id=1GGc65PP9MWFzaCHPS6HgMX1RN5sb33Zj",
-    "localFile": null
+    "description": "Pengelolaan basis data, pengoptimalan kueri SQL, dan integritas data skala besar melalui SQL.",
+    "googleDriveId": "1CyAvDuxgabi8-47fB3HEKQtJb6n6USHs",
+    "previewUrl": "https://drive.google.com/file/d/1CyAvDuxgabi8-47fB3HEKQtJb6n6USHs/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=1CyAvDuxgabi8-47fB3HEKQtJb6n6USHs",
+    "localFile": null,
+    "callNumber": "DDC 005.74",
+    "catalogId": "AKSINU-LIB-132",
+    "isbn": "AKSINU-REF-132",
+    "ddc": "005.74"
   },
   {
     "id": "book-1dtr77wf_iza",
-    "title": "Fundamentals of Creating a Great UI Ux",
-    "author": "Teknologi & Komputasi",
-    "category": "Dasar Pemrograman",
+    "title": "Fundamentals of Creating a Great UI/UX",
+    "author": "Creative Design Studio",
+    "category": "UI/UX & Desain",
     "tags": [
-      "teknologi",
-      "komputer"
+      "ui/ux",
+      "user experience",
+      "user interface",
+      "design thinking"
     ],
     "size": "PDF",
-    "description": "Buku panduan dan referensi komprehensif mengenai Fundamentals of Creating a Great UI Ux untuk memperdalam pemahaman teknologi informasi dan rekayasa perangkat lunak.",
+    "description": "Prinsip desain pengalaman pengguna (UX) dan antarmuka (UI): wireframing, prototipe, hierarki visual, dan usability testing.",
     "googleDriveId": "1DtR77Wf_IZAbAwUYOdI3FDZKWu7J_zyR",
     "previewUrl": "https://drive.google.com/file/d/1DtR77Wf_IZAbAwUYOdI3FDZKWu7J_zyR/preview",
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1DtR77Wf_IZAbAwUYOdI3FDZKWu7J_zyR",
-    "localFile": null
+    "localFile": null,
+    "callNumber": "DDC 006.6",
+    "catalogId": "AKSINU-LIB-133",
+    "isbn": "AKSINU-REF-133",
+    "ddc": "006.6"
   },
   {
-    "id": "book-1mh3ww3w6-yf",
-    "title": "Fundamentals of Creating a Great UI Ux",
+    "id": "book-1walujwkyvf7",
+    "title": "Game Development in C: Programming Fundamentals",
     "author": "Teknologi & Komputasi",
-    "category": "Dasar Pemrograman",
+    "category": "Java & OOP",
     "tags": [
       "teknologi",
       "komputer"
     ],
     "size": "PDF",
-    "description": "Buku panduan dan referensi komprehensif mengenai Fundamentals of Creating a Great UI Ux untuk memperdalam pemahaman teknologi informasi dan rekayasa perangkat lunak.",
-    "googleDriveId": "1mH3wW3w6-yF0w8D_JZFnAxLH-7pHgIvB",
-    "previewUrl": "https://drive.google.com/file/d/1mH3wW3w6-yF0w8D_JZFnAxLH-7pHgIvB/preview",
-    "downloadUrl": "https://drive.google.com/uc?export=download&id=1mH3wW3w6-yF0w8D_JZFnAxLH-7pHgIvB",
-    "localFile": null
+    "description": "Buku panduan dan referensi komprehensif mengenai C Game Development Book untuk memperdalam pemahaman teknologi informasi dan rekayasa perangkat lunak.",
+    "googleDriveId": "1WALUjwkyVF7yQ6noTDyZUVRlJKED8NYY",
+    "previewUrl": "https://drive.google.com/file/d/1WALUjwkyVF7yQ6noTDyZUVRlJKED8NYY/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=1WALUjwkyVF7yQ6noTDyZUVRlJKED8NYY",
+    "localFile": null,
+    "callNumber": "DDC 005.133",
+    "catalogId": "AKSINU-LIB-134",
+    "isbn": "AKSINU-REF-134",
+    "ddc": "005.133"
   },
   {
     "id": "book-1_id3fxrzb5a",
@@ -1446,32 +2908,39 @@ const BOOKS_DATA = [
     "googleDriveId": "1_ID3fxRzb5A48oulOYY82wVu7yDR6ly_",
     "previewUrl": "https://drive.google.com/file/d/1_ID3fxRzb5A48oulOYY82wVu7yDR6ly_/preview",
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1_ID3fxRzb5A48oulOYY82wVu7yDR6ly_",
-    "localFile": null
+    "localFile": null,
+    "callNumber": "DDC 005.276",
+    "catalogId": "AKSINU-LIB-135",
+    "isbn": "AKSINU-REF-135",
+    "ddc": "005.276"
   },
   {
     "id": "book-1ah-k9ctkny1",
-    "title": "Git Apprentice Getting Started with Git Commands Concepts by Chris Belanger Z Lib Org",
-    "author": "Teknologi & Komputasi",
+    "title": "Git Apprentice: Getting Started with Git Commands & Concepts",
+    "author": "Chris Belanger",
     "category": "Cloud & DevOps",
     "tags": [
-      "cloud",
+      "git",
+      "version control",
       "devops",
-      "ci/cd",
-      "otomasi",
-      "infrastruktur"
+      "github"
     ],
     "size": "PDF",
-    "description": "Implementasi otomasi pipeline pengujian, deployment berkelanjutan, dan infrastruktur cloud dengan Git Apprentice Getting Started with Git Commands Concepts by Chris Belanger Z Lib Org.",
+    "description": "Panduan ramah pemula untuk memahami sistem kontrol versi Git, branching, merging, dan kolaborasi repositori.",
     "googleDriveId": "1aH-K9cTknY1LOytEd7bBSQRbIabdRYZo",
     "previewUrl": "https://drive.google.com/file/d/1aH-K9cTknY1LOytEd7bBSQRbIabdRYZo/preview",
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1aH-K9cTknY1LOytEd7bBSQRbIabdRYZo",
-    "localFile": null
+    "localFile": null,
+    "callNumber": "DDC 004.6782",
+    "catalogId": "AKSINU-LIB-136",
+    "isbn": "AKSINU-REF-136",
+    "ddc": "004.6782"
   },
   {
     "id": "book-1flw3bd7wh9_",
     "title": "Godot Beginners Develop Games Scripting",
     "author": "Teknologi & Komputasi",
-    "category": "Dasar Pemrograman",
+    "category": "Sistem Informasi",
     "tags": [
       "teknologi",
       "komputer"
@@ -1481,13 +2950,17 @@ const BOOKS_DATA = [
     "googleDriveId": "1FLW3bD7wH9_uo6gDIOZwrFX7tLy6IYLq",
     "previewUrl": "https://drive.google.com/file/d/1FLW3bD7wH9_uo6gDIOZwrFX7tLy6IYLq/preview",
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1FLW3bD7wH9_uo6gDIOZwrFX7tLy6IYLq",
-    "localFile": null
+    "localFile": null,
+    "callNumber": "DDC 004.068",
+    "catalogId": "AKSINU-LIB-137",
+    "isbn": "AKSINU-REF-137",
+    "ddc": "004.068"
   },
   {
     "id": "book-1vef_3mkqmkw",
     "title": "Golang the Ultimate Guide",
     "author": "Teknologi & Komputasi",
-    "category": "Dasar Pemrograman",
+    "category": "Sistem Informasi",
     "tags": [
       "teknologi",
       "komputer"
@@ -1497,26 +2970,11 @@ const BOOKS_DATA = [
     "googleDriveId": "1vef_3MkQMKWx002egj1vQYB38KtXSdV_",
     "previewUrl": "https://drive.google.com/file/d/1vef_3MkQMKWx002egj1vQYB38KtXSdV_/preview",
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1vef_3MkQMKWx002egj1vQYB38KtXSdV_",
-    "localFile": null
-  },
-  {
-    "id": "book-1-o_ote6hnfm",
-    "title": "Hajian M Flutter Engineering 2024",
-    "author": "M. Hajian",
-    "category": "Mobile Development",
-    "tags": [
-      "flutter",
-      "dart",
-      "mobile",
-      "cross-platform",
-      "clean architecture"
-    ],
-    "size": "PDF",
-    "description": "Buku rekayasa perangkat lunak tingkat mahir untuk merancang arsitektur aplikasi mobile Flutter yang tangguh.",
-    "googleDriveId": "1-O_OtE6hnfMMGslVZR_26BVfO2HE-pnK",
-    "previewUrl": "https://drive.google.com/file/d/1-O_OtE6hnfMMGslVZR_26BVfO2HE-pnK/preview",
-    "downloadUrl": "https://drive.google.com/uc?export=download&id=1-O_OtE6hnfMMGslVZR_26BVfO2HE-pnK",
-    "localFile": "ebook/841290729-Hajian-M-Flutter-Engineering-2024.pdf"
+    "localFile": null,
+    "callNumber": "DDC 004.068",
+    "catalogId": "AKSINU-LIB-138",
+    "isbn": "AKSINU-REF-138",
+    "ddc": "004.068"
   },
   {
     "id": "book-1ndtfryiodcl",
@@ -1534,7 +2992,11 @@ const BOOKS_DATA = [
     "googleDriveId": "1NDTfRYiOdCLBgDC8IG4FqWFnmJRaiuUB",
     "previewUrl": "https://drive.google.com/file/d/1NDTfRYiOdCLBgDC8IG4FqWFnmJRaiuUB/preview",
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1NDTfRYiOdCLBgDC8IG4FqWFnmJRaiuUB",
-    "localFile": null
+    "localFile": null,
+    "callNumber": "DDC 005.276",
+    "catalogId": "AKSINU-LIB-139",
+    "isbn": "AKSINU-REF-139",
+    "ddc": "005.276"
   },
   {
     "id": "book-16pjzhscf8ru",
@@ -1553,31 +3015,39 @@ const BOOKS_DATA = [
     "googleDriveId": "16pJZHScF8RUlNMFIJEQCOyxRgtzIHip1",
     "previewUrl": "https://drive.google.com/file/d/16pJZHScF8RUlNMFIJEQCOyxRgtzIHip1/preview",
     "downloadUrl": "https://drive.google.com/uc?export=download&id=16pJZHScF8RUlNMFIJEQCOyxRgtzIHip1",
-    "localFile": null
+    "localFile": null,
+    "callNumber": "DDC 004.6782",
+    "catalogId": "AKSINU-LIB-140",
+    "isbn": "AKSINU-REF-140",
+    "ddc": "004.6782"
   },
   {
     "id": "book-1anbg_lapjhd",
-    "title": "HTML to React the Ultimate Guide Pdf 1",
-    "author": "Teknologi & Komputasi",
+    "title": "HTML to React: The Ultimate Guide",
+    "author": "Pustaka Web",
     "category": "JavaScript & Web",
     "tags": [
-      "javascript",
-      "web",
+      "html",
+      "react",
       "frontend",
-      "fullstack"
+      "transisi"
     ],
     "size": "PDF",
-    "description": "Pelajari arsitektur dan sintaks modern ekosistem web interaktif melalui buku HTML to React the Ultimate Guide Pdf 1.",
+    "description": "Panduan transisi bagi developer HTML/CSS statis menuju ekosistem dinamis komponen React.",
     "googleDriveId": "1aNBG_LapjHdvzvnZhUsVPFaoI5VGpNSN",
     "previewUrl": "https://drive.google.com/file/d/1aNBG_LapjHdvzvnZhUsVPFaoI5VGpNSN/preview",
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1aNBG_LapjHdvzvnZhUsVPFaoI5VGpNSN",
-    "localFile": null
+    "localFile": null,
+    "callNumber": "DDC 005.276",
+    "catalogId": "AKSINU-LIB-141",
+    "isbn": "AKSINU-REF-141",
+    "ddc": "005.276"
   },
   {
     "id": "book-1ya2uemqzura",
     "title": "Html5 Tutorial",
     "author": "Teknologi & Komputasi",
-    "category": "Dasar Web & Desain",
+    "category": "JavaScript & Web",
     "tags": [
       "html",
       "css",
@@ -1589,121 +3059,283 @@ const BOOKS_DATA = [
     "googleDriveId": "1Ya2uemQzURAasA6yWMazIyjSFaTykCf4",
     "previewUrl": "https://drive.google.com/file/d/1Ya2uemQzURAasA6yWMazIyjSFaTykCf4/preview",
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1Ya2uemQzURAasA6yWMazIyjSFaTykCf4",
-    "localFile": null
+    "localFile": null,
+    "callNumber": "DDC 005.276",
+    "catalogId": "AKSINU-LIB-142",
+    "isbn": "AKSINU-REF-142",
+    "ddc": "005.276"
   },
   {
-    "id": "book-13s2jlf_mj6s",
-    "title": "Interaksi Manusia",
-    "author": "Teknologi & Komputasi",
-    "category": "Dasar Pemrograman",
+    "id": "book-1nqzw_ho4mbv",
+    "title": "Information System Strategic Management",
+    "author": "Steve Clarke",
+    "category": "Sistem Informasi",
+    "callNumber": "DDC 004.068",
+    "catalogId": "AKSINU-LIB-143",
+    "isbn": "AKSINU-REF-143",
     "tags": [
       "teknologi",
       "komputer"
     ],
     "size": "PDF",
-    "description": "Buku panduan dan referensi komprehensif mengenai Interaksi Manusia untuk memperdalam pemahaman teknologi informasi dan rekayasa perangkat lunak.",
+    "description": "Buku manajemen strategis sistem informasi, keselarasan TI dengan strategi bisnis, dan kepemimpinan transformasi digital organisasi.",
+    "googleDriveId": "1nQZW_HO4mBV5S8EY5c9coois-VOZCdmM",
+    "previewUrl": "https://drive.google.com/file/d/1nQZW_HO4mBV5S8EY5c9coois-VOZCdmM/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=1nQZW_HO4mBV5S8EY5c9coois-VOZCdmM",
+    "localFile": null,
+    "ddc": "004.068"
+  },
+  {
+    "id": "book-1qlxqpszohzf",
+    "title": "Interaksi manusia dan komputer",
+    "author": "Pustaka AKSINU",
+    "category": "UI/UX & Desain",
+    "callNumber": "DDC 006.6",
+    "catalogId": "AKSINU-LIB-144",
+    "isbn": "AKSINU-REF-144",
+    "tags": [
+      "teknologi",
+      "komputer"
+    ],
+    "size": "PDF",
+    "description": "Buku panduan dan referensi mengenai Interaksi+manusia+dan+komputer+preview untuk memperdalam literasi teknologi informasi.",
+    "googleDriveId": "1QlxqpsZOHZFFG0O1u5ioWpRkCrQYXzcd",
+    "previewUrl": "https://drive.google.com/file/d/1QlxqpsZOHZFFG0O1u5ioWpRkCrQYXzcd/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=1QlxqpsZOHZFFG0O1u5ioWpRkCrQYXzcd",
+    "localFile": null,
+    "ddc": "006.6"
+  },
+  {
+    "id": "book-13s2jlf_mj6s",
+    "title": "Interaksi Manusia dan Komputer (Prinsip Desain)",
+    "author": "Pustaka AKSINU",
+    "category": "UI/UX & Desain",
+    "tags": [
+      "imk",
+      "ui/ux",
+      "interaksi manusia",
+      "desain"
+    ],
+    "size": "PDF",
+    "description": "Prinsip desain antarmuka berbasis psikologi kognitif manusia untuk menghasilkan software yang intuitif dan mudah dioperasikan.",
     "googleDriveId": "13s2Jlf_MJ6SOXlkQeQhw2MoCrAINUEwV",
     "previewUrl": "https://drive.google.com/file/d/13s2Jlf_MJ6SOXlkQeQhw2MoCrAINUEwV/preview",
     "downloadUrl": "https://drive.google.com/uc?export=download&id=13s2Jlf_MJ6SOXlkQeQhw2MoCrAINUEwV",
-    "localFile": null
+    "localFile": null,
+    "callNumber": "DDC 006.6",
+    "catalogId": "AKSINU-LIB-145",
+    "isbn": "AKSINU-REF-145",
+    "ddc": "006.6"
+  },
+  {
+    "id": "book-1uyhwdjf1bn-",
+    "title": "Interaksi Manusia dan Komputer Teori dan",
+    "author": "Pustaka AKSINU",
+    "category": "UI/UX & Desain",
+    "callNumber": "DDC 006.6",
+    "catalogId": "AKSINU-LIB-146",
+    "isbn": "AKSINU-REF-146",
+    "tags": [
+      "ui/ux",
+      "user interface",
+      "user experience",
+      "desain"
+    ],
+    "size": "PDF",
+    "description": "Prinsip perancangan antarmuka pengguna, kemudahan interaksi, dan metodologi desain modern: Interaksi Manusia dan Komputer Teori dan.",
+    "googleDriveId": "1UyHwDjf1bN-foqa-U2CywzNHZ9c0QExo",
+    "previewUrl": "https://drive.google.com/file/d/1UyHwDjf1bN-foqa-U2CywzNHZ9c0QExo/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=1UyHwDjf1bN-foqa-U2CywzNHZ9c0QExo",
+    "localFile": null,
+    "ddc": "006.6"
+  },
+  {
+    "id": "book-1qnsa4nqz1ti",
+    "title": "Interaksi Manusia Komputer",
+    "author": "Pustaka AKSINU",
+    "category": "UI/UX & Desain",
+    "callNumber": "DDC 006.6",
+    "catalogId": "AKSINU-LIB-147",
+    "isbn": "AKSINU-REF-147",
+    "tags": [
+      "ui/ux",
+      "user interface",
+      "user experience",
+      "desain"
+    ],
+    "size": "PDF",
+    "description": "Prinsip perancangan antarmuka pengguna, kemudahan interaksi, dan metodologi desain modern: Interaksi Manusia Komputer.",
+    "googleDriveId": "1QNSA4Nqz1TiWjAGFcl4Yw12Su6U-9Dkc",
+    "previewUrl": "https://drive.google.com/file/d/1QNSA4Nqz1TiWjAGFcl4Yw12Su6U-9Dkc/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=1QNSA4Nqz1TiWjAGFcl4Yw12Su6U-9Dkc",
+    "localFile": null,
+    "ddc": "006.6"
+  },
+  {
+    "id": "book-1-6zc7t-r_1a",
+    "title": "Introduction to Cybersecurity",
+    "author": "Pustaka AKSINU",
+    "category": "Ilmu Komputer",
+    "callNumber": "DDC 004",
+    "catalogId": "AKSINU-LIB-148",
+    "isbn": "AKSINU-REF-148",
+    "tags": [
+      "teknologi",
+      "komputer"
+    ],
+    "size": "PDF",
+    "description": "Buku panduan dan referensi mengenai Introduction to Cybersecurity untuk memperdalam literasi teknologi informasi.",
+    "googleDriveId": "1-6ZC7t-R_1a1044l9hL87fRpDlBJ7mvF",
+    "previewUrl": "https://drive.google.com/file/d/1-6ZC7t-R_1a1044l9hL87fRpDlBJ7mvF/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=1-6ZC7t-R_1a1044l9hL87fRpDlBJ7mvF",
+    "localFile": null,
+    "ddc": "004"
   },
   {
     "id": "book-1a3_mrxwdi3j",
     "title": "Introduction to Data Mining and Analytics",
-    "author": "Teknologi & Komputasi",
-    "category": "Dasar Pemrograman",
+    "author": "Pustaka Data Science",
+    "category": "Python & Data Science",
     "tags": [
-      "teknologi",
-      "komputer"
+      "data mining",
+      "analytics",
+      "data science"
     ],
     "size": "PDF",
-    "description": "Buku panduan dan referensi komprehensif mengenai Introduction to Data Mining and Analytics untuk memperdalam pemahaman teknologi informasi dan rekayasa perangkat lunak.",
+    "description": "Pengantar analitika data skala besar, pengenalan algoritma clustering, association rules, dan evaluasi akurasi model.",
     "googleDriveId": "1A3_mRxWDI3JqRNOTY5OnrJvMmdxvY3nJ",
     "previewUrl": "https://drive.google.com/file/d/1A3_mRxWDI3JqRNOTY5OnrJvMmdxvY3nJ/preview",
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1A3_mRxWDI3JqRNOTY5OnrJvMmdxvY3nJ",
-    "localFile": null
+    "localFile": null,
+    "callNumber": "DDC 005.133",
+    "catalogId": "AKSINU-LIB-149",
+    "isbn": "AKSINU-REF-149",
+    "ddc": "005.133"
   },
   {
     "id": "book-1ugkp5ncjd4y",
-    "title": "Introduction to Data Science",
-    "author": "Teknologi & Komputasi",
-    "category": "Dasar Pemrograman",
+    "title": "Introduction to Data Science & Big Data",
+    "author": "Pustaka Data Science",
+    "category": "Python & Data Science",
     "tags": [
-      "teknologi",
-      "komputer"
+      "data science",
+      "big data",
+      "python",
+      "statistika"
     ],
     "size": "PDF",
-    "description": "Buku panduan dan referensi komprehensif mengenai Introduction to Data Science untuk memperdalam pemahaman teknologi informasi dan rekayasa perangkat lunak.",
+    "description": "Konsep inti ilmu data: pengumpulan data, data cleaning, exploratory data analysis (EDA), dan komunikasi temuan data.",
     "googleDriveId": "1ugkp5ncJD4Yw1h-YoHbHSfEWLJOvcxsh",
     "previewUrl": "https://drive.google.com/file/d/1ugkp5ncJD4Yw1h-YoHbHSfEWLJOvcxsh/preview",
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1ugkp5ncJD4Yw1h-YoHbHSfEWLJOvcxsh",
-    "localFile": null
+    "localFile": null,
+    "callNumber": "DDC 005.133",
+    "catalogId": "AKSINU-LIB-150",
+    "isbn": "AKSINU-REF-150",
+    "ddc": "005.133"
   },
   {
-    "id": "book-1m8b8culzo3d",
-    "title": "Jaringan Komputer",
-    "author": "Teknologi & Komputasi",
-    "category": "Dasar Pemrograman",
+    "id": "book-1lps_ouzjz2z",
+    "title": "Introduction to Information System Edisi 5 Tahun 2014",
+    "author": "Pustaka AKSINU",
+    "category": "Sistem Informasi",
+    "callNumber": "DDC 004.068",
+    "catalogId": "AKSINU-LIB-151",
+    "isbn": "AKSINU-REF-151",
     "tags": [
       "teknologi",
       "komputer"
     ],
     "size": "PDF",
-    "description": "Buku panduan dan referensi komprehensif mengenai Jaringan Komputer untuk memperdalam pemahaman teknologi informasi dan rekayasa perangkat lunak.",
-    "googleDriveId": "1m8b8CulZo3d5ab7w7CXMTk0b86btyJv6",
-    "previewUrl": "https://drive.google.com/file/d/1m8b8CulZo3d5ab7w7CXMTk0b86btyJv6/preview",
-    "downloadUrl": "https://drive.google.com/uc?export=download&id=1m8b8CulZo3d5ab7w7CXMTk0b86btyJv6",
-    "localFile": null
+    "description": "Buku panduan dan referensi mengenai Introduction to Information System Edisi 5 Tahun 2014 untuk memperdalam literasi teknologi informasi.",
+    "googleDriveId": "1lpS_OuZjZ2ZwOnb4wP6UGxFWVpXaMbhz",
+    "previewUrl": "https://drive.google.com/file/d/1lpS_OuZjZ2ZwOnb4wP6UGxFWVpXaMbhz/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=1lpS_OuZjZ2ZwOnb4wP6UGxFWVpXaMbhz",
+    "localFile": null,
+    "ddc": "004.068"
   },
   {
-    "id": "book-1od9l2-mlynz",
-    "title": "Jaringan Komputer",
-    "author": "Teknologi & Komputasi",
-    "category": "Dasar Pemrograman",
+    "id": "book-1l5zlai9n_7j",
+    "title": "Introduction to Information Systems",
+    "author": "Pustaka AKSINU",
+    "category": "Sistem Informasi",
+    "callNumber": "DDC 004.068",
+    "catalogId": "AKSINU-LIB-152",
+    "isbn": "AKSINU-REF-152",
     "tags": [
       "teknologi",
       "komputer"
     ],
     "size": "PDF",
-    "description": "Buku panduan dan referensi komprehensif mengenai Jaringan Komputer untuk memperdalam pemahaman teknologi informasi dan rekayasa perangkat lunak.",
-    "googleDriveId": "1oD9l2-MlyNzc7KuN1Hk7RRzLUweHJJB3",
-    "previewUrl": "https://drive.google.com/file/d/1oD9l2-MlyNzc7KuN1Hk7RRzLUweHJJB3/preview",
-    "downloadUrl": "https://drive.google.com/uc?export=download&id=1oD9l2-MlyNzc7KuN1Hk7RRzLUweHJJB3",
-    "localFile": null
+    "description": "Buku panduan dan referensi mengenai Is Book untuk memperdalam literasi teknologi informasi.",
+    "googleDriveId": "1l5zlaI9n_7jaMjkffanrND3jn2AWoaUx",
+    "previewUrl": "https://drive.google.com/file/d/1l5zlaI9n_7jaMjkffanrND3jn2AWoaUx/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=1l5zlaI9n_7jaMjkffanrND3jn2AWoaUx",
+    "localFile": null,
+    "ddc": "004.068"
+  },
+  {
+    "id": "book-1rqnil6dgqwk",
+    "title": "IT Security Risk Management & Cyber Security Governance",
+    "author": "Pustaka AKSINU",
+    "category": "Sistem Informasi",
+    "callNumber": "DDC 004.068",
+    "catalogId": "AKSINU-LIB-153",
+    "isbn": "AKSINU-REF-153",
+    "tags": [
+      "teknologi",
+      "komputer"
+    ],
+    "size": "PDF",
+    "description": "Buku panduan dan referensi mengenai It Security Risk Management untuk memperdalam literasi teknologi informasi.",
+    "googleDriveId": "1rqNIL6DgQwk3uaI7OMEUBculE-43LHrF",
+    "previewUrl": "https://drive.google.com/file/d/1rqNIL6DgQwk3uaI7OMEUBculE-43LHrF/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=1rqNIL6DgQwk3uaI7OMEUBculE-43LHrF",
+    "localFile": null,
+    "ddc": "004.068"
+  },
+  {
+    "id": "book-1gzs-4ob_7my",
+    "title": "Jaringan Komputer",
+    "author": "Pustaka AKSINU",
+    "category": "Jaringan Komputer",
+    "callNumber": "DDC 004.6",
+    "catalogId": "AKSINU-LIB-154",
+    "isbn": "AKSINU-REF-154",
+    "tags": [
+      "jaringan komputer",
+      "networking",
+      "protokol",
+      "infrastruktur"
+    ],
+    "size": "PDF",
+    "description": "Panduan arsitektur jaringan komputer, protokol komunikasi data, dan administrasi infrastruktur jaringan.",
+    "googleDriveId": "1gzs-4oB_7MyEtZkEI0aWNCDlOZUaMpHh",
+    "previewUrl": "https://drive.google.com/file/d/1gzs-4oB_7MyEtZkEI0aWNCDlOZUaMpHh/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=1gzs-4oB_7MyEtZkEI0aWNCDlOZUaMpHh",
+    "localFile": null,
+    "ddc": "004.6"
   },
   {
     "id": "book-1qt11nlo1gq5",
-    "title": "Jaringan Komputer Untuk Pemula",
-    "author": "Teknologi & Komputasi",
-    "category": "Dasar Pemrograman",
+    "title": "Jaringan Komputer untuk Pemula: Konsep Dasar Protokol & IP",
+    "author": "Pustaka AKSINU",
+    "category": "Jaringan Komputer",
     "tags": [
-      "teknologi",
-      "komputer"
+      "jaringan komputer",
+      "dasar jaringan",
+      "pemula"
     ],
     "size": "PDF",
-    "description": "Buku panduan dan referensi komprehensif mengenai Jaringan Komputer Untuk Pemula untuk memperdalam pemahaman teknologi informasi dan rekayasa perangkat lunak.",
+    "description": "Panduan ramah pemula langkah demi langkah mengenal dunia jaringan komputer dan setup koneksi internet mandiri.",
     "googleDriveId": "1qt11nlo1gq50KLJILrzJX7MZ9lxlsHz_",
     "previewUrl": "https://drive.google.com/file/d/1qt11nlo1gq50KLJILrzJX7MZ9lxlsHz_/preview",
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1qt11nlo1gq50KLJILrzJX7MZ9lxlsHz_",
-    "localFile": null
-  },
-  {
-    "id": "book-1iqqsparcbhy",
-    "title": "Java",
-    "author": "Teknologi & Komputasi",
-    "category": "Java & OOP",
-    "tags": [
-      "java",
-      "oop",
-      "backend",
-      "arsitektur perangkat lunak"
-    ],
-    "size": "PDF",
-    "description": "Pemrograman berorientasi objek tingkat industri dan arsitektur aplikasi tangguh melalui Java.",
-    "googleDriveId": "1iqQSPaRCbHY7dJrlbP07nHxaz2nO1KNY",
-    "previewUrl": "https://drive.google.com/file/d/1iqQSPaRCbHY7dJrlbP07nHxaz2nO1KNY/preview",
-    "downloadUrl": "https://drive.google.com/uc?export=download&id=1iqQSPaRCbHY7dJrlbP07nHxaz2nO1KNY",
-    "localFile": null
+    "localFile": null,
+    "callNumber": "DDC 004.6",
+    "catalogId": "AKSINU-LIB-155",
+    "isbn": "AKSINU-REF-155",
+    "ddc": "004.6"
   },
   {
     "id": "book-18vbywrdqwmm",
@@ -1721,11 +3353,15 @@ const BOOKS_DATA = [
     "googleDriveId": "18vbywRDqWMMOFIjgExzq7YPoE5k5JI7f",
     "previewUrl": "https://drive.google.com/file/d/18vbywRDqWMMOFIjgExzq7YPoE5k5JI7f/preview",
     "downloadUrl": "https://drive.google.com/uc?export=download&id=18vbywRDqWMMOFIjgExzq7YPoE5k5JI7f",
-    "localFile": null
+    "localFile": null,
+    "callNumber": "DDC 005.133",
+    "catalogId": "AKSINU-LIB-156",
+    "isbn": "AKSINU-REF-156",
+    "ddc": "005.133"
   },
   {
     "id": "book-15wyg4viqycv",
-    "title": "Java for Beginners Get from Zero to Object Oriented Programming",
+    "title": "Java for Beginners: From Zero to Object-Oriented Programming",
     "author": "Teknologi & Komputasi",
     "category": "Java & OOP",
     "tags": [
@@ -1739,7 +3375,32 @@ const BOOKS_DATA = [
     "googleDriveId": "15Wyg4vIQyCvM0DBOLImlceblWFBZQ_p1",
     "previewUrl": "https://drive.google.com/file/d/15Wyg4vIQyCvM0DBOLImlceblWFBZQ_p1/preview",
     "downloadUrl": "https://drive.google.com/uc?export=download&id=15Wyg4vIQyCvM0DBOLImlceblWFBZQ_p1",
-    "localFile": null
+    "localFile": null,
+    "callNumber": "DDC 005.133",
+    "catalogId": "AKSINU-LIB-157",
+    "isbn": "AKSINU-REF-157",
+    "ddc": "005.133"
+  },
+  {
+    "id": "book-1jqdcuhf03dh",
+    "title": "Java Programming Made Easy",
+    "author": "Alfred James",
+    "category": "Java & OOP",
+    "tags": [
+      "java",
+      "oop",
+      "pemula"
+    ],
+    "size": "PDF",
+    "description": "Penjelasan sederhana konsep berorientasi objek dalam bahasa Java: class, object, inheritance, polymorphism, dan exception handling.",
+    "googleDriveId": "1jQDcUHF03Dhj-FhhsksFbQYB-W1RrVLJ",
+    "previewUrl": "https://drive.google.com/file/d/1jQDcUHF03Dhj-FhhsksFbQYB-W1RrVLJ/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=1jQDcUHF03Dhj-FhhsksFbQYB-W1RrVLJ",
+    "localFile": null,
+    "callNumber": "DDC 005.133",
+    "catalogId": "AKSINU-LIB-158",
+    "isbn": "AKSINU-REF-158",
+    "ddc": "005.133"
   },
   {
     "id": "book-1wuuvxr93shd",
@@ -1757,7 +3418,11 @@ const BOOKS_DATA = [
     "googleDriveId": "1WuUVxR93sHd9ZqjsU-o0FKLJMcEpYm6W",
     "previewUrl": "https://drive.google.com/file/d/1WuUVxR93sHd9ZqjsU-o0FKLJMcEpYm6W/preview",
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1WuUVxR93sHd9ZqjsU-o0FKLJMcEpYm6W",
-    "localFile": null
+    "localFile": null,
+    "callNumber": "DDC 005.133",
+    "catalogId": "AKSINU-LIB-159",
+    "isbn": "AKSINU-REF-159",
+    "ddc": "005.133"
   },
   {
     "id": "book-1fw9dip4t_br",
@@ -1775,25 +3440,55 @@ const BOOKS_DATA = [
     "googleDriveId": "1Fw9dIP4T_BrzvTg1phkmP7c5fRuagmR3",
     "previewUrl": "https://drive.google.com/file/d/1Fw9dIP4T_BrzvTg1phkmP7c5fRuagmR3/preview",
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1Fw9dIP4T_BrzvTg1phkmP7c5fRuagmR3",
-    "localFile": null
+    "localFile": null,
+    "callNumber": "DDC 005.276",
+    "catalogId": "AKSINU-LIB-160",
+    "isbn": "AKSINU-REF-160",
+    "ddc": "005.276"
   },
   {
     "id": "book-12posndm5x96",
-    "title": "JavaScript for Beginners the Complete Manual for Beginners with Tips and Tricks to Learn JavaScript from Scratch by Mark Harrington Harrington Mark",
-    "author": "Teknologi & Komputasi",
+    "title": "JavaScript for Beginners: Step by Step Guide",
+    "author": "Mark Harrington",
     "category": "JavaScript & Web",
     "tags": [
       "javascript",
-      "web",
       "frontend",
-      "fullstack"
+      "pemula",
+      "web"
     ],
     "size": "PDF",
-    "description": "Pelajari arsitektur dan sintaks modern ekosistem web interaktif melalui buku JavaScript for Beginners the Complete Manual for Beginners with Tips and Tricks to Learn JavaScript from Scratch by Mark Harrington Harrington Mark.",
+    "description": "Panduan ramah pemula untuk menguasai JavaScript dari nol, manipulasi DOM, event listener, dan logika web interaktif.",
     "googleDriveId": "12pOsNDM5x96g8bauQcYdZKAfZ919Ed5f",
     "previewUrl": "https://drive.google.com/file/d/12pOsNDM5x96g8bauQcYdZKAfZ919Ed5f/preview",
     "downloadUrl": "https://drive.google.com/uc?export=download&id=12pOsNDM5x96g8bauQcYdZKAfZ919Ed5f",
-    "localFile": null
+    "localFile": null,
+    "callNumber": "DDC 005.276",
+    "catalogId": "AKSINU-LIB-161",
+    "isbn": "AKSINU-REF-161",
+    "ddc": "005.276"
+  },
+  {
+    "id": "book-175qal7-w2fd",
+    "title": "JavaScript for Impatient Programmers",
+    "author": "Dr. Axel Rauschmayer",
+    "category": "JavaScript & Web",
+    "tags": [
+      "javascript",
+      "es2020",
+      "web development",
+      "frontend"
+    ],
+    "size": "PDF",
+    "description": "Buku referensi JavaScript modern esensial yang ringkas, tepat sasaran, dan mendalam bagi para programmer.",
+    "googleDriveId": "175qal7-W2FDzri1I95FNi6kcaGuo-AyZ",
+    "previewUrl": "https://drive.google.com/file/d/175qal7-W2FDzri1I95FNi6kcaGuo-AyZ/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=175qal7-W2FDzri1I95FNi6kcaGuo-AyZ",
+    "localFile": null,
+    "callNumber": "DDC 005.276",
+    "catalogId": "AKSINU-LIB-162",
+    "isbn": "AKSINU-REF-162",
+    "ddc": "005.276"
   },
   {
     "id": "book-1hvy74jjiihp",
@@ -1811,7 +3506,33 @@ const BOOKS_DATA = [
     "googleDriveId": "1Hvy74JjiIhp4QqT2iLLubKq_e55xfrkn",
     "previewUrl": "https://drive.google.com/file/d/1Hvy74JjiIhp4QqT2iLLubKq_e55xfrkn/preview",
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1Hvy74JjiIhp4QqT2iLLubKq_e55xfrkn",
-    "localFile": null
+    "localFile": null,
+    "callNumber": "DDC 005.276",
+    "catalogId": "AKSINU-LIB-163",
+    "isbn": "978-1118531648",
+    "ddc": "005.276"
+  },
+  {
+    "id": "book-1j4amgj9kksa",
+    "title": "JavaScript Programming Fundamentals & Web Standards",
+    "author": "Teknologi & Komputasi",
+    "category": "JavaScript & Web",
+    "tags": [
+      "javascript",
+      "web",
+      "frontend",
+      "fullstack"
+    ],
+    "size": "PDF",
+    "description": "Pelajari arsitektur dan sintaks modern ekosistem web interaktif melalui buku Pdf JavaScript Programming.",
+    "googleDriveId": "1j4AmgJ9kkSA2yo70szEi0d-fslIMpaDV",
+    "previewUrl": "https://drive.google.com/file/d/1j4AmgJ9kkSA2yo70szEi0d-fslIMpaDV/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=1j4AmgJ9kkSA2yo70szEi0d-fslIMpaDV",
+    "localFile": null,
+    "callNumber": "DDC 005.276",
+    "catalogId": "AKSINU-LIB-164",
+    "isbn": "AKSINU-REF-164",
+    "ddc": "005.276"
   },
   {
     "id": "book-1czss5o3ymjq",
@@ -1829,89 +3550,441 @@ const BOOKS_DATA = [
     "googleDriveId": "1CZSS5o3YMjQ8jaX0T_A42HSb6SPCWJBQ",
     "previewUrl": "https://drive.google.com/file/d/1CZSS5o3YMjQ8jaX0T_A42HSb6SPCWJBQ/preview",
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1CZSS5o3YMjQ8jaX0T_A42HSb6SPCWJBQ",
-    "localFile": null
+    "localFile": null,
+    "callNumber": "DDC 005.276",
+    "catalogId": "AKSINU-LIB-165",
+    "isbn": "AKSINU-REF-165",
+    "ddc": "005.276"
   },
   {
-    "id": "book-1eyvkdcvwqvb",
-    "title": "Jeff P Java Learn Java Programming from Beginner to Professional 2024",
+    "id": "book-1bcp5_s851ld",
+    "title": "Keamanan Siber & Perlindungan Infrastruktur Digital",
+    "author": "Pustaka AKSINU",
+    "category": "Sistem Informasi",
+    "callNumber": "DDC 004.068",
+    "catalogId": "AKSINU-LIB-166",
+    "isbn": "AKSINU-REF-166",
+    "tags": [
+      "teknologi",
+      "komputer"
+    ],
+    "size": "PDF",
+    "description": "Buku panduan dan referensi mengenai Kemananan Cyber untuk memperdalam literasi teknologi informasi.",
+    "googleDriveId": "1bcP5_S851lD9HLZut57RFytK3EykEFvX",
+    "previewUrl": "https://drive.google.com/file/d/1bcP5_S851lD9HLZut57RFytK3EykEFvX/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=1bcP5_S851lD9HLZut57RFytK3EykEFvX",
+    "localFile": null,
+    "ddc": "004.068"
+  },
+  {
+    "id": "book-1w2l9xdixdrr",
+    "title": "Keamanan Siber: Esensi Keamanan Sistem Informasi",
+    "author": "Pustaka AKSINU",
+    "category": "Sistem Informasi",
+    "callNumber": "DDC 004.068",
+    "catalogId": "AKSINU-LIB-167",
+    "isbn": "AKSINU-REF-167",
+    "tags": [
+      "teknologi",
+      "komputer"
+    ],
+    "size": "PDF",
+    "description": "Buku panduan dan referensi mengenai Buku Keamanan Siber Esensi Keamanan Sist untuk memperdalam literasi teknologi informasi.",
+    "googleDriveId": "1w2L9XdIXdrRXT5XAhnacMkV81EjUMf5L",
+    "previewUrl": "https://drive.google.com/file/d/1w2L9XdIXdrRXT5XAhnacMkV81EjUMf5L/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=1w2L9XdIXdrRXT5XAhnacMkV81EjUMf5L",
+    "localFile": null,
+    "ddc": "004.068"
+  },
+  {
+    "id": "book-1eigt-b9wbvp",
+    "title": "Keamanan Sistem Informasi & Cyber Defense",
+    "author": "Pena Muda Media",
+    "category": "Sistem Informasi",
+    "callNumber": "DDC 004.068",
+    "catalogId": "AKSINU-LIB-168",
+    "isbn": "AKSINU-REF-168",
+    "tags": [
+      "sistem informasi",
+      "analisis sistem",
+      "manajemen sistem",
+      "ti kampus"
+    ],
+    "size": "PDF",
+    "description": "Buku kajian sistem informasi, analisis kebutuhan, dan perancangan sistem informasi modern: Cetak Layout Keamanan Sistem Informasi Penamudamedia.",
+    "googleDriveId": "1eigT-b9WbvPGiAPmmTPI3C68qFEHY73W",
+    "previewUrl": "https://drive.google.com/file/d/1eigT-b9WbvPGiAPmmTPI3C68qFEHY73W/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=1eigT-b9WbvPGiAPmmTPI3C68qFEHY73W",
+    "localFile": null,
+    "ddc": "004.068"
+  },
+  {
+    "id": "book-1giq14ekkkfa",
+    "title": "Keamanan Sistem Informasi & Cyber Security",
+    "author": "Pustaka AKSINU",
+    "category": "Sistem Informasi",
+    "tags": [
+      "keamanan sistem",
+      "cyber security",
+      "enkripsi",
+      "firewall",
+      "sistem informasi"
+    ],
+    "size": "PDF",
+    "description": "Prinsip keamanan sistem informasi: kerahasiaan, integritas data, autentikasi, mitigasi malware, dan manajemen ancaman siber.",
+    "googleDriveId": "1giq14EkKkFax7qJt9f1EPsxFUqhtp_aQ",
+    "previewUrl": "https://drive.google.com/file/d/1giq14EkKkFax7qJt9f1EPsxFUqhtp_aQ/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=1giq14EkKkFax7qJt9f1EPsxFUqhtp_aQ",
+    "localFile": null,
+    "callNumber": "DDC 004.068",
+    "catalogId": "AKSINU-LIB-169",
+    "isbn": "AKSINU-REF-169",
+    "ddc": "004.068"
+  },
+  {
+    "id": "book-1nu96i4hilj8",
+    "title": "Keamanan Sistem Informasi Berbasis Internet",
+    "author": "Pustaka AKSINU",
+    "category": "Sistem Informasi",
+    "callNumber": "DDC 004.068",
+    "catalogId": "AKSINU-LIB-170",
+    "isbn": "AKSINU-REF-170",
+    "tags": [
+      "sistem informasi",
+      "analisis sistem",
+      "manajemen sistem",
+      "ti kampus"
+    ],
+    "size": "PDF",
+    "description": "Buku kajian sistem informasi, analisis kebutuhan, dan perancangan sistem informasi modern: Keamanan Sistem Informasi Berbasis Internet.",
+    "googleDriveId": "1nu96I4HiLJ8fqq3NS9u84e9v6OmEIfh8",
+    "previewUrl": "https://drive.google.com/file/d/1nu96I4HiLJ8fqq3NS9u84e9v6OmEIfh8/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=1nu96I4HiLJ8fqq3NS9u84e9v6OmEIfh8",
+    "localFile": null,
+    "ddc": "004.068"
+  },
+  {
+    "id": "book-1d2axvphbtkd",
+    "title": "Keamanan Sistem Informasi Prinsip Dasar",
+    "author": "Pustaka AKSINU",
+    "category": "Sistem Informasi",
+    "callNumber": "DDC 004.068",
+    "catalogId": "AKSINU-LIB-171",
+    "isbn": "AKSINU-REF-171",
+    "tags": [
+      "sistem informasi",
+      "analisis sistem",
+      "manajemen sistem",
+      "ti kampus"
+    ],
+    "size": "PDF",
+    "description": "Buku kajian sistem informasi, analisis kebutuhan, dan perancangan sistem informasi modern: Keamanan Sistem Informasi Prinsip Dasar.",
+    "googleDriveId": "1d2aXVpHBtkDquJPTGzPAZdfOXV6KJh4n",
+    "previewUrl": "https://drive.google.com/file/d/1d2aXVpHBtkDquJPTGzPAZdfOXV6KJh4n/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=1d2aXVpHBtkDquJPTGzPAZdfOXV6KJh4n",
+    "localFile": null,
+    "ddc": "004.068"
+  },
+  {
+    "id": "book-1mohi5itswbt",
+    "title": "Kecerdasan Buatan (Artificial Intelligence): Konsep dan Aplikasi",
     "author": "Teknologi & Komputasi",
+    "category": "AI & Machine Learning",
+    "tags": [
+      "ai",
+      "machine learning",
+      "deep learning",
+      "data science"
+    ],
+    "size": "PDF",
+    "description": "Eksplorasi mendalam kecerdasan buatan, pemodelan data, dan algoritma pembelajaran mesin melalui Ai.",
+    "googleDriveId": "1MoHI5iTsWBT1unYWw5R2uxXqS2Z_8IlJ",
+    "previewUrl": "https://drive.google.com/file/d/1MoHI5iTsWBT1unYWw5R2uxXqS2Z_8IlJ/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=1MoHI5iTsWBT1unYWw5R2uxXqS2Z_8IlJ",
+    "localFile": null,
+    "callNumber": "DDC 006.3",
+    "catalogId": "AKSINU-LIB-172",
+    "isbn": "AKSINU-REF-172",
+    "ddc": "006.3"
+  },
+  {
+    "id": "book-1uvmycxd3xhs",
+    "title": "Komunikasi Bisnis",
+    "author": "Pustaka AKSINU",
+    "category": "Manajemen & Bisnis",
+    "callNumber": "DDC 658.4038",
+    "catalogId": "AKSINU-LIB-173",
+    "isbn": "AKSINU-REF-173",
+    "tags": [
+      "manajemen",
+      "bisnis",
+      "kewirausahaan",
+      "technopreneurship"
+    ],
+    "size": "PDF",
+    "description": "Kajian manajemen operasional, technopreneurship, kepemimpinan organisasi, dan dinamika bisnis TI.",
+    "googleDriveId": "1uVmyCXD3XHSk0WBS5b35s0p-zyW0ZpMS",
+    "previewUrl": "https://drive.google.com/file/d/1uVmyCXD3XHSk0WBS5b35s0p-zyW0ZpMS/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=1uVmyCXD3XHSk0WBS5b35s0p-zyW0ZpMS",
+    "localFile": null,
+    "ddc": "658.4038"
+  },
+  {
+    "id": "book-1mjl3hsrxxqf",
+    "title": "Komunikasi Bisnis di Era Transformasi Digital",
+    "author": "Pustaka AKSINU",
+    "category": "Manajemen & Bisnis",
+    "callNumber": "DDC 658.4038",
+    "catalogId": "AKSINU-LIB-174",
+    "isbn": "AKSINU-REF-174",
+    "tags": [
+      "manajemen",
+      "bisnis",
+      "kewirausahaan",
+      "technopreneurship"
+    ],
+    "size": "PDF",
+    "description": "Kajian manajemen operasional, technopreneurship, kepemimpinan organisasi, dan dinamika bisnis TI.",
+    "googleDriveId": "1MJL3HsrxXQfTS1qaD1qH-mFEFCKsxkax",
+    "previewUrl": "https://drive.google.com/file/d/1MJL3HsrxXQfTS1qaD1qH-mFEFCKsxkax/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=1MJL3HsrxXQfTS1qaD1qH-mFEFCKsxkax",
+    "localFile": null,
+    "ddc": "658.4038"
+  },
+  {
+    "id": "book-1gmncefpp4qi",
+    "title": "Komunikasi Bisnis Modern dan Hubungan Industrial",
+    "author": "Atika Nasution",
+    "category": "Manajemen & Bisnis",
+    "callNumber": "DDC 658.4038",
+    "catalogId": "AKSINU-LIB-175",
+    "isbn": "AKSINU-REF-175",
+    "tags": [
+      "manajemen",
+      "bisnis",
+      "kewirausahaan",
+      "technopreneurship"
+    ],
+    "size": "PDF",
+    "description": "Kajian manajemen operasional, technopreneurship, kepemimpinan organisasi, dan dinamika bisnis TI.",
+    "googleDriveId": "1gMNcefPp4Qii83zDjDFd2IzDQJADQdaY",
+    "previewUrl": "https://drive.google.com/file/d/1gMNcefPp4Qii83zDjDFd2IzDQJADQdaY/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=1gMNcefPp4Qii83zDjDFd2IzDQJADQdaY",
+    "localFile": null,
+    "ddc": "658.4038"
+  },
+  {
+    "id": "book-1bdrdiwip4ab",
+    "title": "Komunikasi Bisnis: Teori dan Konsep Terapan",
+    "author": "Pustaka AKSINU",
+    "category": "Manajemen & Bisnis",
+    "callNumber": "DDC 658.4038",
+    "catalogId": "AKSINU-LIB-176",
+    "isbn": "AKSINU-REF-176",
+    "tags": [
+      "manajemen",
+      "bisnis",
+      "kewirausahaan",
+      "technopreneurship"
+    ],
+    "size": "PDF",
+    "description": "Kajian manajemen operasional, technopreneurship, kepemimpinan organisasi, dan dinamika bisnis TI.",
+    "googleDriveId": "1bDRDIwiP4AbX-BDiNB9ZHQSlQh-aqBog",
+    "previewUrl": "https://drive.google.com/file/d/1bDRDIwiP4AbX-BDiNB9ZHQSlQh-aqBog/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=1bDRDIwiP4AbX-BDiNB9ZHQSlQh-aqBog",
+    "localFile": null,
+    "ddc": "658.4038"
+  },
+  {
+    "id": "book-1pfqioljccgj",
+    "title": "Konsep & Rekayasa Sistem Informasi",
+    "author": "Dimas, M.Kom.",
+    "category": "Sistem Informasi",
+    "callNumber": "DDC 004.068",
+    "catalogId": "AKSINU-LIB-177",
+    "isbn": "AKSINU-REF-177",
+    "tags": [
+      "teknologi",
+      "komputer"
+    ],
+    "size": "PDF",
+    "description": "Buku panduan dan referensi mengenai Buku Pak Dimas untuk memperdalam literasi teknologi informasi.",
+    "googleDriveId": "1pfQioljCcgJ3xj6kgwBNF9Hcd7NIQE20",
+    "previewUrl": "https://drive.google.com/file/d/1pfQioljCcgJ3xj6kgwBNF9Hcd7NIQE20/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=1pfQioljCcgJ3xj6kgwBNF9Hcd7NIQE20",
+    "localFile": null,
+    "ddc": "004.068"
+  },
+  {
+    "id": "book-1fiyhhg3zfnb",
+    "title": "Konsep Dasar Algoritma dan Pemrograman Komputer",
+    "author": "Pustaka AKSINU",
+    "category": "Struktur Data & Algoritma",
+    "callNumber": "DDC 005.13",
+    "catalogId": "AKSINU-LIB-178",
+    "isbn": "AKSINU-REF-178",
+    "tags": [
+      "teknologi",
+      "komputer"
+    ],
+    "size": "PDF",
+    "description": "Buku panduan dan referensi mengenai Konsep Dasar Algo dan Pemrograman untuk memperdalam literasi teknologi informasi.",
+    "googleDriveId": "1FIYhHg3ZFnB1dXdcQwxYElKyn__avJUS",
+    "previewUrl": "https://drive.google.com/file/d/1FIYhHg3ZFnB1dXdcQwxYElKyn__avJUS/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=1FIYhHg3ZFnB1dXdcQwxYElKyn__avJUS",
+    "localFile": null,
+    "ddc": "005.13"
+  },
+  {
+    "id": "book-1g0wan8xdpyw",
+    "title": "Konsep Dasar Pemrograman Berorientasi Objek (OOP)",
+    "author": "Pustaka AKSINU",
     "category": "Java & OOP",
+    "callNumber": "DDC 005.133",
+    "catalogId": "AKSINU-LIB-179",
+    "isbn": "AKSINU-REF-179",
     "tags": [
       "java",
       "oop",
       "backend",
-      "arsitektur perangkat lunak"
+      "berorientasi objek"
     ],
     "size": "PDF",
-    "description": "Pemrograman berorientasi objek tingkat industri dan arsitektur aplikasi tangguh melalui Jeff P Java Learn Java Programming from Beginner to Professional 2024.",
-    "googleDriveId": "1eyvkDcvwqvBehyur6-Dzh3JfNRp9Smq4",
-    "previewUrl": "https://drive.google.com/file/d/1eyvkDcvwqvBehyur6-Dzh3JfNRp9Smq4/preview",
-    "downloadUrl": "https://drive.google.com/uc?export=download&id=1eyvkDcvwqvBehyur6-Dzh3JfNRp9Smq4",
-    "localFile": null
-  },
-  {
-    "id": "book-19t-ki2emypy",
-    "title": "Kelompok 2 004 058 062 070 079 Etika Privasi dan Keamanan Sistem Informasi",
-    "author": "Teknologi & Komputasi",
-    "category": "Dasar Pemrograman",
-    "tags": [
-      "teknologi",
-      "komputer"
-    ],
-    "size": "PDF",
-    "description": "Buku panduan dan referensi komprehensif mengenai Kelompok 2 004 058 062 070 079 Etika Privasi dan Keamanan Sistem Informasi untuk memperdalam pemahaman teknologi informasi dan rekayasa perangkat lunak.",
-    "googleDriveId": "19T-KI2EmYPYbZy9QoGvKJO5rCWZf50Ke",
-    "previewUrl": "https://drive.google.com/file/d/19T-KI2EmYPYbZy9QoGvKJO5rCWZf50Ke/preview",
-    "downloadUrl": "https://drive.google.com/uc?export=download&id=19T-KI2EmYPYbZy9QoGvKJO5rCWZf50Ke",
-    "localFile": null
+    "description": "Pemrograman berorientasi objek tingkat industri dan arsitektur aplikasi tangguh berbasis Java.",
+    "googleDriveId": "1g0waN8XdpYwohamPD7VSjr1x7BoAL2s5",
+    "previewUrl": "https://drive.google.com/file/d/1g0waN8XdpYwohamPD7VSjr1x7BoAL2s5/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=1g0waN8XdpYwohamPD7VSjr1x7BoAL2s5",
+    "localFile": null,
+    "ddc": "005.133"
   },
   {
     "id": "book-1v-serywvoio",
-    "title": "Konsep Dasar Sistem Informasi Isbn",
-    "author": "Teknologi & Komputasi",
-    "category": "Dasar Pemrograman",
+    "title": "Konsep Dasar Sistem Informasi",
+    "author": "Pustaka AKSINU",
+    "category": "Sistem Informasi",
     "tags": [
-      "teknologi",
-      "komputer"
+      "sistem informasi",
+      "konsep dasar",
+      "it"
     ],
     "size": "PDF",
-    "description": "Buku panduan dan referensi komprehensif mengenai Konsep Dasar Sistem Informasi Isbn untuk memperdalam pemahaman teknologi informasi dan rekayasa perangkat lunak.",
+    "description": "Pondasi pemahaman sistem informasi untuk mahasiswa tingkat awal dalam memahami siklus informasi dan teknologi.",
     "googleDriveId": "1V-sERYWvoiOpJGuMBTavnFHdlrVG_aWq",
     "previewUrl": "https://drive.google.com/file/d/1V-sERYWvoiOpJGuMBTavnFHdlrVG_aWq/preview",
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1V-sERYWvoiOpJGuMBTavnFHdlrVG_aWq",
-    "localFile": null
+    "localFile": null,
+    "callNumber": "DDC 004.068",
+    "catalogId": "AKSINU-LIB-180",
+    "isbn": "AKSINU-REF-180",
+    "ddc": "004.068"
+  },
+  {
+    "id": "book-1anjdvemfdy1",
+    "title": "Konsep Dasar Sistem Operasi Modern",
+    "author": "Pustaka AKSINU",
+    "category": "Sistem Operasi & Arsitektur",
+    "callNumber": "DDC 005.43",
+    "catalogId": "AKSINU-LIB-181",
+    "isbn": "AKSINU-REF-181",
+    "tags": [
+      "sistem operasi",
+      "os",
+      "manajemen memori",
+      "kernel"
+    ],
+    "size": "PDF",
+    "description": "Konsep dasar dan desain sistem operasi, manajemen proses, penjadwalan CPU, dan sistem berkas.",
+    "googleDriveId": "1ANjdVEmfDY1jTqjpgH1tq-QrakgZWdjv",
+    "previewUrl": "https://drive.google.com/file/d/1ANjdVEmfDY1jTqjpgH1tq-QrakgZWdjv/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=1ANjdVEmfDY1jTqjpgH1tq-QrakgZWdjv",
+    "localFile": null,
+    "ddc": "005.43"
+  },
+  {
+    "id": "book-1yod2aoc9eaz",
+    "title": "Konsep Dasar Technopreneurship: Inovasi Bisnis Berbasis Teknologi",
+    "author": "Pustaka AKSINU",
+    "category": "Manajemen & Bisnis",
+    "callNumber": "DDC 658.4038",
+    "catalogId": "AKSINU-LIB-182",
+    "isbn": "AKSINU-REF-182",
+    "tags": [
+      "manajemen",
+      "bisnis",
+      "kewirausahaan",
+      "technopreneurship"
+    ],
+    "size": "PDF",
+    "description": "Kajian manajemen operasional, technopreneurship, kepemimpinan organisasi, dan dinamika bisnis TI.",
+    "googleDriveId": "1yOd2aOC9EaZvJQsjEXKBu0Lu-sZdtpIN",
+    "previewUrl": "https://drive.google.com/file/d/1yOd2aOC9EaZvJQsjEXKBu0Lu-sZdtpIN/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=1yOd2aOC9EaZvJQsjEXKBu0Lu-sZdtpIN",
+    "localFile": null,
+    "ddc": "658.4038"
   },
   {
     "id": "book-1yfpocqov7m_",
-    "title": "Konsep Sistem Informasi",
-    "author": "Teknologi & Komputasi",
-    "category": "Dasar Pemrograman",
+    "title": "Konsep Sistem Informasi & Transformasi Digital",
+    "author": "Pustaka AKSINU",
+    "category": "Sistem Informasi",
     "tags": [
-      "teknologi",
-      "komputer"
+      "sistem informasi",
+      "transformasi digital",
+      "organisasi"
     ],
     "size": "PDF",
-    "description": "Buku panduan dan referensi komprehensif mengenai Konsep Sistem Informasi untuk memperdalam pemahaman teknologi informasi dan rekayasa perangkat lunak.",
+    "description": "Analisis bagaimana sistem informasi memfasilitasi transformasi digital dan otomatisasi proses bisnis di era industri 4.0.",
     "googleDriveId": "1YFpocqOV7m_ibHJ4418mtU1vAuWYcN84",
     "previewUrl": "https://drive.google.com/file/d/1YFpocqOV7m_ibHJ4418mtU1vAuWYcN84/preview",
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1YFpocqOV7m_ibHJ4418mtU1vAuWYcN84",
-    "localFile": null
+    "localFile": null,
+    "callNumber": "DDC 004.068",
+    "catalogId": "AKSINU-LIB-183",
+    "isbn": "AKSINU-REF-183",
+    "ddc": "004.068"
   },
   {
     "id": "book-13apuwqieqvo",
-    "title": "Konsep Sistem Informasi Arif Rizki",
-    "author": "Teknologi & Komputasi",
-    "category": "Dasar Pemrograman",
+    "title": "Konsep Sistem Informasi Terapan",
+    "author": "Arif Rizki, M.Kom.",
+    "category": "Database & SQL",
     "tags": [
-      "teknologi",
-      "komputer"
+      "sistem informasi",
+      "arif rizki",
+      "sistem informasi terapan"
     ],
     "size": "PDF",
-    "description": "Buku panduan dan referensi komprehensif mengenai Konsep Sistem Informasi Arif Rizki untuk memperdalam pemahaman teknologi informasi dan rekayasa perangkat lunak.",
+    "description": "Buku kajian terapan konsep sistem informasi untuk perancangan basis data dan aplikasi pelayanan publik.",
     "googleDriveId": "13aPuwQIEQvO2sWW1fcqiQnCH9tGDHEmH",
     "previewUrl": "https://drive.google.com/file/d/13aPuwQIEQvO2sWW1fcqiQnCH9tGDHEmH/preview",
     "downloadUrl": "https://drive.google.com/uc?export=download&id=13aPuwQIEQvO2sWW1fcqiQnCH9tGDHEmH",
-    "localFile": null
+    "localFile": null,
+    "callNumber": "DDC 005.74",
+    "catalogId": "AKSINU-LIB-184",
+    "isbn": "AKSINU-REF-184",
+    "ddc": "005.74"
+  },
+  {
+    "id": "book-1bcwu9qexwyn",
+    "title": "Konsep Sistem Informasi: Perancangan dan Implementasi",
+    "author": "Fithrie Soufitri",
+    "category": "Sistem Informasi",
+    "callNumber": "DDC 004.068",
+    "catalogId": "AKSINU-LIB-185",
+    "isbn": "AKSINU-REF-185",
+    "tags": [
+      "sistem informasi",
+      "analisis sistem",
+      "manajemen sistem",
+      "ti kampus"
+    ],
+    "size": "PDF",
+    "description": "Buku kajian sistem informasi, analisis kebutuhan, dan perancangan sistem informasi modern: Konsep Sistem Informasi Fithrie Soufitri.",
+    "googleDriveId": "1bCWU9QEXWynoZDThF5SJQqlAj58zHCIT",
+    "previewUrl": "https://drive.google.com/file/d/1bCWU9QEXWynoZDThF5SJQqlAj58zHCIT/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=1bCWU9QEXWynoZDThF5SJQqlAj58zHCIT",
+    "localFile": null,
+    "ddc": "004.068"
   },
   {
     "id": "book-1bf73sf0npld",
@@ -1929,7 +4002,11 @@ const BOOKS_DATA = [
     "googleDriveId": "1bF73Sf0NPlDF5uMhn6ZrCA5Q9ncYKfA4",
     "previewUrl": "https://drive.google.com/file/d/1bF73Sf0NPlDF5uMhn6ZrCA5Q9ncYKfA4/preview",
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1bF73Sf0NPlDF5uMhn6ZrCA5Q9ncYKfA4",
-    "localFile": null
+    "localFile": null,
+    "callNumber": "DDC 005.276",
+    "catalogId": "AKSINU-LIB-186",
+    "isbn": "AKSINU-REF-186",
+    "ddc": "005.276"
   },
   {
     "id": "book-1sw9ye2cijym",
@@ -1947,7 +4024,11 @@ const BOOKS_DATA = [
     "googleDriveId": "1sW9yE2cIJyMZmu733axe0BCvL1zlKZOX",
     "previewUrl": "https://drive.google.com/file/d/1sW9yE2cIJyMZmu733axe0BCvL1zlKZOX/preview",
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1sW9yE2cIJyMZmu733axe0BCvL1zlKZOX",
-    "localFile": null
+    "localFile": null,
+    "callNumber": "DDC 005.276",
+    "catalogId": "AKSINU-LIB-187",
+    "isbn": "AKSINU-REF-187",
+    "ddc": "005.276"
   },
   {
     "id": "book-1-ir-wo1ua32",
@@ -1965,31 +4046,40 @@ const BOOKS_DATA = [
     "googleDriveId": "1-ir-WO1uA32yZjWVip0nPQ7AFBzq-yy7",
     "previewUrl": "https://drive.google.com/file/d/1-ir-WO1uA32yZjWVip0nPQ7AFBzq-yy7/preview",
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1-ir-WO1uA32yZjWVip0nPQ7AFBzq-yy7",
-    "localFile": null
+    "localFile": null,
+    "callNumber": "DDC 005.276",
+    "catalogId": "AKSINU-LIB-188",
+    "isbn": "AKSINU-REF-188",
+    "ddc": "005.276"
   },
   {
     "id": "book-1kjb5c5b-qje",
-    "title": "Large Scale Apps with Vue Vite and TypeScript Damiano Fusco Z Library",
-    "author": "Teknologi & Komputasi",
+    "title": "Large Scale Apps with Vue, Vite and TypeScript",
+    "author": "Damiano Fusco",
     "category": "JavaScript & Web",
     "tags": [
-      "javascript",
-      "web",
+      "vue",
+      "vite",
+      "typescript",
       "frontend",
-      "fullstack"
+      "enterprise"
     ],
     "size": "PDF",
-    "description": "Pelajari arsitektur dan sintaks modern ekosistem web interaktif melalui buku Large Scale Apps with Vue Vite and TypeScript Damiano Fusco Z Library.",
+    "description": "Arsitektur dan pola desain pengembangan aplikasi skala enterprise berbasis Vue 3, Vite, dan TypeScript.",
     "googleDriveId": "1kJB5C5b-QJeKngpGsew16j6dz6sOatkV",
     "previewUrl": "https://drive.google.com/file/d/1kJB5C5b-QJeKngpGsew16j6dz6sOatkV/preview",
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1kJB5C5b-QJeKngpGsew16j6dz6sOatkV",
-    "localFile": null
+    "localFile": null,
+    "callNumber": "DDC 005.276",
+    "catalogId": "AKSINU-LIB-189",
+    "isbn": "AKSINU-REF-189",
+    "ddc": "005.276"
   },
   {
     "id": "book-1tqae4r7ncko",
     "title": "Learn CSS",
     "author": "Teknologi & Komputasi",
-    "category": "Dasar Web & Desain",
+    "category": "JavaScript & Web",
     "tags": [
       "html",
       "css",
@@ -2001,7 +4091,11 @@ const BOOKS_DATA = [
     "googleDriveId": "1tQaE4r7ncKoqqluStaacbjspfsseUVar",
     "previewUrl": "https://drive.google.com/file/d/1tQaE4r7ncKoqqluStaacbjspfsseUVar/preview",
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1tQaE4r7ncKoqqluStaacbjspfsseUVar",
-    "localFile": null
+    "localFile": null,
+    "callNumber": "DDC 005.276",
+    "catalogId": "AKSINU-LIB-190",
+    "isbn": "AKSINU-REF-190",
+    "ddc": "005.276"
   },
   {
     "id": "book-1_mnjneo8xa6",
@@ -2020,7 +4114,33 @@ const BOOKS_DATA = [
     "googleDriveId": "1_MnjNeo8xa6dLFLWwxKNyJWg1Xf7a88u",
     "previewUrl": "https://drive.google.com/file/d/1_MnjNeo8xa6dLFLWwxKNyJWg1Xf7a88u/preview",
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1_MnjNeo8xa6dLFLWwxKNyJWg1Xf7a88u",
-    "localFile": null
+    "localFile": null,
+    "callNumber": "DDC 004.6782",
+    "catalogId": "AKSINU-LIB-191",
+    "isbn": "AKSINU-REF-191",
+    "ddc": "004.6782"
+  },
+  {
+    "id": "book-1eyvkdcvwqvb",
+    "title": "Learn Java Programming from Beginner to Professional",
+    "author": "Jeff P.",
+    "category": "Java & OOP",
+    "tags": [
+      "java",
+      "oop",
+      "backend",
+      "programming"
+    ],
+    "size": "PDF",
+    "description": "Pelajari dasar pemrograman Java, konsep Object-Oriented Programming (OOP), hingga penerapan standar industri.",
+    "googleDriveId": "1eyvkDcvwqvBehyur6-Dzh3JfNRp9Smq4",
+    "previewUrl": "https://drive.google.com/file/d/1eyvkDcvwqvBehyur6-Dzh3JfNRp9Smq4/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=1eyvkDcvwqvBehyur6-Dzh3JfNRp9Smq4",
+    "localFile": null,
+    "callNumber": "DDC 005.133",
+    "catalogId": "AKSINU-LIB-192",
+    "isbn": "AKSINU-REF-192",
+    "ddc": "005.133"
   },
   {
     "id": "book-1gyatc1lyuoi",
@@ -2038,7 +4158,11 @@ const BOOKS_DATA = [
     "googleDriveId": "1GYatC1LYUoi8CEM5ElTx96X83Uo10Bmo",
     "previewUrl": "https://drive.google.com/file/d/1GYatC1LYUoi8CEM5ElTx96X83Uo10Bmo/preview",
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1GYatC1LYUoi8CEM5ElTx96X83Uo10Bmo",
-    "localFile": null
+    "localFile": null,
+    "callNumber": "DDC 005.276",
+    "catalogId": "AKSINU-LIB-193",
+    "isbn": "AKSINU-REF-193",
+    "ddc": "005.276"
   },
   {
     "id": "book-1rih69tki3ek",
@@ -2056,7 +4180,33 @@ const BOOKS_DATA = [
     "googleDriveId": "1rIh69tkI3EKlayNGW3X36SHDtH3kFfu7",
     "previewUrl": "https://drive.google.com/file/d/1rIh69tkI3EKlayNGW3X36SHDtH3kFfu7/preview",
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1rIh69tkI3EKlayNGW3X36SHDtH3kFfu7",
-    "localFile": null
+    "localFile": null,
+    "callNumber": "DDC 005.276",
+    "catalogId": "AKSINU-LIB-194",
+    "isbn": "AKSINU-REF-194",
+    "ddc": "005.276"
+  },
+  {
+    "id": "book-1yjnwsfcs8x_",
+    "title": "Learn PHP & MySQL: Ultimate Guide",
+    "author": "Pustaka Web",
+    "category": "PHP & Backend",
+    "tags": [
+      "php",
+      "mysql",
+      "backend",
+      "database"
+    ],
+    "size": "PDF",
+    "description": "Panduan komprehensif mengintegrasikan bahasa backend PHP dengan basis data relasional MySQL.",
+    "googleDriveId": "1YJNWSfcs8x_xAmjVusSaf1QWSPjAYjtd",
+    "previewUrl": "https://drive.google.com/file/d/1YJNWSfcs8x_xAmjVusSaf1QWSPjAYjtd/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=1YJNWSfcs8x_xAmjVusSaf1QWSPjAYjtd",
+    "localFile": null,
+    "callNumber": "DDC 005.276",
+    "catalogId": "AKSINU-LIB-195",
+    "isbn": "AKSINU-REF-195",
+    "ddc": "005.276"
   },
   {
     "id": "book-1xdfp9t6y1qc",
@@ -2074,25 +4224,11 @@ const BOOKS_DATA = [
     "googleDriveId": "1XDfp9t6Y1qcceTVrAn_jALkMmcGKGfra",
     "previewUrl": "https://drive.google.com/file/d/1XDfp9t6Y1qcceTVrAn_jALkMmcGKGfra/preview",
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1XDfp9t6Y1qcceTVrAn_jALkMmcGKGfra",
-    "localFile": null
-  },
-  {
-    "id": "book-1yjnwsfcs8x_",
-    "title": "Learn PHP Mysql with Ultimate",
-    "author": "Teknologi & Komputasi",
-    "category": "PHP & Backend",
-    "tags": [
-      "php",
-      "backend",
-      "web framework",
-      "server"
-    ],
-    "size": "PDF",
-    "description": "Pengembangan backend andal, API web, dan sistem manajemen konten menggunakan Learn PHP Mysql with Ultimate.",
-    "googleDriveId": "1YJNWSfcs8x_xAmjVusSaf1QWSPjAYjtd",
-    "previewUrl": "https://drive.google.com/file/d/1YJNWSfcs8x_xAmjVusSaf1QWSPjAYjtd/preview",
-    "downloadUrl": "https://drive.google.com/uc?export=download&id=1YJNWSfcs8x_xAmjVusSaf1QWSPjAYjtd",
-    "localFile": null
+    "localFile": null,
+    "callNumber": "DDC 005.276",
+    "catalogId": "AKSINU-LIB-196",
+    "isbn": "AKSINU-REF-196",
+    "ddc": "005.276"
   },
   {
     "id": "book-1psjmmfvruow",
@@ -2110,7 +4246,11 @@ const BOOKS_DATA = [
     "googleDriveId": "1psJMmfVruoW8hnYq_EiJIwzNs9OqTaAk",
     "previewUrl": "https://drive.google.com/file/d/1psJMmfVruoW8hnYq_EiJIwzNs9OqTaAk/preview",
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1psJMmfVruoW8hnYq_EiJIwzNs9OqTaAk",
-    "localFile": null
+    "localFile": null,
+    "callNumber": "DDC 005.133",
+    "catalogId": "AKSINU-LIB-197",
+    "isbn": "AKSINU-REF-197",
+    "ddc": "005.133"
   },
   {
     "id": "book-10fekcxkcxxm",
@@ -2128,13 +4268,17 @@ const BOOKS_DATA = [
     "googleDriveId": "10fEkCXKcxXMcE4Vc7daFhurXt-yczx3w",
     "previewUrl": "https://drive.google.com/file/d/10fEkCXKcxXMcE4Vc7daFhurXt-yczx3w/preview",
     "downloadUrl": "https://drive.google.com/uc?export=download&id=10fEkCXKcxXMcE4Vc7daFhurXt-yczx3w",
-    "localFile": null
+    "localFile": null,
+    "callNumber": "DDC 005.133",
+    "catalogId": "AKSINU-LIB-198",
+    "isbn": "AKSINU-REF-198",
+    "ddc": "005.133"
   },
   {
     "id": "book-1g18zry3ua3w",
     "title": "Learning C by Developing Games with Unity",
     "author": "Teknologi & Komputasi",
-    "category": "Dasar Pemrograman",
+    "category": "Sistem Informasi",
     "tags": [
       "teknologi",
       "komputer"
@@ -2144,7 +4288,11 @@ const BOOKS_DATA = [
     "googleDriveId": "1g18zry3Ua3w_ONpoJBEpE49K6Vfxz_Rg",
     "previewUrl": "https://drive.google.com/file/d/1g18zry3Ua3w_ONpoJBEpE49K6Vfxz_Rg/preview",
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1g18zry3Ua3w_ONpoJBEpE49K6Vfxz_Rg",
-    "localFile": null
+    "localFile": null,
+    "callNumber": "DDC 004.068",
+    "catalogId": "AKSINU-LIB-199",
+    "isbn": "AKSINU-REF-199",
+    "ddc": "004.068"
   },
   {
     "id": "book-1fft1-qlxeq1",
@@ -2162,7 +4310,33 @@ const BOOKS_DATA = [
     "googleDriveId": "1Fft1-qLXeQ11isTq3iD0iwn8D4rM7Esz",
     "previewUrl": "https://drive.google.com/file/d/1Fft1-qLXeQ11isTq3iD0iwn8D4rM7Esz/preview",
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1Fft1-qLXeQ11isTq3iD0iwn8D4rM7Esz",
-    "localFile": null
+    "localFile": null,
+    "callNumber": "DDC 005.276",
+    "catalogId": "AKSINU-LIB-200",
+    "isbn": "AKSINU-REF-200",
+    "ddc": "005.276"
+  },
+  {
+    "id": "book-1a6rvq0l18er",
+    "title": "Learning Patterns: JavaScript & React Design Patterns",
+    "author": "Lydia Hallie & Addy Osmani",
+    "category": "JavaScript & Web",
+    "tags": [
+      "design patterns",
+      "javascript",
+      "react",
+      "software architecture"
+    ],
+    "size": "PDF",
+    "description": "Panduan visual eksplorasi arsitektur perangkat lunak, design patterns modern, dan optimasi performa JavaScript & React.",
+    "googleDriveId": "1A6RvQ0l18erRA4dYnY2xD6q0o7pmWrVi",
+    "previewUrl": "https://drive.google.com/file/d/1A6RvQ0l18erRA4dYnY2xD6q0o7pmWrVi/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=1A6RvQ0l18erRA4dYnY2xD6q0o7pmWrVi",
+    "localFile": null,
+    "callNumber": "DDC 005.276",
+    "catalogId": "AKSINU-LIB-201",
+    "isbn": "AKSINU-REF-201",
+    "ddc": "005.276"
   },
   {
     "id": "book-1q7scjj6ddg3",
@@ -2180,11 +4354,15 @@ const BOOKS_DATA = [
     "googleDriveId": "1q7scjj6dDg3N_SudAqiyoWK4LNSk28VB",
     "previewUrl": "https://drive.google.com/file/d/1q7scjj6dDg3N_SudAqiyoWK4LNSk28VB/preview",
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1q7scjj6dDg3N_SudAqiyoWK4LNSk28VB",
-    "localFile": null
+    "localFile": null,
+    "callNumber": "DDC 005.133",
+    "catalogId": "AKSINU-LIB-202",
+    "isbn": "AKSINU-REF-202",
+    "ddc": "005.133"
   },
   {
     "id": "book-11inu1mc9ybg",
-    "title": "Learning React Modern Patterns for Developing React Apps 2nbsped",
+    "title": "Learning React Modern Patterns for Developing React Apps 2nd Edition",
     "author": "Teknologi & Komputasi",
     "category": "JavaScript & Web",
     "tags": [
@@ -2198,7 +4376,11 @@ const BOOKS_DATA = [
     "googleDriveId": "11iNU1Mc9Ybgh6mXTDUszisjacTEsF6jI",
     "previewUrl": "https://drive.google.com/file/d/11iNU1Mc9Ybgh6mXTDUszisjacTEsF6jI/preview",
     "downloadUrl": "https://drive.google.com/uc?export=download&id=11iNU1Mc9Ybgh6mXTDUszisjacTEsF6jI",
-    "localFile": null
+    "localFile": null,
+    "callNumber": "DDC 005.276",
+    "catalogId": "AKSINU-LIB-203",
+    "isbn": "AKSINU-REF-203",
+    "ddc": "005.276"
   },
   {
     "id": "book-1bvwhsshe2it",
@@ -2216,23 +4398,33 @@ const BOOKS_DATA = [
     "googleDriveId": "1bvWhsSHe2it4Ts_QpgrUuRQfikFTNs6a",
     "previewUrl": "https://drive.google.com/file/d/1bvWhsSHe2it4Ts_QpgrUuRQfikFTNs6a/preview",
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1bvWhsSHe2it4Ts_QpgrUuRQfikFTNs6a",
-    "localFile": null
+    "localFile": null,
+    "callNumber": "DDC 005.133",
+    "catalogId": "AKSINU-LIB-204",
+    "isbn": "AKSINU-REF-204",
+    "ddc": "005.133"
   },
   {
-    "id": "book-1a6rvq0l18er",
-    "title": "Lydia Hallie Addy Osmani Learning Patterns 2021 Libgen Li",
-    "author": "Teknologi & Komputasi",
-    "category": "Dasar Pemrograman",
+    "id": "book-1xj9hndtspev",
+    "title": "Machine Learning for Absolute Beginners",
+    "author": "Oliver Theobald",
+    "category": "AI & Machine Learning",
     "tags": [
-      "teknologi",
-      "komputer"
+      "machine learning",
+      "ai",
+      "data science",
+      "pemula"
     ],
     "size": "PDF",
-    "description": "Buku panduan dan referensi komprehensif mengenai Lydia Hallie Addy Osmani Learning Patterns 2021 Libgen Li untuk memperdalam pemahaman teknologi informasi dan rekayasa perangkat lunak.",
-    "googleDriveId": "1A6RvQ0l18erRA4dYnY2xD6q0o7pmWrVi",
-    "previewUrl": "https://drive.google.com/file/d/1A6RvQ0l18erRA4dYnY2xD6q0o7pmWrVi/preview",
-    "downloadUrl": "https://drive.google.com/uc?export=download&id=1A6RvQ0l18erRA4dYnY2xD6q0o7pmWrVi",
-    "localFile": null
+    "description": "Panduan visual tanpa rumus rumit untuk memahami konsep kecerdasan buatan, regresi linear, k-means, dan neural networks.",
+    "googleDriveId": "1Xj9hnDtSPeVDwCtyZwQ03GsUdtsCoCvu",
+    "previewUrl": "https://drive.google.com/file/d/1Xj9hnDtSPeVDwCtyZwQ03GsUdtsCoCvu/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=1Xj9hnDtSPeVDwCtyZwQ03GsUdtsCoCvu",
+    "localFile": null,
+    "callNumber": "DDC 006.3",
+    "catalogId": "AKSINU-LIB-205",
+    "isbn": "AKSINU-REF-205",
+    "ddc": "006.3"
   },
   {
     "id": "book-1nb-0pcwbo7e",
@@ -2250,13 +4442,17 @@ const BOOKS_DATA = [
     "googleDriveId": "1nB-0PCwBO7eU-iz9O3Wv1jBVgYiYNmXw",
     "previewUrl": "https://drive.google.com/file/d/1nB-0PCwBO7eU-iz9O3Wv1jBVgYiYNmXw/preview",
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1nB-0PCwBO7eU-iz9O3Wv1jBVgYiYNmXw",
-    "localFile": null
+    "localFile": null,
+    "callNumber": "DDC 006.3",
+    "catalogId": "AKSINU-LIB-206",
+    "isbn": "AKSINU-REF-206",
+    "ddc": "006.3"
   },
   {
     "id": "book-1vxllk_vf0jb",
     "title": "Machine Learning with Python",
     "author": "Teknologi & Komputasi",
-    "category": "Python & Data Science",
+    "category": "AI & Machine Learning",
     "tags": [
       "python",
       "data science",
@@ -2268,23 +4464,286 @@ const BOOKS_DATA = [
     "googleDriveId": "1VXlLK_VF0jBDsPk_IanFeAPSvnVkWuew",
     "previewUrl": "https://drive.google.com/file/d/1VXlLK_VF0jBDsPk_IanFeAPSvnVkWuew/preview",
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1VXlLK_VF0jBDsPk_IanFeAPSvnVkWuew",
-    "localFile": null
+    "localFile": null,
+    "callNumber": "DDC 006.3",
+    "catalogId": "AKSINU-LIB-207",
+    "isbn": "AKSINU-REF-207",
+    "ddc": "006.3"
   },
   {
-    "id": "book-1xhcsvotlgsu",
-    "title": "Manajemen Layanan Ti",
-    "author": "Teknologi & Komputasi",
-    "category": "Dasar Pemrograman",
+    "id": "book-1pz9q05btwui",
+    "title": "Management Information Systems",
+    "author": "Pustaka AKSINU",
+    "category": "Sistem Informasi",
+    "callNumber": "DDC 004.068",
+    "catalogId": "AKSINU-LIB-208",
+    "isbn": "AKSINU-REF-208",
     "tags": [
       "teknologi",
       "komputer"
     ],
     "size": "PDF",
-    "description": "Buku panduan dan referensi komprehensif mengenai Manajemen Layanan Ti untuk memperdalam pemahaman teknologi informasi dan rekayasa perangkat lunak.",
+    "description": "Buku panduan dan referensi mengenai Management Information Systems untuk memperdalam literasi teknologi informasi.",
+    "googleDriveId": "1PZ9q05BTwUI-w7T_giTGhwwaiB5SxGMy",
+    "previewUrl": "https://drive.google.com/file/d/1PZ9q05BTwUI-w7T_giTGhwwaiB5SxGMy/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=1PZ9q05BTwUI-w7T_giTGhwwaiB5SxGMy",
+    "localFile": null,
+    "ddc": "004.068"
+  },
+  {
+    "id": "book-1kalpr9zhqnn",
+    "title": "Management Information Systems by Kenneth Sousa Effy Oz 7ed",
+    "author": "Pustaka AKSINU",
+    "category": "Sistem Informasi",
+    "callNumber": "DDC 004.068",
+    "catalogId": "AKSINU-LIB-209",
+    "isbn": "AKSINU-REF-209",
+    "tags": [
+      "teknologi",
+      "komputer"
+    ],
+    "size": "PDF",
+    "description": "Buku panduan dan referensi mengenai Management Information Systems by Kenneth Sousa Effy Oz 7ed untuk memperdalam literasi teknologi informasi.",
+    "googleDriveId": "1KAlpr9ZHQnnMl0LkRJvvcl0-33VE0Lnx",
+    "previewUrl": "https://drive.google.com/file/d/1KAlpr9ZHQnnMl0LkRJvvcl0-33VE0Lnx/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=1KAlpr9ZHQnnMl0LkRJvvcl0-33VE0Lnx",
+    "localFile": null,
+    "ddc": "004.068"
+  },
+  {
+    "id": "book-1oair43gosrc",
+    "title": "Manajemen & Pengelolaan Data Relasional",
+    "author": "Pustaka Basis Data AKSINU",
+    "category": "Database & SQL",
+    "tags": [
+      "pengelolaan data",
+      "database",
+      "sql",
+      "manajemen data"
+    ],
+    "size": "PDF",
+    "description": "Panduan terstruktur pengorganisasian data, integritas referensial, optimasi penyimpanan, dan pemeliharaan basis data.",
+    "googleDriveId": "1oaIr43GoSRC1j_eSRSWd2ZZ_V6u9MG0s",
+    "previewUrl": "https://drive.google.com/file/d/1oaIr43GoSRC1j_eSRSWd2ZZ_V6u9MG0s/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=1oaIr43GoSRC1j_eSRSWd2ZZ_V6u9MG0s",
+    "localFile": null,
+    "callNumber": "DDC 005.74",
+    "catalogId": "AKSINU-LIB-210",
+    "isbn": "AKSINU-REF-210",
+    "ddc": "005.74"
+  },
+  {
+    "id": "book-1s0pif4ufqv6",
+    "title": "Manajemen Agro Industri",
+    "author": "Pustaka AKSINU",
+    "category": "Manajemen & Bisnis",
+    "callNumber": "DDC 658.4038",
+    "catalogId": "AKSINU-LIB-211",
+    "isbn": "AKSINU-REF-211",
+    "tags": [
+      "teknologi",
+      "komputer"
+    ],
+    "size": "PDF",
+    "description": "Buku panduan dan referensi mengenai Manajemen Agro Industri untuk memperdalam literasi teknologi informasi.",
+    "googleDriveId": "1S0pif4ufQv6z9tg2Jz534CM3OMo0Ph6c",
+    "previewUrl": "https://drive.google.com/file/d/1S0pif4ufQv6z9tg2Jz534CM3OMo0Ph6c/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=1S0pif4ufQv6z9tg2Jz534CM3OMo0Ph6c",
+    "localFile": null,
+    "ddc": "658.4038"
+  },
+  {
+    "id": "book-1ktxblf5a3t8",
+    "title": "Manajemen Data & Tata Kelola Informasi",
+    "author": "Evi Susanti Sinaga",
+    "category": "Manajemen & Bisnis",
+    "callNumber": "DDC 658.4038",
+    "catalogId": "AKSINU-LIB-212",
+    "isbn": "AKSINU-REF-212",
+    "tags": [
+      "teknologi",
+      "komputer"
+    ],
+    "size": "PDF",
+    "description": "Buku panduan dan referensi mengenai Buku Evi Susanti Sinaga Buku Manajemen Data untuk memperdalam literasi teknologi informasi.",
+    "googleDriveId": "1KtxbLf5A3T8VOdjNf-yLMivqvym5EuBA",
+    "previewUrl": "https://drive.google.com/file/d/1KtxbLf5A3T8VOdjNf-yLMivqvym5EuBA/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=1KtxbLf5A3T8VOdjNf-yLMivqvym5EuBA",
+    "localFile": null,
+    "ddc": "658.4038"
+  },
+  {
+    "id": "book-1qww67m_fsrk",
+    "title": "Manajemen Data dan Informasi Berbasis OBE",
+    "author": "Pustaka AKSINU",
+    "category": "Database & SQL",
+    "callNumber": "DDC 005.74",
+    "catalogId": "AKSINU-LIB-213",
+    "isbn": "AKSINU-REF-213",
+    "tags": [
+      "teknologi",
+      "komputer"
+    ],
+    "size": "PDF",
+    "description": "Buku panduan dan referensi mengenai Rps Obe Manajemen Data dan Informasi untuk memperdalam literasi teknologi informasi.",
+    "googleDriveId": "1qWW67m_FSrKamIwAk5JAf5EdxlBA06IF",
+    "previewUrl": "https://drive.google.com/file/d/1qWW67m_FSrKamIwAk5JAf5EdxlBA06IF/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=1qWW67m_FSrKamIwAk5JAf5EdxlBA06IF",
+    "localFile": null,
+    "ddc": "005.74"
+  },
+  {
+    "id": "book-12f1ir27he-o",
+    "title": "Manajemen Kualitas",
+    "author": "Pustaka AKSINU",
+    "category": "Manajemen & Bisnis",
+    "callNumber": "DDC 658.4038",
+    "catalogId": "AKSINU-LIB-214",
+    "isbn": "AKSINU-REF-214",
+    "tags": [
+      "manajemen",
+      "bisnis",
+      "kewirausahaan",
+      "technopreneurship"
+    ],
+    "size": "PDF",
+    "description": "Kajian manajemen operasional, technopreneurship, kepemimpinan organisasi, dan dinamika bisnis TI.",
+    "googleDriveId": "12f1ir27He-OXgHJ9YVhL6uYaRZQ5BA-H",
+    "previewUrl": "https://drive.google.com/file/d/12f1ir27He-OXgHJ9YVhL6uYaRZQ5BA-H/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=12f1ir27He-OXgHJ9YVhL6uYaRZQ5BA-H",
+    "localFile": null,
+    "ddc": "658.4038"
+  },
+  {
+    "id": "book-11odb-mulxnw",
+    "title": "Manajemen Kualitas dan Produktivitas",
+    "author": "Pustaka AKSINU",
+    "category": "Manajemen & Bisnis",
+    "callNumber": "DDC 658.4038",
+    "catalogId": "AKSINU-LIB-215",
+    "isbn": "AKSINU-REF-215",
+    "tags": [
+      "manajemen",
+      "bisnis",
+      "kewirausahaan",
+      "technopreneurship"
+    ],
+    "size": "PDF",
+    "description": "Kajian manajemen operasional, technopreneurship, kepemimpinan organisasi, dan dinamika bisnis TI.",
+    "googleDriveId": "11odb-MuLxNWTVgEI4oceoEqUUD8kKntF",
+    "previewUrl": "https://drive.google.com/file/d/11odb-MuLxNWTVgEI4oceoEqUUD8kKntF/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=11odb-MuLxNWTVgEI4oceoEqUUD8kKntF",
+    "localFile": null,
+    "ddc": "658.4038"
+  },
+  {
+    "id": "book-1w9hsrvcoqrk",
+    "title": "Manajemen Kualitas dan Produktivitas Kerja",
+    "author": "Pustaka AKSINU",
+    "category": "Manajemen & Bisnis",
+    "callNumber": "DDC 658.4038",
+    "catalogId": "AKSINU-LIB-216",
+    "isbn": "AKSINU-REF-216",
+    "tags": [
+      "teknologi",
+      "komputer"
+    ],
+    "size": "PDF",
+    "description": "Buku panduan dan referensi mengenai Ebook Manajemen+kualitas Organized untuk memperdalam literasi teknologi informasi.",
+    "googleDriveId": "1w9hSRVCoqrkSjxA3MJojLx5wPiVZ6Q9v",
+    "previewUrl": "https://drive.google.com/file/d/1w9hSRVCoqrkSjxA3MJojLx5wPiVZ6Q9v/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=1w9hSRVCoqrkSjxA3MJojLx5wPiVZ6Q9v",
+    "localFile": null,
+    "ddc": "658.4038"
+  },
+  {
+    "id": "book-1xhcsvotlgsu",
+    "title": "Manajemen Layanan TI (ITSM & ITIL)",
+    "author": "Pustaka AKSINU",
+    "category": "Manajemen & Bisnis",
+    "tags": [
+      "itsm",
+      "itil",
+      "manajemen layanan ti",
+      "sla",
+      "tata kelola ti"
+    ],
+    "size": "PDF",
+    "description": "Kerangka kerja tata kelola TI, manajemen insiden, Service Level Agreement (SLA), dan pengoperasian layanan TI berbasis standar ITIL.",
     "googleDriveId": "1XhcsvOtLgSuu7P0Wva8lwUD5iLHuRfjm",
     "previewUrl": "https://drive.google.com/file/d/1XhcsvOtLgSuu7P0Wva8lwUD5iLHuRfjm/preview",
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1XhcsvOtLgSuu7P0Wva8lwUD5iLHuRfjm",
-    "localFile": null
+    "localFile": null,
+    "callNumber": "DDC 658.4038",
+    "catalogId": "AKSINU-LIB-217",
+    "isbn": "AKSINU-REF-217",
+    "ddc": "658.4038"
+  },
+  {
+    "id": "book-1ksxniz9xlqp",
+    "title": "Manajemen Proyek Perangkat Lunak",
+    "author": "Pustaka AKSINU",
+    "category": "Sistem Informasi",
+    "callNumber": "DDC 004.068",
+    "catalogId": "AKSINU-LIB-218",
+    "isbn": "AKSINU-REF-218",
+    "tags": [
+      "sistem informasi",
+      "analisis sistem",
+      "manajemen sistem",
+      "ti kampus"
+    ],
+    "size": "PDF",
+    "description": "Buku kajian sistem informasi, analisis kebutuhan, dan perancangan sistem informasi modern: Manajemen Proyek Perangkat Lunak.",
+    "googleDriveId": "1KSxNiZ9xLQpvSNpWRwcK240BSrE_BSio",
+    "previewUrl": "https://drive.google.com/file/d/1KSxNiZ9xLQpvSNpWRwcK240BSrE_BSio/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=1KSxNiZ9xLQpvSNpWRwcK240BSrE_BSio",
+    "localFile": null,
+    "ddc": "004.068"
+  },
+  {
+    "id": "book-18jujry4syyc",
+    "title": "Manajemen Proyek Sistem Informasi",
+    "author": "Pustaka AKSINU",
+    "category": "Sistem Informasi",
+    "callNumber": "DDC 004.068",
+    "catalogId": "AKSINU-LIB-219",
+    "isbn": "AKSINU-REF-219",
+    "tags": [
+      "sistem informasi",
+      "analisis sistem",
+      "manajemen sistem",
+      "ti kampus"
+    ],
+    "size": "PDF",
+    "description": "Buku kajian sistem informasi, analisis kebutuhan, dan perancangan sistem informasi modern: Manajemen Proyek Sistem Informasi.",
+    "googleDriveId": "18jUjRy4sYYcGHjfnZeRw6wjn4J-Sl1Oa",
+    "previewUrl": "https://drive.google.com/file/d/18jUjRy4sYYcGHjfnZeRw6wjn4J-Sl1Oa/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=18jUjRy4sYYcGHjfnZeRw6wjn4J-Sl1Oa",
+    "localFile": null,
+    "ddc": "004.068"
+  },
+  {
+    "id": "book-1yav8tlzb12i",
+    "title": "Manajemen UMKM: Strategi dan Inovasi Produk Lokal Berdaya Saing Global",
+    "author": "Dr. E. K. Sugiyanto, dkk.",
+    "category": "Manajemen & Bisnis",
+    "callNumber": "DDC 658.4038",
+    "catalogId": "AKSINU-LIB-220",
+    "isbn": "AKSINU-REF-220",
+    "tags": [
+      "manajemen",
+      "umkm",
+      "inovasi",
+      "bisnis"
+    ],
+    "size": "PDF",
+    "description": "Strategi pengembangan produk UMKM, daya saing pasar, dan inovasi bisnis lokal di era digital.",
+    "googleDriveId": "1yAv8tLzb12Ip8D-XRhBp8aLfpIm64LxL",
+    "previewUrl": "https://drive.google.com/file/d/1yAv8tLzb12Ip8D-XRhBp8aLfpIm64LxL/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=1yAv8tLzb12Ip8D-XRhBp8aLfpIm64LxL",
+    "localFile": null,
+    "ddc": "658.4038"
   },
   {
     "id": "book-1gr4r83kjqrx",
@@ -2302,7 +4761,11 @@ const BOOKS_DATA = [
     "googleDriveId": "1gR4r83kjQrXQOprOZl_DQESBhET3C_tB",
     "previewUrl": "https://drive.google.com/file/d/1gR4r83kjQrXQOprOZl_DQESBhET3C_tB/preview",
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1gR4r83kjQrXQOprOZl_DQESBhET3C_tB",
-    "localFile": null
+    "localFile": null,
+    "callNumber": "DDC 006.3",
+    "catalogId": "AKSINU-LIB-221",
+    "isbn": "AKSINU-REF-221",
+    "ddc": "006.3"
   },
   {
     "id": "book-1mfsx9na7u-c",
@@ -2320,13 +4783,17 @@ const BOOKS_DATA = [
     "googleDriveId": "1mfSX9na7U-c8HYWCis9ghylM_9078Ysg",
     "previewUrl": "https://drive.google.com/file/d/1mfSX9na7U-c8HYWCis9ghylM_9078Ysg/preview",
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1mfSX9na7U-c8HYWCis9ghylM_9078Ysg",
-    "localFile": null
+    "localFile": null,
+    "callNumber": "DDC 006.3",
+    "catalogId": "AKSINU-LIB-222",
+    "isbn": "AKSINU-REF-222",
+    "ddc": "006.3"
   },
   {
     "id": "book-1hy7evto46ve",
     "title": "Mastering C Programming",
     "author": "Teknologi & Komputasi",
-    "category": "Dasar Pemrograman",
+    "category": "Sistem Informasi",
     "tags": [
       "teknologi",
       "komputer"
@@ -2336,23 +4803,160 @@ const BOOKS_DATA = [
     "googleDriveId": "1hY7evTo46veBP5uXbIzrCqxfGuD_6dfb",
     "previewUrl": "https://drive.google.com/file/d/1hY7evTo46veBP5uXbIzrCqxfGuD_6dfb/preview",
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1hY7evTo46veBP5uXbIzrCqxfGuD_6dfb",
-    "localFile": null
+    "localFile": null,
+    "callNumber": "DDC 004.068",
+    "catalogId": "AKSINU-LIB-223",
+    "isbn": "AKSINU-REF-223",
+    "ddc": "004.068"
+  },
+  {
+    "id": "book-14ujq5nuom-t",
+    "title": "Mastering Flutter Development (Advanced Edition)",
+    "author": "K. Moore",
+    "category": "Mobile Development",
+    "tags": [
+      "flutter",
+      "dart",
+      "advanced flutter"
+    ],
+    "size": "PDF",
+    "description": "Teknik lanjutan rekayasa aplikasi Flutter, pengujian otomatis, dan optimasi performa rendering.",
+    "googleDriveId": "14ujq5NUoM-T-kg-cmOpJPCXc4KmogWyt",
+    "previewUrl": "https://drive.google.com/file/d/14ujq5NUoM-T-kg-cmOpJPCXc4KmogWyt/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=14ujq5NUoM-T-kg-cmOpJPCXc4KmogWyt",
+    "localFile": null,
+    "callNumber": "DDC 005.268",
+    "catalogId": "AKSINU-LIB-224",
+    "isbn": "AKSINU-REF-224",
+    "ddc": "005.268"
+  },
+  {
+    "id": "book-1rqxaqptjmgu",
+    "title": "Mastering Flutter: Learn to Develop Flutter Apps",
+    "author": "K. Moore",
+    "category": "Mobile Development",
+    "tags": [
+      "flutter",
+      "dart",
+      "mobile dev",
+      "ui design"
+    ],
+    "size": "PDF",
+    "description": "Panduan komprehensif pengembangan aplikasi mobile lintas platform dengan Flutter, animasi kustom, dan arsitektur bersih.",
+    "googleDriveId": "1RqXaQpTJMgueo5lfjZEVR2WZlUzLHnGD",
+    "previewUrl": "https://drive.google.com/file/d/1RqXaQpTJMgueo5lfjZEVR2WZlUzLHnGD/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=1RqXaQpTJMgueo5lfjZEVR2WZlUzLHnGD",
+    "localFile": null,
+    "callNumber": "DDC 005.268",
+    "catalogId": "AKSINU-LIB-225",
+    "isbn": "AKSINU-REF-225",
+    "ddc": "005.268"
   },
   {
     "id": "book-1i7rsdjmomua",
-    "title": "Mastering Netbeans Sample Chapter",
-    "author": "Teknologi & Komputasi",
-    "category": "Dasar Pemrograman",
+    "title": "Mastering NetBeans IDE for Java Development",
+    "author": "Pustaka Java",
+    "category": "Java & OOP",
+    "tags": [
+      "netbeans",
+      "java",
+      "ide"
+    ],
+    "size": "PDF",
+    "description": "Panduan produktivitas memakai NetBeans IDE untuk penulisan kode Java, refactoring, profiling, dan integrasi build tool.",
+    "googleDriveId": "1I7RsdJMOmuALhBobzRUX0v2nUTTnj9Bv",
+    "previewUrl": "https://drive.google.com/file/d/1I7RsdJMOmuALhBobzRUX0v2nUTTnj9Bv/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=1I7RsdJMOmuALhBobzRUX0v2nUTTnj9Bv",
+    "localFile": null,
+    "callNumber": "DDC 005.133",
+    "catalogId": "AKSINU-LIB-226",
+    "isbn": "AKSINU-REF-226",
+    "ddc": "005.133"
+  },
+  {
+    "id": "book-1mh3ww3w6-yf",
+    "title": "Mastering UI/UX Design Principles",
+    "author": "Creative Design Studio",
+    "category": "UI/UX & Desain",
+    "tags": [
+      "ui/ux",
+      "design system",
+      "interaksi",
+      "figma"
+    ],
+    "size": "PDF",
+    "description": "Teknik mendalam pembuatan Design System yang konsisten, aksesibel, dan berpusat pada kepuasan pengguna.",
+    "googleDriveId": "1mH3wW3w6-yF0w8D_JZFnAxLH-7pHgIvB",
+    "previewUrl": "https://drive.google.com/file/d/1mH3wW3w6-yF0w8D_JZFnAxLH-7pHgIvB/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=1mH3wW3w6-yF0w8D_JZFnAxLH-7pHgIvB",
+    "localFile": null,
+    "callNumber": "DDC 006.6",
+    "catalogId": "AKSINU-LIB-227",
+    "isbn": "AKSINU-REF-227",
+    "ddc": "006.6"
+  },
+  {
+    "id": "book-1gsn8hmabkjm",
+    "title": "Matematika Diskrit",
+    "author": "Rinaldi Munir",
+    "category": "Struktur Data & Algoritma",
+    "tags": [
+      "matematika diskrit",
+      "rinaldi munir",
+      "logika matematika",
+      "teori graf",
+      "kombinatorika"
+    ],
+    "size": "PDF",
+    "description": "Buku teks legendaris karya Rinaldi Munir (Informatika Bandung) yang membahas logika, teori himpunan, relasi fungsi, graf, dan pohon biner.",
+    "googleDriveId": "1GsN8hmAbkJme808Vi5avqb6TNjG0VDa5",
+    "previewUrl": "https://drive.google.com/file/d/1GsN8hmAbkJme808Vi5avqb6TNjG0VDa5/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=1GsN8hmAbkJme808Vi5avqb6TNjG0VDa5",
+    "localFile": null,
+    "callNumber": "DDC 005.13",
+    "catalogId": "AKSINU-LIB-228",
+    "isbn": "978-602-8758-08-6",
+    "ddc": "005.13"
+  },
+  {
+    "id": "book-15iw5pbzoqvs",
+    "title": "Matematika Diskrit Komprehensif",
+    "author": "Pustaka AKSINU",
+    "category": "Struktur Data & Algoritma",
+    "callNumber": "DDC 005.13",
+    "catalogId": "AKSINU-LIB-229",
+    "isbn": "AKSINU-REF-229",
     "tags": [
       "teknologi",
       "komputer"
     ],
     "size": "PDF",
-    "description": "Buku panduan dan referensi komprehensif mengenai Mastering Netbeans Sample Chapter untuk memperdalam pemahaman teknologi informasi dan rekayasa perangkat lunak.",
-    "googleDriveId": "1I7RsdJMOmuALhBobzRUX0v2nUTTnj9Bv",
-    "previewUrl": "https://drive.google.com/file/d/1I7RsdJMOmuALhBobzRUX0v2nUTTnj9Bv/preview",
-    "downloadUrl": "https://drive.google.com/uc?export=download&id=1I7RsdJMOmuALhBobzRUX0v2nUTTnj9Bv",
-    "localFile": null
+    "description": "Buku panduan dan referensi mengenai Buku Matematika Diskrited untuk memperdalam literasi teknologi informasi.",
+    "googleDriveId": "15iW5PbzOqvSF-_8FeNfkc2GiP3CGC6Bb",
+    "previewUrl": "https://drive.google.com/file/d/15iW5PbzOqvSF-_8FeNfkc2GiP3CGC6Bb/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=15iW5PbzOqvSF-_8FeNfkc2GiP3CGC6Bb",
+    "localFile": null,
+    "ddc": "005.13"
+  },
+  {
+    "id": "book-1wui1ozmwpi7",
+    "title": "Matematika Diskrit untuk Teknik Informat",
+    "author": "Pustaka AKSINU",
+    "category": "Struktur Data & Algoritma",
+    "callNumber": "DDC 005.13",
+    "catalogId": "AKSINU-LIB-230",
+    "isbn": "AKSINU-REF-230",
+    "tags": [
+      "teknologi",
+      "komputer"
+    ],
+    "size": "PDF",
+    "description": "Buku panduan dan referensi mengenai Matematika Diskrit untuk Teknik Informat untuk memperdalam literasi teknologi informasi.",
+    "googleDriveId": "1wui1oZMwpi7Wfr9h2EEVggoLksEGofVi",
+    "previewUrl": "https://drive.google.com/file/d/1wui1oZMwpi7Wfr9h2EEVggoLksEGofVi/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=1wui1oZMwpi7Wfr9h2EEVggoLksEGofVi",
+    "localFile": null,
+    "ddc": "005.13"
   },
   {
     "id": "book-11iytqfhrdor",
@@ -2370,7 +4974,11 @@ const BOOKS_DATA = [
     "googleDriveId": "11IytqfhRDoRIIKz5h-EAP37L2RcuCnWj",
     "previewUrl": "https://drive.google.com/file/d/11IytqfhRDoRIIKz5h-EAP37L2RcuCnWj/preview",
     "downloadUrl": "https://drive.google.com/uc?export=download&id=11IytqfhRDoRIIKz5h-EAP37L2RcuCnWj",
-    "localFile": null
+    "localFile": null,
+    "callNumber": "DDC 006.3",
+    "catalogId": "AKSINU-LIB-231",
+    "isbn": "AKSINU-REF-231",
+    "ddc": "006.3"
   },
   {
     "id": "book-1qjbwozp_h_h",
@@ -2388,59 +4996,234 @@ const BOOKS_DATA = [
     "googleDriveId": "1qJbWOzP_h_hgAC_UgFuqRKFkuihlDUdI",
     "previewUrl": "https://drive.google.com/file/d/1qJbWOzP_h_hgAC_UgFuqRKFkuihlDUdI/preview",
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1qJbWOzP_h_hgAC_UgFuqRKFkuihlDUdI",
-    "localFile": null
+    "localFile": null,
+    "callNumber": "DDC 005.276",
+    "catalogId": "AKSINU-LIB-232",
+    "isbn": "AKSINU-REF-232",
+    "ddc": "005.276"
   },
   {
     "id": "book-1dfsvzyzibz6",
-    "title": "Membuat CMS Website dengan CodeIgniter dari Nol sampai Online 20 21 1686",
-    "author": "Teknologi & Komputasi",
-    "category": "AI & Machine Learning",
-    "tags": [
-      "ai",
-      "machine learning",
-      "deep learning",
-      "data science"
-    ],
-    "size": "PDF",
-    "description": "Eksplorasi mendalam kecerdasan buatan, pemodelan data, dan algoritma pembelajaran mesin melalui Membuat CMS Website dengan CodeIgniter dari Nol sampai Online 20 21 1686.",
-    "googleDriveId": "1DfSvZyzIbz6gVwN6pPt0ZiGY8UW5VBoW",
-    "previewUrl": "https://drive.google.com/file/d/1DfSvZyzIbz6gVwN6pPt0ZiGY8UW5VBoW/preview",
-    "downloadUrl": "https://drive.google.com/uc?export=download&id=1DfSvZyzIbz6gVwN6pPt0ZiGY8UW5VBoW",
-    "localFile": "ebook/Membuat-CMS-WebSite-Dengan-Codigniter-Dari-Nol-Sampai-Online-20-21-1686-ebook-free.pdf"
-  },
-  {
-    "id": "book-1hocy_yx1fau",
-    "title": "Mempelajari Dasar Dasar Laravel a Z V1 0 12661",
-    "author": "Teknologi & Komputasi",
+    "title": "Membuat CMS Website dengan CodeIgniter dari Nol Sampai Online",
+    "author": "Diki Alfarabi Hadi, S.T.",
     "category": "PHP & Backend",
     "tags": [
       "php",
+      "codeigniter",
+      "cms",
       "backend",
-      "web framework",
-      "server"
+      "web development"
     ],
     "size": "PDF",
-    "description": "Pengembangan backend andal, API web, dan sistem manajemen konten menggunakan Mempelajari Dasar Dasar Laravel a Z V1 0 12661.",
+    "description": "Panduan komprehensif langkah demi langkah membangun Content Management System (CMS) dari nol hingga siap di-hosting secara online.",
+    "googleDriveId": "1DfSvZyzIbz6gVwN6pPt0ZiGY8UW5VBoW",
+    "previewUrl": "https://drive.google.com/file/d/1DfSvZyzIbz6gVwN6pPt0ZiGY8UW5VBoW/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=1DfSvZyzIbz6gVwN6pPt0ZiGY8UW5VBoW",
+    "localFile": "ebook/Membuat-CMS-Website-dengan-CodeIgniter.pdf",
+    "callNumber": "DDC 005.276",
+    "catalogId": "AKSINU-LIB-233",
+    "isbn": "AKSINU-REF-233",
+    "ddc": "005.276"
+  },
+  {
+    "id": "book-1hocy_yx1fau",
+    "title": "Mempelajari Dasar-Dasar Laravel (A - Z)",
+    "author": "Pustaka AKSINU",
+    "category": "PHP & Backend",
+    "tags": [
+      "laravel",
+      "php",
+      "backend",
+      "mvc",
+      "artisan"
+    ],
+    "size": "PDF",
+    "description": "Panduan terstruktur penguasaan kerangka kerja Laravel dari dasar routing, controller, Eloquent ORM, hingga deployment.",
     "googleDriveId": "1hoCy_Yx1fAu1Px_RtHfHrbZ5PGoK9HRr",
     "previewUrl": "https://drive.google.com/file/d/1hoCy_Yx1fAu1Px_RtHfHrbZ5PGoK9HRr/preview",
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1hoCy_Yx1fAu1Px_RtHfHrbZ5PGoK9HRr",
-    "localFile": null
+    "localFile": null,
+    "callNumber": "DDC 005.276",
+    "catalogId": "AKSINU-LIB-234",
+    "isbn": "AKSINU-REF-234",
+    "ddc": "005.276"
   },
   {
-    "id": "book-10cuso-7fk63",
-    "title": "Metodologi Pengembangan Sistem Informasi",
-    "author": "Teknologi & Komputasi",
-    "category": "Dasar Pemrograman",
+    "id": "book-1dpuqlqrfcsb",
+    "title": "Metode Penelitian Kualitatif dan Kuantitatif Terpadu",
+    "author": "Tim Dosen Riset",
+    "category": "Metodologi Riset",
+    "tags": [
+      "metode penelitian",
+      "kuantitatif",
+      "kualitatif",
+      "metodologi riset"
+    ],
+    "size": "PDF",
+    "description": "Buku pedoman penyusunan penelitian ilmiah kuantitatif dan kualitatif untuk karya ilmiah, skripsi, dan publikasi jurnal.",
+    "googleDriveId": "1DPUQlqrfcSbxUX9d-3hvs5NQu1Y5mVme",
+    "previewUrl": "https://drive.google.com/file/d/1DPUQlqrfcSbxUX9d-3hvs5NQu1Y5mVme/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=1DPUQlqrfcSbxUX9d-3hvs5NQu1Y5mVme",
+    "localFile": null,
+    "callNumber": "DDC 001.42",
+    "catalogId": "AKSINU-LIB-235",
+    "isbn": "AKSINU-REF-235",
+    "ddc": "001.42"
+  },
+  {
+    "id": "book-1w2ujsdlifoj",
+    "title": "Metode Penelitian Kualitatif: Karakteristik dan Keunggulan",
+    "author": "Dr. Jozef Raco, M.E., M.Sc.",
+    "category": "Metodologi Riset",
+    "tags": [
+      "metode penelitian",
+      "kualitatif",
+      "riset ilmiah",
+      "studi kasus"
+    ],
+    "size": "PDF",
+    "description": "Kajian teoritis dan terapan mengenai metodologi penelitian kualitatif, teknik pengumpulan data, triangulasi, dan analisis tematik.",
+    "googleDriveId": "1W2ujsdLIFoJG9c9TAk2cFcM4jxz4SfyZ",
+    "previewUrl": "https://drive.google.com/file/d/1W2ujsdLIFoJG9c9TAk2cFcM4jxz4SfyZ/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=1W2ujsdLIFoJG9c9TAk2cFcM4jxz4SfyZ",
+    "localFile": null,
+    "callNumber": "DDC 001.42",
+    "catalogId": "AKSINU-LIB-236",
+    "isbn": "AKSINU-REF-236",
+    "ddc": "001.42"
+  },
+  {
+    "id": "book-1emhdo2qe6av",
+    "title": "Metode Penelitian Kuantitatif, Kualitatif, dan R&D",
+    "author": "Prof. Dr. Sugiyono",
+    "category": "Metodologi Riset",
+    "tags": [
+      "metode penelitian",
+      "riset",
+      "kuantitatif",
+      "kualitatif",
+      "r&d",
+      "skripsi"
+    ],
+    "size": "PDF",
+    "description": "Buku rujukan utama akademis untuk penyusunan metodologi penelitian kuantitatif, kualitatif, dan Research and Development (R&D).",
+    "googleDriveId": "1EMhDO2QE6AV8csym7aKKCby0X9rcL8ma",
+    "previewUrl": "https://drive.google.com/file/d/1EMhDO2QE6AV8csym7aKKCby0X9rcL8ma/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=1EMhDO2QE6AV8csym7aKKCby0X9rcL8ma",
+    "localFile": "ebook/Buku-Metode-Penelitian-Sugiyono.pdf",
+    "callNumber": "DDC 001.42",
+    "catalogId": "AKSINU-LIB-237",
+    "isbn": "978-602-8683-17-3",
+    "ddc": "001.42"
+  },
+  {
+    "id": "book-1w_hp8hi1v_h",
+    "title": "Metode Penelitian Terapan",
+    "author": "Pustaka AKSINU",
+    "category": "Metodologi Riset",
+    "callNumber": "DDC 001.42",
+    "catalogId": "AKSINU-LIB-238",
+    "isbn": "AKSINU-REF-238",
+    "tags": [
+      "metode penelitian",
+      "riset",
+      "kualitatif",
+      "kuantitatif"
+    ],
+    "size": "PDF",
+    "description": "Buku pedoman metodologi penelitian dan penyusunan karya ilmiah akademis mengenai Metode Penelitian Terapan.",
+    "googleDriveId": "1W_hP8HI1v_hcK_PGzS_j9NXefjI4uw3A",
+    "previewUrl": "https://drive.google.com/file/d/1W_hP8HI1v_hcK_PGzS_j9NXefjI4uw3A/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=1W_hP8HI1v_hcK_PGzS_j9NXefjI4uw3A",
+    "localFile": null,
+    "ddc": "001.42"
+  },
+  {
+    "id": "book-1rrbdl46kcue",
+    "title": "Metodologi Penelitian",
+    "author": "Pustaka AKSINU",
+    "category": "Metodologi Riset",
+    "callNumber": "DDC 001.42",
+    "catalogId": "AKSINU-LIB-239",
+    "isbn": "AKSINU-REF-239",
+    "tags": [
+      "metode penelitian",
+      "riset",
+      "kualitatif",
+      "kuantitatif"
+    ],
+    "size": "PDF",
+    "description": "Buku pedoman metodologi penelitian dan penyusunan karya ilmiah akademis mengenai Metodologi Penelitian.",
+    "googleDriveId": "1rrbDL46KCUEeWCHolDYkUdPJTkiT2P6g",
+    "previewUrl": "https://drive.google.com/file/d/1rrbDL46KCUEeWCHolDYkUdPJTkiT2P6g/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=1rrbDL46KCUEeWCHolDYkUdPJTkiT2P6g",
+    "localFile": null,
+    "ddc": "001.42"
+  },
+  {
+    "id": "book-1dwjk74_z8x1",
+    "title": "Metodologi Penelitian Bidang Ilmu Komputer",
+    "author": "Dr. Hariyono",
+    "category": "Metodologi Riset",
+    "callNumber": "DDC 001.42",
+    "catalogId": "AKSINU-LIB-240",
+    "isbn": "AKSINU-REF-240",
     "tags": [
       "teknologi",
       "komputer"
     ],
     "size": "PDF",
-    "description": "Buku panduan dan referensi komprehensif mengenai Metodologi Pengembangan Sistem Informasi untuk memperdalam pemahaman teknologi informasi dan rekayasa perangkat lunak.",
+    "description": "Buku panduan dan referensi mengenai Hariyono Buku Full untuk memperdalam literasi teknologi informasi.",
+    "googleDriveId": "1DwjK74_Z8X1oPpAbuDOurCp-KJTMFwNV",
+    "previewUrl": "https://drive.google.com/file/d/1DwjK74_Z8X1oPpAbuDOurCp-KJTMFwNV/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=1DwjK74_Z8X1oPpAbuDOurCp-KJTMFwNV",
+    "localFile": null,
+    "ddc": "001.42"
+  },
+  {
+    "id": "book-1aknfunhqttd",
+    "title": "Metodologi Penelitian Bidang Ilmu Komputer & TI",
+    "author": "Prof. Zainal A. Hasibuan, Ph.D.",
+    "category": "Metodologi Riset",
+    "callNumber": "DDC 001.42",
+    "catalogId": "AKSINU-LIB-241",
+    "isbn": "AKSINU-REF-241",
+    "tags": [
+      "metode penelitian",
+      "riset",
+      "kualitatif",
+      "kuantitatif"
+    ],
+    "size": "PDF",
+    "description": "Buku pedoman metodologi penelitian dan penyusunan karya ilmiah akademis mengenai Buku Metode Penelitian pada Bidang Ikom TI (zainal a Hasibuan).",
+    "googleDriveId": "1aknfuNHqttD6hFhxYiezwzKYYJwZuztc",
+    "previewUrl": "https://drive.google.com/file/d/1aknfuNHqttD6hFhxYiezwzKYYJwZuztc/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=1aknfuNHqttD6hFhxYiezwzKYYJwZuztc",
+    "localFile": null,
+    "ddc": "001.42"
+  },
+  {
+    "id": "book-10cuso-7fk63",
+    "title": "Metodologi Pengembangan Sistem Informasi",
+    "author": "Pustaka AKSINU",
+    "category": "Sistem Informasi",
+    "tags": [
+      "metodologi",
+      "pengembangan sistem",
+      "rad",
+      "prototyping",
+      "sdlc"
+    ],
+    "size": "PDF",
+    "description": "Perbandingan komprehensif berbagai metodologi rekayasa sistem informasi: Prototyping, RAD, Agile, dan Extreme Programming.",
     "googleDriveId": "10CUSo-7fk63f8HHJnAnagSbji3C5FDUx",
     "previewUrl": "https://drive.google.com/file/d/10CUSo-7fk63f8HHJnAnagSbji3C5FDUx/preview",
     "downloadUrl": "https://drive.google.com/uc?export=download&id=10CUSo-7fk63f8HHJnAnagSbji3C5FDUx",
-    "localFile": null
+    "localFile": null,
+    "callNumber": "DDC 004.068",
+    "catalogId": "AKSINU-LIB-242",
+    "isbn": "AKSINU-REF-242",
+    "ddc": "004.068"
   },
   {
     "id": "book-1429rrg-bztx",
@@ -2458,181 +5241,279 @@ const BOOKS_DATA = [
     "googleDriveId": "1429RRg-BZTxrQiH6T6JEY5jkLntk7yCj",
     "previewUrl": "https://drive.google.com/file/d/1429RRg-BZTxrQiH6T6JEY5jkLntk7yCj/preview",
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1429RRg-BZTxrQiH6T6JEY5jkLntk7yCj",
-    "localFile": null
+    "localFile": null,
+    "callNumber": "DDC 005.74",
+    "catalogId": "AKSINU-LIB-243",
+    "isbn": "AKSINU-REF-243",
+    "ddc": "005.74"
+  },
+  {
+    "id": "book-1mcjb-zxkz2_",
+    "title": "Mobile Programming",
+    "author": "Pustaka AKSINU",
+    "category": "Mobile Development",
+    "callNumber": "DDC 005.268",
+    "catalogId": "AKSINU-LIB-244",
+    "isbn": "AKSINU-REF-244",
+    "tags": [
+      "teknologi",
+      "komputer"
+    ],
+    "size": "PDF",
+    "description": "Buku panduan dan referensi mengenai Mobile Programming untuk memperdalam literasi teknologi informasi.",
+    "googleDriveId": "1mcjb-zXkz2__d6dQEfzI4uUtSsGShJJ3",
+    "previewUrl": "https://drive.google.com/file/d/1mcjb-zXkz2__d6dQEfzI4uUtSsGShJJ3/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=1mcjb-zXkz2__d6dQEfzI4uUtSsGShJJ3",
+    "localFile": null,
+    "ddc": "005.268"
   },
   {
     "id": "book-1avq62qk_sxs",
-    "title": "Modern App Development with Dart and Flutter 2 a Comprehensive Introduction to Flutter",
-    "author": "Teknologi & Komputasi",
+    "title": "Modern App Development with Dart & Flutter",
+    "author": "Pustaka Mobile Dev",
     "category": "Mobile Development",
     "tags": [
-      "mobile",
-      "android",
-      "ios",
-      "aplikasi seluler"
+      "flutter",
+      "dart",
+      "cross-platform"
     ],
     "size": "PDF",
-    "description": "Pengembangan aplikasi perangkat seluler modern, responsif, dan berperforma tinggi melalui Modern App Development with Dart and Flutter 2 a Comprehensive Introduction to Flutter.",
+    "description": "Pengenalan komprehensif pengembangan aplikasi mobile lintas platform dengan antarmuka deklaratif Flutter.",
     "googleDriveId": "1AvQ62qk_sxSJZjnc9GYm0E4vWkksj987",
     "previewUrl": "https://drive.google.com/file/d/1AvQ62qk_sxSJZjnc9GYm0E4vWkksj987/preview",
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1AvQ62qk_sxSJZjnc9GYm0E4vWkksj987",
-    "localFile": null
+    "localFile": null,
+    "callNumber": "DDC 005.268",
+    "catalogId": "AKSINU-LIB-245",
+    "isbn": "AKSINU-REF-245",
+    "ddc": "005.268"
+  },
+  {
+    "id": "book-1_sauczqnwqd",
+    "title": "Modern UI Development with React & Tailwind",
+    "author": "Teknologi & Komputasi",
+    "category": "JavaScript & Web",
+    "tags": [
+      "javascript",
+      "web",
+      "frontend",
+      "fullstack"
+    ],
+    "size": "PDF",
+    "description": "Pelajari arsitektur dan sintaks modern ekosistem web interaktif melalui buku UI React.",
+    "googleDriveId": "1_SaucZqnWQDByKnSFQCHiZfKConAcAOk",
+    "previewUrl": "https://drive.google.com/file/d/1_SaucZqnWQDByKnSFQCHiZfKConAcAOk/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=1_SaucZqnWQDByKnSFQCHiZfKConAcAOk",
+    "localFile": null,
+    "callNumber": "DDC 005.276",
+    "catalogId": "AKSINU-LIB-246",
+    "isbn": "AKSINU-REF-246",
+    "ddc": "005.276"
   },
   {
     "id": "book-1d4gbxd0sye6",
-    "title": "Modul Administrasiinfrastrukturjaringankelasxi Xii",
-    "author": "Teknologi & Komputasi",
-    "category": "Dasar Pemrograman",
+    "title": "Modul Administrasi Infrastruktur Jaringan",
+    "author": "Tim Pengajar Jaringan Komputer",
+    "category": "Jaringan Komputer",
     "tags": [
-      "teknologi",
-      "komputer"
+      "jaringan komputer",
+      "administrasi infrastruktur",
+      "cisco",
+      "mikrotik",
+      "routing"
     ],
     "size": "PDF",
-    "description": "Buku panduan dan referensi komprehensif mengenai Modul Administrasiinfrastrukturjaringankelasxi Xii untuk memperdalam pemahaman teknologi informasi dan rekayasa perangkat lunak.",
+    "description": "Modul komprehensif administrasi perangkat jaringan, konfigurasi VLAN, routing statis & dinamis, dan keamanan jaringan.",
     "googleDriveId": "1D4gbXd0SYe6qtqeV2oACTuuH3XzcnQd0",
     "previewUrl": "https://drive.google.com/file/d/1D4gbXd0SYe6qtqeV2oACTuuH3XzcnQd0/preview",
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1D4gbXd0SYe6qtqeV2oACTuuH3XzcnQd0",
-    "localFile": null
+    "localFile": null,
+    "callNumber": "DDC 004.6",
+    "catalogId": "AKSINU-LIB-247",
+    "isbn": "AKSINU-REF-247",
+    "ddc": "004.6"
   },
   {
     "id": "book-1nvqiwzkahsh",
-    "title": "Modul Interaksi Manusia dan Komputer Gaya Inte",
-    "author": "Teknologi & Komputasi",
-    "category": "Dasar Pemrograman",
+    "title": "Modul Interaksi Manusia dan Komputer (IMK)",
+    "author": "Laboratorium Desain & IMK AKSINU",
+    "category": "UI/UX & Desain",
     "tags": [
-      "teknologi",
-      "komputer"
+      "imk",
+      "interaksi manusia dan komputer",
+      "hci",
+      "ergonomi",
+      "ui"
     ],
     "size": "PDF",
-    "description": "Buku panduan dan referensi komprehensif mengenai Modul Interaksi Manusia dan Komputer Gaya Inte untuk memperdalam pemahaman teknologi informasi dan rekayasa perangkat lunak.",
+    "description": "Modul akademis mempelajari faktor manusia, ergonomi kognitif, gaya dialog antarmuka, dan perancangan menu interaktif.",
     "googleDriveId": "1NvQIWzKAhShK7Dta6TpCQgi9nJuxF7jo",
     "previewUrl": "https://drive.google.com/file/d/1NvQIWzKAhShK7Dta6TpCQgi9nJuxF7jo/preview",
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1NvQIWzKAhShK7Dta6TpCQgi9nJuxF7jo",
-    "localFile": null
+    "localFile": null,
+    "callNumber": "DDC 006.6",
+    "catalogId": "AKSINU-LIB-248",
+    "isbn": "AKSINU-REF-248",
+    "ddc": "006.6"
   },
   {
     "id": "book-1xw0ktez8o-0",
-    "title": "Modul It Enterprise",
-    "author": "Teknologi & Komputasi",
-    "category": "Dasar Pemrograman",
+    "title": "Modul IT Enterprise Architecture",
+    "author": "Tim Dosen Sistem Informasi",
+    "category": "Sistem Informasi",
     "tags": [
-      "teknologi",
-      "komputer"
+      "enterprise architecture",
+      "togaf",
+      "arsitektur enterprise",
+      "it governance"
     ],
     "size": "PDF",
-    "description": "Buku panduan dan referensi komprehensif mengenai Modul It Enterprise untuk memperdalam pemahaman teknologi informasi dan rekayasa perangkat lunak.",
+    "description": "Panduan pemodelan arsitektur sistem informasi enterprise berbasis kerangka kerja TOGAF dan Zachman.",
     "googleDriveId": "1Xw0ktez8O-0qyuRaAuJdjHR9EpmDBp5m",
     "previewUrl": "https://drive.google.com/file/d/1Xw0ktez8O-0qyuRaAuJdjHR9EpmDBp5m/preview",
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1Xw0ktez8O-0qyuRaAuJdjHR9EpmDBp5m",
-    "localFile": null
-  },
-  {
-    "id": "book-1kyiqxs_c599",
-    "title": "Modul Manajemen Proyek Si 0009 D3",
-    "author": "Teknologi & Komputasi",
-    "category": "Dasar Pemrograman",
-    "tags": [
-      "teknologi",
-      "komputer"
-    ],
-    "size": "PDF",
-    "description": "Buku panduan dan referensi komprehensif mengenai Modul Manajemen Proyek Si 0009 D3 untuk memperdalam pemahaman teknologi informasi dan rekayasa perangkat lunak.",
-    "googleDriveId": "1kYIqXs_c599Fn-cOeIzAEsTH5uWMLIIm",
-    "previewUrl": "https://drive.google.com/file/d/1kYIqXs_c599Fn-cOeIzAEsTH5uWMLIIm/preview",
-    "downloadUrl": "https://drive.google.com/uc?export=download&id=1kYIqXs_c599Fn-cOeIzAEsTH5uWMLIIm",
-    "localFile": null
-  },
-  {
-    "id": "book-1dvbcil1ilnu",
-    "title": "Modul Pemrograman 2019 Python",
-    "author": "Teknologi & Komputasi",
-    "category": "Python & Data Science",
-    "tags": [
-      "python",
-      "data science",
-      "pemrograman",
-      "analisis data"
-    ],
-    "size": "PDF",
-    "description": "Panduan praktis penguasaan bahasa pemrograman Python dan teknik analisis komputasi modern melalui Modul Pemrograman 2019 Python.",
-    "googleDriveId": "1dVbCIl1iLNU6YNF6Gc3tsKfwFe54HPEY",
-    "previewUrl": "https://drive.google.com/file/d/1dVbCIl1iLNU6YNF6Gc3tsKfwFe54HPEY/preview",
-    "downloadUrl": "https://drive.google.com/uc?export=download&id=1dVbCIl1iLNU6YNF6Gc3tsKfwFe54HPEY",
-    "localFile": null
-  },
-  {
-    "id": "book-1rvrr4xdviz-",
-    "title": "Modul Sistem Basis Data",
-    "author": "Teknologi & Komputasi",
-    "category": "Dasar Pemrograman",
-    "tags": [
-      "teknologi",
-      "komputer"
-    ],
-    "size": "PDF",
-    "description": "Buku panduan dan referensi komprehensif mengenai Modul Sistem Basis Data untuk memperdalam pemahaman teknologi informasi dan rekayasa perangkat lunak.",
-    "googleDriveId": "1rVRr4XDViz-gbEyljokeaCyGebf1EFh-",
-    "previewUrl": "https://drive.google.com/file/d/1rVRr4XDViz-gbEyljokeaCyGebf1EFh-/preview",
-    "downloadUrl": "https://drive.google.com/uc?export=download&id=1rVRr4XDViz-gbEyljokeaCyGebf1EFh-",
-    "localFile": null
+    "localFile": null,
+    "callNumber": "DDC 004.068",
+    "catalogId": "AKSINU-LIB-249",
+    "isbn": "AKSINU-REF-249",
+    "ddc": "004.068"
   },
   {
     "id": "book-1myxgjciptce",
-    "title": "Modul Sistembasisdata",
-    "author": "Teknologi & Komputasi",
-    "category": "Dasar Pemrograman",
+    "title": "Modul Konsep Sistem Basis Data",
+    "author": "Tim Pengajar Basis Data",
+    "category": "Database & SQL",
     "tags": [
-      "teknologi",
-      "komputer"
+      "basis data",
+      "database",
+      "sql",
+      "dbms"
     ],
     "size": "PDF",
-    "description": "Buku panduan dan referensi komprehensif mengenai Modul Sistembasisdata untuk memperdalam pemahaman teknologi informasi dan rekayasa perangkat lunak.",
+    "description": "Panduan konseptual Database Management System (DBMS), integritas transaksi ACID, dan manajemen penyimpanan basis data.",
     "googleDriveId": "1MYxgJCiPtCEXy6eMbSwPUD4qUr_Ph6qm",
     "previewUrl": "https://drive.google.com/file/d/1MYxgJCiPtCEXy6eMbSwPUD4qUr_Ph6qm/preview",
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1MYxgJCiPtCEXy6eMbSwPUD4qUr_Ph6qm",
-    "localFile": null
+    "localFile": null,
+    "callNumber": "DDC 005.74",
+    "catalogId": "AKSINU-LIB-250",
+    "isbn": "AKSINU-REF-250",
+    "ddc": "005.74"
   },
   {
-    "id": "book-1rqxaqptjmgu",
-    "title": "Moore K Mastering Flutter Learn to Develop Flutter Apps 2025",
-    "author": "Teknologi & Komputasi",
-    "category": "Mobile Development",
+    "id": "book-1q7fycprnt2p",
+    "title": "Modul Kurikulum Sains Komputer Tingkatan 4",
+    "author": "Kementerian Pendidikan",
+    "category": "Database & SQL",
     "tags": [
-      "mobile",
-      "android",
-      "ios",
-      "aplikasi seluler"
+      "sains komputer",
+      "kurikulum",
+      "ilmu komputer"
     ],
     "size": "PDF",
-    "description": "Pengembangan aplikasi perangkat seluler modern, responsif, dan berperforma tinggi melalui Moore K Mastering Flutter Learn to Develop Flutter Apps 2025.",
-    "googleDriveId": "1RqXaQpTJMgueo5lfjZEVR2WZlUzLHnGD",
-    "previewUrl": "https://drive.google.com/file/d/1RqXaQpTJMgueo5lfjZEVR2WZlUzLHnGD/preview",
-    "downloadUrl": "https://drive.google.com/uc?export=download&id=1RqXaQpTJMgueo5lfjZEVR2WZlUzLHnGD",
-    "localFile": null
+    "description": "Silabus dan materi pembelajaran sains komputer mencakup pemikiran komputasional, basis data, dan pemrograman algoritma.",
+    "googleDriveId": "1q7FYcpRNT2pSh0F7JS3l8MOXyS26ANXP",
+    "previewUrl": "https://drive.google.com/file/d/1q7FYcpRNT2pSh0F7JS3l8MOXyS26ANXP/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=1q7FYcpRNT2pSh0F7JS3l8MOXyS26ANXP",
+    "localFile": null,
+    "callNumber": "DDC 005.74",
+    "catalogId": "AKSINU-LIB-251",
+    "isbn": "AKSINU-REF-251",
+    "ddc": "005.74"
   },
   {
-    "id": "book-14ujq5nuom-t",
-    "title": "Moore K Mastering Flutter Learn to Develop Flutter Apps 2025",
-    "author": "Teknologi & Komputasi",
-    "category": "Mobile Development",
+    "id": "book-1kyiqxs_c599",
+    "title": "Modul Manajemen Proyek Sistem Informasi",
+    "author": "Tim Pengajar Sistem Informasi",
+    "category": "Sistem Informasi",
     "tags": [
-      "mobile",
-      "android",
-      "ios",
-      "aplikasi seluler"
+      "manajemen proyek",
+      "sistem informasi",
+      "project management",
+      "agile"
     ],
     "size": "PDF",
-    "description": "Pengembangan aplikasi perangkat seluler modern, responsif, dan berperforma tinggi melalui Moore K Mastering Flutter Learn to Develop Flutter Apps 2025.",
-    "googleDriveId": "14ujq5NUoM-T-kg-cmOpJPCXc4KmogWyt",
-    "previewUrl": "https://drive.google.com/file/d/14ujq5NUoM-T-kg-cmOpJPCXc4KmogWyt/preview",
-    "downloadUrl": "https://drive.google.com/uc?export=download&id=14ujq5NUoM-T-kg-cmOpJPCXc4KmogWyt",
-    "localFile": null
+    "description": "Modul ajar perencanaan, estimasi biaya, alokasi sumber daya, dan pengendalian risiko proyek perangkat lunak dan sistem informasi.",
+    "googleDriveId": "1kYIqXs_c599Fn-cOeIzAEsTH5uWMLIIm",
+    "previewUrl": "https://drive.google.com/file/d/1kYIqXs_c599Fn-cOeIzAEsTH5uWMLIIm/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=1kYIqXs_c599Fn-cOeIzAEsTH5uWMLIIm",
+    "localFile": null,
+    "callNumber": "DDC 004.068",
+    "catalogId": "AKSINU-LIB-252",
+    "isbn": "AKSINU-REF-252",
+    "ddc": "004.068"
+  },
+  {
+    "id": "book-10uzzvs3rpt8",
+    "title": "Modul Praktikum Pemrograman Berorientasi Objek",
+    "author": "Pustaka AKSINU",
+    "category": "Java & OOP",
+    "callNumber": "DDC 005.133",
+    "catalogId": "AKSINU-LIB-253",
+    "isbn": "AKSINU-REF-253",
+    "tags": [
+      "java",
+      "oop",
+      "backend",
+      "berorientasi objek"
+    ],
+    "size": "PDF",
+    "description": "Pemrograman berorientasi objek tingkat industri dan arsitektur aplikasi tangguh berbasis Java.",
+    "googleDriveId": "10UzZVS3RpT8hRDNhY0XhKeMrS28peHWA",
+    "previewUrl": "https://drive.google.com/file/d/10UzZVS3RpT8hRDNhY0XhKeMrS28peHWA/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=10UzZVS3RpT8hRDNhY0XhKeMrS28peHWA",
+    "localFile": null,
+    "ddc": "005.133"
+  },
+  {
+    "id": "book-1dvbcil1ilnu",
+    "title": "Modul Praktikum Pemrograman Python",
+    "author": "Laboratorium Komputasi AKSINU",
+    "category": "Python & Data Science",
+    "tags": [
+      "python",
+      "praktikum",
+      "dasar python"
+    ],
+    "size": "PDF",
+    "description": "Modul praktikum terstruktur penguasaan sintaks Python, pemrosesan berkas, dan dasar-dasar analitika data.",
+    "googleDriveId": "1dVbCIl1iLNU6YNF6Gc3tsKfwFe54HPEY",
+    "previewUrl": "https://drive.google.com/file/d/1dVbCIl1iLNU6YNF6Gc3tsKfwFe54HPEY/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=1dVbCIl1iLNU6YNF6Gc3tsKfwFe54HPEY",
+    "localFile": null,
+    "callNumber": "DDC 005.133",
+    "catalogId": "AKSINU-LIB-254",
+    "isbn": "AKSINU-REF-254",
+    "ddc": "005.133"
+  },
+  {
+    "id": "book-1rvrr4xdviz-",
+    "title": "Modul Praktikum Sistem Basis Data",
+    "author": "Laboratorium Sistem Informasi AKSINU",
+    "category": "Database & SQL",
+    "tags": [
+      "basis data",
+      "sql",
+      "erd",
+      "normalisasi",
+      "mysql"
+    ],
+    "size": "PDF",
+    "description": "Modul praktikum perancangan skema relasional, Entity Relationship Diagram (ERD), normalisasi data, dan kueri SQL.",
+    "googleDriveId": "1rVRr4XDViz-gbEyljokeaCyGebf1EFh-",
+    "previewUrl": "https://drive.google.com/file/d/1rVRr4XDViz-gbEyljokeaCyGebf1EFh-/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=1rVRr4XDViz-gbEyljokeaCyGebf1EFh-",
+    "localFile": null,
+    "callNumber": "DDC 005.74",
+    "catalogId": "AKSINU-LIB-255",
+    "isbn": "AKSINU-REF-255",
+    "ddc": "005.74"
   },
   {
     "id": "book-1ob_jmujvfdp",
     "title": "Murach S Java Programming",
     "author": "Murach Publishing",
-    "category": "Java & OOP",
+    "category": "Sistem Informasi",
     "tags": [
       "java",
       "murach",
@@ -2644,7 +5525,11 @@ const BOOKS_DATA = [
     "googleDriveId": "1oB_jMuJvFdpmb5AgXKTgKXN6l9qxOMCn",
     "previewUrl": "https://drive.google.com/file/d/1oB_jMuJvFdpmb5AgXKTgKXN6l9qxOMCn/preview",
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1oB_jMuJvFdpmb5AgXKTgKXN6l9qxOMCn",
-    "localFile": null
+    "localFile": null,
+    "callNumber": "DDC 004.068",
+    "catalogId": "AKSINU-LIB-256",
+    "isbn": "AKSINU-REF-256",
+    "ddc": "004.068"
   },
   {
     "id": "book-1ou080g63q5m",
@@ -2662,79 +5547,15 @@ const BOOKS_DATA = [
     "googleDriveId": "1oU080g63q5m6dqhhLzjRh5Jj1vVyC8xI",
     "previewUrl": "https://drive.google.com/file/d/1oU080g63q5m6dqhhLzjRh5Jj1vVyC8xI/preview",
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1oU080g63q5m6dqhhLzjRh5Jj1vVyC8xI",
-    "localFile": null
-  },
-  {
-    "id": "book-1gwy9nekfkxl",
-    "title": "Next.js Ebook",
-    "author": "Teknologi & Komputasi",
-    "category": "Dasar Pemrograman",
-    "tags": [
-      "teknologi",
-      "komputer"
-    ],
-    "size": "PDF",
-    "description": "Buku panduan dan referensi komprehensif mengenai Next.js Ebook untuk memperdalam pemahaman teknologi informasi dan rekayasa perangkat lunak.",
-    "googleDriveId": "1GwY9nekfKXlhwRNysrldPc0f6S7kn-ns",
-    "previewUrl": "https://drive.google.com/file/d/1GwY9nekfKXlhwRNysrldPc0f6S7kn-ns/preview",
-    "downloadUrl": "https://drive.google.com/uc?export=download&id=1GwY9nekfKXlhwRNysrldPc0f6S7kn-ns",
-    "localFile": null
-  },
-  {
-    "id": "book-17o2knqhiiod",
-    "title": "Next.js Ebook",
-    "author": "Teknologi & Komputasi",
-    "category": "Dasar Pemrograman",
-    "tags": [
-      "teknologi",
-      "komputer"
-    ],
-    "size": "PDF",
-    "description": "Buku panduan dan referensi komprehensif mengenai Next.js Ebook untuk memperdalam pemahaman teknologi informasi dan rekayasa perangkat lunak.",
-    "googleDriveId": "17o2knqhIioDRouLjP6R_J_vZ7zemCbfL",
-    "previewUrl": "https://drive.google.com/file/d/17o2knqhIioDRouLjP6R_J_vZ7zemCbfL/preview",
-    "downloadUrl": "https://drive.google.com/uc?export=download&id=17o2knqhIioDRouLjP6R_J_vZ7zemCbfL",
-    "localFile": "ebook/Next-js-eBook.pdf"
-  },
-  {
-    "id": "book-1jqdcuhf03dh",
-    "title": "Oceanofpdf Com Java Programming Made Easy Alfred James",
-    "author": "Teknologi & Komputasi",
-    "category": "Java & OOP",
-    "tags": [
-      "java",
-      "oop",
-      "backend",
-      "arsitektur perangkat lunak"
-    ],
-    "size": "PDF",
-    "description": "Pemrograman berorientasi objek tingkat industri dan arsitektur aplikasi tangguh melalui Oceanofpdf Com Java Programming Made Easy Alfred James.",
-    "googleDriveId": "1jQDcUHF03Dhj-FhhsksFbQYB-W1RrVLJ",
-    "previewUrl": "https://drive.google.com/file/d/1jQDcUHF03Dhj-FhhsksFbQYB-W1RrVLJ/preview",
-    "downloadUrl": "https://drive.google.com/uc?export=download&id=1jQDcUHF03Dhj-FhhsksFbQYB-W1RrVLJ",
-    "localFile": null
-  },
-  {
-    "id": "book-1xj9hndtspev",
-    "title": "Oceanofpdf Com Machine Learning for Absolute Beginners a Oliver Theobald",
-    "author": "Teknologi & Komputasi",
-    "category": "AI & Machine Learning",
-    "tags": [
-      "ai",
-      "machine learning",
-      "deep learning",
-      "data science"
-    ],
-    "size": "PDF",
-    "description": "Eksplorasi mendalam kecerdasan buatan, pemodelan data, dan algoritma pembelajaran mesin melalui Oceanofpdf Com Machine Learning for Absolute Beginners a Oliver Theobald.",
-    "googleDriveId": "1Xj9hnDtSPeVDwCtyZwQ03GsUdtsCoCvu",
-    "previewUrl": "https://drive.google.com/file/d/1Xj9hnDtSPeVDwCtyZwQ03GsUdtsCoCvu/preview",
-    "downloadUrl": "https://drive.google.com/uc?export=download&id=1Xj9hnDtSPeVDwCtyZwQ03GsUdtsCoCvu",
-    "localFile": null
+    "localFile": null,
+    "callNumber": "DDC 006.3",
+    "catalogId": "AKSINU-LIB-257",
+    "isbn": "AKSINU-REF-257",
+    "ddc": "006.3"
   },
   {
     "id": "book-1nob6wak87r8",
-    "title": "Optimization for Machine Learning 1",
+    "title": "Optimization for Machine Learning: Mathematical Methods",
     "author": "Teknologi & Komputasi",
     "category": "AI & Machine Learning",
     "tags": [
@@ -2748,13 +5569,235 @@ const BOOKS_DATA = [
     "googleDriveId": "1Nob6wak87R8Rr142BcWFKADrtZ4xE_p1",
     "previewUrl": "https://drive.google.com/file/d/1Nob6wak87R8Rr142BcWFKADrtZ4xE_p1/preview",
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1Nob6wak87R8Rr142BcWFKADrtZ4xE_p1",
-    "localFile": null
+    "localFile": null,
+    "callNumber": "DDC 006.3",
+    "catalogId": "AKSINU-LIB-258",
+    "isbn": "AKSINU-REF-258",
+    "ddc": "006.3"
   },
   {
-    "id": "book-1j4amgj9kksa",
-    "title": "Pdf JavaScript Programming",
+    "id": "book-1tkchqxymc07",
+    "title": "Panduan Praktis Jaringan Komputer Modern",
+    "author": "Pustaka AKSINU",
+    "category": "Jaringan Komputer",
+    "callNumber": "DDC 004.6",
+    "catalogId": "AKSINU-LIB-259",
+    "isbn": "AKSINU-REF-259",
+    "tags": [
+      "jaringan komputer",
+      "networking",
+      "protokol",
+      "infrastruktur"
+    ],
+    "size": "PDF",
+    "description": "Panduan arsitektur jaringan komputer, protokol komunikasi data, dan administrasi infrastruktur jaringan.",
+    "googleDriveId": "1TKCHQXYmC07DobVcQV-ZWqSTN5jfvO4V",
+    "previewUrl": "https://drive.google.com/file/d/1TKCHQXYmC07DobVcQV-ZWqSTN5jfvO4V/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=1TKCHQXYmC07DobVcQV-ZWqSTN5jfvO4V",
+    "localFile": null,
+    "ddc": "004.6"
+  },
+  {
+    "id": "book-1cyprm6ll1_c",
+    "title": "Panduan Praktis Pengembangan Aplikasi Flutter",
     "author": "Teknologi & Komputasi",
+    "category": "Mobile Development",
+    "tags": [
+      "mobile",
+      "android",
+      "ios",
+      "aplikasi seluler"
+    ],
+    "size": "PDF",
+    "description": "Pengembangan aplikasi perangkat seluler modern, responsif, dan berperforma tinggi melalui Flutter Nettrain.",
+    "googleDriveId": "1CyprM6lL1_CsvOQbkLIKB9NGoxD3YKul",
+    "previewUrl": "https://drive.google.com/file/d/1CyprM6lL1_CsvOQbkLIKB9NGoxD3YKul/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=1CyprM6lL1_CsvOQbkLIKB9NGoxD3YKul",
+    "localFile": null,
+    "callNumber": "DDC 005.268",
+    "catalogId": "AKSINU-LIB-260",
+    "isbn": "AKSINU-REF-260",
+    "ddc": "005.268"
+  },
+  {
+    "id": "book-1lb2xvaart6l",
+    "title": "Pemodelan dan Visualisasi Data Ilmiah",
+    "author": "Pustaka AKSINU",
+    "category": "Python & Data Science",
+    "callNumber": "DDC 005.133",
+    "catalogId": "AKSINU-LIB-261",
+    "isbn": "AKSINU-REF-261",
+    "tags": [
+      "teknologi",
+      "komputer"
+    ],
+    "size": "PDF",
+    "description": "Buku panduan dan referensi mengenai Ebook Pemodelan+dan+visualisasi+data Organized untuk memperdalam literasi teknologi informasi.",
+    "googleDriveId": "1lb2xVaArt6l_33U-qUJIO01JdBmFZeQG",
+    "previewUrl": "https://drive.google.com/file/d/1lb2xVaArt6l_33U-qUJIO01JdBmFZeQG/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=1lb2xVaArt6l_33U-qUJIO01JdBmFZeQG",
+    "localFile": null,
+    "ddc": "005.133"
+  },
+  {
+    "id": "book-1rxt90xfxhy8",
+    "title": "Pemodelan Proses Bisnis & Pembelajaran Sistem",
+    "author": "Pustaka AKSINU",
+    "category": "Sistem Informasi",
+    "callNumber": "DDC 004.068",
+    "catalogId": "AKSINU-LIB-262",
+    "isbn": "AKSINU-REF-262",
+    "tags": [
+      "teknologi",
+      "komputer"
+    ],
+    "size": "PDF",
+    "description": "Buku panduan dan referensi mengenai Pemodelan Proses Belajar untuk memperdalam literasi teknologi informasi.",
+    "googleDriveId": "1Rxt90xfXHY8bHLkC9ML6CEiXMu0xDXfW",
+    "previewUrl": "https://drive.google.com/file/d/1Rxt90xfXHY8bHLkC9ML6CEiXMu0xDXfW/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=1Rxt90xfXHY8bHLkC9ML6CEiXMu0xDXfW",
+    "localFile": null,
+    "ddc": "004.068"
+  },
+  {
+    "id": "book-11qakpnmhvau",
+    "title": "Pemrograman Berbasis Web (Fullstack)",
+    "author": "Pustaka AKSINU",
     "category": "JavaScript & Web",
+    "tags": [
+      "pemrograman web",
+      "html",
+      "css",
+      "javascript",
+      "backend"
+    ],
+    "size": "PDF",
+    "description": "Panduan praktis perancangan aplikasi berbasis web dari antarmuka pengguna hingga komunikasi data ke server backend.",
+    "googleDriveId": "11QAKpnMhVaUwUua_WsswxktBXkt8MJk8",
+    "previewUrl": "https://drive.google.com/file/d/11QAKpnMhVaUwUua_WsswxktBXkt8MJk8/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=11QAKpnMhVaUwUua_WsswxktBXkt8MJk8",
+    "localFile": null,
+    "callNumber": "DDC 005.276",
+    "catalogId": "AKSINU-LIB-263",
+    "isbn": "AKSINU-REF-263",
+    "ddc": "005.276"
+  },
+  {
+    "id": "book-1rn3troutorf",
+    "title": "Pemrograman Berorientasi Objek",
+    "author": "Eko Subiyantoro",
+    "category": "Java & OOP",
+    "callNumber": "DDC 005.133",
+    "catalogId": "AKSINU-LIB-264",
+    "isbn": "AKSINU-REF-264",
+    "tags": [
+      "teknologi",
+      "komputer"
+    ],
+    "size": "PDF",
+    "description": "Buku teks Kementerian Pendidikan & Kebudayaan mengenai konsep Object Oriented Programming (OOP), abstraksi, dan enkapsulasi.",
+    "googleDriveId": "1rN3TRoutoRFVjchTD3NqGvBg3e5_bxDT",
+    "previewUrl": "https://drive.google.com/file/d/1rN3TRoutoRFVjchTD3NqGvBg3e5_bxDT/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=1rN3TRoutoRFVjchTD3NqGvBg3e5_bxDT",
+    "localFile": null,
+    "ddc": "005.133"
+  },
+  {
+    "id": "book-1fpw4defu4vk",
+    "title": "Pemrograman Berorientasi Objek untuk Android",
+    "author": "Pustaka AKSINU",
+    "category": "Mobile Development",
+    "callNumber": "DDC 005.268",
+    "catalogId": "AKSINU-LIB-265",
+    "isbn": "AKSINU-REF-265",
+    "tags": [
+      "mobile dev",
+      "aplikasi seluler",
+      "android",
+      "ios"
+    ],
+    "size": "PDF",
+    "description": "Pengembangan aplikasi mobile modern, antarmuka responsif, dan performa tinggi untuk Android & iOS.",
+    "googleDriveId": "1fPW4DeFU4vKhero3YYage1QhKIBmw34E",
+    "previewUrl": "https://drive.google.com/file/d/1fPW4DeFU4vKhero3YYage1QhKIBmw34E/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=1fPW4DeFU4vKhero3YYage1QhKIBmw34E",
+    "localFile": null,
+    "ddc": "005.268"
+  },
+  {
+    "id": "book-1jy7phxgxvqv",
+    "title": "Pemrograman Berorientasi Objek: Konsep dan Praktik",
+    "author": "Pustaka AKSINU",
+    "category": "Java & OOP",
+    "callNumber": "DDC 005.133",
+    "catalogId": "AKSINU-LIB-266",
+    "isbn": "AKSINU-REF-266",
+    "tags": [
+      "java",
+      "oop",
+      "backend",
+      "berorientasi objek"
+    ],
+    "size": "PDF",
+    "description": "Pemrograman berorientasi objek tingkat industri dan arsitektur aplikasi tangguh berbasis Java.",
+    "googleDriveId": "1JY7PHxgxvQv-OT4w0uiRAsW_HJOl_ITG",
+    "previewUrl": "https://drive.google.com/file/d/1JY7PHxgxvQv-OT4w0uiRAsW_HJOl_ITG/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=1JY7PHxgxvQv-OT4w0uiRAsW_HJOl_ITG",
+    "localFile": null,
+    "ddc": "005.133"
+  },
+  {
+    "id": "book-1iqqsparcbhy",
+    "title": "Pemrograman Java: Konsep dan Implementasi Berorientasi Objek",
+    "author": "Teknologi & Komputasi",
+    "category": "Java & OOP",
+    "tags": [
+      "java",
+      "oop",
+      "backend",
+      "arsitektur perangkat lunak"
+    ],
+    "size": "PDF",
+    "description": "Pemrograman berorientasi objek tingkat industri dan arsitektur aplikasi tangguh melalui Java.",
+    "googleDriveId": "1iqQSPaRCbHY7dJrlbP07nHxaz2nO1KNY",
+    "previewUrl": "https://drive.google.com/file/d/1iqQSPaRCbHY7dJrlbP07nHxaz2nO1KNY/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=1iqQSPaRCbHY7dJrlbP07nHxaz2nO1KNY",
+    "localFile": null,
+    "callNumber": "DDC 005.133",
+    "catalogId": "AKSINU-LIB-267",
+    "isbn": "AKSINU-REF-267",
+    "ddc": "005.133"
+  },
+  {
+    "id": "book-10n5yzkk4edi",
+    "title": "Pemrograman Mobile",
+    "author": "Pustaka AKSINU",
+    "category": "Mobile Development",
+    "callNumber": "DDC 005.268",
+    "catalogId": "AKSINU-LIB-268",
+    "isbn": "AKSINU-REF-268",
+    "tags": [
+      "mobile dev",
+      "aplikasi seluler",
+      "android",
+      "ios"
+    ],
+    "size": "PDF",
+    "description": "Pengembangan aplikasi mobile modern, antarmuka responsif, dan performa tinggi untuk Android & iOS.",
+    "googleDriveId": "10n5YZKK4EDiYYXh5_RyPQrCm6MCvliQp",
+    "previewUrl": "https://drive.google.com/file/d/10n5YZKK4EDiYYXh5_RyPQrCm6MCvliQp/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=10n5YZKK4EDiYYXh5_RyPQrCm6MCvliQp",
+    "localFile": null,
+    "ddc": "005.268"
+  },
+  {
+    "id": "book-1kf86zhfvcst",
+    "title": "Pemrograman Web Dasar",
+    "author": "Pustaka AKSINU",
+    "category": "JavaScript & Web",
+    "callNumber": "DDC 005.276",
+    "catalogId": "AKSINU-LIB-269",
+    "isbn": "AKSINU-REF-269",
     "tags": [
       "javascript",
       "web",
@@ -2762,91 +5805,646 @@ const BOOKS_DATA = [
       "fullstack"
     ],
     "size": "PDF",
-    "description": "Pelajari arsitektur dan sintaks modern ekosistem web interaktif melalui buku Pdf JavaScript Programming.",
-    "googleDriveId": "1j4AmgJ9kkSA2yo70szEi0d-fslIMpaDV",
-    "previewUrl": "https://drive.google.com/file/d/1j4AmgJ9kkSA2yo70szEi0d-fslIMpaDV/preview",
-    "downloadUrl": "https://drive.google.com/uc?export=download&id=1j4AmgJ9kkSA2yo70szEi0d-fslIMpaDV",
-    "localFile": null
+    "description": "Pelajari arsitektur dan sintaks modern ekosistem web interaktif melalui Pemrograman Web Dasar.",
+    "googleDriveId": "1kf86zhFVCSTgin8CmwduDfaPFT9Y9hL8",
+    "previewUrl": "https://drive.google.com/file/d/1kf86zhFVCSTgin8CmwduDfaPFT9Y9hL8/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=1kf86zhFVCSTgin8CmwduDfaPFT9Y9hL8",
+    "localFile": null,
+    "ddc": "005.276"
+  },
+  {
+    "id": "book-1rvybu6toirh",
+    "title": "Pemrograman Web HTML & CSS Modern",
+    "author": "Pustaka AKSINU",
+    "category": "JavaScript & Web",
+    "callNumber": "DDC 005.276",
+    "catalogId": "AKSINU-LIB-270",
+    "isbn": "AKSINU-REF-270",
+    "tags": [
+      "javascript",
+      "web",
+      "frontend",
+      "fullstack"
+    ],
+    "size": "PDF",
+    "description": "Pelajari arsitektur dan sintaks modern ekosistem web interaktif melalui Buku Pemorg Web HTML 9786237694342.",
+    "googleDriveId": "1RVYbu6TOIRH5RLuYsd8LNtW7DzGAZ49f",
+    "previewUrl": "https://drive.google.com/file/d/1RVYbu6TOIRH5RLuYsd8LNtW7DzGAZ49f/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=1RVYbu6TOIRH5RLuYsd8LNtW7DzGAZ49f",
+    "localFile": null,
+    "ddc": "005.276"
+  },
+  {
+    "id": "book-13dtveoq_p3m",
+    "title": "Pemrograman Web Lanjut (Kurikulum Standar UNESCO)",
+    "author": "UNESCO Education Sector",
+    "category": "JavaScript & Web",
+    "callNumber": "DDC 005.276",
+    "catalogId": "AKSINU-LIB-271",
+    "isbn": "AKSINU-REF-271",
+    "tags": [
+      "javascript",
+      "web",
+      "frontend",
+      "fullstack"
+    ],
+    "size": "PDF",
+    "description": "Pelajari arsitektur dan sintaks modern ekosistem web interaktif melalui Pemrograman Web Lanjut V 3 0 Unesco.",
+    "googleDriveId": "13dtVeOQ_P3MrhjjlQj_yVxw30iS3Mx6u",
+    "previewUrl": "https://drive.google.com/file/d/13dtVeOQ_P3MrhjjlQj_yVxw30iS3Mx6u/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=13dtVeOQ_P3MrhjjlQj_yVxw30iS3Mx6u",
+    "localFile": null,
+    "ddc": "005.276"
+  },
+  {
+    "id": "book-1hqlrsgoq12e",
+    "title": "Pemrograman Web Lanjutan Berbasis Framework",
+    "author": "Evi Lestari, M.Kom.",
+    "category": "JavaScript & Web",
+    "callNumber": "DDC 005.276",
+    "catalogId": "AKSINU-LIB-272",
+    "isbn": "AKSINU-REF-272",
+    "tags": [
+      "javascript",
+      "web",
+      "frontend",
+      "fullstack"
+    ],
+    "size": "PDF",
+    "description": "Pelajari arsitektur dan sintaks modern ekosistem web interaktif melalui Evi Lestari Pemrograman Web Lanjutan Publish.",
+    "googleDriveId": "1hQLRSGOq12eHR73wT19fr_rug9pVM1Ow",
+    "previewUrl": "https://drive.google.com/file/d/1hQLRSGOq12eHR73wT19fr_rug9pVM1Ow/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=1hQLRSGOq12eHR73wT19fr_rug9pVM1Ow",
+    "localFile": null,
+    "ddc": "005.276"
+  },
+  {
+    "id": "book-1j5seppehm_s",
+    "title": "Pemrograman Web: HyperText Markup Language (HTML & CSS)",
+    "author": "Pustaka AKSINU",
+    "category": "JavaScript & Web",
+    "callNumber": "DDC 005.276",
+    "catalogId": "AKSINU-LIB-273",
+    "isbn": "AKSINU-REF-273",
+    "tags": [
+      "javascript",
+      "web",
+      "frontend",
+      "fullstack"
+    ],
+    "size": "PDF",
+    "description": "Pelajari arsitektur dan sintaks modern ekosistem web interaktif melalui Pemrograman Web Hyper Text Markup Langua.",
+    "googleDriveId": "1J5sePpEHM_SP6Z8YynKnSeDnBXdmZVwl",
+    "previewUrl": "https://drive.google.com/file/d/1J5sePpEHM_SP6Z8YynKnSeDnBXdmZVwl/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=1J5sePpEHM_SP6Z8YynKnSeDnBXdmZVwl",
+    "localFile": null,
+    "ddc": "005.276"
+  },
+  {
+    "id": "book-1p6okdwkjmdv",
+    "title": "Pendidikan Agama Islam di Perguruan Tinggi",
+    "author": "Pustaka AKSINU",
+    "category": "Ilmu Komputer",
+    "callNumber": "DDC 004",
+    "catalogId": "AKSINU-LIB-274",
+    "isbn": "AKSINU-REF-274",
+    "tags": [
+      "teknologi",
+      "komputer"
+    ],
+    "size": "PDF",
+    "description": "Buku panduan dan referensi mengenai Pendidikan Agama Islam di Perguruan Tinggi untuk memperdalam literasi teknologi informasi.",
+    "googleDriveId": "1p6OkdWkJmdvYd0nrZBJpeEuaTn4GykTE",
+    "previewUrl": "https://drive.google.com/file/d/1p6OkdWkJmdvYd0nrZBJpeEuaTn4GykTE/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=1p6OkdWkJmdvYd0nrZBJpeEuaTn4GykTE",
+    "localFile": null,
+    "ddc": "004"
+  },
+  {
+    "id": "book-1edmnlmadkti",
+    "title": "Pendidikan Kewarganegaraan",
+    "author": "Pustaka AKSINU",
+    "category": "Ilmu Komputer",
+    "callNumber": "DDC 004",
+    "catalogId": "AKSINU-LIB-275",
+    "isbn": "AKSINU-REF-275",
+    "tags": [
+      "teknologi",
+      "komputer"
+    ],
+    "size": "PDF",
+    "description": "Buku panduan dan referensi mengenai Buku Modul Mkwk Pendidikan Kewarganegaraan untuk memperdalam literasi teknologi informasi.",
+    "googleDriveId": "1eDmNLMADKtIbp71R7Yphqpx22lf4lzo9",
+    "previewUrl": "https://drive.google.com/file/d/1eDmNLMADKtIbp71R7Yphqpx22lf4lzo9/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=1eDmNLMADKtIbp71R7Yphqpx22lf4lzo9",
+    "localFile": null,
+    "ddc": "004"
+  },
+  {
+    "id": "book-1hh6bs1b2ppi",
+    "title": "Pengantar Basis Data",
+    "author": "Pustaka AKSINU",
+    "category": "Database & SQL",
+    "callNumber": "DDC 005.74",
+    "catalogId": "AKSINU-LIB-276",
+    "isbn": "AKSINU-REF-276",
+    "tags": [
+      "basis data",
+      "database",
+      "sql",
+      "dbms"
+    ],
+    "size": "PDF",
+    "description": "Pengelolaan basis data, pemodelan data relasional, dan optimasi kueri untuk pemrosesan skala besar.",
+    "googleDriveId": "1HH6Bs1B2pPIoqkdN99nQkyBLgVK5Suie",
+    "previewUrl": "https://drive.google.com/file/d/1HH6Bs1B2pPIoqkdN99nQkyBLgVK5Suie/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=1HH6Bs1B2pPIoqkdN99nQkyBLgVK5Suie",
+    "localFile": null,
+    "ddc": "005.74"
+  },
+  {
+    "id": "book-13dzajiawznf",
+    "title": "Pengantar Basis Data untuk Teknik Informatika",
+    "author": "Pustaka AKSINU",
+    "category": "Database & SQL",
+    "callNumber": "DDC 005.74",
+    "catalogId": "AKSINU-LIB-277",
+    "isbn": "AKSINU-REF-277",
+    "tags": [
+      "basis data",
+      "database",
+      "sql",
+      "dbms"
+    ],
+    "size": "PDF",
+    "description": "Pengelolaan basis data, pemodelan data relasional, dan optimasi kueri untuk pemrosesan skala besar.",
+    "googleDriveId": "13dZAJiAWzNFm1x_Oc81eKG_mgaBC5nPx",
+    "previewUrl": "https://drive.google.com/file/d/13dZAJiAWzNFm1x_Oc81eKG_mgaBC5nPx/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=13dZAJiAWzNFm1x_Oc81eKG_mgaBC5nPx",
+    "localFile": null,
+    "ddc": "005.74"
   },
   {
     "id": "book-1hzdimm-6nor",
     "title": "Pengantar Bisnis dan Manajemen",
-    "author": "Teknologi & Komputasi",
-    "category": "Dasar Pemrograman",
+    "author": "Pustaka Bisnis AKSINU",
+    "category": "Manajemen & Bisnis",
     "tags": [
-      "teknologi",
-      "komputer"
+      "pengantar bisnis",
+      "manajemen",
+      "kewirausahaan"
     ],
     "size": "PDF",
-    "description": "Buku panduan dan referensi komprehensif mengenai Pengantar Bisnis dan Manajemen untuk memperdalam pemahaman teknologi informasi dan rekayasa perangkat lunak.",
+    "description": "Pengantar menyeluruh dinamika dunia bisnis, etika bisnis, tanggung jawab sosial perusahaan, dan tata kelola korporasi.",
     "googleDriveId": "1hzDimM-6NOR7-LiaS-8O3o0YtIN-mk8n",
     "previewUrl": "https://drive.google.com/file/d/1hzDimM-6NOR7-LiaS-8O3o0YtIN-mk8n/preview",
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1hzDimM-6NOR7-LiaS-8O3o0YtIN-mk8n",
-    "localFile": null
+    "localFile": null,
+    "callNumber": "DDC 658.4038",
+    "catalogId": "AKSINU-LIB-278",
+    "isbn": "AKSINU-REF-278",
+    "ddc": "658.4038"
+  },
+  {
+    "id": "book-1bg7mjz3ehv2",
+    "title": "Pengantar Data Science: Teori, Metode, dan Aplikasi",
+    "author": "Pustaka AKSINU",
+    "category": "Python & Data Science",
+    "callNumber": "DDC 005.133",
+    "catalogId": "AKSINU-LIB-279",
+    "isbn": "AKSINU-REF-279",
+    "tags": [
+      "teknologi",
+      "komputer"
+    ],
+    "size": "PDF",
+    "description": "Buku panduan dan referensi mengenai Pengantar+data+science+preview untuk memperdalam literasi teknologi informasi.",
+    "googleDriveId": "1BG7MJz3EHV2eJgmsks8hZcoe7QJz3O5_",
+    "previewUrl": "https://drive.google.com/file/d/1BG7MJz3EHV2eJgmsks8hZcoe7QJz3O5_/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=1BG7MJz3EHV2eJgmsks8hZcoe7QJz3O5_",
+    "localFile": null,
+    "ddc": "005.133"
+  },
+  {
+    "id": "book-1e6yj50l38sf",
+    "title": "Pengantar Fundamental Komputasi & Pemrograman",
+    "author": "Pustaka AKSINU",
+    "category": "Ilmu Komputer",
+    "callNumber": "DDC 004",
+    "catalogId": "AKSINU-LIB-280",
+    "isbn": "AKSINU-REF-280",
+    "tags": [
+      "teknologi",
+      "komputer"
+    ],
+    "size": "PDF",
+    "description": "Buku panduan dan referensi mengenai Book (1) untuk memperdalam literasi teknologi informasi.",
+    "googleDriveId": "1E6Yj50L38Sfawg9obpW7bKZD5bbXODhN",
+    "previewUrl": "https://drive.google.com/file/d/1E6Yj50L38Sfawg9obpW7bKZD5bbXODhN/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=1E6Yj50L38Sfawg9obpW7bKZD5bbXODhN",
+    "localFile": null,
+    "ddc": "004"
   },
   {
     "id": "book-13rze64bedrr",
-    "title": "Pengantar Jaringan Komputer",
-    "author": "Teknologi & Komputasi",
-    "category": "Dasar Pemrograman",
+    "title": "Pengantar Jaringan Komputer & Komunikasi Data",
+    "author": "Pustaka AKSINU",
+    "category": "Jaringan Komputer",
     "tags": [
-      "teknologi",
-      "komputer"
+      "jaringan komputer",
+      "komunikasi data",
+      "bandwidth",
+      "sinyal"
     ],
     "size": "PDF",
-    "description": "Buku panduan dan referensi komprehensif mengenai Pengantar Jaringan Komputer untuk memperdalam pemahaman teknologi informasi dan rekayasa perangkat lunak.",
+    "description": "Mempelajari dasar transmisi gelombang sinyal, modulasi komunikasi data, dan interkoneksi perangkat dalam jaringan.",
     "googleDriveId": "13rZE64beDrRbzoHc0tjCCTbmNiXPkCqT",
     "previewUrl": "https://drive.google.com/file/d/13rZE64beDrRbzoHc0tjCCTbmNiXPkCqT/preview",
     "downloadUrl": "https://drive.google.com/uc?export=download&id=13rZE64beDrRbzoHc0tjCCTbmNiXPkCqT",
-    "localFile": null
+    "localFile": null,
+    "callNumber": "DDC 004.6",
+    "catalogId": "AKSINU-LIB-281",
+    "isbn": "AKSINU-REF-281",
+    "ddc": "004.6"
+  },
+  {
+    "id": "book-1xedqk-yhzhx",
+    "title": "Pengantar Konsep Sistem Informasi Modern",
+    "author": "Pustaka AKSINU",
+    "category": "Sistem Informasi",
+    "tags": [
+      "sistem informasi",
+      "komputer",
+      "teknologi informasi"
+    ],
+    "size": "PDF",
+    "description": "Dasar-dasar sistem informasi modern dalam integrasi data, otomatisasi kerja, dan arsitektur aplikasi korporat.",
+    "googleDriveId": "1xEDQk-yHZHxJdxmeTol2Su5QKYBPLeXy",
+    "previewUrl": "https://drive.google.com/file/d/1xEDQk-yHZHxJdxmeTol2Su5QKYBPLeXy/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=1xEDQk-yHZHxJdxmeTol2Su5QKYBPLeXy",
+    "localFile": null,
+    "callNumber": "DDC 004.068",
+    "catalogId": "AKSINU-LIB-282",
+    "isbn": "AKSINU-REF-282",
+    "ddc": "004.068"
   },
   {
     "id": "book-1eksqdgempvo",
-    "title": "Pengantar Manajemen",
-    "author": "Teknologi & Komputasi",
-    "category": "Dasar Pemrograman",
+    "title": "Pengantar Manajemen Organisasi",
+    "author": "Pustaka Bisnis AKSINU",
+    "category": "Manajemen & Bisnis",
     "tags": [
-      "teknologi",
-      "komputer"
+      "pengantar manajemen",
+      "kepemimpinan",
+      "organisasi"
     ],
     "size": "PDF",
-    "description": "Buku panduan dan referensi komprehensif mengenai Pengantar Manajemen untuk memperdalam pemahaman teknologi informasi dan rekayasa perangkat lunak.",
+    "description": "Kajian teori kepemimpinan, motivasi kerja, dinamika kelompok, dan struktur organisasi modern.",
     "googleDriveId": "1EKSqdGeMPVO5CdEJ_aY3citEX-trJmZS",
     "previewUrl": "https://drive.google.com/file/d/1EKSqdGeMPVO5CdEJ_aY3citEX-trJmZS/preview",
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1EKSqdGeMPVO5CdEJ_aY3citEX-trJmZS",
-    "localFile": null
+    "localFile": null,
+    "callNumber": "DDC 658.4038",
+    "catalogId": "AKSINU-LIB-283",
+    "isbn": "AKSINU-REF-283",
+    "ddc": "658.4038"
+  },
+  {
+    "id": "book-1ovi9ktta8iv",
+    "title": "Pengantar Manajemen Proses Bisnis",
+    "author": "Pustaka AKSINU",
+    "category": "Manajemen & Bisnis",
+    "callNumber": "DDC 658.4038",
+    "catalogId": "AKSINU-LIB-284",
+    "isbn": "AKSINU-REF-284",
+    "tags": [
+      "manajemen",
+      "bisnis",
+      "kewirausahaan",
+      "technopreneurship"
+    ],
+    "size": "PDF",
+    "description": "Kajian manajemen operasional, technopreneurship, kepemimpinan organisasi, dan dinamika bisnis TI.",
+    "googleDriveId": "1OVI9ktTA8IveuSy2-0FWKxuifkBlVBuz",
+    "previewUrl": "https://drive.google.com/file/d/1OVI9ktTA8IveuSy2-0FWKxuifkBlVBuz/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=1OVI9ktTA8IveuSy2-0FWKxuifkBlVBuz",
+    "localFile": null,
+    "ddc": "658.4038"
+  },
+  {
+    "id": "book-1nauqc7nji2b",
+    "title": "Pengantar Matematika Diskrit (2020)",
+    "author": "Pustaka AKSINU",
+    "category": "Struktur Data & Algoritma",
+    "callNumber": "DDC 005.13",
+    "catalogId": "AKSINU-LIB-285",
+    "isbn": "AKSINU-REF-285",
+    "tags": [
+      "teknologi",
+      "komputer"
+    ],
+    "size": "PDF",
+    "description": "Buku panduan dan referensi mengenai Pengantar Matematika Diskrit (2020) untuk memperdalam literasi teknologi informasi.",
+    "googleDriveId": "1nAUQc7njI2bAcmAmKa8F1h1baWshYWOJ",
+    "previewUrl": "https://drive.google.com/file/d/1nAUQc7njI2bAcmAmKa8F1h1baWshYWOJ/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=1nAUQc7njI2bAcmAmKa8F1h1baWshYWOJ",
+    "localFile": null,
+    "ddc": "005.13"
+  },
+  {
+    "id": "book-1zsopmk7vcjd",
+    "title": "Pengantar Sains Data Komunikasi",
+    "author": "Pustaka AKSINU",
+    "category": "Python & Data Science",
+    "callNumber": "DDC 005.133",
+    "catalogId": "AKSINU-LIB-286",
+    "isbn": "AKSINU-REF-286",
+    "tags": [
+      "python",
+      "data science",
+      "analitika data"
+    ],
+    "size": "PDF",
+    "description": "Buku pengantar penerapan sains data, analitika data komunikasi, dan komputasi big data untuk media digital.",
+    "googleDriveId": "1zsOpmk7vcjdc3GwS3Lfh6f56wXKj9gOE",
+    "previewUrl": "https://drive.google.com/file/d/1zsOpmk7vcjdc3GwS3Lfh6f56wXKj9gOE/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=1zsOpmk7vcjdc3GwS3Lfh6f56wXKj9gOE",
+    "localFile": null,
+    "ddc": "005.133"
+  },
+  {
+    "id": "book-1ur1locub2fm",
+    "title": "Pengantar Sains Data: Proses dan Analisis Data Modern",
+    "author": "Pustaka AKSINU",
+    "category": "Python & Data Science",
+    "callNumber": "DDC 005.133",
+    "catalogId": "AKSINU-LIB-287",
+    "isbn": "AKSINU-REF-287",
+    "tags": [
+      "python",
+      "data science",
+      "analitika data"
+    ],
+    "size": "PDF",
+    "description": "Panduan praktis penguasaan bahasa pemrograman Python dan teknik komputasi modern untuk analitika data.",
+    "googleDriveId": "1ur1lOCUB2fmMqMIF1j4CMUwEGomgcFbW",
+    "previewUrl": "https://drive.google.com/file/d/1ur1lOCUB2fmMqMIF1j4CMUwEGomgcFbW/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=1ur1lOCUB2fmMqMIF1j4CMUwEGomgcFbW",
+    "localFile": null,
+    "ddc": "005.133"
+  },
+  {
+    "id": "book-1ss7k0xgramo",
+    "title": "Pengantar Sistem Basis Data",
+    "author": "Pustaka AKSINU",
+    "category": "Database & SQL",
+    "callNumber": "DDC 005.74",
+    "catalogId": "AKSINU-LIB-288",
+    "isbn": "AKSINU-REF-288",
+    "tags": [
+      "basis data",
+      "database",
+      "sql",
+      "dbms"
+    ],
+    "size": "PDF",
+    "description": "Pengelolaan basis data, pemodelan data relasional, dan optimasi kueri untuk pemrosesan skala besar.",
+    "googleDriveId": "1SS7K0xGRAMOMuvXwDqfNtmSCj90Y_S2S",
+    "previewUrl": "https://drive.google.com/file/d/1SS7K0xGRAMOMuvXwDqfNtmSCj90Y_S2S/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=1SS7K0xGRAMOMuvXwDqfNtmSCj90Y_S2S",
+    "localFile": null,
+    "ddc": "005.74"
+  },
+  {
+    "id": "book-1pipeaqs7fog",
+    "title": "Pengantar Sistem Informasi & Komputasi Modern",
+    "author": "Pustaka AKSINU",
+    "category": "Sistem Informasi",
+    "callNumber": "DDC 004.068",
+    "catalogId": "AKSINU-LIB-289",
+    "isbn": "AKSINU-REF-289",
+    "tags": [
+      "teknologi",
+      "komputer"
+    ],
+    "size": "PDF",
+    "description": "Buku panduan dan referensi mengenai Fullteks (1) untuk memperdalam literasi teknologi informasi.",
+    "googleDriveId": "1PIpeAqs7fOGWboZL6l802IDVqMqwvxNu",
+    "previewUrl": "https://drive.google.com/file/d/1PIpeAqs7fOGWboZL6l802IDVqMqwvxNu/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=1PIpeAqs7fOGWboZL6l802IDVqMqwvxNu",
+    "localFile": null,
+    "ddc": "004.068"
+  },
+  {
+    "id": "book-1giwznj4eiwn",
+    "title": "Pengantar Sistem Informasi (Konsep & Penerapan)",
+    "author": "Pustaka AKSINU",
+    "category": "Sistem Informasi",
+    "tags": [
+      "sistem informasi",
+      "si",
+      "konsep dasar"
+    ],
+    "size": "PDF",
+    "description": "Buku teks pengantar menyeluruh mengenai komponen utama sistem informasi dan peranannya dalam organisasi modern.",
+    "googleDriveId": "1gIWzNJ4eIWNuBvaFANQu9F1YKG-0t5KC",
+    "previewUrl": "https://drive.google.com/file/d/1gIWzNJ4eIWNuBvaFANQu9F1YKG-0t5KC/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=1gIWzNJ4eIWNuBvaFANQu9F1YKG-0t5KC",
+    "localFile": null,
+    "callNumber": "DDC 004.068",
+    "catalogId": "AKSINU-LIB-290",
+    "isbn": "AKSINU-REF-290",
+    "ddc": "004.068"
+  },
+  {
+    "id": "book-1jfhbrwav3ti",
+    "title": "Pengantar Sistem Informasi Manajemen",
+    "author": "Pustaka AKSINU",
+    "category": "Sistem Informasi",
+    "callNumber": "DDC 004.068",
+    "catalogId": "AKSINU-LIB-291",
+    "isbn": "AKSINU-REF-291",
+    "tags": [
+      "sistem informasi",
+      "analisis sistem",
+      "manajemen sistem",
+      "ti kampus"
+    ],
+    "size": "PDF",
+    "description": "Buku kajian sistem informasi, analisis kebutuhan, dan perancangan sistem informasi modern: Pengantar Sistem Informasi Manajemen.",
+    "googleDriveId": "1jFHBRWAV3tIdGUL8V05Vn3z_eq2YwSgg",
+    "previewUrl": "https://drive.google.com/file/d/1jFHBRWAV3tIdGUL8V05Vn3z_eq2YwSgg/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=1jFHBRWAV3tIdGUL8V05Vn3z_eq2YwSgg",
+    "localFile": null,
+    "ddc": "004.068"
   },
   {
     "id": "book-1d4vieqlfluu",
-    "title": "Pengatar Sistem Informasi",
-    "author": "Teknologi & Komputasi",
-    "category": "Dasar Pemrograman",
+    "title": "Pengantar Sistem Informasi Manajemen Modern",
+    "author": "Pustaka AKSINU",
+    "category": "Database & SQL",
     "tags": [
-      "teknologi",
-      "komputer"
+      "pengantar sistem informasi",
+      "sistem informasi manajemen"
     ],
     "size": "PDF",
-    "description": "Buku panduan dan referensi komprehensif mengenai Pengatar Sistem Informasi untuk memperdalam pemahaman teknologi informasi dan rekayasa perangkat lunak.",
+    "description": "Dasar-dasar pengenalan perangkat keras, perangkat lunak, basis data, dan telekomunikasi dalam ekosistem sistem informasi.",
     "googleDriveId": "1D4ViEQLflUUrqIEnEaBPL31LjdrDcH9p",
     "previewUrl": "https://drive.google.com/file/d/1D4ViEQLflUUrqIEnEaBPL31LjdrDcH9p/preview",
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1D4ViEQLflUUrqIEnEaBPL31LjdrDcH9p",
-    "localFile": null
+    "localFile": null,
+    "callNumber": "DDC 005.74",
+    "catalogId": "AKSINU-LIB-292",
+    "isbn": "AKSINU-REF-292",
+    "ddc": "005.74"
   },
   {
-    "id": "book-1oair43gosrc",
-    "title": "Pengelolaan Data",
-    "author": "Teknologi & Komputasi",
-    "category": "Dasar Pemrograman",
+    "id": "book-1twnza_qb-2j",
+    "title": "Pengantar Struktur Data",
+    "author": "Pustaka AKSINU",
+    "category": "Struktur Data & Algoritma",
+    "callNumber": "DDC 005.13",
+    "catalogId": "AKSINU-LIB-293",
+    "isbn": "AKSINU-REF-293",
+    "tags": [
+      "struktur data",
+      "algoritma",
+      "efisiensi",
+      "komputasi"
+    ],
+    "size": "PDF",
+    "description": "Konsep struktur data esensial dan teknik algoritma optimal untuk pemrosesan data komputer.",
+    "googleDriveId": "1TwNZa_QB-2jCsnTC33mJki0lil-ApBJ-",
+    "previewUrl": "https://drive.google.com/file/d/1TwNZa_QB-2jCsnTC33mJki0lil-ApBJ-/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=1TwNZa_QB-2jCsnTC33mJki0lil-ApBJ-",
+    "localFile": null,
+    "ddc": "005.13"
+  },
+  {
+    "id": "book-1mv2nujf6njy",
+    "title": "Pengantar Technopreneur",
+    "author": "Pustaka AKSINU",
+    "category": "Manajemen & Bisnis",
+    "callNumber": "DDC 658.4038",
+    "catalogId": "AKSINU-LIB-294",
+    "isbn": "AKSINU-REF-294",
     "tags": [
       "teknologi",
       "komputer"
     ],
     "size": "PDF",
-    "description": "Buku panduan dan referensi komprehensif mengenai Pengelolaan Data untuk memperdalam pemahaman teknologi informasi dan rekayasa perangkat lunak.",
-    "googleDriveId": "1oaIr43GoSRC1j_eSRSWd2ZZ_V6u9MG0s",
-    "previewUrl": "https://drive.google.com/file/d/1oaIr43GoSRC1j_eSRSWd2ZZ_V6u9MG0s/preview",
-    "downloadUrl": "https://drive.google.com/uc?export=download&id=1oaIr43GoSRC1j_eSRSWd2ZZ_V6u9MG0s",
-    "localFile": null
+    "description": "Buku panduan dan referensi mengenai Pengantar Technopreneur Preview untuk memperdalam literasi teknologi informasi.",
+    "googleDriveId": "1Mv2nujf6njYwf_64QqgEiqI6ff1iEu5d",
+    "previewUrl": "https://drive.google.com/file/d/1Mv2nujf6njYwf_64QqgEiqI6ff1iEu5d/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=1Mv2nujf6njYwf_64QqgEiqI6ff1iEu5d",
+    "localFile": null,
+    "ddc": "658.4038"
+  },
+  {
+    "id": "book-1bdcdi8_w2xt",
+    "title": "Pengantar Teknologi Informasi",
+    "author": "Pustaka AKSINU",
+    "category": "Ilmu Komputer",
+    "callNumber": "DDC 004",
+    "catalogId": "AKSINU-LIB-295",
+    "isbn": "AKSINU-REF-295",
+    "tags": [
+      "computer science",
+      "ilmu komputer",
+      "etika profesi"
+    ],
+    "size": "PDF",
+    "description": "Dasar-dasar ilmu komputer, etika profesi teknologi informasi, dan arsitektur sistem komputasi.",
+    "googleDriveId": "1bDcDI8_W2xTFlikvLuxmJ5JhpGgBd04e",
+    "previewUrl": "https://drive.google.com/file/d/1bDcDI8_W2xTFlikvLuxmJ5JhpGgBd04e/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=1bDcDI8_W2xTFlikvLuxmJ5JhpGgBd04e",
+    "localFile": null,
+    "ddc": "004"
+  },
+  {
+    "id": "book-1tyz__rcpt_u",
+    "title": "Pengantar Teknologi Informasi (Kurikulum Standar UNESCO)",
+    "author": "UNESCO Education Sector",
+    "category": "Ilmu Komputer",
+    "callNumber": "DDC 004",
+    "catalogId": "AKSINU-LIB-296",
+    "isbn": "AKSINU-REF-296",
+    "tags": [
+      "computer science",
+      "ilmu komputer",
+      "etika profesi"
+    ],
+    "size": "PDF",
+    "description": "Dasar-dasar ilmu komputer, etika profesi teknologi informasi, dan arsitektur sistem komputasi.",
+    "googleDriveId": "1TYZ__rcPT_uRfJfCEL8qux_T_JyCJvkY",
+    "previewUrl": "https://drive.google.com/file/d/1TYZ__rcPT_uRfJfCEL8qux_T_JyCJvkY/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=1TYZ__rcPT_uRfJfCEL8qux_T_JyCJvkY",
+    "localFile": null,
+    "ddc": "004"
+  },
+  {
+    "id": "book-1gpuiukce7-f",
+    "title": "Pengantar Teknologi Informasi Modern",
+    "author": "Pustaka AKSINU",
+    "category": "Ilmu Komputer",
+    "callNumber": "DDC 004",
+    "catalogId": "AKSINU-LIB-297",
+    "isbn": "AKSINU-REF-297",
+    "tags": [
+      "teknologi",
+      "komputer"
+    ],
+    "size": "PDF",
+    "description": "Buku panduan dan referensi mengenai E Book+pengantar+teknologi+informasi untuk memperdalam literasi teknologi informasi.",
+    "googleDriveId": "1gpUIukce7-fs0JEDvmwem0D9LgvqmnN1",
+    "previewUrl": "https://drive.google.com/file/d/1gpUIukce7-fs0JEDvmwem0D9LgvqmnN1/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=1gpUIukce7-fs0JEDvmwem0D9LgvqmnN1",
+    "localFile": null,
+    "ddc": "004"
+  },
+  {
+    "id": "book-1ylimqzweo4x",
+    "title": "Pengembangan Aplikasi Berbasis Web",
+    "author": "Pustaka AKSINU",
+    "category": "JavaScript & Web",
+    "callNumber": "DDC 005.276",
+    "catalogId": "AKSINU-LIB-298",
+    "isbn": "AKSINU-REF-298",
+    "tags": [
+      "javascript",
+      "web",
+      "frontend",
+      "fullstack"
+    ],
+    "size": "PDF",
+    "description": "Pelajari arsitektur dan sintaks modern ekosistem web interaktif melalui Pengembangan Aplikasi Berbasis Web.",
+    "googleDriveId": "1ylimQzWEO4XclLzMs21wjYW2WCATOidb",
+    "previewUrl": "https://drive.google.com/file/d/1ylimQzWEO4XclLzMs21wjYW2WCATOidb/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=1ylimQzWEO4XclLzMs21wjYW2WCATOidb",
+    "localFile": null,
+    "ddc": "005.276"
+  },
+  {
+    "id": "book-1dh200gi-oib",
+    "title": "Pengembangan Aplikasi Web Modern",
+    "author": "I. Ali",
+    "category": "JavaScript & Web",
+    "callNumber": "DDC 005.276",
+    "catalogId": "AKSINU-LIB-299",
+    "isbn": "AKSINU-REF-299",
+    "tags": [
+      "javascript",
+      "web",
+      "frontend",
+      "fullstack"
+    ],
+    "size": "PDF",
+    "description": "Pelajari arsitektur dan sintaks modern ekosistem web interaktif melalui Ali, I. (2024). Pengembangan Aplikasi Web. Bandung Widina Bhakti Persada. Isbn 978 623 500 498 3.",
+    "googleDriveId": "1DH200Gi-oiBzGGq1v9WvLTMkAYk3BZFl",
+    "previewUrl": "https://drive.google.com/file/d/1DH200Gi-oiBzGGq1v9WvLTMkAYk3BZFl/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=1DH200Gi-oiBzGGq1v9WvLTMkAYk3BZFl",
+    "localFile": null,
+    "ddc": "005.276"
   },
   {
     "id": "book-1mfk8r2bdma-",
@@ -2864,25 +6462,33 @@ const BOOKS_DATA = [
     "googleDriveId": "1MFK8R2bDma-CQ5RzF0c0s8RJ3EMzDMm5",
     "previewUrl": "https://drive.google.com/file/d/1MFK8R2bDma-CQ5RzF0c0s8RJ3EMzDMm5/preview",
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1MFK8R2bDma-CQ5RzF0c0s8RJ3EMzDMm5",
-    "localFile": null
+    "localFile": null,
+    "callNumber": "DDC 005.276",
+    "catalogId": "AKSINU-LIB-300",
+    "isbn": "AKSINU-REF-300",
+    "ddc": "005.276"
   },
   {
-    "id": "book-1-76wswwjgnf",
-    "title": "Planet Code Python for Large Language Models a Beginners Handbook for Leveraging Llms Into Modern Development Workflows and Applications 2025",
-    "author": "Teknologi & Komputasi",
+    "id": "book-16pl4cyplyi7",
+    "title": "Practical Statistics for Data Scientists",
+    "author": "Pustaka Data Science",
     "category": "Python & Data Science",
     "tags": [
-      "python",
+      "statistika",
       "data science",
-      "pemrograman",
-      "analisis data"
+      "probability",
+      "hypothesis testing"
     ],
     "size": "PDF",
-    "description": "Panduan praktis penguasaan bahasa pemrograman Python dan teknik analisis komputasi modern melalui Planet Code Python for Large Language Models a Beginners Handbook for Leveraging Llms Into Modern Development Workflows and Applications 2025.",
-    "googleDriveId": "1-76WswwJGNFYdJxf1WGuoQfW_rx-IAip",
-    "previewUrl": "https://drive.google.com/file/d/1-76WswwJGNFYdJxf1WGuoQfW_rx-IAip/preview",
-    "downloadUrl": "https://drive.google.com/uc?export=download&id=1-76WswwJGNFYdJxf1WGuoQfW_rx-IAip",
-    "localFile": null
+    "description": "Prinsip-prinsip statistika fundamental yang paling krusial untuk praktisi data: uji hipotesis, distribusi probabilitas, dan regresi.",
+    "googleDriveId": "16PL4CypLyi7HD8qaTqk9S4EDsKdr9XSA",
+    "previewUrl": "https://drive.google.com/file/d/16PL4CypLyi7HD8qaTqk9S4EDsKdr9XSA/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=16PL4CypLyi7HD8qaTqk9S4EDsKdr9XSA",
+    "localFile": null,
+    "callNumber": "DDC 005.133",
+    "catalogId": "AKSINU-LIB-301",
+    "isbn": "AKSINU-REF-301",
+    "ddc": "005.133"
   },
   {
     "id": "book-1zwngju1fj84",
@@ -2900,11 +6506,37 @@ const BOOKS_DATA = [
     "googleDriveId": "1zwnGju1fJ84SZcieM151eu6_LXlsOgY3",
     "previewUrl": "https://drive.google.com/file/d/1zwnGju1fJ84SZcieM151eu6_LXlsOgY3/preview",
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1zwnGju1fJ84SZcieM151eu6_LXlsOgY3",
-    "localFile": null
+    "localFile": null,
+    "callNumber": "DDC 005.268",
+    "catalogId": "AKSINU-LIB-302",
+    "isbn": "AKSINU-REF-302",
+    "ddc": "005.268"
+  },
+  {
+    "id": "book-1o2b-hs0hye3",
+    "title": "Profil Bisnis UMKM",
+    "author": "Pustaka AKSINU",
+    "category": "Manajemen & Bisnis",
+    "callNumber": "DDC 658.4038",
+    "catalogId": "AKSINU-LIB-303",
+    "isbn": "AKSINU-REF-303",
+    "tags": [
+      "manajemen",
+      "bisnis",
+      "kewirausahaan",
+      "technopreneurship"
+    ],
+    "size": "PDF",
+    "description": "Kajian manajemen operasional, technopreneurship, kepemimpinan organisasi, dan dinamika bisnis TI.",
+    "googleDriveId": "1o2B-hs0HYE3ZzUzOb2Rk13dLUCBP-MGW",
+    "previewUrl": "https://drive.google.com/file/d/1o2B-hs0HYE3ZzUzOb2Rk13dLUCBP-MGW/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=1o2B-hs0HYE3ZzUzOb2Rk13dLUCBP-MGW",
+    "localFile": null,
+    "ddc": "658.4038"
   },
   {
     "id": "book-1yz_xgg7ja63",
-    "title": "Programming Fundamentals in JavaScript Rex a Barzee",
+    "title": "Programming Fundamentals in JavaScript",
     "author": "Rex A. Barzee",
     "category": "JavaScript & Web",
     "tags": [
@@ -2917,25 +6549,53 @@ const BOOKS_DATA = [
     "googleDriveId": "1YZ_xGG7ja63i3y2YAKyuic0sATlUwuvP",
     "previewUrl": "https://drive.google.com/file/d/1YZ_xGG7ja63i3y2YAKyuic0sATlUwuvP/preview",
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1YZ_xGG7ja63i3y2YAKyuic0sATlUwuvP",
-    "localFile": null
+    "localFile": null,
+    "callNumber": "DDC 005.276",
+    "catalogId": "AKSINU-LIB-304",
+    "isbn": "AKSINU-REF-304",
+    "ddc": "005.276"
   },
   {
     "id": "book-1bhnla-vciul",
-    "title": "Programming Kotlin Enhance Your Skills for Android Development using Kotlin by Alexander Aronowitz",
-    "author": "Teknologi & Komputasi",
+    "title": "Programming Kotlin: Android Development with Kotlin",
+    "author": "Alexander Aronowitz",
     "category": "Mobile Development",
     "tags": [
-      "mobile",
+      "kotlin",
       "android",
-      "ios",
-      "aplikasi seluler"
+      "mobile dev"
     ],
     "size": "PDF",
-    "description": "Pengembangan aplikasi perangkat seluler modern, responsif, dan berperforma tinggi melalui Programming Kotlin Enhance Your Skills for Android Development using Kotlin by Alexander Aronowitz.",
+    "description": "Tingkatkan keahlian rekayasa aplikasi Android modern memanfaatkan bahasa Kotlin dan fitur coroutines.",
     "googleDriveId": "1BhNla-vCiuLLztQeHYHGV6GD17LL2UOV",
     "previewUrl": "https://drive.google.com/file/d/1BhNla-vCiuLLztQeHYHGV6GD17LL2UOV/preview",
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1BhNla-vCiuLLztQeHYHGV6GD17LL2UOV",
-    "localFile": null
+    "localFile": null,
+    "callNumber": "DDC 005.268",
+    "catalogId": "AKSINU-LIB-305",
+    "isbn": "AKSINU-REF-305",
+    "ddc": "005.268"
+  },
+  {
+    "id": "book-18omr5idnhze",
+    "title": "Programming Python, 4th Edition (2010)",
+    "author": "Pustaka AKSINU",
+    "category": "Python & Data Science",
+    "callNumber": "DDC 005.133",
+    "catalogId": "AKSINU-LIB-306",
+    "isbn": "AKSINU-REF-306",
+    "tags": [
+      "python",
+      "data science",
+      "analitika data"
+    ],
+    "size": "PDF",
+    "description": "Panduan praktis penguasaan bahasa pemrograman Python dan teknik komputasi modern untuk analitika data.",
+    "googleDriveId": "18Omr5IDNHZEhfBjPsDV6wObGHBi61Gng",
+    "previewUrl": "https://drive.google.com/file/d/18Omr5IDNHZEhfBjPsDV6wObGHBi61Gng/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=18Omr5IDNHZEhfBjPsDV6wObGHBi61Gng",
+    "localFile": null,
+    "ddc": "005.133"
   },
   {
     "id": "book-17tpcdlj99dd",
@@ -2953,7 +6613,11 @@ const BOOKS_DATA = [
     "googleDriveId": "17tpCdlj99DDYqixIlZ4IiNm5rKf2Z4nR",
     "previewUrl": "https://drive.google.com/file/d/17tpCdlj99DDYqixIlZ4IiNm5rKf2Z4nR/preview",
     "downloadUrl": "https://drive.google.com/uc?export=download&id=17tpCdlj99DDYqixIlZ4IiNm5rKf2Z4nR",
-    "localFile": null
+    "localFile": null,
+    "callNumber": "DDC 005.133",
+    "catalogId": "AKSINU-LIB-307",
+    "isbn": "AKSINU-REF-307",
+    "ddc": "005.133"
   },
   {
     "id": "book-1nml3buymft0",
@@ -2971,7 +6635,11 @@ const BOOKS_DATA = [
     "googleDriveId": "1Nml3BUYmfT0cS0VrJrfRO1sNZsDzdUkh",
     "previewUrl": "https://drive.google.com/file/d/1Nml3BUYmfT0cS0VrJrfRO1sNZsDzdUkh/preview",
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1Nml3BUYmfT0cS0VrJrfRO1sNZsDzdUkh",
-    "localFile": null
+    "localFile": null,
+    "callNumber": "DDC 005.133",
+    "catalogId": "AKSINU-LIB-308",
+    "isbn": "AKSINU-REF-308",
+    "ddc": "005.133"
   },
   {
     "id": "book-1unjojidkgly",
@@ -2989,25 +6657,55 @@ const BOOKS_DATA = [
     "googleDriveId": "1uNjOjIdKgLYJSw80JuniMZM8lkaAu_u4",
     "previewUrl": "https://drive.google.com/file/d/1uNjOjIdKgLYJSw80JuniMZM8lkaAu_u4/preview",
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1uNjOjIdKgLYJSw80JuniMZM8lkaAu_u4",
-    "localFile": null
+    "localFile": null,
+    "callNumber": "DDC 005.133",
+    "catalogId": "AKSINU-LIB-309",
+    "isbn": "AKSINU-REF-309",
+    "ddc": "005.133"
   },
   {
     "id": "book-17hwsrctibgw",
-    "title": "Python for Data Science the Ultimate Beginners Guide to Learning Python Data Science Step by Step",
-    "author": "Teknologi & Komputasi",
-    "category": "Python & Data Science",
+    "title": "Python for Data Science: The Ultimate Guide",
+    "author": "Pustaka Data Science",
+    "category": "AI & Machine Learning",
     "tags": [
       "python",
       "data science",
-      "pemrograman",
-      "analisis data"
+      "machine learning"
     ],
     "size": "PDF",
-    "description": "Panduan praktis penguasaan bahasa pemrograman Python dan teknik analisis komputasi modern melalui Python for Data Science the Ultimate Beginners Guide to Learning Python Data Science Step by Step.",
+    "description": "Langkah demi langkah menguasai ekosistem Data Science Python: NumPy, Pandas, Matplotlib, dan Scikit-Learn.",
     "googleDriveId": "17HWsRcTIbgwuEZVEmEfkRbNGLi1VPo68",
     "previewUrl": "https://drive.google.com/file/d/17HWsRcTIbgwuEZVEmEfkRbNGLi1VPo68/preview",
     "downloadUrl": "https://drive.google.com/uc?export=download&id=17HWsRcTIbgwuEZVEmEfkRbNGLi1VPo68",
-    "localFile": null
+    "localFile": null,
+    "callNumber": "DDC 006.3",
+    "catalogId": "AKSINU-LIB-310",
+    "isbn": "AKSINU-REF-310",
+    "ddc": "006.3"
+  },
+  {
+    "id": "book-1-76wswwjgnf",
+    "title": "Python for Large Language Models: A Guide to LLM Workflows",
+    "author": "Planet Code",
+    "category": "AI & Machine Learning",
+    "tags": [
+      "python",
+      "llm",
+      "ai",
+      "prompt engineering",
+      "genai"
+    ],
+    "size": "PDF",
+    "description": "Buku panduan praktis memanfaatkan Large Language Models (LLM) dalam alur kerja rekayasa aplikasi Python modern.",
+    "googleDriveId": "1-76WswwJGNFYdJxf1WGuoQfW_rx-IAip",
+    "previewUrl": "https://drive.google.com/file/d/1-76WswwJGNFYdJxf1WGuoQfW_rx-IAip/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=1-76WswwJGNFYdJxf1WGuoQfW_rx-IAip",
+    "localFile": null,
+    "callNumber": "DDC 006.3",
+    "catalogId": "AKSINU-LIB-311",
+    "isbn": "AKSINU-REF-311",
+    "ddc": "006.3"
   },
   {
     "id": "book-1aa9kcyq-3_e",
@@ -3025,29 +6723,15 @@ const BOOKS_DATA = [
     "googleDriveId": "1Aa9KCyq-3_Eb8LpU3wmMhQJV4RDT43zh",
     "previewUrl": "https://drive.google.com/file/d/1Aa9KCyq-3_Eb8LpU3wmMhQJV4RDT43zh/preview",
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1Aa9KCyq-3_Eb8LpU3wmMhQJV4RDT43zh",
-    "localFile": null
-  },
-  {
-    "id": "book-1wugtcroh7mh",
-    "title": "Python in Excel 2024",
-    "author": "Teknologi & Komputasi",
-    "category": "Python & Data Science",
-    "tags": [
-      "python",
-      "data science",
-      "pemrograman",
-      "analisis data"
-    ],
-    "size": "PDF",
-    "description": "Panduan praktis penguasaan bahasa pemrograman Python dan teknik analisis komputasi modern melalui Python in Excel 2024.",
-    "googleDriveId": "1wuGtcRoh7MHWhAmTQfhIMPqZPgysKz8Q",
-    "previewUrl": "https://drive.google.com/file/d/1wuGtcRoh7MHWhAmTQfhIMPqZPgysKz8Q/preview",
-    "downloadUrl": "https://drive.google.com/uc?export=download&id=1wuGtcRoh7MHWhAmTQfhIMPqZPgysKz8Q",
-    "localFile": null
+    "localFile": null,
+    "callNumber": "DDC 005.133",
+    "catalogId": "AKSINU-LIB-312",
+    "isbn": "AKSINU-REF-312",
+    "ddc": "005.133"
   },
   {
     "id": "book-10fjwkymprny",
-    "title": "Python Learn Python Programming in 90 Minutes Or Less Python Learning Python Python Programming Python Tutorial Python Programming for Begi",
+    "title": "Python in 90 Minutes: Fast Track Guide for Beginners",
     "author": "Teknologi & Komputasi",
     "category": "Python & Data Science",
     "tags": [
@@ -3061,7 +6745,33 @@ const BOOKS_DATA = [
     "googleDriveId": "10fJWKYmPrNyF0mW7OjNjXEdU9AxWOa3D",
     "previewUrl": "https://drive.google.com/file/d/10fJWKYmPrNyF0mW7OjNjXEdU9AxWOa3D/preview",
     "downloadUrl": "https://drive.google.com/uc?export=download&id=10fJWKYmPrNyF0mW7OjNjXEdU9AxWOa3D",
-    "localFile": null
+    "localFile": null,
+    "callNumber": "DDC 005.133",
+    "catalogId": "AKSINU-LIB-313",
+    "isbn": "AKSINU-REF-313",
+    "ddc": "005.133"
+  },
+  {
+    "id": "book-1wugtcroh7mh",
+    "title": "Python in Excel",
+    "author": "Pustaka Data Science",
+    "category": "Python & Data Science",
+    "tags": [
+      "python",
+      "excel",
+      "data analysis",
+      "spreadsheet"
+    ],
+    "size": "PDF",
+    "description": "Integrasi kemampuan analisis data bahasa Python secara langsung di dalam lembar kerja Microsoft Excel.",
+    "googleDriveId": "1wuGtcRoh7MHWhAmTQfhIMPqZPgysKz8Q",
+    "previewUrl": "https://drive.google.com/file/d/1wuGtcRoh7MHWhAmTQfhIMPqZPgysKz8Q/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=1wuGtcRoh7MHWhAmTQfhIMPqZPgysKz8Q",
+    "localFile": null,
+    "callNumber": "DDC 005.133",
+    "catalogId": "AKSINU-LIB-314",
+    "isbn": "AKSINU-REF-314",
+    "ddc": "005.133"
   },
   {
     "id": "book-1w9jxsfowdlc",
@@ -3079,7 +6789,11 @@ const BOOKS_DATA = [
     "googleDriveId": "1W9jxSFOwDlc_dWidZDUZTBLBVYK4cfqr",
     "previewUrl": "https://drive.google.com/file/d/1W9jxSFOwDlc_dWidZDUZTBLBVYK4cfqr/preview",
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1W9jxSFOwDlc_dWidZDUZTBLBVYK4cfqr",
-    "localFile": null
+    "localFile": null,
+    "callNumber": "DDC 005.133",
+    "catalogId": "AKSINU-LIB-315",
+    "isbn": "AKSINU-REF-315",
+    "ddc": "005.133"
   },
   {
     "id": "book-1lrdkpxnp_hg",
@@ -3097,61 +6811,95 @@ const BOOKS_DATA = [
     "googleDriveId": "1LRdkPXNP_HG_W3evLFuQpaJ_3YOu2Cbp",
     "previewUrl": "https://drive.google.com/file/d/1LRdkPXNP_HG_W3evLFuQpaJ_3YOu2Cbp/preview",
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1LRdkPXNP_HG_W3evLFuQpaJ_3YOu2Cbp",
-    "localFile": null
+    "localFile": null,
+    "callNumber": "DDC 005.133",
+    "catalogId": "AKSINU-LIB-316",
+    "isbn": "AKSINU-REF-316",
+    "ddc": "005.133"
   },
   {
     "id": "book-1_scgrrweala",
-    "title": "Python Programming a Step by Step Guide for Absolute Beginners",
-    "author": "Teknologi & Komputasi",
+    "title": "Python Programming for Absolute Beginners",
+    "author": "Pustaka Python",
     "category": "Python & Data Science",
     "tags": [
       "python",
-      "data science",
-      "pemrograman",
-      "analisis data"
+      "pemula",
+      "dasar python"
     ],
     "size": "PDF",
-    "description": "Panduan praktis penguasaan bahasa pemrograman Python dan teknik analisis komputasi modern melalui Python Programming a Step by Step Guide for Absolute Beginners.",
+    "description": "Panduan ramah pemula tanpa prasyarat koding untuk mempelajari logika pemrograman Python secara intuitif.",
     "googleDriveId": "1_ScGRRwEalaKVU6GoyWBg2XcBkkOHRLp",
     "previewUrl": "https://drive.google.com/file/d/1_ScGRRwEalaKVU6GoyWBg2XcBkkOHRLp/preview",
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1_ScGRRwEalaKVU6GoyWBg2XcBkkOHRLp",
-    "localFile": null
+    "localFile": null,
+    "callNumber": "DDC 005.133",
+    "catalogId": "AKSINU-LIB-317",
+    "isbn": "AKSINU-REF-317",
+    "ddc": "005.133"
   },
   {
-    "id": "book-1rsuqbsurhbo",
-    "title": "Python Programming for Beginners from Basics to Ai Integrations 5 Minute Illustrated Tutorials Coding Hacks Hands on Exercises Case Studies to M",
-    "author": "Teknologi & Komputasi",
+    "id": "book-1vvhzqmfplml",
+    "title": "Python Programming for Beginners",
+    "author": "Philip Robbins",
     "category": "Python & Data Science",
     "tags": [
       "python",
-      "data science",
-      "pemrograman",
-      "analisis data"
+      "philip robbins",
+      "pemula"
     ],
     "size": "PDF",
-    "description": "Panduan praktis penguasaan bahasa pemrograman Python dan teknik analisis komputasi modern melalui Python Programming for Beginners from Basics to Ai Integrations 5 Minute Illustrated Tutorials Coding Hacks Hands on Exercises Case Studies to M.",
-    "googleDriveId": "1rsUqBSurhBoULxfATj3qudE6KGwR_jo8",
-    "previewUrl": "https://drive.google.com/file/d/1rsUqBSurhBoULxfATj3qudE6KGwR_jo8/preview",
-    "downloadUrl": "https://drive.google.com/uc?export=download&id=1rsUqBSurhBoULxfATj3qudE6KGwR_jo8",
-    "localFile": null
+    "description": "Panduan komprehensif penguasaan dasar-dasar pemrograman Python karya Philip Robbins.",
+    "googleDriveId": "1vvhzQmFPlMlVN7LxQiZ1qIWohexkSFQV",
+    "previewUrl": "https://drive.google.com/file/d/1vvhzQmFPlMlVN7LxQiZ1qIWohexkSFQV/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=1vvhzQmFPlMlVN7LxQiZ1qIWohexkSFQV",
+    "localFile": null,
+    "callNumber": "DDC 005.133",
+    "catalogId": "AKSINU-LIB-318",
+    "isbn": "AKSINU-REF-318",
+    "ddc": "005.133"
   },
   {
     "id": "book-19lc0rru_8gn",
-    "title": "Python Programming for Beginners from Basics to Ai Integrations 5 Minute Illustrated Tutorials Coding Hacks Hands on Exercises Case Studies to M",
-    "author": "Teknologi & Komputasi",
+    "title": "Python Programming for Beginners: 5-Minute Coding Tutorials",
+    "author": "Pustaka Python",
     "category": "Python & Data Science",
     "tags": [
       "python",
-      "data science",
-      "pemrograman",
-      "analisis data"
+      "coding hacks",
+      "latihan"
     ],
     "size": "PDF",
-    "description": "Panduan praktis penguasaan bahasa pemrograman Python dan teknik analisis komputasi modern melalui Python Programming for Beginners from Basics to Ai Integrations 5 Minute Illustrated Tutorials Coding Hacks Hands on Exercises Case Studies to M.",
+    "description": "Latihan praktis dan coding hacks pemrograman Python yang dirancang untuk pembelajaran mandiri cepat.",
     "googleDriveId": "19LC0Rru_8GNTQAZ_RIdAXgfMTXPB3OGS",
     "previewUrl": "https://drive.google.com/file/d/19LC0Rru_8GNTQAZ_RIdAXgfMTXPB3OGS/preview",
     "downloadUrl": "https://drive.google.com/uc?export=download&id=19LC0Rru_8GNTQAZ_RIdAXgfMTXPB3OGS",
-    "localFile": null
+    "localFile": null,
+    "callNumber": "DDC 005.133",
+    "catalogId": "AKSINU-LIB-319",
+    "isbn": "AKSINU-REF-319",
+    "ddc": "005.133"
+  },
+  {
+    "id": "book-1rsuqbsurhbo",
+    "title": "Python Programming for Beginners: From Basics to AI",
+    "author": "Pustaka Python",
+    "category": "AI & Machine Learning",
+    "tags": [
+      "python",
+      "ai integrations",
+      "pemula"
+    ],
+    "size": "PDF",
+    "description": "Tutorial visual ringkas pemrograman Python dari sintaks dasar hingga integrasi logika AI modern.",
+    "googleDriveId": "1rsUqBSurhBoULxfATj3qudE6KGwR_jo8",
+    "previewUrl": "https://drive.google.com/file/d/1rsUqBSurhBoULxfATj3qudE6KGwR_jo8/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=1rsUqBSurhBoULxfATj3qudE6KGwR_jo8",
+    "localFile": null,
+    "callNumber": "DDC 006.3",
+    "catalogId": "AKSINU-LIB-320",
+    "isbn": "AKSINU-REF-320",
+    "ddc": "006.3"
   },
   {
     "id": "book-1y55bpdih7ve",
@@ -3169,25 +6917,54 @@ const BOOKS_DATA = [
     "googleDriveId": "1Y55bPDih7VESFq0fw9pDeAAFnLLoFNar",
     "previewUrl": "https://drive.google.com/file/d/1Y55bPDih7VESFq0fw9pDeAAFnLLoFNar/preview",
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1Y55bPDih7VESFq0fw9pDeAAFnLLoFNar",
-    "localFile": null
+    "localFile": null,
+    "callNumber": "DDC 005.133",
+    "catalogId": "AKSINU-LIB-321",
+    "isbn": "AKSINU-REF-321",
+    "ddc": "005.133"
   },
   {
     "id": "book-1igcvaw1molv",
-    "title": "Python Simplified with Generative Ai Hands on Python Development with Genai Tools Integrating Data Science and Web Interfaces Duc T Haba Ashley R H",
-    "author": "Teknologi & Komputasi",
-    "category": "Python & Data Science",
+    "title": "Python Simplified with Generative AI",
+    "author": "Duc T. Haba & Ashley R. Haba",
+    "category": "AI & Machine Learning",
     "tags": [
       "python",
-      "data science",
-      "pemrograman",
-      "analisis data"
+      "generative ai",
+      "genai",
+      "data science"
     ],
     "size": "PDF",
-    "description": "Panduan praktis penguasaan bahasa pemrograman Python dan teknik analisis komputasi modern melalui Python Simplified with Generative Ai Hands on Python Development with Genai Tools Integrating Data Science and Web Interfaces Duc T Haba Ashley R H.",
+    "description": "Integrasi praktis alat bantu Generative AI dan bahasa Python untuk analitika data dan antarmuka web modern.",
     "googleDriveId": "1IGcVaw1molvIhxEFTY3JXCtRjToJwPuG",
     "previewUrl": "https://drive.google.com/file/d/1IGcVaw1molvIhxEFTY3JXCtRjToJwPuG/preview",
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1IGcVaw1molvIhxEFTY3JXCtRjToJwPuG",
-    "localFile": null
+    "localFile": null,
+    "callNumber": "DDC 006.3",
+    "catalogId": "AKSINU-LIB-322",
+    "isbn": "AKSINU-REF-322",
+    "ddc": "006.3"
+  },
+  {
+    "id": "book-1uqeygu7no5k",
+    "title": "Python untuk Data Science Analisis Data, Visualisasi, dan Pembelajaran Mesin",
+    "author": "Pustaka AKSINU",
+    "category": "Python & Data Science",
+    "callNumber": "DDC 005.133",
+    "catalogId": "AKSINU-LIB-323",
+    "isbn": "AKSINU-REF-323",
+    "tags": [
+      "python",
+      "data science",
+      "analitika data"
+    ],
+    "size": "PDF",
+    "description": "Panduan praktis penguasaan bahasa pemrograman Python dan teknik komputasi modern untuk analitika data.",
+    "googleDriveId": "1UQeyGu7No5K_221wIUcIieDsc4v5GqaP",
+    "previewUrl": "https://drive.google.com/file/d/1UQeyGu7No5K_221wIUcIieDsc4v5GqaP/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=1UQeyGu7No5K_221wIUcIieDsc4v5GqaP",
+    "localFile": null,
+    "ddc": "005.133"
   },
   {
     "id": "book-1bnayj4ht7vg",
@@ -3205,7 +6982,11 @@ const BOOKS_DATA = [
     "googleDriveId": "1BNAyJ4ht7vgcMODwCTkeT33l0bRJ2n_Q",
     "previewUrl": "https://drive.google.com/file/d/1BNAyJ4ht7vgcMODwCTkeT33l0bRJ2n_Q/preview",
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1BNAyJ4ht7vgcMODwCTkeT33l0bRJ2n_Q",
-    "localFile": null
+    "localFile": null,
+    "callNumber": "DDC 005.276",
+    "catalogId": "AKSINU-LIB-324",
+    "isbn": "AKSINU-REF-324",
+    "ddc": "005.276"
   },
   {
     "id": "book-1prq4emnsesh",
@@ -3223,25 +7004,32 @@ const BOOKS_DATA = [
     "googleDriveId": "1PRQ4emNseSH27Pa9Mw2xtHoXn_qJxC4D",
     "previewUrl": "https://drive.google.com/file/d/1PRQ4emNseSH27Pa9Mw2xtHoXn_qJxC4D/preview",
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1PRQ4emNseSH27Pa9Mw2xtHoXn_qJxC4D",
-    "localFile": null
+    "localFile": null,
+    "callNumber": "DDC 005.276",
+    "catalogId": "AKSINU-LIB-325",
+    "isbn": "AKSINU-REF-325",
+    "ddc": "005.276"
   },
   {
     "id": "book-1khh5tu6edib",
-    "title": "React Tutorial 2020",
-    "author": "Teknologi & Komputasi",
+    "title": "React Tutorial (Comprehensive Guide)",
+    "author": "Pustaka Web",
     "category": "JavaScript & Web",
     "tags": [
-      "javascript",
-      "web",
-      "frontend",
-      "fullstack"
+      "react",
+      "tutorial",
+      "frontend"
     ],
     "size": "PDF",
-    "description": "Pelajari arsitektur dan sintaks modern ekosistem web interaktif melalui buku React Tutorial 2020.",
+    "description": "Tutorial terstruktur komponen React, siklus hidup komponen, dan manajemen state aplikasi web.",
     "googleDriveId": "1khh5tU6EdibETlYLvB99JfHNP6FO2paW",
     "previewUrl": "https://drive.google.com/file/d/1khh5tU6EdibETlYLvB99JfHNP6FO2paW/preview",
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1khh5tU6EdibETlYLvB99JfHNP6FO2paW",
-    "localFile": null
+    "localFile": null,
+    "callNumber": "DDC 005.276",
+    "catalogId": "AKSINU-LIB-326",
+    "isbn": "AKSINU-REF-326",
+    "ddc": "005.276"
   },
   {
     "id": "book-1gthswfs7zzz",
@@ -3259,177 +7047,311 @@ const BOOKS_DATA = [
     "googleDriveId": "1GtHsWfs7Zzzy1AOtxA1IQhnw7MT_LueL",
     "previewUrl": "https://drive.google.com/file/d/1GtHsWfs7Zzzy1AOtxA1IQhnw7MT_LueL/preview",
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1GtHsWfs7Zzzy1AOtxA1IQhnw7MT_LueL",
-    "localFile": null
+    "localFile": null,
+    "callNumber": "DDC 005.276",
+    "catalogId": "AKSINU-LIB-327",
+    "isbn": "AKSINU-REF-327",
+    "ddc": "005.276"
   },
   {
-    "id": "book-1gsn8hmabkjm",
-    "title": "Rinaldi Munir Matematika Diskrit Penerbit Informatika Bandung",
-    "author": "Teknologi & Komputasi",
-    "category": "Dasar Pemrograman",
+    "id": "book-1etl41oniq4l",
+    "title": "Rekayasa Perangkat Lunak Terapan",
+    "author": "Pustaka Rekayasa",
+    "category": "Sistem Informasi",
+    "callNumber": "DDC 004.068",
+    "catalogId": "AKSINU-LIB-328",
+    "isbn": "AKSINU-REF-328",
     "tags": [
       "teknologi",
       "komputer"
     ],
     "size": "PDF",
-    "description": "Buku panduan dan referensi komprehensif mengenai Rinaldi Munir Matematika Diskrit Penerbit Informatika Bandung untuk memperdalam pemahaman teknologi informasi dan rekayasa perangkat lunak.",
-    "googleDriveId": "1GsN8hmAbkJme808Vi5avqb6TNjG0VDa5",
-    "previewUrl": "https://drive.google.com/file/d/1GsN8hmAbkJme808Vi5avqb6TNjG0VDa5/preview",
-    "downloadUrl": "https://drive.google.com/uc?export=download&id=1GsN8hmAbkJme808Vi5avqb6TNjG0VDa5",
-    "localFile": null
+    "description": "Panduan praktis rekayasa sistem perangkat lunak, perancangan modul aplikasi, dan pengujian kualitas sistem.",
+    "googleDriveId": "1ETL41ONIQ4LWJUxNKX_z_afKRKXhr003",
+    "previewUrl": "https://drive.google.com/file/d/1ETL41ONIQ4LWJUxNKX_z_afKRKXhr003/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=1ETL41ONIQ4LWJUxNKX_z_afKRKXhr003",
+    "localFile": null,
+    "ddc": "004.068"
   },
   {
-    "id": "book-1vvhzqmfplml",
-    "title": "Robbins Philip Python Programming for Beginners 2023",
-    "author": "Teknologi & Komputasi",
-    "category": "Python & Data Science",
+    "id": "book-1f4yfz3t09pt",
+    "title": "Repository Riset & Kajian Sistem Informasi",
+    "author": "Mei Lenawati, M.Kom.",
+    "category": "Sistem Informasi",
+    "callNumber": "DDC 004.068",
+    "catalogId": "AKSINU-LIB-329",
+    "isbn": "AKSINU-REF-329",
     "tags": [
-      "python",
-      "data science",
-      "pemrograman",
-      "analisis data"
+      "sistem informasi",
+      "riset",
+      "kajian"
     ],
     "size": "PDF",
-    "description": "Panduan praktis penguasaan bahasa pemrograman Python dan teknik analisis komputasi modern melalui Robbins Philip Python Programming for Beginners 2023.",
-    "googleDriveId": "1vvhzQmFPlMlVN7LxQiZ1qIWohexkSFQV",
-    "previewUrl": "https://drive.google.com/file/d/1vvhzQmFPlMlVN7LxQiZ1qIWohexkSFQV/preview",
-    "downloadUrl": "https://drive.google.com/uc?export=download&id=1vvhzQmFPlMlVN7LxQiZ1qIWohexkSFQV",
-    "localFile": null
+    "description": "Kompilasi penelitian dan kajian komprehensif bidang sistem informasi dan teknologi terapan.",
+    "googleDriveId": "1f4YFz3T09pTXkXmdmgW3VBSCvkyHQkW7",
+    "previewUrl": "https://drive.google.com/file/d/1f4YFz3T09pTXkXmdmgW3VBSCvkyHQkW7/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=1f4YFz3T09pTXkXmdmgW3VBSCvkyHQkW7",
+    "localFile": null,
+    "ddc": "004.068"
   },
   {
-    "id": "book-1cixue6dbply",
-    "title": "Sande Jonathan Dart Apprentice Beyond the Basics",
-    "author": "Teknologi & Komputasi",
-    "category": "Mobile Development",
+    "id": "book-192hyvinavod",
+    "title": "Risk Management",
+    "author": "Pustaka AKSINU",
+    "category": "Manajemen & Bisnis",
+    "callNumber": "DDC 658.4038",
+    "catalogId": "AKSINU-LIB-330",
+    "isbn": "AKSINU-REF-330",
     "tags": [
-      "mobile",
-      "android",
-      "ios",
-      "aplikasi seluler"
+      "teknologi",
+      "komputer"
     ],
     "size": "PDF",
-    "description": "Pengembangan aplikasi perangkat seluler modern, responsif, dan berperforma tinggi melalui Sande Jonathan Dart Apprentice Beyond the Basics.",
-    "googleDriveId": "1CIXue6DBply2J3Xvmzg142ut96E66Ymd",
-    "previewUrl": "https://drive.google.com/file/d/1CIXue6DBply2J3Xvmzg142ut96E66Ymd/preview",
-    "downloadUrl": "https://drive.google.com/uc?export=download&id=1CIXue6DBply2J3Xvmzg142ut96E66Ymd",
-    "localFile": null
+    "description": "Buku panduan dan referensi mengenai Risk Management untuk memperdalam literasi teknologi informasi.",
+    "googleDriveId": "192hyvInaVODl30QEke4eGebOHzBf9beb",
+    "previewUrl": "https://drive.google.com/file/d/192hyvInaVODl30QEke4eGebOHzBf9beb/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=192hyvInaVODl30QEke4eGebOHzBf9beb",
+    "localFile": null,
+    "ddc": "658.4038"
   },
   {
     "id": "book-1lbtuial-nv2",
-    "title": "Serious Python 2019",
-    "author": "Teknologi & Komputasi",
+    "title": "Serious Python: Black-Belt Advice on Deployment & Scalability",
+    "author": "Julien Danjou",
     "category": "Python & Data Science",
     "tags": [
       "python",
-      "data science",
-      "pemrograman",
-      "analisis data"
+      "serious python",
+      "deployment",
+      "scalability"
     ],
     "size": "PDF",
-    "description": "Panduan praktis penguasaan bahasa pemrograman Python dan teknik analisis komputasi modern melalui Serious Python 2019.",
+    "description": "Panduan tingkat mahir untuk rekayasa kode Python standar industri, arsitektur modular, dan performa tinggi.",
     "googleDriveId": "1lBtuIAl-Nv2_M7TDN3aClhfxnnEOlFG2",
     "previewUrl": "https://drive.google.com/file/d/1lBtuIAl-Nv2_M7TDN3aClhfxnnEOlFG2/preview",
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1lBtuIAl-Nv2_M7TDN3aClhfxnnEOlFG2",
-    "localFile": null
+    "localFile": null,
+    "callNumber": "DDC 005.133",
+    "catalogId": "AKSINU-LIB-331",
+    "isbn": "AKSINU-REF-331",
+    "ddc": "005.133"
   },
   {
-    "id": "book-1giwznj4eiwn",
-    "title": "Si",
-    "author": "Teknologi & Komputasi",
-    "category": "Dasar Pemrograman",
+    "id": "book-1h6w61zr-k3h",
+    "title": "Simplified JavaScript for Very Important Programmers",
+    "author": "D. Ebenezer",
+    "category": "JavaScript & Web",
     "tags": [
-      "teknologi",
-      "komputer"
+      "javascript",
+      "frontend",
+      "web development"
     ],
     "size": "PDF",
-    "description": "Buku panduan dan referensi komprehensif mengenai Si untuk memperdalam pemahaman teknologi informasi dan rekayasa perangkat lunak.",
-    "googleDriveId": "1gIWzNJ4eIWNuBvaFANQu9F1YKG-0t5KC",
-    "previewUrl": "https://drive.google.com/file/d/1gIWzNJ4eIWNuBvaFANQu9F1YKG-0t5KC/preview",
-    "downloadUrl": "https://drive.google.com/uc?export=download&id=1gIWzNJ4eIWNuBvaFANQu9F1YKG-0t5KC",
-    "localFile": null
+    "description": "Panduan praktis konsep-konsep inti JavaScript modern dengan penjelasan yang disederhanakan dan contoh interaktif.",
+    "googleDriveId": "1H6w61zR-k3huIoLIVNLGYDkeMbaTLfJ3",
+    "previewUrl": "https://drive.google.com/file/d/1H6w61zR-k3huIoLIVNLGYDkeMbaTLfJ3/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=1H6w61zR-k3huIoLIVNLGYDkeMbaTLfJ3",
+    "localFile": null,
+    "callNumber": "DDC 005.276",
+    "catalogId": "AKSINU-LIB-332",
+    "isbn": "AKSINU-REF-332",
+    "ddc": "005.276"
+  },
+  {
+    "id": "book-17gpczmzchzp",
+    "title": "Sistem Basis Data",
+    "author": "Pustaka AKSINU",
+    "category": "Database & SQL",
+    "callNumber": "DDC 005.74",
+    "catalogId": "AKSINU-LIB-333",
+    "isbn": "AKSINU-REF-333",
+    "tags": [
+      "basis data",
+      "database",
+      "sql",
+      "dbms"
+    ],
+    "size": "PDF",
+    "description": "Pengelolaan basis data, pemodelan data relasional, dan optimasi kueri untuk pemrosesan skala besar.",
+    "googleDriveId": "17GpCZmzchZPcpQd0j_WTJocZw3_7Ip9J",
+    "previewUrl": "https://drive.google.com/file/d/17GpCZmzchZPcpQd0j_WTJocZw3_7Ip9J/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=17GpCZmzchZPcpQd0j_WTJocZw3_7Ip9J",
+    "localFile": null,
+    "ddc": "005.74"
+  },
+  {
+    "id": "book-1p0saur_7uag",
+    "title": "Sistem Basis Data Konseptual & Praktis",
+    "author": "Pustaka AKSINU",
+    "category": "Database & SQL",
+    "tags": [
+      "basis data",
+      "database",
+      "sql",
+      "desain database"
+    ],
+    "size": "PDF",
+    "description": "Pengantar menyeluruh konsep basis data relasional, pemodelan tabel, indeksasi kueri, dan implementasi SQL.",
+    "googleDriveId": "1P0SAUR_7uagXtvP40mJJeuhAUMVh_ggN",
+    "previewUrl": "https://drive.google.com/file/d/1P0SAUR_7uagXtvP40mJJeuhAUMVh_ggN/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=1P0SAUR_7uagXtvP40mJJeuhAUMVh_ggN",
+    "localFile": null,
+    "callNumber": "DDC 005.74",
+    "catalogId": "AKSINU-LIB-334",
+    "isbn": "AKSINU-REF-334",
+    "ddc": "005.74"
+  },
+  {
+    "id": "book-1xr9d-bgwjsf",
+    "title": "Sistem Informasi Manajemen",
+    "author": "Pustaka AKSINU",
+    "category": "Sistem Informasi",
+    "callNumber": "DDC 004.068",
+    "catalogId": "AKSINU-LIB-335",
+    "isbn": "AKSINU-REF-335",
+    "tags": [
+      "sistem informasi",
+      "analisis sistem",
+      "manajemen sistem",
+      "ti kampus"
+    ],
+    "size": "PDF",
+    "description": "Buku kajian sistem informasi, analisis kebutuhan, dan perancangan sistem informasi modern: Sistem Informasi Manajemen.",
+    "googleDriveId": "1xr9D-bGWJSF98SDVUdtXivXR3_XdgZOm",
+    "previewUrl": "https://drive.google.com/file/d/1xr9D-bGWJSF98SDVUdtXivXR3_XdgZOm/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=1xr9D-bGWJSF98SDVUdtXivXR3_XdgZOm",
+    "localFile": null,
+    "ddc": "004.068"
   },
   {
     "id": "book-1kskbdo1vupa",
-    "title": "Sistem Informasi Manajemen",
-    "author": "Teknologi & Komputasi",
-    "category": "Dasar Pemrograman",
+    "title": "Sistem Informasi Manajemen: Konsep & Strategi",
+    "author": "Pustaka AKSINU",
+    "category": "Sistem Informasi",
     "tags": [
-      "teknologi",
-      "komputer"
+      "sistem informasi manajemen",
+      "sim",
+      "strategi bisnis"
     ],
     "size": "PDF",
-    "description": "Buku panduan dan referensi komprehensif mengenai Sistem Informasi Manajemen untuk memperdalam pemahaman teknologi informasi dan rekayasa perangkat lunak.",
+    "description": "Strategi pemanfaatan SIM sebagai alat keunggulan kompetitif, otomasi kantor, dan pelaporan manajemen eksekutif.",
     "googleDriveId": "1KskBdO1VuPARnyppb-o4iHYiO6rRwQMW",
     "previewUrl": "https://drive.google.com/file/d/1KskBdO1VuPARnyppb-o4iHYiO6rRwQMW/preview",
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1KskBdO1VuPARnyppb-o4iHYiO6rRwQMW",
-    "localFile": null
+    "localFile": null,
+    "callNumber": "DDC 004.068",
+    "catalogId": "AKSINU-LIB-336",
+    "isbn": "AKSINU-REF-336",
+    "ddc": "004.068"
+  },
+  {
+    "id": "book-1uqzp0hphdko",
+    "title": "Sistem Informasi Manajemen: Konsep, Teori, dan Aplikasi",
+    "author": "Pustaka AKSINU",
+    "category": "Sistem Informasi",
+    "callNumber": "DDC 004.068",
+    "catalogId": "AKSINU-LIB-337",
+    "isbn": "AKSINU-REF-337",
+    "tags": [
+      "sistem informasi",
+      "analisis sistem",
+      "manajemen sistem",
+      "ti kampus"
+    ],
+    "size": "PDF",
+    "description": "Buku kajian sistem informasi, analisis kebutuhan, dan perancangan sistem informasi modern: Buku SIM.",
+    "googleDriveId": "1UQzP0hphdkOKHgzVpgSdjIgfBTEjVukv",
+    "previewUrl": "https://drive.google.com/file/d/1UQzP0hphdkOKHgzVpgSdjIgfBTEjVukv/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=1UQzP0hphdkOKHgzVpgSdjIgfBTEjVukv",
+    "localFile": null,
+    "ddc": "004.068"
   },
   {
     "id": "book-1x5fjzakq6kr",
-    "title": "Sistem Informasi Manajemen Ali Sadikin Nuruddin Wiranda",
-    "author": "Teknologi & Komputasi",
-    "category": "Dasar Pemrograman",
+    "title": "Sistem Informasi Manajemen: Teori dan Praktik",
+    "author": "Ali Sadikin & Nuruddin Wiranda",
+    "category": "Sistem Informasi",
     "tags": [
-      "teknologi",
-      "komputer"
+      "sistem informasi manajemen",
+      "ali sadikin",
+      "nuruddin wiranda"
     ],
     "size": "PDF",
-    "description": "Buku panduan dan referensi komprehensif mengenai Sistem Informasi Manajemen Ali Sadikin Nuruddin Wiranda untuk memperdalam pemahaman teknologi informasi dan rekayasa perangkat lunak.",
+    "description": "Buku teks komprehensif mengkaji aspek teoritis dan implementasi praktis sistem informasi manajemen di instansi publik dan swasta.",
     "googleDriveId": "1x5fJzAKQ6KRMqQAc6Z8U0VgMBFZKms-U",
     "previewUrl": "https://drive.google.com/file/d/1x5fJzAKQ6KRMqQAc6Z8U0VgMBFZKms-U/preview",
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1x5fJzAKQ6KRMqQAc6Z8U0VgMBFZKms-U",
-    "localFile": null
+    "localFile": null,
+    "callNumber": "DDC 004.068",
+    "catalogId": "AKSINU-LIB-338",
+    "isbn": "AKSINU-REF-338",
+    "ddc": "004.068"
+  },
+  {
+    "id": "book-1evz2rdv6aci",
+    "title": "Sistem Operasi Itu Mudah",
+    "author": "Pustaka AKSINU",
+    "category": "Sistem Operasi & Arsitektur",
+    "callNumber": "DDC 005.43",
+    "catalogId": "AKSINU-LIB-339",
+    "isbn": "AKSINU-REF-339",
+    "tags": [
+      "sistem operasi",
+      "os",
+      "manajemen memori",
+      "kernel"
+    ],
+    "size": "PDF",
+    "description": "Konsep dasar dan desain sistem operasi, manajemen proses, penjadwalan CPU, dan sistem berkas.",
+    "googleDriveId": "1evz2Rdv6acIsgWQIwKcU2Tv3y2PDYmNO",
+    "previewUrl": "https://drive.google.com/file/d/1evz2Rdv6acIsgWQIwKcU2Tv3y2PDYmNO/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=1evz2Rdv6acIsgWQIwKcU2Tv3y2PDYmNO",
+    "localFile": null,
+    "ddc": "005.43"
+  },
+  {
+    "id": "book-1abhjlqtgngh",
+    "title": "Sistem Operasi Komputer: Teori dan Implementasi",
+    "author": "Pustaka AKSINU",
+    "category": "Sistem Operasi & Arsitektur",
+    "callNumber": "DDC 005.43",
+    "catalogId": "AKSINU-LIB-340",
+    "isbn": "AKSINU-REF-340",
+    "tags": [
+      "sistem operasi",
+      "os",
+      "manajemen memori",
+      "kernel"
+    ],
+    "size": "PDF",
+    "description": "Konsep dasar dan desain sistem operasi, manajemen proses, penjadwalan CPU, dan sistem berkas.",
+    "googleDriveId": "1abHJlQtgngHBKC8X-yPPPjLIzqNPJx6H",
+    "previewUrl": "https://drive.google.com/file/d/1abHJlQtgngHBKC8X-yPPPjLIzqNPJx6H/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=1abHJlQtgngHBKC8X-yPPPjLIzqNPJx6H",
+    "localFile": null,
+    "ddc": "005.43"
   },
   {
     "id": "book-1hymwzuipulv",
-    "title": "Sistem Pendukung Keputusan",
-    "author": "Teknologi & Komputasi",
-    "category": "Dasar Pemrograman",
+    "title": "Sistem Pendukung Keputusan (Teori & Algoritma)",
+    "author": "Pustaka AKSINU",
+    "category": "Struktur Data & Algoritma",
     "tags": [
-      "teknologi",
-      "komputer"
+      "sistem pendukung keputusan",
+      "spk",
+      "dss",
+      "algoritma spk"
     ],
     "size": "PDF",
-    "description": "Buku panduan dan referensi komprehensif mengenai Sistem Pendukung Keputusan untuk memperdalam pemahaman teknologi informasi dan rekayasa perangkat lunak.",
+    "description": "Kupas tuntas metodologi perancangan DSS, simulasi kuantitatif, dan formulasi bobot kriteria pengambilan keputusan.",
     "googleDriveId": "1HYmWzuipuLvz9jqvdqp_i1faFKXS26ie",
     "previewUrl": "https://drive.google.com/file/d/1HYmWzuipuLvz9jqvdqp_i1faFKXS26ie/preview",
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1HYmWzuipuLvz9jqvdqp_i1faFKXS26ie",
-    "localFile": null
-  },
-  {
-    "id": "book-1q7fycprnt2p",
-    "title": "Skema T2v Sains Komputer T4",
-    "author": "Teknologi & Komputasi",
-    "category": "AI & Machine Learning",
-    "tags": [
-      "ai",
-      "machine learning",
-      "deep learning",
-      "data science"
-    ],
-    "size": "PDF",
-    "description": "Eksplorasi mendalam kecerdasan buatan, pemodelan data, dan algoritma pembelajaran mesin melalui Skema T2v Sains Komputer T4.",
-    "googleDriveId": "1q7FYcpRNT2pSh0F7JS3l8MOXyS26ANXP",
-    "previewUrl": "https://drive.google.com/file/d/1q7FYcpRNT2pSh0F7JS3l8MOXyS26ANXP/preview",
-    "downloadUrl": "https://drive.google.com/uc?export=download&id=1q7FYcpRNT2pSh0F7JS3l8MOXyS26ANXP",
-    "localFile": null
-  },
-  {
-    "id": "book-1cyavduxgabi",
-    "title": "SQL",
-    "author": "Teknologi & Komputasi",
-    "category": "Database & SQL",
-    "tags": [
-      "sql",
-      "database",
-      "basis data",
-      "query"
-    ],
-    "size": "PDF",
-    "description": "Pengelolaan basis data, pengoptimalan kueri SQL, dan integritas data skala besar melalui SQL.",
-    "googleDriveId": "1CyAvDuxgabi8-47fB3HEKQtJb6n6USHs",
-    "previewUrl": "https://drive.google.com/file/d/1CyAvDuxgabi8-47fB3HEKQtJb6n6USHs/preview",
-    "downloadUrl": "https://drive.google.com/uc?export=download&id=1CyAvDuxgabi8-47fB3HEKQtJb6n6USHs",
-    "localFile": null
+    "localFile": null,
+    "callNumber": "DDC 005.13",
+    "catalogId": "AKSINU-LIB-341",
+    "isbn": "AKSINU-REF-341",
+    "ddc": "005.13"
   },
   {
     "id": "book-1du4knhvkv68",
@@ -3447,7 +7369,11 @@ const BOOKS_DATA = [
     "googleDriveId": "1dU4KNhVKV68-_-6tjT3ULoJIiAx_CaxO",
     "previewUrl": "https://drive.google.com/file/d/1dU4KNhVKV68-_-6tjT3ULoJIiAx_CaxO/preview",
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1dU4KNhVKV68-_-6tjT3ULoJIiAx_CaxO",
-    "localFile": null
+    "localFile": null,
+    "callNumber": "DDC 005.74",
+    "catalogId": "AKSINU-LIB-342",
+    "isbn": "AKSINU-REF-342",
+    "ddc": "005.74"
   },
   {
     "id": "book-1uvcx16lhmt8",
@@ -3465,59 +7391,247 @@ const BOOKS_DATA = [
     "googleDriveId": "1UVcx16lHmt88jI_RXiZn6RpLGaJ-2JD5",
     "previewUrl": "https://drive.google.com/file/d/1UVcx16lHmt88jI_RXiZn6RpLGaJ-2JD5/preview",
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1UVcx16lHmt88jI_RXiZn6RpLGaJ-2JD5",
-    "localFile": null
+    "localFile": null,
+    "callNumber": "DDC 005.74",
+    "catalogId": "AKSINU-LIB-343",
+    "isbn": "AKSINU-REF-343",
+    "ddc": "005.74"
   },
   {
-    "id": "book-16pl4cyplyi7",
-    "title": "Statistics for Data Scientists",
-    "author": "Teknologi & Komputasi",
-    "category": "Dasar Pemrograman",
+    "id": "book-1ns8vfxcspxy",
+    "title": "Statistik Dasar untuk Sains Data",
+    "author": "Pustaka AKSINU",
+    "category": "Python & Data Science",
+    "callNumber": "DDC 005.133",
+    "catalogId": "AKSINU-LIB-344",
+    "isbn": "AKSINU-REF-344",
     "tags": [
       "teknologi",
       "komputer"
     ],
     "size": "PDF",
-    "description": "Buku panduan dan referensi komprehensif mengenai Statistics for Data Scientists untuk memperdalam pemahaman teknologi informasi dan rekayasa perangkat lunak.",
-    "googleDriveId": "16PL4CypLyi7HD8qaTqk9S4EDsKdr9XSA",
-    "previewUrl": "https://drive.google.com/file/d/16PL4CypLyi7HD8qaTqk9S4EDsKdr9XSA/preview",
-    "downloadUrl": "https://drive.google.com/uc?export=download&id=16PL4CypLyi7HD8qaTqk9S4EDsKdr9XSA",
-    "localFile": null
+    "description": "Buku panduan dan referensi mengenai Book Chapter Tahun 2024 Statistik Dasar untuk memperdalam literasi teknologi informasi.",
+    "googleDriveId": "1NS8vfxcsPXyr6VRFHGC3Ey3aibZnwJ2K",
+    "previewUrl": "https://drive.google.com/file/d/1NS8vfxcsPXyr6VRFHGC3Ey3aibZnwJ2K/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=1NS8vfxcsPXyr6VRFHGC3Ey3aibZnwJ2K",
+    "localFile": null,
+    "ddc": "005.133"
+  },
+  {
+    "id": "book-1iznos4cj5ro",
+    "title": "Statistik Dasar: Pengukuran, Analisis, dan Interpretasi Data",
+    "author": "Pustaka AKSINU",
+    "category": "Python & Data Science",
+    "callNumber": "DDC 005.133",
+    "catalogId": "AKSINU-LIB-345",
+    "isbn": "AKSINU-REF-345",
+    "tags": [
+      "teknologi",
+      "komputer"
+    ],
+    "size": "PDF",
+    "description": "Buku panduan dan referensi mengenai K 212 (finish Layout) Statistik Dasar Pengukuran, Analisis, dan Interpretasi Data (1) untuk memperdalam literasi teknologi informasi.",
+    "googleDriveId": "1iznOS4CJ5roaZF416BuQo7SsPqNErkeC",
+    "previewUrl": "https://drive.google.com/file/d/1iznOS4CJ5roaZF416BuQo7SsPqNErkeC/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=1iznOS4CJ5roaZF416BuQo7SsPqNErkeC",
+    "localFile": null,
+    "ddc": "005.133"
+  },
+  {
+    "id": "book-1lx85sycivnc",
+    "title": "Strategi Technopreneurship & Pertumbuhan Bisnis Startup",
+    "author": "Pustaka AKSINU",
+    "category": "Manajemen & Bisnis",
+    "callNumber": "DDC 658.4038",
+    "catalogId": "AKSINU-LIB-346",
+    "isbn": "AKSINU-REF-346",
+    "tags": [
+      "manajemen",
+      "bisnis",
+      "kewirausahaan",
+      "technopreneurship"
+    ],
+    "size": "PDF",
+    "description": "Kajian manajemen operasional, technopreneurship, kepemimpinan organisasi, dan dinamika bisnis TI.",
+    "googleDriveId": "1Lx85SYcIvncitpBhxh1XQGATLJ4zglhV",
+    "previewUrl": "https://drive.google.com/file/d/1Lx85SYcIvncitpBhxh1XQGATLJ4zglhV/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=1Lx85SYcIvncitpBhxh1XQGATLJ4zglhV",
+    "localFile": null,
+    "ddc": "658.4038"
   },
   {
     "id": "book-1ten0cfoiemt",
-    "title": "Struktur Data dan Algoritma Pdf Free",
-    "author": "Teknologi & Komputasi",
+    "title": "Struktur Data dan Algoritma",
+    "author": "Tim Pengajar Struktur Data",
     "category": "Struktur Data & Algoritma",
     "tags": [
       "struktur data",
       "algoritma",
-      "efisiensi",
-      "komputasi"
+      "stack",
+      "queue",
+      "tree"
     ],
     "size": "PDF",
-    "description": "Konsep struktur data esensial dan teknik algoritma optimal untuk efisiensi pemrosesan data.",
+    "description": "Konsep struktur data linier dan non-linier: Stack, Queue, Linked List, Tree, dan Graph beserta contoh implementasi.",
     "googleDriveId": "1TEn0CfOiemt8vQOuQp0050N6MtlXfiX8",
     "previewUrl": "https://drive.google.com/file/d/1TEn0CfOiemt8vQOuQp0050N6MtlXfiX8/preview",
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1TEn0CfOiemt8vQOuQp0050N6MtlXfiX8",
-    "localFile": null
+    "localFile": null,
+    "callNumber": "DDC 005.13",
+    "catalogId": "AKSINU-LIB-347",
+    "isbn": "AKSINU-REF-347",
+    "ddc": "005.13"
+  },
+  {
+    "id": "book-1ahqrp73xssu",
+    "title": "Struktur Data dan Algoritma Terapan",
+    "author": "Pustaka AKSINU",
+    "category": "Struktur Data & Algoritma",
+    "callNumber": "DDC 005.13",
+    "catalogId": "AKSINU-LIB-348",
+    "isbn": "AKSINU-REF-348",
+    "tags": [
+      "teknologi",
+      "komputer"
+    ],
+    "size": "PDF",
+    "description": "Buku panduan dan referensi mengenai Strukturdata Perpusr 2022 untuk memperdalam literasi teknologi informasi.",
+    "googleDriveId": "1ahqrp73XSSUFKmPR0yyDf9WdGV-NB6QP",
+    "previewUrl": "https://drive.google.com/file/d/1ahqrp73XSSUFKmPR0yyDf9WdGV-NB6QP/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=1ahqrp73XSSUFKmPR0yyDf9WdGV-NB6QP",
+    "localFile": null,
+    "ddc": "005.13"
   },
   {
     "id": "book-1pqz6ddp15zn",
-    "title": "Tam a Begbie C SwiftUI Apprentice 2nd Edition 2023",
+    "title": "SwiftUI Apprentice (2nd Edition)",
     "author": "Audrey Tam & Caroline Begbie",
     "category": "Mobile Development",
     "tags": [
       "swiftui",
+      "swift",
       "ios",
       "apple",
-      "mobile app"
+      "mobile"
     ],
     "size": "PDF",
-    "description": "Panduan deklaratif pembuatan aplikasi iOS native modern dengan antarmuka SwiftUI dan Xcode.",
+    "description": "Panduan deklaratif pembuatan aplikasi iOS native modern dengan antarmuka SwiftUI dan Xcode dari tim Ray Wenderlich / Kodeco.",
     "googleDriveId": "1pQz6ddp15Znf-QL0tVR8U2N9Hu9P9B0t",
     "previewUrl": "https://drive.google.com/file/d/1pQz6ddp15Znf-QL0tVR8U2N9Hu9P9B0t/preview",
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1pQz6ddp15Znf-QL0tVR8U2N9Hu9P9B0t",
-    "localFile": "ebook/709214252-Tam-A-Begbie-C-SwiftUI-Apprentice-2nd-Edition-2023.pdf"
+    "localFile": "ebook/SwiftUI-Apprentice-2nd-Edition.pdf",
+    "callNumber": "DDC 005.268",
+    "catalogId": "AKSINU-LIB-349",
+    "isbn": "978-1950325764",
+    "ddc": "005.268"
+  },
+  {
+    "id": "book-1dbf_nbjdqna",
+    "title": "Tata Kelola Teknologi Informasi (IT Governance)",
+    "author": "Pustaka AKSINU",
+    "category": "Sistem Informasi",
+    "callNumber": "DDC 004.068",
+    "catalogId": "AKSINU-LIB-350",
+    "isbn": "AKSINU-REF-350",
+    "tags": [
+      "teknologi",
+      "komputer"
+    ],
+    "size": "PDF",
+    "description": "Buku panduan dan referensi mengenai It Governance untuk memperdalam literasi teknologi informasi.",
+    "googleDriveId": "1Dbf_nbjdqna_N3VC9WAwktRK3Br3ZAX2",
+    "previewUrl": "https://drive.google.com/file/d/1Dbf_nbjdqna_N3VC9WAwktRK3Br3ZAX2/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=1Dbf_nbjdqna_N3VC9WAwktRK3Br3ZAX2",
+    "localFile": null,
+    "ddc": "004.068"
+  },
+  {
+    "id": "book-1sxc79_ueqju",
+    "title": "Technopreneurship",
+    "author": "Pustaka AKSINU",
+    "category": "Manajemen & Bisnis",
+    "callNumber": "DDC 658.4038",
+    "catalogId": "AKSINU-LIB-351",
+    "isbn": "AKSINU-REF-351",
+    "tags": [
+      "manajemen",
+      "bisnis",
+      "kewirausahaan",
+      "technopreneurship"
+    ],
+    "size": "PDF",
+    "description": "Kajian manajemen operasional, technopreneurship, kepemimpinan organisasi, dan dinamika bisnis TI.",
+    "googleDriveId": "1SxC79_ueQjuo5AlL5pHDd3GKfN5kD_G_",
+    "previewUrl": "https://drive.google.com/file/d/1SxC79_ueQjuo5AlL5pHDd3GKfN5kD_G_/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=1SxC79_ueQjuo5AlL5pHDd3GKfN5kD_G_",
+    "localFile": null,
+    "ddc": "658.4038"
+  },
+  {
+    "id": "book-1bo82mhuel81",
+    "title": "Technopreneurship dan Komersialisasi Produk Digital",
+    "author": "Pustaka AKSINU",
+    "category": "Manajemen & Bisnis",
+    "callNumber": "DDC 658.4038",
+    "catalogId": "AKSINU-LIB-352",
+    "isbn": "AKSINU-REF-352",
+    "tags": [
+      "manajemen",
+      "bisnis",
+      "kewirausahaan",
+      "technopreneurship"
+    ],
+    "size": "PDF",
+    "description": "Kajian manajemen operasional, technopreneurship, kepemimpinan organisasi, dan dinamika bisnis TI.",
+    "googleDriveId": "1bO82mHuEl81nbCJDEbwxmzF5bu6x1gTr",
+    "previewUrl": "https://drive.google.com/file/d/1bO82mHuEl81nbCJDEbwxmzF5bu6x1gTr/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=1bO82mHuEl81nbCJDEbwxmzF5bu6x1gTr",
+    "localFile": null,
+    "ddc": "658.4038"
+  },
+  {
+    "id": "book-1-rx1zxh7rgo",
+    "title": "Technopreneurship Era Digital",
+    "author": "Pustaka AKSINU",
+    "category": "Manajemen & Bisnis",
+    "callNumber": "DDC 658.4038",
+    "catalogId": "AKSINU-LIB-353",
+    "isbn": "AKSINU-REF-353",
+    "tags": [
+      "manajemen",
+      "bisnis",
+      "kewirausahaan",
+      "technopreneurship"
+    ],
+    "size": "PDF",
+    "description": "Kajian manajemen operasional, technopreneurship, kepemimpinan organisasi, dan dinamika bisnis TI.",
+    "googleDriveId": "1-Rx1ZXh7rGoTCjBZcoJVaRp7sXpFDGGO",
+    "previewUrl": "https://drive.google.com/file/d/1-Rx1ZXh7rGoTCjBZcoJVaRp7sXpFDGGO/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=1-Rx1ZXh7rGoTCjBZcoJVaRp7sXpFDGGO",
+    "localFile": null,
+    "ddc": "658.4038"
+  },
+  {
+    "id": "book-1hoyjcfuaahb",
+    "title": "Technopreneurship: Inovasi Bisnis Berbasis Teknologi",
+    "author": "Pustaka AKSINU",
+    "category": "Manajemen & Bisnis",
+    "callNumber": "DDC 658.4038",
+    "catalogId": "AKSINU-LIB-354",
+    "isbn": "AKSINU-REF-354",
+    "tags": [
+      "manajemen",
+      "bisnis",
+      "kewirausahaan",
+      "technopreneurship"
+    ],
+    "size": "PDF",
+    "description": "Kajian manajemen operasional, technopreneurship, kepemimpinan organisasi, dan dinamika bisnis TI.",
+    "googleDriveId": "1HOyJcFUAaHbSpozloS_DMPTe5ay6lIoh",
+    "previewUrl": "https://drive.google.com/file/d/1HOyJcFUAaHbSpozloS_DMPTe5ay6lIoh/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=1HOyJcFUAaHbSpozloS_DMPTe5ay6lIoh",
+    "localFile": null,
+    "ddc": "658.4038"
   },
   {
     "id": "book-12w_7qfjggwe",
@@ -3535,7 +7649,11 @@ const BOOKS_DATA = [
     "googleDriveId": "12W_7QfjGgwegE5OHTWryethF13yXqp-V",
     "previewUrl": "https://drive.google.com/file/d/12W_7QfjGgwegE5OHTWryethF13yXqp-V/preview",
     "downloadUrl": "https://drive.google.com/uc?export=download&id=12W_7QfjGgwegE5OHTWryethF13yXqp-V",
-    "localFile": null
+    "localFile": null,
+    "callNumber": "DDC 006.3",
+    "catalogId": "AKSINU-LIB-355",
+    "isbn": "AKSINU-REF-355",
+    "ddc": "006.3"
   },
   {
     "id": "book-1f0rxilgb4a7",
@@ -3553,7 +7671,11 @@ const BOOKS_DATA = [
     "googleDriveId": "1F0RXIlGB4a7GtZ4vIXQGMdjnJPA24yCy",
     "previewUrl": "https://drive.google.com/file/d/1F0RXIlGB4a7GtZ4vIXQGMdjnJPA24yCy/preview",
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1F0RXIlGB4a7GtZ4vIXQGMdjnJPA24yCy",
-    "localFile": null
+    "localFile": null,
+    "callNumber": "DDC 006.3",
+    "catalogId": "AKSINU-LIB-356",
+    "isbn": "AKSINU-REF-356",
+    "ddc": "006.3"
   },
   {
     "id": "book-1y0phipn6sry",
@@ -3571,25 +7693,34 @@ const BOOKS_DATA = [
     "googleDriveId": "1y0phIPN6SRy-lrIhYE_Q9kzIhc5uaSsi",
     "previewUrl": "https://drive.google.com/file/d/1y0phIPN6SRy-lrIhYE_Q9kzIhc5uaSsi/preview",
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1y0phIPN6SRy-lrIhYE_Q9kzIhc5uaSsi",
-    "localFile": null
+    "localFile": null,
+    "callNumber": "DDC 005.276",
+    "catalogId": "AKSINU-LIB-357",
+    "isbn": "AKSINU-REF-357",
+    "ddc": "005.276"
   },
   {
     "id": "book-1mhmjz1nkxxn",
-    "title": "The Complete Langgraph Blueprint Build 50 Ai Agents for Business Success Karanja Maina James Z Library",
-    "author": "Teknologi & Komputasi",
+    "title": "The Complete LangGraph Blueprint: Build AI Agents for Business",
+    "author": "James Karanja Maina",
     "category": "AI & Machine Learning",
     "tags": [
-      "ai",
-      "machine learning",
-      "deep learning",
-      "data science"
+      "langgraph",
+      "ai agents",
+      "python",
+      "langchain",
+      "ai"
     ],
     "size": "PDF",
-    "description": "Eksplorasi mendalam kecerdasan buatan, pemodelan data, dan algoritma pembelajaran mesin melalui The Complete Langgraph Blueprint Build 50 Ai Agents for Business Success Karanja Maina James Z Library.",
+    "description": "Cetak biru lengkap perancangan agen AI otonom berbasis grafik alur multi-agen menggunakan LangGraph dan Python.",
     "googleDriveId": "1MhmJZ1nKxXNcJzgUyYUPIBDNC2H-NvTS",
     "previewUrl": "https://drive.google.com/file/d/1MhmJZ1nKxXNcJzgUyYUPIBDNC2H-NvTS/preview",
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1MhmJZ1nKxXNcJzgUyYUPIBDNC2H-NvTS",
-    "localFile": null
+    "localFile": null,
+    "callNumber": "DDC 006.3",
+    "catalogId": "AKSINU-LIB-358",
+    "isbn": "AKSINU-REF-358",
+    "ddc": "006.3"
   },
   {
     "id": "book-1hh4oqupoqgt",
@@ -3608,7 +7739,11 @@ const BOOKS_DATA = [
     "googleDriveId": "1hh4oquPoqGTuX4avNiok7cIpIJdVegwp",
     "previewUrl": "https://drive.google.com/file/d/1hh4oquPoqGTuX4avNiok7cIpIJdVegwp/preview",
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1hh4oquPoqGTuX4avNiok7cIpIJdVegwp",
-    "localFile": null
+    "localFile": null,
+    "callNumber": "DDC 004.6782",
+    "catalogId": "AKSINU-LIB-359",
+    "isbn": "AKSINU-REF-359",
+    "ddc": "004.6782"
   },
   {
     "id": "book-1grzzo_jcrqd",
@@ -3626,7 +7761,11 @@ const BOOKS_DATA = [
     "googleDriveId": "1gRZzo_jCRqDXJwFXzGva2lO7OFmlGFFg",
     "previewUrl": "https://drive.google.com/file/d/1gRZzo_jCRqDXJwFXzGva2lO7OFmlGFFg/preview",
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1gRZzo_jCRqDXJwFXzGva2lO7OFmlGFFg",
-    "localFile": null
+    "localFile": null,
+    "callNumber": "DDC 005.276",
+    "catalogId": "AKSINU-LIB-360",
+    "isbn": "AKSINU-REF-360",
+    "ddc": "005.276"
   },
   {
     "id": "book-14iqvt0p7aib",
@@ -3644,31 +7783,39 @@ const BOOKS_DATA = [
     "googleDriveId": "14IQVt0p7AIB1Ue2tHIhy1hUciXxs8wJ0",
     "previewUrl": "https://drive.google.com/file/d/14IQVt0p7AIB1Ue2tHIhy1hUciXxs8wJ0/preview",
     "downloadUrl": "https://drive.google.com/uc?export=download&id=14IQVt0p7AIB1Ue2tHIhy1hUciXxs8wJ0",
-    "localFile": null
+    "localFile": null,
+    "callNumber": "DDC 005.133",
+    "catalogId": "AKSINU-LIB-361",
+    "isbn": "AKSINU-REF-361",
+    "ddc": "005.133"
   },
   {
     "id": "book-10_igu1_q1oh",
-    "title": "The Road to React the React.js 19 with Hooks in JavaScript Book 2025 Edition",
-    "author": "Teknologi & Komputasi",
+    "title": "The Road to React (React 19 Edition)",
+    "author": "Robin Wieruch",
     "category": "JavaScript & Web",
     "tags": [
-      "javascript",
-      "web",
-      "frontend",
-      "fullstack"
+      "react",
+      "react 19",
+      "hooks",
+      "javascript"
     ],
     "size": "PDF",
-    "description": "Pelajari arsitektur dan sintaks modern ekosistem web interaktif melalui buku The Road to React the React.js 19 with Hooks in JavaScript Book 2025 Edition.",
+    "description": "Buku rujukan populer karya Robin Wieruch mengenai ekosistem React modern, Hooks, dan arsitektur komponen.",
     "googleDriveId": "10_igu1_q1ohAeYyDBNAGQxxFld7spBu-",
     "previewUrl": "https://drive.google.com/file/d/10_igu1_q1ohAeYyDBNAGQxxFld7spBu-/preview",
     "downloadUrl": "https://drive.google.com/uc?export=download&id=10_igu1_q1ohAeYyDBNAGQxxFld7spBu-",
-    "localFile": null
+    "localFile": null,
+    "callNumber": "DDC 005.276",
+    "catalogId": "AKSINU-LIB-362",
+    "isbn": "AKSINU-REF-362",
+    "ddc": "005.276"
   },
   {
     "id": "book-1fjuv26z0hpi",
     "title": "The Self Taught Programmer the Definitive Guide to Programming Professionally",
     "author": "Teknologi & Komputasi",
-    "category": "Dasar Pemrograman",
+    "category": "Sistem Informasi",
     "tags": [
       "teknologi",
       "komputer"
@@ -3678,7 +7825,57 @@ const BOOKS_DATA = [
     "googleDriveId": "1FjUv26z0hpINd1sXodPIh8le5yNQZ1kj",
     "previewUrl": "https://drive.google.com/file/d/1FjUv26z0hpINd1sXodPIh8le5yNQZ1kj/preview",
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1FjUv26z0hpINd1sXodPIh8le5yNQZ1kj",
-    "localFile": null
+    "localFile": null,
+    "callNumber": "DDC 004.068",
+    "catalogId": "AKSINU-LIB-363",
+    "isbn": "AKSINU-REF-363",
+    "ddc": "004.068"
+  },
+  {
+    "id": "book-17o2knqhiiod",
+    "title": "The Ultimate Next.js eBook",
+    "author": "Next.js Community",
+    "category": "JavaScript & Web",
+    "tags": [
+      "next.js",
+      "react",
+      "javascript",
+      "frontend",
+      "server components"
+    ],
+    "size": "PDF",
+    "description": "Panduan lengkap Next.js modern, meliputi App Router, Server Actions, Server Components, SSR/SSG, dan optimalisasi SEO.",
+    "googleDriveId": "17o2knqhIioDRouLjP6R_J_vZ7zemCbfL",
+    "previewUrl": "https://drive.google.com/file/d/17o2knqhIioDRouLjP6R_J_vZ7zemCbfL/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=17o2knqhIioDRouLjP6R_J_vZ7zemCbfL",
+    "localFile": "ebook/Next-js-eBook.pdf",
+    "callNumber": "DDC 005.276",
+    "catalogId": "AKSINU-LIB-364",
+    "isbn": "AKSINU-REF-364",
+    "ddc": "005.276"
+  },
+  {
+    "id": "book-1gwy9nekfkxl",
+    "title": "The Ultimate Next.js Guide",
+    "author": "Next.js Community",
+    "category": "JavaScript & Web",
+    "tags": [
+      "next.js",
+      "react",
+      "javascript",
+      "frontend",
+      "web"
+    ],
+    "size": "PDF",
+    "description": "Eksplorasi mendalam arsitektur Next.js modern untuk pengembangan aplikasi web fullstack berbasis React.",
+    "googleDriveId": "1GwY9nekfKXlhwRNysrldPc0f6S7kn-ns",
+    "previewUrl": "https://drive.google.com/file/d/1GwY9nekfKXlhwRNysrldPc0f6S7kn-ns/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=1GwY9nekfKXlhwRNysrldPc0f6S7kn-ns",
+    "localFile": null,
+    "callNumber": "DDC 005.276",
+    "catalogId": "AKSINU-LIB-365",
+    "isbn": "AKSINU-REF-365",
+    "ddc": "005.276"
   },
   {
     "id": "book-1ekakhp6vpmc",
@@ -3696,7 +7893,11 @@ const BOOKS_DATA = [
     "googleDriveId": "1EKaKHp6VpMCZsYrKhcQ8FPj940JmdYqO",
     "previewUrl": "https://drive.google.com/file/d/1EKaKHp6VpMCZsYrKhcQ8FPj940JmdYqO/preview",
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1EKaKHp6VpMCZsYrKhcQ8FPj940JmdYqO",
-    "localFile": null
+    "localFile": null,
+    "callNumber": "DDC 005.276",
+    "catalogId": "AKSINU-LIB-366",
+    "isbn": "AKSINU-REF-366",
+    "ddc": "005.276"
   },
   {
     "id": "book-1rcisuq2raie",
@@ -3714,25 +7915,11 @@ const BOOKS_DATA = [
     "googleDriveId": "1RCisUQ2rAIEaGW09S0_ZWx2Cgkvfzj2g",
     "previewUrl": "https://drive.google.com/file/d/1RCisUQ2rAIEaGW09S0_ZWx2Cgkvfzj2g/preview",
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1RCisUQ2rAIEaGW09S0_ZWx2Cgkvfzj2g",
-    "localFile": null
-  },
-  {
-    "id": "book-1_sauczqnwqd",
-    "title": "UI React",
-    "author": "Teknologi & Komputasi",
-    "category": "JavaScript & Web",
-    "tags": [
-      "javascript",
-      "web",
-      "frontend",
-      "fullstack"
-    ],
-    "size": "PDF",
-    "description": "Pelajari arsitektur dan sintaks modern ekosistem web interaktif melalui buku UI React.",
-    "googleDriveId": "1_SaucZqnWQDByKnSFQCHiZfKConAcAOk",
-    "previewUrl": "https://drive.google.com/file/d/1_SaucZqnWQDByKnSFQCHiZfKConAcAOk/preview",
-    "downloadUrl": "https://drive.google.com/uc?export=download&id=1_SaucZqnWQDByKnSFQCHiZfKConAcAOk",
-    "localFile": null
+    "localFile": null,
+    "callNumber": "DDC 005.276",
+    "catalogId": "AKSINU-LIB-367",
+    "isbn": "AKSINU-REF-367",
+    "ddc": "005.276"
   },
   {
     "id": "book-1bluxyhmp1k9",
@@ -3750,13 +7937,39 @@ const BOOKS_DATA = [
     "googleDriveId": "1BlUXYhmp1K9QPbXfKQ9-L46Q1y8Qk0t1",
     "previewUrl": "https://drive.google.com/file/d/1BlUXYhmp1K9QPbXfKQ9-L46Q1y8Qk0t1/preview",
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1BlUXYhmp1K9QPbXfKQ9-L46Q1y8Qk0t1",
-    "localFile": null
+    "localFile": null,
+    "callNumber": "DDC 006.3",
+    "catalogId": "AKSINU-LIB-368",
+    "isbn": "AKSINU-REF-368",
+    "ddc": "006.3"
+  },
+  {
+    "id": "book-1npynkytyghl",
+    "title": "UX Design Book",
+    "author": "Pustaka AKSINU",
+    "category": "UI/UX & Desain",
+    "callNumber": "DDC 006.6",
+    "catalogId": "AKSINU-LIB-369",
+    "isbn": "AKSINU-REF-369",
+    "tags": [
+      "ui/ux",
+      "user interface",
+      "user experience",
+      "desain"
+    ],
+    "size": "PDF",
+    "description": "Prinsip perancangan antarmuka pengguna, kemudahan interaksi, dan metodologi desain modern: UX Design Book.",
+    "googleDriveId": "1npyNKYTyghlZgZ1xHY5C2umhz8YdTJqU",
+    "previewUrl": "https://drive.google.com/file/d/1npyNKYTyghlZgZ1xHY5C2umhz8YdTJqU/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=1npyNKYTyghlZgZ1xHY5C2umhz8YdTJqU",
+    "localFile": null,
+    "ddc": "006.6"
   },
   {
     "id": "book-1eolgblmubxd",
-    "title": "Vibe Coding and Software 3 0 Part 4",
+    "title": "Vibe Coding and Software 3.0: The AI Era (Part 4)",
     "author": "Teknologi & Komputasi",
-    "category": "Dasar Pemrograman",
+    "category": "AI & Machine Learning",
     "tags": [
       "teknologi",
       "komputer"
@@ -3766,13 +7979,17 @@ const BOOKS_DATA = [
     "googleDriveId": "1eOlgBLMuBxd5hlk6krGaO0tDWJkJIMKV",
     "previewUrl": "https://drive.google.com/file/d/1eOlgBLMuBxd5hlk6krGaO0tDWJkJIMKV/preview",
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1eOlgBLMuBxd5hlk6krGaO0tDWJkJIMKV",
-    "localFile": null
+    "localFile": null,
+    "callNumber": "DDC 006.3",
+    "catalogId": "AKSINU-LIB-370",
+    "isbn": "AKSINU-REF-370",
+    "ddc": "006.3"
   },
   {
     "id": "book-1rf6cc3jojhp",
-    "title": "Vibe Coding Part 1",
+    "title": "Vibe Coding: AI-Assisted Programming (Part 1)",
     "author": "Teknologi & Komputasi",
-    "category": "Dasar Pemrograman",
+    "category": "AI & Machine Learning",
     "tags": [
       "teknologi",
       "komputer"
@@ -3782,7 +7999,53 @@ const BOOKS_DATA = [
     "googleDriveId": "1rF6Cc3jojhp4L7A6VStsVo1zBgNEi8QQ",
     "previewUrl": "https://drive.google.com/file/d/1rF6Cc3jojhp4L7A6VStsVo1zBgNEi8QQ/preview",
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1rF6Cc3jojhp4L7A6VStsVo1zBgNEi8QQ",
-    "localFile": null
+    "localFile": null,
+    "callNumber": "DDC 006.3",
+    "catalogId": "AKSINU-LIB-371",
+    "isbn": "AKSINU-REF-371",
+    "ddc": "006.3"
+  },
+  {
+    "id": "book-1fw7zthabkoc",
+    "title": "Visualisasi Data",
+    "author": "Pustaka AKSINU",
+    "category": "Python & Data Science",
+    "callNumber": "DDC 005.133",
+    "catalogId": "AKSINU-LIB-372",
+    "isbn": "AKSINU-REF-372",
+    "tags": [
+      "teknologi",
+      "komputer"
+    ],
+    "size": "PDF",
+    "description": "Buku panduan dan referensi mengenai Visualisasi Data untuk memperdalam literasi teknologi informasi.",
+    "googleDriveId": "1Fw7zThabKoCC6YU1yrS2H48UsUJQKAvT",
+    "previewUrl": "https://drive.google.com/file/d/1Fw7zThabKoCC6YU1yrS2H48UsUJQKAvT/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=1Fw7zThabKoCC6YU1yrS2H48UsUJQKAvT",
+    "localFile": null,
+    "ddc": "005.133"
+  },
+  {
+    "id": "book-1nshaoavgiil",
+    "title": "Web 3",
+    "author": "Pustaka AKSINU",
+    "category": "JavaScript & Web",
+    "callNumber": "DDC 005.276",
+    "catalogId": "AKSINU-LIB-373",
+    "isbn": "AKSINU-REF-373",
+    "tags": [
+      "javascript",
+      "web",
+      "frontend",
+      "fullstack"
+    ],
+    "size": "PDF",
+    "description": "Pelajari arsitektur dan sintaks modern ekosistem web interaktif melalui Web 3.",
+    "googleDriveId": "1nSHaoavgIilmHbcuC4HV_uJBnXuOPAdX",
+    "previewUrl": "https://drive.google.com/file/d/1nSHaoavgIilmHbcuC4HV_uJBnXuOPAdX/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=1nSHaoavgIilmHbcuC4HV_uJBnXuOPAdX",
+    "localFile": null,
+    "ddc": "005.276"
   },
   {
     "id": "book-1ajocpgvg7nf",
@@ -3800,29 +8063,37 @@ const BOOKS_DATA = [
     "googleDriveId": "1aJOcPgvG7Nflex5DBXKffOfgvbASNIdW",
     "previewUrl": "https://drive.google.com/file/d/1aJOcPgvG7Nflex5DBXKffOfgvbASNIdW/preview",
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1aJOcPgvG7Nflex5DBXKffOfgvbASNIdW",
-    "localFile": null
+    "localFile": null,
+    "callNumber": "DDC 005.276",
+    "catalogId": "AKSINU-LIB-374",
+    "isbn": "AKSINU-REF-374",
+    "ddc": "005.276"
   },
   {
     "id": "book-1iqqwkigsb2y",
-    "title": "Web Design Tips Tricks Fixes Vol 3 2015",
-    "author": "Teknologi & Komputasi",
-    "category": "Dasar Web & Desain",
+    "title": "Web Design Tips, Tricks & Fixes",
+    "author": "Imagine Publishing",
+    "category": "JavaScript & Web",
     "tags": [
-      "html",
-      "css",
       "web design",
-      "tata letak"
+      "ui/ux",
+      "css",
+      "html"
     ],
     "size": "PDF",
-    "description": "Panduan fundamental perancangan tampilan antarmuka web responsif dan standar web modern dengan Web Design Tips Tricks Fixes Vol 3 2015.",
+    "description": "Koleksi teknik praktis, tipografi web, grid responsif, dan tips visual untuk desainer web profesional.",
     "googleDriveId": "1iQqwKigSB2YLvdTKKVXPRr73kRyO-GtP",
     "previewUrl": "https://drive.google.com/file/d/1iQqwKigSB2YLvdTKKVXPRr73kRyO-GtP/preview",
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1iQqwKigSB2YLvdTKKVXPRr73kRyO-GtP",
-    "localFile": null
+    "localFile": null,
+    "callNumber": "DDC 005.276",
+    "catalogId": "AKSINU-LIB-375",
+    "isbn": "AKSINU-REF-375",
+    "ddc": "005.276"
   },
   {
     "id": "book-1ekmq8pg7utm",
-    "title": "What Is Dart",
+    "title": "What Is Dart? Language Guide & Fundamentals",
     "author": "Teknologi & Komputasi",
     "category": "Mobile Development",
     "tags": [
@@ -3836,7 +8107,11 @@ const BOOKS_DATA = [
     "googleDriveId": "1eKmQ8pG7uTMC6kMaBBQazJQIpwIlQP6d",
     "previewUrl": "https://drive.google.com/file/d/1eKmQ8pG7uTMC6kMaBBQazJQIpwIlQP6d/preview",
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1eKmQ8pG7uTMC6kMaBBQazJQIpwIlQP6d",
-    "localFile": null
+    "localFile": null,
+    "callNumber": "DDC 005.268",
+    "catalogId": "AKSINU-LIB-376",
+    "isbn": "AKSINU-REF-376",
+    "ddc": "005.268"
   },
   {
     "id": "book-1tf4cbfsqrhn",
@@ -3854,7 +8129,11 @@ const BOOKS_DATA = [
     "googleDriveId": "1tF4CBfSqRhNCLoUdWfTpRM_J1McA_hTD",
     "previewUrl": "https://drive.google.com/file/d/1tF4CBfSqRhNCLoUdWfTpRM_J1McA_hTD/preview",
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1tF4CBfSqRhNCLoUdWfTpRM_J1McA_hTD",
-    "localFile": null
+    "localFile": null,
+    "callNumber": "DDC 005.268",
+    "catalogId": "AKSINU-LIB-377",
+    "isbn": "AKSINU-REF-377",
+    "ddc": "005.268"
   }
 ];
 

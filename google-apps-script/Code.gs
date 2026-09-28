@@ -30,6 +30,15 @@ const DDC_MAP = {
   "Ilmu Komputer": { ddc: "004", callNumber: "DDC 004" },
   "Metodologi Riset": { ddc: "001.42", callNumber: "DDC 001.42" },
   "Manajemen & Bisnis": { ddc: "658.4038", callNumber: "DDC 658.4038" },
+  "Bahasa & Komunikasi": { ddc: "400", callNumber: "DDC 400" },
+  "Agama & Keislaman": { ddc: "297", callNumber: "DDC 297" },
+  "Pancasila & Kewarganegaraan": { ddc: "320", callNumber: "DDC 320" },
+  "Sosial & Humaniora": { ddc: "300", callNumber: "DDC 300" },
+  "Sains & Matematika": { ddc: "500", callNumber: "DDC 500" },
+  "Ekonomi & Akuntansi": { ddc: "330", callNumber: "DDC 330" },
+  "Pendidikan & Keguruan": { ddc: "370", callNumber: "DDC 370" },
+  "Mata Kuliah Umum (MKU)": { ddc: "378", callNumber: "DDC 378" },
+  "Umum & Referensi": { ddc: "000", callNumber: "DDC 000" },
   "Cloud & DevOps": { ddc: "004.6782", callNumber: "DDC 004.6782" }
 };
 
@@ -471,11 +480,59 @@ function detectCategoryAndAuthor(rawTitle, filename) {
     tags = ["dasar pemrograman", "coding", "logika"];
     desc = "Pengenalan logika komputasi, algoritma dasar, dan pondasi pemrograman komputer.";
   }
-  // Q. Ilmu Komputer & Umum
-  else {
+  // Q. Bahasa & Komunikasi (Mata Kuliah Umum / MKDU)
+  else if (hasMatch(lower, ["bahasa indonesia", "bahasa inggris", "english", "bhs indonesia", "mkdu", "linguistik", "tata bahasa", "kurikulum merdeka", "sastra"])) {
+    category = "Bahasa & Komunikasi";
+    tags = ["bahasa", "komunikasi", "mkdu", "akademik"];
+    desc = "Buku pembelajaran bahasa, penguasaan tata bahasa baku, dan kemampuan komunikasi akademik di perguruan tinggi.";
+  }
+  // R. Agama & Keislaman (Khas Kampus Nahdlatul Ulama / AKSINU)
+  else if (hasMatch(lower, ["agama islam", "pendidikan agama", "keislaman", "fiqih", "akidah", "akhlak", "tafsir", "hadits", "aswaja", "ke nu an", "nahdlatul ulama", "syariah", "tasawuf", "pai", "islam"])) {
+    category = "Agama & Keislaman";
+    tags = ["agama islam", "pai", "keislaman", "akhlak", "aswaja"];
+    desc = "Buku kajian Pendidikan Agama Islam, akhlak mulia, tauhid, fiqih ibadah, dan moderasi beragama civitas akademika.";
+  }
+  // S. Pancasila & Kewarganegaraan (Mata Kuliah Wajib Kurikulum / MKWK)
+  else if (hasMatch(lower, ["kewarganegaraan", "pancasila", "pkn", "mkwk", "hukum", "konstitusi", "tata negara", "bela negara", "politik", "kebangsaan"])) {
+    category = "Pancasila & Kewarganegaraan";
+    tags = ["kewarganegaraan", "pancasila", "pkn", "mkwk", "konstitusi"];
+    desc = "Buku ajar Pendidikan Kewarganegaraan dan Pancasila mengenai wawasan nusantara, ketahanan nasional, serta konstitusi Indonesia.";
+  }
+  // T. Sosial, Humaniora & Filsafat
+  else if (hasMatch(lower, ["sosial", "humaniora", "sosiologi", "psikologi", "filsafat", "antropologi", "sejarah", "budaya", "etika moral"])) {
+    category = "Sosial & Humaniora";
+    tags = ["sosial", "humaniora", "psikologi", "filsafat"];
+    desc = "Kajian ilmu sosial, dinamika kebudayaan, psikologi perkembangan, dan filsafat ilmu pengetahuan.";
+  }
+  // U. Sains & Matematika Murni
+  else if (hasMatch(lower, ["kalkulus", "aljabar", "fisika", "kimia", "biologi", "sains dasar", "geometri", "matematika murni"])) {
+    category = "Sains & Matematika";
+    tags = ["sains", "matematika", "kalkulus", "komputasi"];
+    desc = "Pondasi sains dasar, kalkulus analitik, aljabar linier, dan pemodelan matematis.";
+  }
+  // V. Ekonomi & Akuntansi
+  else if (hasMatch(lower, ["akuntansi", "keuangan", "pajak", "perbankan", "audit", "investasi", "ekonomi syariah", "makroekonomi", "mikroekonomi", "ekonomi"])) {
+    category = "Ekonomi & Akuntansi";
+    tags = ["ekonomi", "akuntansi", "keuangan", "bisnis"];
+    desc = "Prinsip akuntansi keuangan, pencatatan transaksi, audit, dan tata kelola ekonomi makro serta mikro.";
+  }
+  // W. Pendidikan & Keguruan
+  else if (hasMatch(lower, ["keguruan", "pedagogik", "didaktik", "evaluasi pendidikan", "media pembelajaran", "model pembelajaran"])) {
+    category = "Pendidikan & Keguruan";
+    tags = ["pendidikan", "keguruan", "pedagogik", "pembelajaran"];
+    desc = "Kajian teori pendidikan, metodologi pengajaran interaktif, dan pengembangan kurikulum pembelajaran.";
+  }
+  // X. Ilmu Komputer & Teknologi Informasi
+  else if (hasMatch(lower, ["komputer", "teknologi", "informatika", "software", "hardware", "digital", "informasi"])) {
     category = "Ilmu Komputer";
     tags = ["ilmu komputer", "teknologi informasi", "literasi digital"];
     desc = "Buku pengayaan wawasan literasi teknologi informasi dan ilmu komputer terapan.";
+  }
+  // Y. Mata Kuliah Umum (MKU) / Referensi Umum (Fallback Aman)
+  else {
+    category = "Umum & Referensi";
+    tags = ["umum", "referensi", "literasi", "kampus"];
+    desc = "Koleksi pustaka referensi umum dan materi pengayaan wawasan akademik mahasiswa.";
   }
 
   return {

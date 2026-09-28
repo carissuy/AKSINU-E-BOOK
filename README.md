@@ -56,7 +56,7 @@ Koleksi buku disimpan di infrastruktur **Google Drive publik**, sehingga:
 │   ├── favicon-192.png             # Ikon PWA 192x192
 │   └── logo-aksinu-512.png         # Ikon PWA 512x512
 ├── data/
-│   └── books.js        # Basis data metadata 377 buku unik terverifikasi (bebas duplikat & judul bersih), DDC, ISBN, & Drive ID
+│   └── books.js        # Basis data metadata 380 buku unik terverifikasi (bebas duplikat & judul bersih), DDC, ISBN, & Drive ID
 ├── js/
 │   └── app.js          # Logika pencarian instan, filter kategori, favorit, modal, & PWA
 ├── css/

@@ -56,5 +56,5 @@ Sekarang website **AKSINU** Anda terhubung secara *real-time* dengan Google Driv
 - **Pencegah Duplikat Otomatis**: Jika Anda tidak sengaja mengunggah file yang sama dua kali atau ada file *Salinan*, sistem otomatis mendeteksi dan mengabaikan duplikatnya sehingga hanya 1 buku yang masuk.
 - Judul buku baru akan dibersihkan secara otomatis dari angka scraper atau watermark.
 - Buku baru langsung diklasifikasikan ke kategori yang sesuai (Sistem Informasi, AI, Python, Jaringan, dll) lengkap dengan kode DDC.
-- Di navbar atas akan muncul indikator hijau: **"Live: 377+ Buku"**.
-- Jika sewaktu-waktu koneksi internet Google Apps Script lambat, website otomatis menggunakan 377 data lokal cadangan sehingga website tidak akan pernah kosong atau macet!
+- Di navbar atas akan muncul indikator hijau: **"Live: 380+ Buku"**.
+- Jika sewaktu-waktu koneksi internet Google Apps Script lambat, website otomatis menggunakan 380 data lokal cadangan sehingga website tidak akan pernah kosong atau macet!

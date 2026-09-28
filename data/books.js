@@ -1,11 +1,11 @@
 /**
  * Basis Data Ebook AKSINU - Pustaka Kampus Digital
  * Akademi Sistem Informasi NU Purworejo
- * Koleksi Lengkap Ebook Google Drive Terverifikasi (377 Judul Unik Tanpa Duplikat)
+ * Koleksi Lengkap Ebook Google Drive Terverifikasi (380 Judul Unik Tanpa Duplikat)
  */
 
 // Masukkan Web App URL dari Google Apps Script jika ingin sinkronisasi live otomatis
-const GOOGLE_APPS_SCRIPT_URL = "";
+const GOOGLE_APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycby-65tavEDbNZ5_sAzr4TO07GYqO-XCeNiloXdrrE1QcIEffPHEOMGMkm3jPs_Ei3hl/exec";
 
 const BOOKS_DATA = [
   {
@@ -556,13 +556,36 @@ const BOOKS_DATA = [
     "ddc": "004.6782"
   },
   {
+    "id": "book-1uxaiyjkcezp",
+    "title": "Bahasa Indonesia untuk Perguruan Tinggi",
+    "author": "Tim Dosen Bahasa Indonesia",
+    "category": "Bahasa & Komunikasi",
+    "callNumber": "DDC 410",
+    "catalogId": "AKSINU-LIB-026",
+    "isbn": "AKSINU-REF-026",
+    "tags": [
+      "bahasa indonesia",
+      "mkdu",
+      "tata bahasa",
+      "karya ilmiah",
+      "komunikasi"
+    ],
+    "size": "PDF",
+    "description": "Panduan penguasaan tata bahasa, ejaan baku (EYD), penulisan artikel ilmiah, dan komunikasi akademik Bahasa Indonesia yang efektif untuk mahasiswa di perguruan tinggi.",
+    "googleDriveId": "1UxaIyjKcezP5FvhMn1ApjmcEZ4SG1TUX",
+    "previewUrl": "https://drive.google.com/file/d/1UxaIyjKcezP5FvhMn1ApjmcEZ4SG1TUX/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=1UxaIyjKcezP5FvhMn1ApjmcEZ4SG1TUX",
+    "localFile": null,
+    "ddc": "410"
+  },
+  {
     "id": "book-1fugm0doxhro",
     "title": "Basis Data",
     "author": "Pustaka AKSINU",
     "category": "Database & SQL",
     "callNumber": "DDC 005.74",
-    "catalogId": "AKSINU-LIB-026",
-    "isbn": "AKSINU-REF-026",
+    "catalogId": "AKSINU-LIB-027",
+    "isbn": "AKSINU-REF-027",
     "tags": [
       "basis data",
       "database",
@@ -594,8 +617,8 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1aTWg6hvhrFe2oEIn0tSXnBQ_JbSmCy4H",
     "localFile": null,
     "callNumber": "DDC 005.1",
-    "catalogId": "AKSINU-LIB-027",
-    "isbn": "AKSINU-REF-027",
+    "catalogId": "AKSINU-LIB-028",
+    "isbn": "AKSINU-REF-028",
     "ddc": "005.1"
   },
   {
@@ -616,8 +639,8 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1Pleu0dP64MaUO4YPQkEafYfdl1YuK9A4",
     "localFile": null,
     "callNumber": "DDC 005.268",
-    "catalogId": "AKSINU-LIB-028",
-    "isbn": "AKSINU-REF-028",
+    "catalogId": "AKSINU-LIB-029",
+    "isbn": "AKSINU-REF-029",
     "ddc": "005.268"
   },
   {
@@ -637,8 +660,8 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1jGwLdpvZI9S5BjJZJldmUET0X9osk4It",
     "localFile": null,
     "callNumber": "DDC 005.268",
-    "catalogId": "AKSINU-LIB-029",
-    "isbn": "AKSINU-REF-029",
+    "catalogId": "AKSINU-LIB-030",
+    "isbn": "AKSINU-REF-030",
     "ddc": "005.268"
   },
   {
@@ -658,8 +681,8 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1oaFHyfH6ovDmBK7VlJVnkXE9PRahhmig",
     "localFile": null,
     "callNumber": "DDC 005.276",
-    "catalogId": "AKSINU-LIB-030",
-    "isbn": "AKSINU-REF-030",
+    "catalogId": "AKSINU-LIB-031",
+    "isbn": "AKSINU-REF-031",
     "ddc": "005.276"
   },
   {
@@ -679,8 +702,8 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=12zHvmIS9aGzEKhC5Endypoa2H8pDzleZ",
     "localFile": null,
     "callNumber": "DDC 005.276",
-    "catalogId": "AKSINU-LIB-031",
-    "isbn": "AKSINU-REF-031",
+    "catalogId": "AKSINU-LIB-032",
+    "isbn": "AKSINU-REF-032",
     "ddc": "005.276"
   },
   {
@@ -701,8 +724,8 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=19MWNKbZhJvU1Tcg0dJtyPLJYwaGkue0Y",
     "localFile": null,
     "callNumber": "DDC 005.133",
-    "catalogId": "AKSINU-LIB-032",
-    "isbn": "AKSINU-REF-032",
+    "catalogId": "AKSINU-LIB-033",
+    "isbn": "AKSINU-REF-033",
     "ddc": "005.133"
   },
   {
@@ -711,8 +734,8 @@ const BOOKS_DATA = [
     "author": "Pustaka AKSINU",
     "category": "Python & Data Science",
     "callNumber": "DDC 005.133",
-    "catalogId": "AKSINU-LIB-033",
-    "isbn": "AKSINU-REF-033",
+    "catalogId": "AKSINU-LIB-034",
+    "isbn": "AKSINU-REF-034",
     "tags": [
       "python",
       "data science",
@@ -744,8 +767,8 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1U-18_Wl3NqP7v9179OnveNoCXgXiSCa4",
     "localFile": null,
     "callNumber": "DDC 006.3",
-    "catalogId": "AKSINU-LIB-034",
-    "isbn": "AKSINU-REF-034",
+    "catalogId": "AKSINU-LIB-035",
+    "isbn": "AKSINU-REF-035",
     "ddc": "006.3"
   },
   {
@@ -754,8 +777,8 @@ const BOOKS_DATA = [
     "author": "Pustaka AKSINU",
     "category": "Python & Data Science",
     "callNumber": "DDC 005.133",
-    "catalogId": "AKSINU-LIB-035",
-    "isbn": "AKSINU-REF-035",
+    "catalogId": "AKSINU-LIB-036",
+    "isbn": "AKSINU-REF-036",
     "tags": [
       "teknologi",
       "komputer"
@@ -774,8 +797,8 @@ const BOOKS_DATA = [
     "author": "Pustaka AKSINU",
     "category": "Manajemen & Bisnis",
     "callNumber": "DDC 658.4038",
-    "catalogId": "AKSINU-LIB-036",
-    "isbn": "AKSINU-REF-036",
+    "catalogId": "AKSINU-LIB-037",
+    "isbn": "AKSINU-REF-037",
     "tags": [
       "manajemen",
       "bisnis",
@@ -808,8 +831,8 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=130OVfpUL9qbyz-OtQdpVi-mjnM6cQ3bS",
     "localFile": null,
     "callNumber": "DDC 005.268",
-    "catalogId": "AKSINU-LIB-037",
-    "isbn": "AKSINU-REF-037",
+    "catalogId": "AKSINU-LIB-038",
+    "isbn": "AKSINU-REF-038",
     "ddc": "005.268"
   },
   {
@@ -830,8 +853,8 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=15Z-h3rlcIO3SIXBjP9MqniZbgO9rq56j",
     "localFile": null,
     "callNumber": "DDC 005.276",
-    "catalogId": "AKSINU-LIB-038",
-    "isbn": "AKSINU-REF-038",
+    "catalogId": "AKSINU-LIB-039",
+    "isbn": "AKSINU-REF-039",
     "ddc": "005.276"
   },
   {
@@ -852,8 +875,8 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1Elz36h3jepS7V_PcclmXkYpmlZYAVjIr",
     "localFile": null,
     "callNumber": "DDC 006.3",
-    "catalogId": "AKSINU-LIB-039",
-    "isbn": "AKSINU-REF-039",
+    "catalogId": "AKSINU-LIB-040",
+    "isbn": "AKSINU-REF-040",
     "ddc": "006.3"
   },
   {
@@ -862,8 +885,8 @@ const BOOKS_DATA = [
     "author": "Pustaka AKSINU",
     "category": "Sistem Informasi",
     "callNumber": "DDC 004.068",
-    "catalogId": "AKSINU-LIB-040",
-    "isbn": "AKSINU-REF-040",
+    "catalogId": "AKSINU-LIB-041",
+    "isbn": "AKSINU-REF-041",
     "tags": [
       "teknologi",
       "komputer"
@@ -882,8 +905,8 @@ const BOOKS_DATA = [
     "author": "Pustaka AKSINU",
     "category": "Python & Data Science",
     "callNumber": "DDC 005.133",
-    "catalogId": "AKSINU-LIB-041",
-    "isbn": "AKSINU-REF-041",
+    "catalogId": "AKSINU-LIB-042",
+    "isbn": "AKSINU-REF-042",
     "tags": [
       "metode penelitian",
       "riset",
@@ -904,8 +927,8 @@ const BOOKS_DATA = [
     "author": "Dr. Rina Fitriana",
     "category": "Sistem Informasi",
     "callNumber": "DDC 004.068",
-    "catalogId": "AKSINU-LIB-042",
-    "isbn": "AKSINU-REF-042",
+    "catalogId": "AKSINU-LIB-043",
+    "isbn": "AKSINU-REF-043",
     "tags": [
       "manajemen",
       "bisnis",
@@ -926,8 +949,8 @@ const BOOKS_DATA = [
     "author": "Pustaka AKSINU",
     "category": "UI/UX & Desain",
     "callNumber": "DDC 006.6",
-    "catalogId": "AKSINU-LIB-043",
-    "isbn": "AKSINU-REF-043",
+    "catalogId": "AKSINU-LIB-044",
+    "isbn": "AKSINU-REF-044",
     "tags": [
       "ui/ux",
       "user interface",
@@ -948,8 +971,8 @@ const BOOKS_DATA = [
     "author": "Pustaka AKSINU",
     "category": "Manajemen & Bisnis",
     "callNumber": "DDC 658.4038",
-    "catalogId": "AKSINU-LIB-044",
-    "isbn": "AKSINU-REF-044",
+    "catalogId": "AKSINU-LIB-045",
+    "isbn": "AKSINU-REF-045",
     "tags": [
       "manajemen",
       "bisnis",
@@ -970,8 +993,8 @@ const BOOKS_DATA = [
     "author": "Pustaka AKSINU",
     "category": "Sistem Informasi",
     "callNumber": "DDC 004.068",
-    "catalogId": "AKSINU-LIB-045",
-    "isbn": "AKSINU-REF-045",
+    "catalogId": "AKSINU-LIB-046",
+    "isbn": "AKSINU-REF-046",
     "tags": [
       "sistem informasi",
       "analisis sistem",
@@ -1003,8 +1026,8 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=19-W3hV8ObNT_hmeuOjGwKKvsdh3FyP95",
     "localFile": null,
     "callNumber": "DDC 005.13",
-    "catalogId": "AKSINU-LIB-046",
-    "isbn": "AKSINU-REF-046",
+    "catalogId": "AKSINU-LIB-047",
+    "isbn": "AKSINU-REF-047",
     "ddc": "005.13"
   },
   {
@@ -1013,8 +1036,8 @@ const BOOKS_DATA = [
     "author": "Pustaka AKSINU",
     "category": "Mobile Development",
     "callNumber": "DDC 005.268",
-    "catalogId": "AKSINU-LIB-047",
-    "isbn": "AKSINU-REF-047",
+    "catalogId": "AKSINU-LIB-048",
+    "isbn": "AKSINU-REF-048",
     "tags": [
       "teknologi",
       "komputer"
@@ -1033,8 +1056,8 @@ const BOOKS_DATA = [
     "author": "Pustaka AKSINU",
     "category": "Java & OOP",
     "callNumber": "DDC 005.133",
-    "catalogId": "AKSINU-LIB-048",
-    "isbn": "AKSINU-REF-048",
+    "catalogId": "AKSINU-LIB-049",
+    "isbn": "AKSINU-REF-049",
     "tags": [
       "teknologi",
       "komputer"
@@ -1053,8 +1076,8 @@ const BOOKS_DATA = [
     "author": "Pustaka AKSINU",
     "category": "JavaScript & Web",
     "callNumber": "DDC 005.276",
-    "catalogId": "AKSINU-LIB-049",
-    "isbn": "AKSINU-REF-049",
+    "catalogId": "AKSINU-LIB-050",
+    "isbn": "AKSINU-REF-050",
     "tags": [
       "javascript",
       "web",
@@ -1086,8 +1109,8 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1OSwv9Fvw0JAAs8iEMTSDSTaAD46kQEqU",
     "localFile": null,
     "callNumber": "DDC 004.068",
-    "catalogId": "AKSINU-LIB-050",
-    "isbn": "AKSINU-REF-050",
+    "catalogId": "AKSINU-LIB-051",
+    "isbn": "AKSINU-REF-051",
     "ddc": "004.068"
   },
   {
@@ -1108,8 +1131,8 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=15YQ5YRsUWOiMuGa9R5bC1CQFWezplXVp",
     "localFile": null,
     "callNumber": "DDC 004.068",
-    "catalogId": "AKSINU-LIB-051",
-    "isbn": "AKSINU-REF-051",
+    "catalogId": "AKSINU-LIB-052",
+    "isbn": "AKSINU-REF-052",
     "ddc": "004.068"
   },
   {
@@ -1118,8 +1141,8 @@ const BOOKS_DATA = [
     "author": "Novia & Nuril",
     "category": "Sistem Informasi",
     "callNumber": "DDC 004.068",
-    "catalogId": "AKSINU-LIB-052",
-    "isbn": "AKSINU-REF-052",
+    "catalogId": "AKSINU-LIB-053",
+    "isbn": "AKSINU-REF-053",
     "tags": [
       "teknologi",
       "komputer"
@@ -1138,8 +1161,8 @@ const BOOKS_DATA = [
     "author": "Pustaka AKSINU",
     "category": "Sistem Operasi & Arsitektur",
     "callNumber": "DDC 005.43",
-    "catalogId": "AKSINU-LIB-053",
-    "isbn": "AKSINU-REF-053",
+    "catalogId": "AKSINU-LIB-054",
+    "isbn": "AKSINU-REF-054",
     "tags": [
       "sistem operasi",
       "os",
@@ -1160,8 +1183,8 @@ const BOOKS_DATA = [
     "author": "Pustaka AKSINU",
     "category": "Sistem Operasi & Arsitektur",
     "callNumber": "DDC 005.43",
-    "catalogId": "AKSINU-LIB-054",
-    "isbn": "AKSINU-REF-054",
+    "catalogId": "AKSINU-LIB-055",
+    "isbn": "AKSINU-REF-055",
     "tags": [
       "sistem operasi",
       "os",
@@ -1195,8 +1218,8 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1xIs6GcpyvbVqMaHUjh3AeMBxHBiNe4iq",
     "localFile": null,
     "callNumber": "DDC 005.13",
-    "catalogId": "AKSINU-LIB-055",
-    "isbn": "AKSINU-REF-055",
+    "catalogId": "AKSINU-LIB-056",
+    "isbn": "AKSINU-REF-056",
     "ddc": "005.13"
   },
   {
@@ -1205,8 +1228,8 @@ const BOOKS_DATA = [
     "author": "Tim Dosen Statistika",
     "category": "Python & Data Science",
     "callNumber": "DDC 005.133",
-    "catalogId": "AKSINU-LIB-056",
-    "isbn": "AKSINU-REF-056",
+    "catalogId": "AKSINU-LIB-057",
+    "isbn": "AKSINU-REF-057",
     "tags": [
       "teknologi",
       "komputer"
@@ -1225,8 +1248,8 @@ const BOOKS_DATA = [
     "author": "Pustaka AKSINU",
     "category": "UI/UX & Desain",
     "callNumber": "DDC 006.6",
-    "catalogId": "AKSINU-LIB-057",
-    "isbn": "AKSINU-REF-057",
+    "catalogId": "AKSINU-LIB-058",
+    "isbn": "AKSINU-REF-058",
     "tags": [
       "ui/ux",
       "user interface",
@@ -1247,8 +1270,8 @@ const BOOKS_DATA = [
     "author": "Pustaka AKSINU",
     "category": "Struktur Data & Algoritma",
     "callNumber": "DDC 005.13",
-    "catalogId": "AKSINU-LIB-058",
-    "isbn": "AKSINU-REF-058",
+    "catalogId": "AKSINU-LIB-059",
+    "isbn": "AKSINU-REF-059",
     "tags": [
       "struktur data",
       "algoritma",
@@ -1280,8 +1303,8 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1ZMrl2liZWXEZfRLGPnkDPas1T4BAysNB",
     "localFile": null,
     "callNumber": "DDC 005.13",
-    "catalogId": "AKSINU-LIB-059",
-    "isbn": "AKSINU-REF-059",
+    "catalogId": "AKSINU-LIB-060",
+    "isbn": "AKSINU-REF-060",
     "ddc": "005.13"
   },
   {
@@ -1300,8 +1323,8 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1mbdbFFQNZtLMxn7IRL-OpPRPz8HvRLsk",
     "localFile": null,
     "callNumber": "DDC 005.13",
-    "catalogId": "AKSINU-LIB-060",
-    "isbn": "AKSINU-REF-060",
+    "catalogId": "AKSINU-LIB-061",
+    "isbn": "AKSINU-REF-061",
     "ddc": "005.13"
   },
   {
@@ -1310,8 +1333,8 @@ const BOOKS_DATA = [
     "author": "Pustaka AKSINU",
     "category": "Sistem Informasi",
     "callNumber": "DDC 004.068",
-    "catalogId": "AKSINU-LIB-061",
-    "isbn": "AKSINU-REF-061",
+    "catalogId": "AKSINU-LIB-062",
+    "isbn": "AKSINU-REF-062",
     "tags": [
       "sistem informasi",
       "analisis sistem",
@@ -1332,8 +1355,8 @@ const BOOKS_DATA = [
     "author": "Pustaka AKSINU",
     "category": "Jaringan Komputer",
     "callNumber": "DDC 004.6",
-    "catalogId": "AKSINU-LIB-062",
-    "isbn": "AKSINU-REF-062",
+    "catalogId": "AKSINU-LIB-063",
+    "isbn": "AKSINU-REF-063",
     "tags": [
       "jaringan komputer",
       "networking",
@@ -1354,8 +1377,8 @@ const BOOKS_DATA = [
     "author": "Pustaka AKSINU",
     "category": "Manajemen & Bisnis",
     "callNumber": "DDC 658.4038",
-    "catalogId": "AKSINU-LIB-063",
-    "isbn": "AKSINU-REF-063",
+    "catalogId": "AKSINU-LIB-064",
+    "isbn": "AKSINU-REF-064",
     "tags": [
       "manajemen",
       "bisnis",
@@ -1376,8 +1399,8 @@ const BOOKS_DATA = [
     "author": "Pustaka AKSINU",
     "category": "Manajemen & Bisnis",
     "callNumber": "DDC 658.4038",
-    "catalogId": "AKSINU-LIB-064",
-    "isbn": "AKSINU-REF-064",
+    "catalogId": "AKSINU-LIB-065",
+    "isbn": "AKSINU-REF-065",
     "tags": [
       "manajemen",
       "bisnis",
@@ -1408,8 +1431,8 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=11WPQIG4gmLwWXZATgqnaCT2Nw0L7OykV",
     "localFile": null,
     "callNumber": "DDC 004.068",
-    "catalogId": "AKSINU-LIB-065",
-    "isbn": "AKSINU-REF-065",
+    "catalogId": "AKSINU-LIB-066",
+    "isbn": "AKSINU-REF-066",
     "ddc": "004.068"
   },
   {
@@ -1430,8 +1453,8 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1bKG4PCKrLSOGZUOAzgtrClSRNa6hM1p1",
     "localFile": null,
     "callNumber": "DDC 004.6",
-    "catalogId": "AKSINU-LIB-066",
-    "isbn": "AKSINU-REF-066",
+    "catalogId": "AKSINU-LIB-067",
+    "isbn": "AKSINU-REF-067",
     "ddc": "004.6"
   },
   {
@@ -1452,8 +1475,8 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1xX6LoWV_Lu15A-uRM_lOmAgks5OUFZeB",
     "localFile": null,
     "callNumber": "DDC 658.4038",
-    "catalogId": "AKSINU-LIB-067",
-    "isbn": "AKSINU-REF-067",
+    "catalogId": "AKSINU-LIB-068",
+    "isbn": "AKSINU-REF-068",
     "ddc": "658.4038"
   },
   {
@@ -1462,8 +1485,8 @@ const BOOKS_DATA = [
     "author": "Pustaka AKSINU",
     "category": "Sistem Informasi",
     "callNumber": "DDC 004.068",
-    "catalogId": "AKSINU-LIB-068",
-    "isbn": "AKSINU-REF-068",
+    "catalogId": "AKSINU-LIB-069",
+    "isbn": "AKSINU-REF-069",
     "tags": [
       "sistem informasi",
       "analisis sistem",
@@ -1484,8 +1507,8 @@ const BOOKS_DATA = [
     "author": "Pustaka AKSINU",
     "category": "Struktur Data & Algoritma",
     "callNumber": "DDC 005.13",
-    "catalogId": "AKSINU-LIB-069",
-    "isbn": "AKSINU-REF-069",
+    "catalogId": "AKSINU-LIB-070",
+    "isbn": "AKSINU-REF-070",
     "tags": [
       "teknologi",
       "komputer"
@@ -1515,8 +1538,8 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1CYepUF6sAVYOe-IdhIUVGfdQAulteJjo",
     "localFile": null,
     "callNumber": "DDC 004.068",
-    "catalogId": "AKSINU-LIB-070",
-    "isbn": "AKSINU-REF-070",
+    "catalogId": "AKSINU-LIB-071",
+    "isbn": "AKSINU-REF-071",
     "ddc": "004.068"
   },
   {
@@ -1538,8 +1561,8 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=16Z7reQq1kRzYMYA9DnNw5UaAeTpxMERZ",
     "localFile": null,
     "callNumber": "DDC 004.068",
-    "catalogId": "AKSINU-LIB-071",
-    "isbn": "AKSINU-REF-071",
+    "catalogId": "AKSINU-LIB-072",
+    "isbn": "AKSINU-REF-072",
     "ddc": "004.068"
   },
   {
@@ -1560,8 +1583,8 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1GGc65PP9MWFzaCHPS6HgMX1RN5sb33Zj",
     "localFile": null,
     "callNumber": "DDC 004.068",
-    "catalogId": "AKSINU-LIB-072",
-    "isbn": "AKSINU-REF-072",
+    "catalogId": "AKSINU-LIB-073",
+    "isbn": "AKSINU-REF-073",
     "ddc": "004.068"
   },
   {
@@ -1583,8 +1606,8 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1yrJO5SqLkdNklGQKnw0mWe9ldkkXxd5r",
     "localFile": null,
     "callNumber": "DDC 004.6",
-    "catalogId": "AKSINU-LIB-073",
-    "isbn": "AKSINU-REF-073",
+    "catalogId": "AKSINU-LIB-074",
+    "isbn": "AKSINU-REF-074",
     "ddc": "004.6"
   },
   {
@@ -1593,8 +1616,8 @@ const BOOKS_DATA = [
     "author": "Pustaka AKSINU",
     "category": "Ilmu Komputer",
     "callNumber": "DDC 004",
-    "catalogId": "AKSINU-LIB-074",
-    "isbn": "AKSINU-REF-074",
+    "catalogId": "AKSINU-LIB-075",
+    "isbn": "AKSINU-REF-075",
     "tags": [
       "computer science",
       "ilmu komputer",
@@ -1614,8 +1637,8 @@ const BOOKS_DATA = [
     "author": "Pustaka AKSINU",
     "category": "Python & Data Science",
     "callNumber": "DDC 005.133",
-    "catalogId": "AKSINU-LIB-075",
-    "isbn": "AKSINU-REF-075",
+    "catalogId": "AKSINU-LIB-076",
+    "isbn": "AKSINU-REF-076",
     "tags": [
       "teknologi",
       "komputer"
@@ -1646,8 +1669,8 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1Qyvi2wqQGi-yNznZiLUwwcHcgUFcFQV6",
     "localFile": null,
     "callNumber": "DDC 005.13",
-    "catalogId": "AKSINU-LIB-076",
-    "isbn": "AKSINU-REF-076",
+    "catalogId": "AKSINU-LIB-077",
+    "isbn": "AKSINU-REF-077",
     "ddc": "005.13"
   },
   {
@@ -1656,8 +1679,8 @@ const BOOKS_DATA = [
     "author": "Pustaka AKSINU",
     "category": "Manajemen & Bisnis",
     "callNumber": "DDC 658.4038",
-    "catalogId": "AKSINU-LIB-077",
-    "isbn": "AKSINU-REF-077",
+    "catalogId": "AKSINU-LIB-078",
+    "isbn": "AKSINU-REF-078",
     "tags": [
       "manajemen",
       "bisnis",
@@ -1678,8 +1701,8 @@ const BOOKS_DATA = [
     "author": "Pustaka AKSINU",
     "category": "JavaScript & Web",
     "callNumber": "DDC 005.276",
-    "catalogId": "AKSINU-LIB-078",
-    "isbn": "AKSINU-REF-078",
+    "catalogId": "AKSINU-LIB-079",
+    "isbn": "AKSINU-REF-079",
     "tags": [
       "javascript",
       "web",
@@ -1712,8 +1735,8 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1ayEoOZ6TqR-RGzPJ7dv_uBNDmW87I-pG",
     "localFile": null,
     "callNumber": "DDC 004.068",
-    "catalogId": "AKSINU-LIB-079",
-    "isbn": "AKSINU-REF-079",
+    "catalogId": "AKSINU-LIB-080",
+    "isbn": "AKSINU-REF-080",
     "ddc": "004.068"
   },
   {
@@ -1722,8 +1745,8 @@ const BOOKS_DATA = [
     "author": "Pustaka AKSINU",
     "category": "Sistem Informasi",
     "callNumber": "DDC 004.068",
-    "catalogId": "AKSINU-LIB-080",
-    "isbn": "AKSINU-REF-080",
+    "catalogId": "AKSINU-LIB-081",
+    "isbn": "AKSINU-REF-081",
     "tags": [
       "teknologi",
       "komputer"
@@ -1742,8 +1765,8 @@ const BOOKS_DATA = [
     "author": "Pustaka AKSINU",
     "category": "Sistem Informasi",
     "callNumber": "DDC 004.068",
-    "catalogId": "AKSINU-LIB-081",
-    "isbn": "AKSINU-REF-081",
+    "catalogId": "AKSINU-LIB-082",
+    "isbn": "AKSINU-REF-082",
     "tags": [
       "teknologi",
       "komputer"
@@ -1762,8 +1785,8 @@ const BOOKS_DATA = [
     "author": "IPQI Research",
     "category": "Manajemen & Bisnis",
     "callNumber": "DDC 658.4038",
-    "catalogId": "AKSINU-LIB-082",
-    "isbn": "AKSINU-REF-082",
+    "catalogId": "AKSINU-LIB-083",
+    "isbn": "AKSINU-REF-083",
     "tags": [
       "teknologi",
       "komputer"
@@ -1793,8 +1816,8 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1Pmcs_x4K2kln9bnHPTCjIB0ML8OG1P8u",
     "localFile": null,
     "callNumber": "DDC 004.068",
-    "catalogId": "AKSINU-LIB-083",
-    "isbn": "AKSINU-REF-083",
+    "catalogId": "AKSINU-LIB-084",
+    "isbn": "AKSINU-REF-084",
     "ddc": "004.068"
   },
   {
@@ -1813,8 +1836,8 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1awBkO8AMNzyk7zmoJgzv9zrE0LrMebQb",
     "localFile": null,
     "callNumber": "DDC 004.068",
-    "catalogId": "AKSINU-LIB-084",
-    "isbn": "AKSINU-REF-084",
+    "catalogId": "AKSINU-LIB-085",
+    "isbn": "AKSINU-REF-085",
     "ddc": "004.068"
   },
   {
@@ -1835,8 +1858,8 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1KFylug8L0TNvV0GKxgZl5hMTaonUU-0S",
     "localFile": null,
     "callNumber": "DDC 005.133",
-    "catalogId": "AKSINU-LIB-085",
-    "isbn": "AKSINU-REF-085",
+    "catalogId": "AKSINU-LIB-086",
+    "isbn": "AKSINU-REF-086",
     "ddc": "005.133"
   },
   {
@@ -1856,7 +1879,7 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1C8wcfg97M9YXl7CAAhqNX0bmQvno-fAY",
     "localFile": null,
     "callNumber": "DDC 005.43",
-    "catalogId": "AKSINU-LIB-086",
+    "catalogId": "AKSINU-LIB-087",
     "isbn": "978-8131733097",
     "ddc": "005.43"
   },
@@ -1876,8 +1899,8 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1YJ4pZ1WjjmzEYbkq-VS7jUrDKkqO4mLE",
     "localFile": null,
     "callNumber": "DDC 004.068",
-    "catalogId": "AKSINU-LIB-087",
-    "isbn": "AKSINU-REF-087",
+    "catalogId": "AKSINU-LIB-088",
+    "isbn": "AKSINU-REF-088",
     "ddc": "004.068"
   },
   {
@@ -1896,8 +1919,8 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1Xd4XpDNGKlPeUHT3HfnypbUTavCe48xh",
     "localFile": null,
     "callNumber": "DDC 004.068",
-    "catalogId": "AKSINU-LIB-088",
-    "isbn": "AKSINU-REF-088",
+    "catalogId": "AKSINU-LIB-089",
+    "isbn": "AKSINU-REF-089",
     "ddc": "004.068"
   },
   {
@@ -1918,7 +1941,7 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1Shkot20zGvuenqkYYRA-uojby9fQTSS6",
     "localFile": "ebook/Core-Computer-Science-IB-Diploma.pdf",
     "callNumber": "DDC 004.6",
-    "catalogId": "AKSINU-LIB-089",
+    "catalogId": "AKSINU-LIB-090",
     "isbn": "978-1780983110",
     "ddc": "004.6"
   },
@@ -1940,8 +1963,8 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1Ehylw3RA7QzPutX_8LodphOLhYOmxLc2",
     "localFile": null,
     "callNumber": "DDC 005.276",
-    "catalogId": "AKSINU-LIB-090",
-    "isbn": "AKSINU-REF-090",
+    "catalogId": "AKSINU-LIB-091",
+    "isbn": "AKSINU-REF-091",
     "ddc": "005.276"
   },
   {
@@ -1962,8 +1985,8 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1qXzYJ8L9Cz3rFm857Vj26Dfa52qApFqs",
     "localFile": null,
     "callNumber": "DDC 005.276",
-    "catalogId": "AKSINU-LIB-091",
-    "isbn": "AKSINU-REF-091",
+    "catalogId": "AKSINU-LIB-092",
+    "isbn": "AKSINU-REF-092",
     "ddc": "005.276"
   },
   {
@@ -1972,8 +1995,8 @@ const BOOKS_DATA = [
     "author": "Pustaka AKSINU",
     "category": "JavaScript & Web",
     "callNumber": "DDC 005.276",
-    "catalogId": "AKSINU-LIB-092",
-    "isbn": "AKSINU-REF-092",
+    "catalogId": "AKSINU-LIB-093",
+    "isbn": "AKSINU-REF-093",
     "tags": [
       "javascript",
       "web",
@@ -2006,8 +2029,8 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1CIXue6DBply2J3Xvmzg142ut96E66Ymd",
     "localFile": null,
     "callNumber": "DDC 005.268",
-    "catalogId": "AKSINU-LIB-093",
-    "isbn": "AKSINU-REF-093",
+    "catalogId": "AKSINU-LIB-094",
+    "isbn": "AKSINU-REF-094",
     "ddc": "005.268"
   },
   {
@@ -2026,8 +2049,8 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1Q0HhwSslRwCpfWI7ItoUNPrslRgU4PBV",
     "localFile": null,
     "callNumber": "DDC 004.068",
-    "catalogId": "AKSINU-LIB-094",
-    "isbn": "AKSINU-REF-094",
+    "catalogId": "AKSINU-LIB-095",
+    "isbn": "AKSINU-REF-095",
     "ddc": "004.068"
   },
   {
@@ -2036,8 +2059,8 @@ const BOOKS_DATA = [
     "author": "Pustaka AKSINU",
     "category": "Mobile Development",
     "callNumber": "DDC 005.268",
-    "catalogId": "AKSINU-LIB-095",
-    "isbn": "AKSINU-REF-095",
+    "catalogId": "AKSINU-LIB-096",
+    "isbn": "AKSINU-REF-096",
     "tags": [
       "mobile dev",
       "aplikasi seluler",
@@ -2058,8 +2081,8 @@ const BOOKS_DATA = [
     "author": "Pustaka AKSINU",
     "category": "JavaScript & Web",
     "callNumber": "DDC 005.276",
-    "catalogId": "AKSINU-LIB-096",
-    "isbn": "AKSINU-REF-096",
+    "catalogId": "AKSINU-LIB-097",
+    "isbn": "AKSINU-REF-097",
     "tags": [
       "javascript",
       "web",
@@ -2090,8 +2113,8 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1UKCIZu7iAFHZI9gAL9Ic8JMrr6d7wEU9",
     "localFile": null,
     "callNumber": "DDC 658.4038",
-    "catalogId": "AKSINU-LIB-097",
-    "isbn": "AKSINU-REF-097",
+    "catalogId": "AKSINU-LIB-098",
+    "isbn": "AKSINU-REF-098",
     "ddc": "658.4038"
   },
   {
@@ -2100,8 +2123,8 @@ const BOOKS_DATA = [
     "author": "Pustaka AKSINU",
     "category": "Mobile Development",
     "callNumber": "DDC 005.268",
-    "catalogId": "AKSINU-LIB-098",
-    "isbn": "AKSINU-REF-098",
+    "catalogId": "AKSINU-LIB-099",
+    "isbn": "AKSINU-REF-099",
     "tags": [
       "mobile dev",
       "aplikasi seluler",
@@ -2122,8 +2145,8 @@ const BOOKS_DATA = [
     "author": "Pustaka AKSINU",
     "category": "Database & SQL",
     "callNumber": "DDC 005.74",
-    "catalogId": "AKSINU-LIB-099",
-    "isbn": "AKSINU-REF-099",
+    "catalogId": "AKSINU-LIB-100",
+    "isbn": "AKSINU-REF-100",
     "tags": [
       "basis data",
       "database",
@@ -2144,8 +2167,8 @@ const BOOKS_DATA = [
     "author": "Anisa, M.Si.",
     "category": "Python & Data Science",
     "callNumber": "DDC 005.133",
-    "catalogId": "AKSINU-LIB-100",
-    "isbn": "AKSINU-REF-100",
+    "catalogId": "AKSINU-LIB-101",
+    "isbn": "AKSINU-REF-101",
     "tags": [
       "metode penelitian",
       "riset",
@@ -2166,8 +2189,8 @@ const BOOKS_DATA = [
     "author": "Nurhayati",
     "category": "Python & Data Science",
     "callNumber": "DDC 005.133",
-    "catalogId": "AKSINU-LIB-101",
-    "isbn": "AKSINU-REF-101",
+    "catalogId": "AKSINU-LIB-102",
+    "isbn": "AKSINU-REF-102",
     "tags": [
       "teknologi",
       "komputer"
@@ -2198,8 +2221,8 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=19rDEGRyad-MH-nQ4n5B2DfN917wDDBiR",
     "localFile": null,
     "callNumber": "DDC 006.3",
-    "catalogId": "AKSINU-LIB-102",
-    "isbn": "AKSINU-REF-102",
+    "catalogId": "AKSINU-LIB-103",
+    "isbn": "AKSINU-REF-103",
     "ddc": "006.3"
   },
   {
@@ -2220,8 +2243,8 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1BtkiSk2nEY1fMidochA26-h5_8-JQhDY",
     "localFile": null,
     "callNumber": "DDC 006.3",
-    "catalogId": "AKSINU-LIB-103",
-    "isbn": "AKSINU-REF-103",
+    "catalogId": "AKSINU-LIB-104",
+    "isbn": "AKSINU-REF-104",
     "ddc": "006.3"
   },
   {
@@ -2243,7 +2266,7 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1Q2qDCEJkopG6tcbeTucJ0Ci4Vr2dEzVk",
     "localFile": "ebook/Data-Analytics-using-Python.pdf",
     "callNumber": "DDC 005.133",
-    "catalogId": "AKSINU-LIB-104",
+    "catalogId": "AKSINU-LIB-105",
     "isbn": "978-9389520446",
     "ddc": "005.133"
   },
@@ -2265,8 +2288,8 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1Mv7a-XitEAYXs8G5GDP7yOU3qo9k-yt7",
     "localFile": null,
     "callNumber": "DDC 005.133",
-    "catalogId": "AKSINU-LIB-105",
-    "isbn": "AKSINU-REF-105",
+    "catalogId": "AKSINU-LIB-106",
+    "isbn": "AKSINU-REF-106",
     "ddc": "005.133"
   },
   {
@@ -2275,8 +2298,8 @@ const BOOKS_DATA = [
     "author": "Pustaka AKSINU",
     "category": "Python & Data Science",
     "callNumber": "DDC 005.133",
-    "catalogId": "AKSINU-LIB-106",
-    "isbn": "AKSINU-REF-106",
+    "catalogId": "AKSINU-LIB-107",
+    "isbn": "AKSINU-REF-107",
     "tags": [
       "teknologi",
       "komputer"
@@ -2295,8 +2318,8 @@ const BOOKS_DATA = [
     "author": "Pustaka AKSINU",
     "category": "Python & Data Science",
     "callNumber": "DDC 005.133",
-    "catalogId": "AKSINU-LIB-107",
-    "isbn": "AKSINU-REF-107",
+    "catalogId": "AKSINU-LIB-108",
+    "isbn": "AKSINU-REF-108",
     "tags": [
       "teknologi",
       "komputer"
@@ -2315,8 +2338,8 @@ const BOOKS_DATA = [
     "author": "Pustaka AKSINU",
     "category": "Python & Data Science",
     "callNumber": "DDC 005.133",
-    "catalogId": "AKSINU-LIB-108",
-    "isbn": "AKSINU-REF-108",
+    "catalogId": "AKSINU-LIB-109",
+    "isbn": "AKSINU-REF-109",
     "tags": [
       "teknologi",
       "komputer"
@@ -2347,8 +2370,8 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1QGFxcZIsWinp2AWk9tCw56K0vmbBdblp",
     "localFile": null,
     "callNumber": "DDC 005.13",
-    "catalogId": "AKSINU-LIB-109",
-    "isbn": "AKSINU-REF-109",
+    "catalogId": "AKSINU-LIB-110",
+    "isbn": "AKSINU-REF-110",
     "ddc": "005.13"
   },
   {
@@ -2369,8 +2392,8 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1l7tYGFJu1kpQl8qAYielJcRafc8lL9-g",
     "localFile": null,
     "callNumber": "DDC 005.268",
-    "catalogId": "AKSINU-LIB-110",
-    "isbn": "AKSINU-REF-110",
+    "catalogId": "AKSINU-LIB-111",
+    "isbn": "AKSINU-REF-111",
     "ddc": "005.268"
   },
   {
@@ -2391,7 +2414,7 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1q0OFr-QNhxX6nWsRoVP3qwQEuY8AR6bX",
     "localFile": "ebook/Data-Structures-and-Algorithms-Made-Easy.pdf",
     "callNumber": "DDC 005.13",
-    "catalogId": "AKSINU-LIB-111",
+    "catalogId": "AKSINU-LIB-112",
     "isbn": "978-8192107516",
     "ddc": "005.13"
   },
@@ -2413,8 +2436,8 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1JL_kOLox6JIvcth5CDsX8gsKyVYwLXY1",
     "localFile": null,
     "callNumber": "DDC 005.133",
-    "catalogId": "AKSINU-LIB-112",
-    "isbn": "AKSINU-REF-112",
+    "catalogId": "AKSINU-LIB-113",
+    "isbn": "AKSINU-REF-113",
     "ddc": "005.133"
   },
   {
@@ -2436,8 +2459,8 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1UdeCCEfGwgtAn25cfr5B6kmZje-QEQuI",
     "localFile": null,
     "callNumber": "DDC 005.133",
-    "catalogId": "AKSINU-LIB-113",
-    "isbn": "AKSINU-REF-113",
+    "catalogId": "AKSINU-LIB-114",
+    "isbn": "AKSINU-REF-114",
     "ddc": "005.133"
   },
   {
@@ -2458,8 +2481,8 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1G-lfdFOYMgC6bWwNNwsL3Dx9FRNa3K9p",
     "localFile": null,
     "callNumber": "DDC 005.276",
-    "catalogId": "AKSINU-LIB-114",
-    "isbn": "AKSINU-REF-114",
+    "catalogId": "AKSINU-LIB-115",
+    "isbn": "AKSINU-REF-115",
     "ddc": "005.276"
   },
   {
@@ -2480,8 +2503,8 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1bvSoHremxUf4nkFVJi6MWTF4X7vvssnX",
     "localFile": null,
     "callNumber": "DDC 006.3",
-    "catalogId": "AKSINU-LIB-115",
-    "isbn": "AKSINU-REF-115",
+    "catalogId": "AKSINU-LIB-116",
+    "isbn": "AKSINU-REF-116",
     "ddc": "006.3"
   },
   {
@@ -2490,8 +2513,8 @@ const BOOKS_DATA = [
     "author": "Pustaka AKSINU",
     "category": "UI/UX & Desain",
     "callNumber": "DDC 006.6",
-    "catalogId": "AKSINU-LIB-116",
-    "isbn": "AKSINU-REF-116",
+    "catalogId": "AKSINU-LIB-117",
+    "isbn": "AKSINU-REF-117",
     "tags": [
       "teknologi",
       "komputer"
@@ -2522,8 +2545,8 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1MbMtIc9Tj5Ektp7tX8UHgwSHOE4xRD30",
     "localFile": null,
     "callNumber": "DDC 005.268",
-    "catalogId": "AKSINU-LIB-117",
-    "isbn": "AKSINU-REF-117",
+    "catalogId": "AKSINU-LIB-118",
+    "isbn": "AKSINU-REF-118",
     "ddc": "005.268"
   },
   {
@@ -2544,7 +2567,7 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1VNCc9FAUehtUnPKxrBszamC4NVoyUO9C",
     "localFile": null,
     "callNumber": "DDC 006.3",
-    "catalogId": "AKSINU-LIB-118",
+    "catalogId": "AKSINU-LIB-119",
     "isbn": "978-0470908747",
     "ddc": "006.3"
   },
@@ -2566,8 +2589,8 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1AjdOKsSZkaNoXTsmqjr03VmX3Tv_oCUt",
     "localFile": null,
     "callNumber": "DDC 005.133",
-    "catalogId": "AKSINU-LIB-119",
-    "isbn": "AKSINU-REF-119",
+    "catalogId": "AKSINU-LIB-120",
+    "isbn": "AKSINU-REF-120",
     "ddc": "005.133"
   },
   {
@@ -2576,8 +2599,8 @@ const BOOKS_DATA = [
     "author": "Pustaka AKSINU",
     "category": "Sistem Informasi",
     "callNumber": "DDC 004.068",
-    "catalogId": "AKSINU-LIB-120",
-    "isbn": "AKSINU-REF-120",
+    "catalogId": "AKSINU-LIB-121",
+    "isbn": "AKSINU-REF-121",
     "tags": [
       "teknologi",
       "komputer"
@@ -2596,8 +2619,8 @@ const BOOKS_DATA = [
     "author": "Pustaka AKSINU",
     "category": "Ilmu Komputer",
     "callNumber": "DDC 004",
-    "catalogId": "AKSINU-LIB-121",
-    "isbn": "AKSINU-REF-121",
+    "catalogId": "AKSINU-LIB-122",
+    "isbn": "AKSINU-REF-122",
     "tags": [
       "computer science",
       "ilmu komputer",
@@ -2617,8 +2640,8 @@ const BOOKS_DATA = [
     "author": "Pustaka AKSINU",
     "category": "Ilmu Komputer",
     "callNumber": "DDC 004",
-    "catalogId": "AKSINU-LIB-122",
-    "isbn": "AKSINU-REF-122",
+    "catalogId": "AKSINU-LIB-123",
+    "isbn": "AKSINU-REF-123",
     "tags": [
       "teknologi",
       "komputer"
@@ -2637,8 +2660,8 @@ const BOOKS_DATA = [
     "author": "Tim Dosen UBSI",
     "category": "Ilmu Komputer",
     "callNumber": "DDC 004",
-    "catalogId": "AKSINU-LIB-123",
-    "isbn": "AKSINU-REF-123",
+    "catalogId": "AKSINU-LIB-124",
+    "isbn": "AKSINU-REF-124",
     "tags": [
       "teknologi",
       "komputer"
@@ -2669,8 +2692,8 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=19T-KI2EmYPYbZy9QoGvKJO5rCWZf50Ke",
     "localFile": null,
     "callNumber": "DDC 004.068",
-    "catalogId": "AKSINU-LIB-124",
-    "isbn": "AKSINU-REF-124",
+    "catalogId": "AKSINU-LIB-125",
+    "isbn": "AKSINU-REF-125",
     "ddc": "004.068"
   },
   {
@@ -2692,8 +2715,8 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=16qN-VhdQzhJK7vWmnS_z6clHhc7pq51H",
     "localFile": null,
     "callNumber": "DDC 005.268",
-    "catalogId": "AKSINU-LIB-125",
-    "isbn": "AKSINU-REF-125",
+    "catalogId": "AKSINU-LIB-126",
+    "isbn": "AKSINU-REF-126",
     "ddc": "005.268"
   },
   {
@@ -2714,8 +2737,8 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1j7KrxLvlPP5f_Aq5JKSb2xtG7v5kGIhB",
     "localFile": null,
     "callNumber": "DDC 005.268",
-    "catalogId": "AKSINU-LIB-126",
-    "isbn": "AKSINU-REF-126",
+    "catalogId": "AKSINU-LIB-127",
+    "isbn": "AKSINU-REF-127",
     "ddc": "005.268"
   },
   {
@@ -2737,7 +2760,7 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1-O_OtE6hnfMMGslVZR_26BVfO2HE-pnK",
     "localFile": "ebook/Flutter-Engineering-2024.pdf",
     "callNumber": "DDC 005.268",
-    "catalogId": "AKSINU-LIB-127",
+    "catalogId": "AKSINU-LIB-128",
     "isbn": "978-1837637836",
     "ddc": "005.268"
   },
@@ -2759,8 +2782,8 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=14-7b1hQ6KntVk9hpSdMGy4GJu1eIrhAl",
     "localFile": null,
     "callNumber": "DDC 006.3",
-    "catalogId": "AKSINU-LIB-128",
-    "isbn": "AKSINU-REF-128",
+    "catalogId": "AKSINU-LIB-129",
+    "isbn": "AKSINU-REF-129",
     "ddc": "006.3"
   },
   {
@@ -2781,8 +2804,8 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1g3OjQaYGYdyxIdWWLZK97LUfLxp2PAPH",
     "localFile": null,
     "callNumber": "DDC 005.276",
-    "catalogId": "AKSINU-LIB-129",
-    "isbn": "AKSINU-REF-129",
+    "catalogId": "AKSINU-LIB-130",
+    "isbn": "AKSINU-REF-130",
     "ddc": "005.276"
   },
   {
@@ -2791,8 +2814,8 @@ const BOOKS_DATA = [
     "author": "Pustaka AKSINU",
     "category": "Python & Data Science",
     "callNumber": "DDC 005.133",
-    "catalogId": "AKSINU-LIB-130",
-    "isbn": "AKSINU-REF-130",
+    "catalogId": "AKSINU-LIB-131",
+    "isbn": "AKSINU-REF-131",
     "tags": [
       "python",
       "data science",
@@ -2824,8 +2847,8 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1m8b8CulZo3d5ab7w7CXMTk0b86btyJv6",
     "localFile": null,
     "callNumber": "DDC 004.6",
-    "catalogId": "AKSINU-LIB-131",
-    "isbn": "AKSINU-REF-131",
+    "catalogId": "AKSINU-LIB-132",
+    "isbn": "AKSINU-REF-132",
     "ddc": "004.6"
   },
   {
@@ -2846,8 +2869,8 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1CyAvDuxgabi8-47fB3HEKQtJb6n6USHs",
     "localFile": null,
     "callNumber": "DDC 005.74",
-    "catalogId": "AKSINU-LIB-132",
-    "isbn": "AKSINU-REF-132",
+    "catalogId": "AKSINU-LIB-133",
+    "isbn": "AKSINU-REF-133",
     "ddc": "005.74"
   },
   {
@@ -2868,8 +2891,8 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1DtR77Wf_IZAbAwUYOdI3FDZKWu7J_zyR",
     "localFile": null,
     "callNumber": "DDC 006.6",
-    "catalogId": "AKSINU-LIB-133",
-    "isbn": "AKSINU-REF-133",
+    "catalogId": "AKSINU-LIB-134",
+    "isbn": "AKSINU-REF-134",
     "ddc": "006.6"
   },
   {
@@ -2888,8 +2911,8 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1WALUjwkyVF7yQ6noTDyZUVRlJKED8NYY",
     "localFile": null,
     "callNumber": "DDC 005.133",
-    "catalogId": "AKSINU-LIB-134",
-    "isbn": "AKSINU-REF-134",
+    "catalogId": "AKSINU-LIB-135",
+    "isbn": "AKSINU-REF-135",
     "ddc": "005.133"
   },
   {
@@ -2910,8 +2933,8 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1_ID3fxRzb5A48oulOYY82wVu7yDR6ly_",
     "localFile": null,
     "callNumber": "DDC 005.276",
-    "catalogId": "AKSINU-LIB-135",
-    "isbn": "AKSINU-REF-135",
+    "catalogId": "AKSINU-LIB-136",
+    "isbn": "AKSINU-REF-136",
     "ddc": "005.276"
   },
   {
@@ -2932,8 +2955,8 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1aH-K9cTknY1LOytEd7bBSQRbIabdRYZo",
     "localFile": null,
     "callNumber": "DDC 004.6782",
-    "catalogId": "AKSINU-LIB-136",
-    "isbn": "AKSINU-REF-136",
+    "catalogId": "AKSINU-LIB-137",
+    "isbn": "AKSINU-REF-137",
     "ddc": "004.6782"
   },
   {
@@ -2952,8 +2975,8 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1FLW3bD7wH9_uo6gDIOZwrFX7tLy6IYLq",
     "localFile": null,
     "callNumber": "DDC 004.068",
-    "catalogId": "AKSINU-LIB-137",
-    "isbn": "AKSINU-REF-137",
+    "catalogId": "AKSINU-LIB-138",
+    "isbn": "AKSINU-REF-138",
     "ddc": "004.068"
   },
   {
@@ -2972,8 +2995,8 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1vef_3MkQMKWx002egj1vQYB38KtXSdV_",
     "localFile": null,
     "callNumber": "DDC 004.068",
-    "catalogId": "AKSINU-LIB-138",
-    "isbn": "AKSINU-REF-138",
+    "catalogId": "AKSINU-LIB-139",
+    "isbn": "AKSINU-REF-139",
     "ddc": "004.068"
   },
   {
@@ -2994,8 +3017,8 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1NDTfRYiOdCLBgDC8IG4FqWFnmJRaiuUB",
     "localFile": null,
     "callNumber": "DDC 005.276",
-    "catalogId": "AKSINU-LIB-139",
-    "isbn": "AKSINU-REF-139",
+    "catalogId": "AKSINU-LIB-140",
+    "isbn": "AKSINU-REF-140",
     "ddc": "005.276"
   },
   {
@@ -3017,8 +3040,8 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=16pJZHScF8RUlNMFIJEQCOyxRgtzIHip1",
     "localFile": null,
     "callNumber": "DDC 004.6782",
-    "catalogId": "AKSINU-LIB-140",
-    "isbn": "AKSINU-REF-140",
+    "catalogId": "AKSINU-LIB-141",
+    "isbn": "AKSINU-REF-141",
     "ddc": "004.6782"
   },
   {
@@ -3039,8 +3062,8 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1aNBG_LapjHdvzvnZhUsVPFaoI5VGpNSN",
     "localFile": null,
     "callNumber": "DDC 005.276",
-    "catalogId": "AKSINU-LIB-141",
-    "isbn": "AKSINU-REF-141",
+    "catalogId": "AKSINU-LIB-142",
+    "isbn": "AKSINU-REF-142",
     "ddc": "005.276"
   },
   {
@@ -3061,8 +3084,8 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1Ya2uemQzURAasA6yWMazIyjSFaTykCf4",
     "localFile": null,
     "callNumber": "DDC 005.276",
-    "catalogId": "AKSINU-LIB-142",
-    "isbn": "AKSINU-REF-142",
+    "catalogId": "AKSINU-LIB-143",
+    "isbn": "AKSINU-REF-143",
     "ddc": "005.276"
   },
   {
@@ -3071,8 +3094,8 @@ const BOOKS_DATA = [
     "author": "Steve Clarke",
     "category": "Sistem Informasi",
     "callNumber": "DDC 004.068",
-    "catalogId": "AKSINU-LIB-143",
-    "isbn": "AKSINU-REF-143",
+    "catalogId": "AKSINU-LIB-144",
+    "isbn": "AKSINU-REF-144",
     "tags": [
       "teknologi",
       "komputer"
@@ -3091,8 +3114,8 @@ const BOOKS_DATA = [
     "author": "Pustaka AKSINU",
     "category": "UI/UX & Desain",
     "callNumber": "DDC 006.6",
-    "catalogId": "AKSINU-LIB-144",
-    "isbn": "AKSINU-REF-144",
+    "catalogId": "AKSINU-LIB-145",
+    "isbn": "AKSINU-REF-145",
     "tags": [
       "teknologi",
       "komputer"
@@ -3123,8 +3146,8 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=13s2Jlf_MJ6SOXlkQeQhw2MoCrAINUEwV",
     "localFile": null,
     "callNumber": "DDC 006.6",
-    "catalogId": "AKSINU-LIB-145",
-    "isbn": "AKSINU-REF-145",
+    "catalogId": "AKSINU-LIB-146",
+    "isbn": "AKSINU-REF-146",
     "ddc": "006.6"
   },
   {
@@ -3133,8 +3156,8 @@ const BOOKS_DATA = [
     "author": "Pustaka AKSINU",
     "category": "UI/UX & Desain",
     "callNumber": "DDC 006.6",
-    "catalogId": "AKSINU-LIB-146",
-    "isbn": "AKSINU-REF-146",
+    "catalogId": "AKSINU-LIB-147",
+    "isbn": "AKSINU-REF-147",
     "tags": [
       "ui/ux",
       "user interface",
@@ -3155,8 +3178,8 @@ const BOOKS_DATA = [
     "author": "Pustaka AKSINU",
     "category": "UI/UX & Desain",
     "callNumber": "DDC 006.6",
-    "catalogId": "AKSINU-LIB-147",
-    "isbn": "AKSINU-REF-147",
+    "catalogId": "AKSINU-LIB-148",
+    "isbn": "AKSINU-REF-148",
     "tags": [
       "ui/ux",
       "user interface",
@@ -3177,8 +3200,8 @@ const BOOKS_DATA = [
     "author": "Pustaka AKSINU",
     "category": "Ilmu Komputer",
     "callNumber": "DDC 004",
-    "catalogId": "AKSINU-LIB-148",
-    "isbn": "AKSINU-REF-148",
+    "catalogId": "AKSINU-LIB-149",
+    "isbn": "AKSINU-REF-149",
     "tags": [
       "teknologi",
       "komputer"
@@ -3208,8 +3231,8 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1A3_mRxWDI3JqRNOTY5OnrJvMmdxvY3nJ",
     "localFile": null,
     "callNumber": "DDC 005.133",
-    "catalogId": "AKSINU-LIB-149",
-    "isbn": "AKSINU-REF-149",
+    "catalogId": "AKSINU-LIB-150",
+    "isbn": "AKSINU-REF-150",
     "ddc": "005.133"
   },
   {
@@ -3230,8 +3253,8 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1ugkp5ncJD4Yw1h-YoHbHSfEWLJOvcxsh",
     "localFile": null,
     "callNumber": "DDC 005.133",
-    "catalogId": "AKSINU-LIB-150",
-    "isbn": "AKSINU-REF-150",
+    "catalogId": "AKSINU-LIB-151",
+    "isbn": "AKSINU-REF-151",
     "ddc": "005.133"
   },
   {
@@ -3240,8 +3263,8 @@ const BOOKS_DATA = [
     "author": "Pustaka AKSINU",
     "category": "Sistem Informasi",
     "callNumber": "DDC 004.068",
-    "catalogId": "AKSINU-LIB-151",
-    "isbn": "AKSINU-REF-151",
+    "catalogId": "AKSINU-LIB-152",
+    "isbn": "AKSINU-REF-152",
     "tags": [
       "teknologi",
       "komputer"
@@ -3260,8 +3283,8 @@ const BOOKS_DATA = [
     "author": "Pustaka AKSINU",
     "category": "Sistem Informasi",
     "callNumber": "DDC 004.068",
-    "catalogId": "AKSINU-LIB-152",
-    "isbn": "AKSINU-REF-152",
+    "catalogId": "AKSINU-LIB-153",
+    "isbn": "AKSINU-REF-153",
     "tags": [
       "teknologi",
       "komputer"
@@ -3280,8 +3303,8 @@ const BOOKS_DATA = [
     "author": "Pustaka AKSINU",
     "category": "Sistem Informasi",
     "callNumber": "DDC 004.068",
-    "catalogId": "AKSINU-LIB-153",
-    "isbn": "AKSINU-REF-153",
+    "catalogId": "AKSINU-LIB-154",
+    "isbn": "AKSINU-REF-154",
     "tags": [
       "teknologi",
       "komputer"
@@ -3300,8 +3323,8 @@ const BOOKS_DATA = [
     "author": "Pustaka AKSINU",
     "category": "Jaringan Komputer",
     "callNumber": "DDC 004.6",
-    "catalogId": "AKSINU-LIB-154",
-    "isbn": "AKSINU-REF-154",
+    "catalogId": "AKSINU-LIB-155",
+    "isbn": "AKSINU-REF-155",
     "tags": [
       "jaringan komputer",
       "networking",
@@ -3333,8 +3356,8 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1qt11nlo1gq50KLJILrzJX7MZ9lxlsHz_",
     "localFile": null,
     "callNumber": "DDC 004.6",
-    "catalogId": "AKSINU-LIB-155",
-    "isbn": "AKSINU-REF-155",
+    "catalogId": "AKSINU-LIB-156",
+    "isbn": "AKSINU-REF-156",
     "ddc": "004.6"
   },
   {
@@ -3355,8 +3378,8 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=18vbywRDqWMMOFIjgExzq7YPoE5k5JI7f",
     "localFile": null,
     "callNumber": "DDC 005.133",
-    "catalogId": "AKSINU-LIB-156",
-    "isbn": "AKSINU-REF-156",
+    "catalogId": "AKSINU-LIB-157",
+    "isbn": "AKSINU-REF-157",
     "ddc": "005.133"
   },
   {
@@ -3377,8 +3400,8 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=15Wyg4vIQyCvM0DBOLImlceblWFBZQ_p1",
     "localFile": null,
     "callNumber": "DDC 005.133",
-    "catalogId": "AKSINU-LIB-157",
-    "isbn": "AKSINU-REF-157",
+    "catalogId": "AKSINU-LIB-158",
+    "isbn": "AKSINU-REF-158",
     "ddc": "005.133"
   },
   {
@@ -3398,8 +3421,8 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1jQDcUHF03Dhj-FhhsksFbQYB-W1RrVLJ",
     "localFile": null,
     "callNumber": "DDC 005.133",
-    "catalogId": "AKSINU-LIB-158",
-    "isbn": "AKSINU-REF-158",
+    "catalogId": "AKSINU-LIB-159",
+    "isbn": "AKSINU-REF-159",
     "ddc": "005.133"
   },
   {
@@ -3420,8 +3443,8 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1WuUVxR93sHd9ZqjsU-o0FKLJMcEpYm6W",
     "localFile": null,
     "callNumber": "DDC 005.133",
-    "catalogId": "AKSINU-LIB-159",
-    "isbn": "AKSINU-REF-159",
+    "catalogId": "AKSINU-LIB-160",
+    "isbn": "AKSINU-REF-160",
     "ddc": "005.133"
   },
   {
@@ -3442,8 +3465,8 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1Fw9dIP4T_BrzvTg1phkmP7c5fRuagmR3",
     "localFile": null,
     "callNumber": "DDC 005.276",
-    "catalogId": "AKSINU-LIB-160",
-    "isbn": "AKSINU-REF-160",
+    "catalogId": "AKSINU-LIB-161",
+    "isbn": "AKSINU-REF-161",
     "ddc": "005.276"
   },
   {
@@ -3464,8 +3487,8 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=12pOsNDM5x96g8bauQcYdZKAfZ919Ed5f",
     "localFile": null,
     "callNumber": "DDC 005.276",
-    "catalogId": "AKSINU-LIB-161",
-    "isbn": "AKSINU-REF-161",
+    "catalogId": "AKSINU-LIB-162",
+    "isbn": "AKSINU-REF-162",
     "ddc": "005.276"
   },
   {
@@ -3486,8 +3509,8 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=175qal7-W2FDzri1I95FNi6kcaGuo-AyZ",
     "localFile": null,
     "callNumber": "DDC 005.276",
-    "catalogId": "AKSINU-LIB-162",
-    "isbn": "AKSINU-REF-162",
+    "catalogId": "AKSINU-LIB-163",
+    "isbn": "AKSINU-REF-163",
     "ddc": "005.276"
   },
   {
@@ -3508,7 +3531,7 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1Hvy74JjiIhp4QqT2iLLubKq_e55xfrkn",
     "localFile": null,
     "callNumber": "DDC 005.276",
-    "catalogId": "AKSINU-LIB-163",
+    "catalogId": "AKSINU-LIB-164",
     "isbn": "978-1118531648",
     "ddc": "005.276"
   },
@@ -3530,8 +3553,8 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1j4AmgJ9kkSA2yo70szEi0d-fslIMpaDV",
     "localFile": null,
     "callNumber": "DDC 005.276",
-    "catalogId": "AKSINU-LIB-164",
-    "isbn": "AKSINU-REF-164",
+    "catalogId": "AKSINU-LIB-165",
+    "isbn": "AKSINU-REF-165",
     "ddc": "005.276"
   },
   {
@@ -3552,8 +3575,8 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1CZSS5o3YMjQ8jaX0T_A42HSb6SPCWJBQ",
     "localFile": null,
     "callNumber": "DDC 005.276",
-    "catalogId": "AKSINU-LIB-165",
-    "isbn": "AKSINU-REF-165",
+    "catalogId": "AKSINU-LIB-166",
+    "isbn": "AKSINU-REF-166",
     "ddc": "005.276"
   },
   {
@@ -3562,8 +3585,8 @@ const BOOKS_DATA = [
     "author": "Pustaka AKSINU",
     "category": "Sistem Informasi",
     "callNumber": "DDC 004.068",
-    "catalogId": "AKSINU-LIB-166",
-    "isbn": "AKSINU-REF-166",
+    "catalogId": "AKSINU-LIB-167",
+    "isbn": "AKSINU-REF-167",
     "tags": [
       "teknologi",
       "komputer"
@@ -3582,8 +3605,8 @@ const BOOKS_DATA = [
     "author": "Pustaka AKSINU",
     "category": "Sistem Informasi",
     "callNumber": "DDC 004.068",
-    "catalogId": "AKSINU-LIB-167",
-    "isbn": "AKSINU-REF-167",
+    "catalogId": "AKSINU-LIB-168",
+    "isbn": "AKSINU-REF-168",
     "tags": [
       "teknologi",
       "komputer"
@@ -3602,8 +3625,8 @@ const BOOKS_DATA = [
     "author": "Pena Muda Media",
     "category": "Sistem Informasi",
     "callNumber": "DDC 004.068",
-    "catalogId": "AKSINU-LIB-168",
-    "isbn": "AKSINU-REF-168",
+    "catalogId": "AKSINU-LIB-169",
+    "isbn": "AKSINU-REF-169",
     "tags": [
       "sistem informasi",
       "analisis sistem",
@@ -3637,8 +3660,8 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1giq14EkKkFax7qJt9f1EPsxFUqhtp_aQ",
     "localFile": null,
     "callNumber": "DDC 004.068",
-    "catalogId": "AKSINU-LIB-169",
-    "isbn": "AKSINU-REF-169",
+    "catalogId": "AKSINU-LIB-170",
+    "isbn": "AKSINU-REF-170",
     "ddc": "004.068"
   },
   {
@@ -3647,8 +3670,8 @@ const BOOKS_DATA = [
     "author": "Pustaka AKSINU",
     "category": "Sistem Informasi",
     "callNumber": "DDC 004.068",
-    "catalogId": "AKSINU-LIB-170",
-    "isbn": "AKSINU-REF-170",
+    "catalogId": "AKSINU-LIB-171",
+    "isbn": "AKSINU-REF-171",
     "tags": [
       "sistem informasi",
       "analisis sistem",
@@ -3669,8 +3692,8 @@ const BOOKS_DATA = [
     "author": "Pustaka AKSINU",
     "category": "Sistem Informasi",
     "callNumber": "DDC 004.068",
-    "catalogId": "AKSINU-LIB-171",
-    "isbn": "AKSINU-REF-171",
+    "catalogId": "AKSINU-LIB-172",
+    "isbn": "AKSINU-REF-172",
     "tags": [
       "sistem informasi",
       "analisis sistem",
@@ -3703,8 +3726,8 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1MoHI5iTsWBT1unYWw5R2uxXqS2Z_8IlJ",
     "localFile": null,
     "callNumber": "DDC 006.3",
-    "catalogId": "AKSINU-LIB-172",
-    "isbn": "AKSINU-REF-172",
+    "catalogId": "AKSINU-LIB-173",
+    "isbn": "AKSINU-REF-173",
     "ddc": "006.3"
   },
   {
@@ -3713,8 +3736,8 @@ const BOOKS_DATA = [
     "author": "Pustaka AKSINU",
     "category": "Manajemen & Bisnis",
     "callNumber": "DDC 658.4038",
-    "catalogId": "AKSINU-LIB-173",
-    "isbn": "AKSINU-REF-173",
+    "catalogId": "AKSINU-LIB-174",
+    "isbn": "AKSINU-REF-174",
     "tags": [
       "manajemen",
       "bisnis",
@@ -3735,8 +3758,8 @@ const BOOKS_DATA = [
     "author": "Pustaka AKSINU",
     "category": "Manajemen & Bisnis",
     "callNumber": "DDC 658.4038",
-    "catalogId": "AKSINU-LIB-174",
-    "isbn": "AKSINU-REF-174",
+    "catalogId": "AKSINU-LIB-175",
+    "isbn": "AKSINU-REF-175",
     "tags": [
       "manajemen",
       "bisnis",
@@ -3757,8 +3780,8 @@ const BOOKS_DATA = [
     "author": "Atika Nasution",
     "category": "Manajemen & Bisnis",
     "callNumber": "DDC 658.4038",
-    "catalogId": "AKSINU-LIB-175",
-    "isbn": "AKSINU-REF-175",
+    "catalogId": "AKSINU-LIB-176",
+    "isbn": "AKSINU-REF-176",
     "tags": [
       "manajemen",
       "bisnis",
@@ -3779,8 +3802,8 @@ const BOOKS_DATA = [
     "author": "Pustaka AKSINU",
     "category": "Manajemen & Bisnis",
     "callNumber": "DDC 658.4038",
-    "catalogId": "AKSINU-LIB-176",
-    "isbn": "AKSINU-REF-176",
+    "catalogId": "AKSINU-LIB-177",
+    "isbn": "AKSINU-REF-177",
     "tags": [
       "manajemen",
       "bisnis",
@@ -3801,8 +3824,8 @@ const BOOKS_DATA = [
     "author": "Dimas, M.Kom.",
     "category": "Sistem Informasi",
     "callNumber": "DDC 004.068",
-    "catalogId": "AKSINU-LIB-177",
-    "isbn": "AKSINU-REF-177",
+    "catalogId": "AKSINU-LIB-178",
+    "isbn": "AKSINU-REF-178",
     "tags": [
       "teknologi",
       "komputer"
@@ -3821,8 +3844,8 @@ const BOOKS_DATA = [
     "author": "Pustaka AKSINU",
     "category": "Struktur Data & Algoritma",
     "callNumber": "DDC 005.13",
-    "catalogId": "AKSINU-LIB-178",
-    "isbn": "AKSINU-REF-178",
+    "catalogId": "AKSINU-LIB-179",
+    "isbn": "AKSINU-REF-179",
     "tags": [
       "teknologi",
       "komputer"
@@ -3841,8 +3864,8 @@ const BOOKS_DATA = [
     "author": "Pustaka AKSINU",
     "category": "Java & OOP",
     "callNumber": "DDC 005.133",
-    "catalogId": "AKSINU-LIB-179",
-    "isbn": "AKSINU-REF-179",
+    "catalogId": "AKSINU-LIB-180",
+    "isbn": "AKSINU-REF-180",
     "tags": [
       "java",
       "oop",
@@ -3874,8 +3897,8 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1V-sERYWvoiOpJGuMBTavnFHdlrVG_aWq",
     "localFile": null,
     "callNumber": "DDC 004.068",
-    "catalogId": "AKSINU-LIB-180",
-    "isbn": "AKSINU-REF-180",
+    "catalogId": "AKSINU-LIB-181",
+    "isbn": "AKSINU-REF-181",
     "ddc": "004.068"
   },
   {
@@ -3884,8 +3907,8 @@ const BOOKS_DATA = [
     "author": "Pustaka AKSINU",
     "category": "Sistem Operasi & Arsitektur",
     "callNumber": "DDC 005.43",
-    "catalogId": "AKSINU-LIB-181",
-    "isbn": "AKSINU-REF-181",
+    "catalogId": "AKSINU-LIB-182",
+    "isbn": "AKSINU-REF-182",
     "tags": [
       "sistem operasi",
       "os",
@@ -3906,8 +3929,8 @@ const BOOKS_DATA = [
     "author": "Pustaka AKSINU",
     "category": "Manajemen & Bisnis",
     "callNumber": "DDC 658.4038",
-    "catalogId": "AKSINU-LIB-182",
-    "isbn": "AKSINU-REF-182",
+    "catalogId": "AKSINU-LIB-183",
+    "isbn": "AKSINU-REF-183",
     "tags": [
       "manajemen",
       "bisnis",
@@ -3939,8 +3962,8 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1YFpocqOV7m_ibHJ4418mtU1vAuWYcN84",
     "localFile": null,
     "callNumber": "DDC 004.068",
-    "catalogId": "AKSINU-LIB-183",
-    "isbn": "AKSINU-REF-183",
+    "catalogId": "AKSINU-LIB-184",
+    "isbn": "AKSINU-REF-184",
     "ddc": "004.068"
   },
   {
@@ -3960,8 +3983,8 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=13aPuwQIEQvO2sWW1fcqiQnCH9tGDHEmH",
     "localFile": null,
     "callNumber": "DDC 005.74",
-    "catalogId": "AKSINU-LIB-184",
-    "isbn": "AKSINU-REF-184",
+    "catalogId": "AKSINU-LIB-185",
+    "isbn": "AKSINU-REF-185",
     "ddc": "005.74"
   },
   {
@@ -3970,8 +3993,8 @@ const BOOKS_DATA = [
     "author": "Fithrie Soufitri",
     "category": "Sistem Informasi",
     "callNumber": "DDC 004.068",
-    "catalogId": "AKSINU-LIB-185",
-    "isbn": "AKSINU-REF-185",
+    "catalogId": "AKSINU-LIB-186",
+    "isbn": "AKSINU-REF-186",
     "tags": [
       "sistem informasi",
       "analisis sistem",
@@ -4004,8 +4027,8 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1bF73Sf0NPlDF5uMhn6ZrCA5Q9ncYKfA4",
     "localFile": null,
     "callNumber": "DDC 005.276",
-    "catalogId": "AKSINU-LIB-186",
-    "isbn": "AKSINU-REF-186",
+    "catalogId": "AKSINU-LIB-187",
+    "isbn": "AKSINU-REF-187",
     "ddc": "005.276"
   },
   {
@@ -4026,8 +4049,8 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1sW9yE2cIJyMZmu733axe0BCvL1zlKZOX",
     "localFile": null,
     "callNumber": "DDC 005.276",
-    "catalogId": "AKSINU-LIB-187",
-    "isbn": "AKSINU-REF-187",
+    "catalogId": "AKSINU-LIB-188",
+    "isbn": "AKSINU-REF-188",
     "ddc": "005.276"
   },
   {
@@ -4048,8 +4071,8 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1-ir-WO1uA32yZjWVip0nPQ7AFBzq-yy7",
     "localFile": null,
     "callNumber": "DDC 005.276",
-    "catalogId": "AKSINU-LIB-188",
-    "isbn": "AKSINU-REF-188",
+    "catalogId": "AKSINU-LIB-189",
+    "isbn": "AKSINU-REF-189",
     "ddc": "005.276"
   },
   {
@@ -4071,8 +4094,8 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1kJB5C5b-QJeKngpGsew16j6dz6sOatkV",
     "localFile": null,
     "callNumber": "DDC 005.276",
-    "catalogId": "AKSINU-LIB-189",
-    "isbn": "AKSINU-REF-189",
+    "catalogId": "AKSINU-LIB-190",
+    "isbn": "AKSINU-REF-190",
     "ddc": "005.276"
   },
   {
@@ -4093,8 +4116,8 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1tQaE4r7ncKoqqluStaacbjspfsseUVar",
     "localFile": null,
     "callNumber": "DDC 005.276",
-    "catalogId": "AKSINU-LIB-190",
-    "isbn": "AKSINU-REF-190",
+    "catalogId": "AKSINU-LIB-191",
+    "isbn": "AKSINU-REF-191",
     "ddc": "005.276"
   },
   {
@@ -4116,8 +4139,8 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1_MnjNeo8xa6dLFLWwxKNyJWg1Xf7a88u",
     "localFile": null,
     "callNumber": "DDC 004.6782",
-    "catalogId": "AKSINU-LIB-191",
-    "isbn": "AKSINU-REF-191",
+    "catalogId": "AKSINU-LIB-192",
+    "isbn": "AKSINU-REF-192",
     "ddc": "004.6782"
   },
   {
@@ -4138,8 +4161,8 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1eyvkDcvwqvBehyur6-Dzh3JfNRp9Smq4",
     "localFile": null,
     "callNumber": "DDC 005.133",
-    "catalogId": "AKSINU-LIB-192",
-    "isbn": "AKSINU-REF-192",
+    "catalogId": "AKSINU-LIB-193",
+    "isbn": "AKSINU-REF-193",
     "ddc": "005.133"
   },
   {
@@ -4160,8 +4183,8 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1GYatC1LYUoi8CEM5ElTx96X83Uo10Bmo",
     "localFile": null,
     "callNumber": "DDC 005.276",
-    "catalogId": "AKSINU-LIB-193",
-    "isbn": "AKSINU-REF-193",
+    "catalogId": "AKSINU-LIB-194",
+    "isbn": "AKSINU-REF-194",
     "ddc": "005.276"
   },
   {
@@ -4182,8 +4205,8 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1rIh69tkI3EKlayNGW3X36SHDtH3kFfu7",
     "localFile": null,
     "callNumber": "DDC 005.276",
-    "catalogId": "AKSINU-LIB-194",
-    "isbn": "AKSINU-REF-194",
+    "catalogId": "AKSINU-LIB-195",
+    "isbn": "AKSINU-REF-195",
     "ddc": "005.276"
   },
   {
@@ -4204,8 +4227,8 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1YJNWSfcs8x_xAmjVusSaf1QWSPjAYjtd",
     "localFile": null,
     "callNumber": "DDC 005.276",
-    "catalogId": "AKSINU-LIB-195",
-    "isbn": "AKSINU-REF-195",
+    "catalogId": "AKSINU-LIB-196",
+    "isbn": "AKSINU-REF-196",
     "ddc": "005.276"
   },
   {
@@ -4226,8 +4249,8 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1XDfp9t6Y1qcceTVrAn_jALkMmcGKGfra",
     "localFile": null,
     "callNumber": "DDC 005.276",
-    "catalogId": "AKSINU-LIB-196",
-    "isbn": "AKSINU-REF-196",
+    "catalogId": "AKSINU-LIB-197",
+    "isbn": "AKSINU-REF-197",
     "ddc": "005.276"
   },
   {
@@ -4248,8 +4271,8 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1psJMmfVruoW8hnYq_EiJIwzNs9OqTaAk",
     "localFile": null,
     "callNumber": "DDC 005.133",
-    "catalogId": "AKSINU-LIB-197",
-    "isbn": "AKSINU-REF-197",
+    "catalogId": "AKSINU-LIB-198",
+    "isbn": "AKSINU-REF-198",
     "ddc": "005.133"
   },
   {
@@ -4270,8 +4293,8 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=10fEkCXKcxXMcE4Vc7daFhurXt-yczx3w",
     "localFile": null,
     "callNumber": "DDC 005.133",
-    "catalogId": "AKSINU-LIB-198",
-    "isbn": "AKSINU-REF-198",
+    "catalogId": "AKSINU-LIB-199",
+    "isbn": "AKSINU-REF-199",
     "ddc": "005.133"
   },
   {
@@ -4290,8 +4313,8 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1g18zry3Ua3w_ONpoJBEpE49K6Vfxz_Rg",
     "localFile": null,
     "callNumber": "DDC 004.068",
-    "catalogId": "AKSINU-LIB-199",
-    "isbn": "AKSINU-REF-199",
+    "catalogId": "AKSINU-LIB-200",
+    "isbn": "AKSINU-REF-200",
     "ddc": "004.068"
   },
   {
@@ -4312,8 +4335,8 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1Fft1-qLXeQ11isTq3iD0iwn8D4rM7Esz",
     "localFile": null,
     "callNumber": "DDC 005.276",
-    "catalogId": "AKSINU-LIB-200",
-    "isbn": "AKSINU-REF-200",
+    "catalogId": "AKSINU-LIB-201",
+    "isbn": "AKSINU-REF-201",
     "ddc": "005.276"
   },
   {
@@ -4334,8 +4357,8 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1A6RvQ0l18erRA4dYnY2xD6q0o7pmWrVi",
     "localFile": null,
     "callNumber": "DDC 005.276",
-    "catalogId": "AKSINU-LIB-201",
-    "isbn": "AKSINU-REF-201",
+    "catalogId": "AKSINU-LIB-202",
+    "isbn": "AKSINU-REF-202",
     "ddc": "005.276"
   },
   {
@@ -4356,8 +4379,8 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1q7scjj6dDg3N_SudAqiyoWK4LNSk28VB",
     "localFile": null,
     "callNumber": "DDC 005.133",
-    "catalogId": "AKSINU-LIB-202",
-    "isbn": "AKSINU-REF-202",
+    "catalogId": "AKSINU-LIB-203",
+    "isbn": "AKSINU-REF-203",
     "ddc": "005.133"
   },
   {
@@ -4378,8 +4401,8 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=11iNU1Mc9Ybgh6mXTDUszisjacTEsF6jI",
     "localFile": null,
     "callNumber": "DDC 005.276",
-    "catalogId": "AKSINU-LIB-203",
-    "isbn": "AKSINU-REF-203",
+    "catalogId": "AKSINU-LIB-204",
+    "isbn": "AKSINU-REF-204",
     "ddc": "005.276"
   },
   {
@@ -4400,8 +4423,8 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1bvWhsSHe2it4Ts_QpgrUuRQfikFTNs6a",
     "localFile": null,
     "callNumber": "DDC 005.133",
-    "catalogId": "AKSINU-LIB-204",
-    "isbn": "AKSINU-REF-204",
+    "catalogId": "AKSINU-LIB-205",
+    "isbn": "AKSINU-REF-205",
     "ddc": "005.133"
   },
   {
@@ -4422,8 +4445,8 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1Xj9hnDtSPeVDwCtyZwQ03GsUdtsCoCvu",
     "localFile": null,
     "callNumber": "DDC 006.3",
-    "catalogId": "AKSINU-LIB-205",
-    "isbn": "AKSINU-REF-205",
+    "catalogId": "AKSINU-LIB-206",
+    "isbn": "AKSINU-REF-206",
     "ddc": "006.3"
   },
   {
@@ -4444,8 +4467,8 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1nB-0PCwBO7eU-iz9O3Wv1jBVgYiYNmXw",
     "localFile": null,
     "callNumber": "DDC 006.3",
-    "catalogId": "AKSINU-LIB-206",
-    "isbn": "AKSINU-REF-206",
+    "catalogId": "AKSINU-LIB-207",
+    "isbn": "AKSINU-REF-207",
     "ddc": "006.3"
   },
   {
@@ -4466,8 +4489,8 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1VXlLK_VF0jBDsPk_IanFeAPSvnVkWuew",
     "localFile": null,
     "callNumber": "DDC 006.3",
-    "catalogId": "AKSINU-LIB-207",
-    "isbn": "AKSINU-REF-207",
+    "catalogId": "AKSINU-LIB-208",
+    "isbn": "AKSINU-REF-208",
     "ddc": "006.3"
   },
   {
@@ -4476,8 +4499,8 @@ const BOOKS_DATA = [
     "author": "Pustaka AKSINU",
     "category": "Sistem Informasi",
     "callNumber": "DDC 004.068",
-    "catalogId": "AKSINU-LIB-208",
-    "isbn": "AKSINU-REF-208",
+    "catalogId": "AKSINU-LIB-209",
+    "isbn": "AKSINU-REF-209",
     "tags": [
       "teknologi",
       "komputer"
@@ -4496,8 +4519,8 @@ const BOOKS_DATA = [
     "author": "Pustaka AKSINU",
     "category": "Sistem Informasi",
     "callNumber": "DDC 004.068",
-    "catalogId": "AKSINU-LIB-209",
-    "isbn": "AKSINU-REF-209",
+    "catalogId": "AKSINU-LIB-210",
+    "isbn": "AKSINU-REF-210",
     "tags": [
       "teknologi",
       "komputer"
@@ -4528,8 +4551,8 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1oaIr43GoSRC1j_eSRSWd2ZZ_V6u9MG0s",
     "localFile": null,
     "callNumber": "DDC 005.74",
-    "catalogId": "AKSINU-LIB-210",
-    "isbn": "AKSINU-REF-210",
+    "catalogId": "AKSINU-LIB-211",
+    "isbn": "AKSINU-REF-211",
     "ddc": "005.74"
   },
   {
@@ -4538,8 +4561,8 @@ const BOOKS_DATA = [
     "author": "Pustaka AKSINU",
     "category": "Manajemen & Bisnis",
     "callNumber": "DDC 658.4038",
-    "catalogId": "AKSINU-LIB-211",
-    "isbn": "AKSINU-REF-211",
+    "catalogId": "AKSINU-LIB-212",
+    "isbn": "AKSINU-REF-212",
     "tags": [
       "teknologi",
       "komputer"
@@ -4558,8 +4581,8 @@ const BOOKS_DATA = [
     "author": "Evi Susanti Sinaga",
     "category": "Manajemen & Bisnis",
     "callNumber": "DDC 658.4038",
-    "catalogId": "AKSINU-LIB-212",
-    "isbn": "AKSINU-REF-212",
+    "catalogId": "AKSINU-LIB-213",
+    "isbn": "AKSINU-REF-213",
     "tags": [
       "teknologi",
       "komputer"
@@ -4578,8 +4601,8 @@ const BOOKS_DATA = [
     "author": "Pustaka AKSINU",
     "category": "Database & SQL",
     "callNumber": "DDC 005.74",
-    "catalogId": "AKSINU-LIB-213",
-    "isbn": "AKSINU-REF-213",
+    "catalogId": "AKSINU-LIB-214",
+    "isbn": "AKSINU-REF-214",
     "tags": [
       "teknologi",
       "komputer"
@@ -4598,8 +4621,8 @@ const BOOKS_DATA = [
     "author": "Pustaka AKSINU",
     "category": "Manajemen & Bisnis",
     "callNumber": "DDC 658.4038",
-    "catalogId": "AKSINU-LIB-214",
-    "isbn": "AKSINU-REF-214",
+    "catalogId": "AKSINU-LIB-215",
+    "isbn": "AKSINU-REF-215",
     "tags": [
       "manajemen",
       "bisnis",
@@ -4620,8 +4643,8 @@ const BOOKS_DATA = [
     "author": "Pustaka AKSINU",
     "category": "Manajemen & Bisnis",
     "callNumber": "DDC 658.4038",
-    "catalogId": "AKSINU-LIB-215",
-    "isbn": "AKSINU-REF-215",
+    "catalogId": "AKSINU-LIB-216",
+    "isbn": "AKSINU-REF-216",
     "tags": [
       "manajemen",
       "bisnis",
@@ -4642,8 +4665,8 @@ const BOOKS_DATA = [
     "author": "Pustaka AKSINU",
     "category": "Manajemen & Bisnis",
     "callNumber": "DDC 658.4038",
-    "catalogId": "AKSINU-LIB-216",
-    "isbn": "AKSINU-REF-216",
+    "catalogId": "AKSINU-LIB-217",
+    "isbn": "AKSINU-REF-217",
     "tags": [
       "teknologi",
       "komputer"
@@ -4675,8 +4698,8 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1XhcsvOtLgSuu7P0Wva8lwUD5iLHuRfjm",
     "localFile": null,
     "callNumber": "DDC 658.4038",
-    "catalogId": "AKSINU-LIB-217",
-    "isbn": "AKSINU-REF-217",
+    "catalogId": "AKSINU-LIB-218",
+    "isbn": "AKSINU-REF-218",
     "ddc": "658.4038"
   },
   {
@@ -4685,8 +4708,8 @@ const BOOKS_DATA = [
     "author": "Pustaka AKSINU",
     "category": "Sistem Informasi",
     "callNumber": "DDC 004.068",
-    "catalogId": "AKSINU-LIB-218",
-    "isbn": "AKSINU-REF-218",
+    "catalogId": "AKSINU-LIB-219",
+    "isbn": "AKSINU-REF-219",
     "tags": [
       "sistem informasi",
       "analisis sistem",
@@ -4707,8 +4730,8 @@ const BOOKS_DATA = [
     "author": "Pustaka AKSINU",
     "category": "Sistem Informasi",
     "callNumber": "DDC 004.068",
-    "catalogId": "AKSINU-LIB-219",
-    "isbn": "AKSINU-REF-219",
+    "catalogId": "AKSINU-LIB-220",
+    "isbn": "AKSINU-REF-220",
     "tags": [
       "sistem informasi",
       "analisis sistem",
@@ -4729,8 +4752,8 @@ const BOOKS_DATA = [
     "author": "Dr. E. K. Sugiyanto, dkk.",
     "category": "Manajemen & Bisnis",
     "callNumber": "DDC 658.4038",
-    "catalogId": "AKSINU-LIB-220",
-    "isbn": "AKSINU-REF-220",
+    "catalogId": "AKSINU-LIB-221",
+    "isbn": "AKSINU-REF-221",
     "tags": [
       "manajemen",
       "umkm",
@@ -4763,8 +4786,8 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1gR4r83kjQrXQOprOZl_DQESBhET3C_tB",
     "localFile": null,
     "callNumber": "DDC 006.3",
-    "catalogId": "AKSINU-LIB-221",
-    "isbn": "AKSINU-REF-221",
+    "catalogId": "AKSINU-LIB-222",
+    "isbn": "AKSINU-REF-222",
     "ddc": "006.3"
   },
   {
@@ -4785,8 +4808,8 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1mfSX9na7U-c8HYWCis9ghylM_9078Ysg",
     "localFile": null,
     "callNumber": "DDC 006.3",
-    "catalogId": "AKSINU-LIB-222",
-    "isbn": "AKSINU-REF-222",
+    "catalogId": "AKSINU-LIB-223",
+    "isbn": "AKSINU-REF-223",
     "ddc": "006.3"
   },
   {
@@ -4805,8 +4828,8 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1hY7evTo46veBP5uXbIzrCqxfGuD_6dfb",
     "localFile": null,
     "callNumber": "DDC 004.068",
-    "catalogId": "AKSINU-LIB-223",
-    "isbn": "AKSINU-REF-223",
+    "catalogId": "AKSINU-LIB-224",
+    "isbn": "AKSINU-REF-224",
     "ddc": "004.068"
   },
   {
@@ -4826,8 +4849,8 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=14ujq5NUoM-T-kg-cmOpJPCXc4KmogWyt",
     "localFile": null,
     "callNumber": "DDC 005.268",
-    "catalogId": "AKSINU-LIB-224",
-    "isbn": "AKSINU-REF-224",
+    "catalogId": "AKSINU-LIB-225",
+    "isbn": "AKSINU-REF-225",
     "ddc": "005.268"
   },
   {
@@ -4848,8 +4871,8 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1RqXaQpTJMgueo5lfjZEVR2WZlUzLHnGD",
     "localFile": null,
     "callNumber": "DDC 005.268",
-    "catalogId": "AKSINU-LIB-225",
-    "isbn": "AKSINU-REF-225",
+    "catalogId": "AKSINU-LIB-226",
+    "isbn": "AKSINU-REF-226",
     "ddc": "005.268"
   },
   {
@@ -4869,8 +4892,8 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1I7RsdJMOmuALhBobzRUX0v2nUTTnj9Bv",
     "localFile": null,
     "callNumber": "DDC 005.133",
-    "catalogId": "AKSINU-LIB-226",
-    "isbn": "AKSINU-REF-226",
+    "catalogId": "AKSINU-LIB-227",
+    "isbn": "AKSINU-REF-227",
     "ddc": "005.133"
   },
   {
@@ -4891,9 +4914,32 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1mH3wW3w6-yF0w8D_JZFnAxLH-7pHgIvB",
     "localFile": null,
     "callNumber": "DDC 006.6",
-    "catalogId": "AKSINU-LIB-227",
-    "isbn": "AKSINU-REF-227",
+    "catalogId": "AKSINU-LIB-228",
+    "isbn": "AKSINU-REF-228",
     "ddc": "006.6"
+  },
+  {
+    "id": "book-1a1ielyewja2",
+    "title": "Mata Kuliah Dasar Umum: Bahasa Indonesia Akademik",
+    "author": "Pustaka AKSINU",
+    "category": "Bahasa & Komunikasi",
+    "callNumber": "DDC 410",
+    "catalogId": "AKSINU-LIB-229",
+    "isbn": "AKSINU-REF-229",
+    "tags": [
+      "bahasa indonesia",
+      "mkdu",
+      "tata bahasa",
+      "akademik",
+      "literasi"
+    ],
+    "size": "PDF",
+    "description": "Buku modul Mata Kuliah Dasar Umum (MKDU) Bahasa Indonesia untuk penguatan literasi ilmiah, sintaksis, dan retorika tulisan mahasiswa dalam penyusunan tugas akhir dan skripsi.",
+    "googleDriveId": "1a1iElYeWjA2i2xGgOX24BClbg-B1XTkE",
+    "previewUrl": "https://drive.google.com/file/d/1a1iElYeWjA2i2xGgOX24BClbg-B1XTkE/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=1a1iElYeWjA2i2xGgOX24BClbg-B1XTkE",
+    "localFile": null,
+    "ddc": "410"
   },
   {
     "id": "book-1gsn8hmabkjm",
@@ -4914,7 +4960,7 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1GsN8hmAbkJme808Vi5avqb6TNjG0VDa5",
     "localFile": null,
     "callNumber": "DDC 005.13",
-    "catalogId": "AKSINU-LIB-228",
+    "catalogId": "AKSINU-LIB-230",
     "isbn": "978-602-8758-08-6",
     "ddc": "005.13"
   },
@@ -4924,8 +4970,8 @@ const BOOKS_DATA = [
     "author": "Pustaka AKSINU",
     "category": "Struktur Data & Algoritma",
     "callNumber": "DDC 005.13",
-    "catalogId": "AKSINU-LIB-229",
-    "isbn": "AKSINU-REF-229",
+    "catalogId": "AKSINU-LIB-231",
+    "isbn": "AKSINU-REF-231",
     "tags": [
       "teknologi",
       "komputer"
@@ -4944,8 +4990,8 @@ const BOOKS_DATA = [
     "author": "Pustaka AKSINU",
     "category": "Struktur Data & Algoritma",
     "callNumber": "DDC 005.13",
-    "catalogId": "AKSINU-LIB-230",
-    "isbn": "AKSINU-REF-230",
+    "catalogId": "AKSINU-LIB-232",
+    "isbn": "AKSINU-REF-232",
     "tags": [
       "teknologi",
       "komputer"
@@ -4976,8 +5022,8 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=11IytqfhRDoRIIKz5h-EAP37L2RcuCnWj",
     "localFile": null,
     "callNumber": "DDC 006.3",
-    "catalogId": "AKSINU-LIB-231",
-    "isbn": "AKSINU-REF-231",
+    "catalogId": "AKSINU-LIB-233",
+    "isbn": "AKSINU-REF-233",
     "ddc": "006.3"
   },
   {
@@ -4998,8 +5044,8 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1qJbWOzP_h_hgAC_UgFuqRKFkuihlDUdI",
     "localFile": null,
     "callNumber": "DDC 005.276",
-    "catalogId": "AKSINU-LIB-232",
-    "isbn": "AKSINU-REF-232",
+    "catalogId": "AKSINU-LIB-234",
+    "isbn": "AKSINU-REF-234",
     "ddc": "005.276"
   },
   {
@@ -5021,8 +5067,8 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1DfSvZyzIbz6gVwN6pPt0ZiGY8UW5VBoW",
     "localFile": "ebook/Membuat-CMS-Website-dengan-CodeIgniter.pdf",
     "callNumber": "DDC 005.276",
-    "catalogId": "AKSINU-LIB-233",
-    "isbn": "AKSINU-REF-233",
+    "catalogId": "AKSINU-LIB-235",
+    "isbn": "AKSINU-REF-235",
     "ddc": "005.276"
   },
   {
@@ -5044,8 +5090,8 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1hoCy_Yx1fAu1Px_RtHfHrbZ5PGoK9HRr",
     "localFile": null,
     "callNumber": "DDC 005.276",
-    "catalogId": "AKSINU-LIB-234",
-    "isbn": "AKSINU-REF-234",
+    "catalogId": "AKSINU-LIB-236",
+    "isbn": "AKSINU-REF-236",
     "ddc": "005.276"
   },
   {
@@ -5066,8 +5112,8 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1DPUQlqrfcSbxUX9d-3hvs5NQu1Y5mVme",
     "localFile": null,
     "callNumber": "DDC 001.42",
-    "catalogId": "AKSINU-LIB-235",
-    "isbn": "AKSINU-REF-235",
+    "catalogId": "AKSINU-LIB-237",
+    "isbn": "AKSINU-REF-237",
     "ddc": "001.42"
   },
   {
@@ -5088,8 +5134,8 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1W2ujsdLIFoJG9c9TAk2cFcM4jxz4SfyZ",
     "localFile": null,
     "callNumber": "DDC 001.42",
-    "catalogId": "AKSINU-LIB-236",
-    "isbn": "AKSINU-REF-236",
+    "catalogId": "AKSINU-LIB-238",
+    "isbn": "AKSINU-REF-238",
     "ddc": "001.42"
   },
   {
@@ -5112,7 +5158,7 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1EMhDO2QE6AV8csym7aKKCby0X9rcL8ma",
     "localFile": "ebook/Buku-Metode-Penelitian-Sugiyono.pdf",
     "callNumber": "DDC 001.42",
-    "catalogId": "AKSINU-LIB-237",
+    "catalogId": "AKSINU-LIB-239",
     "isbn": "978-602-8683-17-3",
     "ddc": "001.42"
   },
@@ -5122,8 +5168,8 @@ const BOOKS_DATA = [
     "author": "Pustaka AKSINU",
     "category": "Metodologi Riset",
     "callNumber": "DDC 001.42",
-    "catalogId": "AKSINU-LIB-238",
-    "isbn": "AKSINU-REF-238",
+    "catalogId": "AKSINU-LIB-240",
+    "isbn": "AKSINU-REF-240",
     "tags": [
       "metode penelitian",
       "riset",
@@ -5144,8 +5190,8 @@ const BOOKS_DATA = [
     "author": "Pustaka AKSINU",
     "category": "Metodologi Riset",
     "callNumber": "DDC 001.42",
-    "catalogId": "AKSINU-LIB-239",
-    "isbn": "AKSINU-REF-239",
+    "catalogId": "AKSINU-LIB-241",
+    "isbn": "AKSINU-REF-241",
     "tags": [
       "metode penelitian",
       "riset",
@@ -5166,8 +5212,8 @@ const BOOKS_DATA = [
     "author": "Dr. Hariyono",
     "category": "Metodologi Riset",
     "callNumber": "DDC 001.42",
-    "catalogId": "AKSINU-LIB-240",
-    "isbn": "AKSINU-REF-240",
+    "catalogId": "AKSINU-LIB-242",
+    "isbn": "AKSINU-REF-242",
     "tags": [
       "teknologi",
       "komputer"
@@ -5186,8 +5232,8 @@ const BOOKS_DATA = [
     "author": "Prof. Zainal A. Hasibuan, Ph.D.",
     "category": "Metodologi Riset",
     "callNumber": "DDC 001.42",
-    "catalogId": "AKSINU-LIB-241",
-    "isbn": "AKSINU-REF-241",
+    "catalogId": "AKSINU-LIB-243",
+    "isbn": "AKSINU-REF-243",
     "tags": [
       "metode penelitian",
       "riset",
@@ -5221,8 +5267,8 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=10CUSo-7fk63f8HHJnAnagSbji3C5FDUx",
     "localFile": null,
     "callNumber": "DDC 004.068",
-    "catalogId": "AKSINU-LIB-242",
-    "isbn": "AKSINU-REF-242",
+    "catalogId": "AKSINU-LIB-244",
+    "isbn": "AKSINU-REF-244",
     "ddc": "004.068"
   },
   {
@@ -5243,8 +5289,8 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1429RRg-BZTxrQiH6T6JEY5jkLntk7yCj",
     "localFile": null,
     "callNumber": "DDC 005.74",
-    "catalogId": "AKSINU-LIB-243",
-    "isbn": "AKSINU-REF-243",
+    "catalogId": "AKSINU-LIB-245",
+    "isbn": "AKSINU-REF-245",
     "ddc": "005.74"
   },
   {
@@ -5253,8 +5299,8 @@ const BOOKS_DATA = [
     "author": "Pustaka AKSINU",
     "category": "Mobile Development",
     "callNumber": "DDC 005.268",
-    "catalogId": "AKSINU-LIB-244",
-    "isbn": "AKSINU-REF-244",
+    "catalogId": "AKSINU-LIB-246",
+    "isbn": "AKSINU-REF-246",
     "tags": [
       "teknologi",
       "komputer"
@@ -5284,8 +5330,8 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1AvQ62qk_sxSJZjnc9GYm0E4vWkksj987",
     "localFile": null,
     "callNumber": "DDC 005.268",
-    "catalogId": "AKSINU-LIB-245",
-    "isbn": "AKSINU-REF-245",
+    "catalogId": "AKSINU-LIB-247",
+    "isbn": "AKSINU-REF-247",
     "ddc": "005.268"
   },
   {
@@ -5306,8 +5352,8 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1_SaucZqnWQDByKnSFQCHiZfKConAcAOk",
     "localFile": null,
     "callNumber": "DDC 005.276",
-    "catalogId": "AKSINU-LIB-246",
-    "isbn": "AKSINU-REF-246",
+    "catalogId": "AKSINU-LIB-248",
+    "isbn": "AKSINU-REF-248",
     "ddc": "005.276"
   },
   {
@@ -5329,8 +5375,8 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1D4gbXd0SYe6qtqeV2oACTuuH3XzcnQd0",
     "localFile": null,
     "callNumber": "DDC 004.6",
-    "catalogId": "AKSINU-LIB-247",
-    "isbn": "AKSINU-REF-247",
+    "catalogId": "AKSINU-LIB-249",
+    "isbn": "AKSINU-REF-249",
     "ddc": "004.6"
   },
   {
@@ -5352,8 +5398,8 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1NvQIWzKAhShK7Dta6TpCQgi9nJuxF7jo",
     "localFile": null,
     "callNumber": "DDC 006.6",
-    "catalogId": "AKSINU-LIB-248",
-    "isbn": "AKSINU-REF-248",
+    "catalogId": "AKSINU-LIB-250",
+    "isbn": "AKSINU-REF-250",
     "ddc": "006.6"
   },
   {
@@ -5374,8 +5420,8 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1Xw0ktez8O-0qyuRaAuJdjHR9EpmDBp5m",
     "localFile": null,
     "callNumber": "DDC 004.068",
-    "catalogId": "AKSINU-LIB-249",
-    "isbn": "AKSINU-REF-249",
+    "catalogId": "AKSINU-LIB-251",
+    "isbn": "AKSINU-REF-251",
     "ddc": "004.068"
   },
   {
@@ -5396,8 +5442,8 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1MYxgJCiPtCEXy6eMbSwPUD4qUr_Ph6qm",
     "localFile": null,
     "callNumber": "DDC 005.74",
-    "catalogId": "AKSINU-LIB-250",
-    "isbn": "AKSINU-REF-250",
+    "catalogId": "AKSINU-LIB-252",
+    "isbn": "AKSINU-REF-252",
     "ddc": "005.74"
   },
   {
@@ -5417,8 +5463,8 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1q7FYcpRNT2pSh0F7JS3l8MOXyS26ANXP",
     "localFile": null,
     "callNumber": "DDC 005.74",
-    "catalogId": "AKSINU-LIB-251",
-    "isbn": "AKSINU-REF-251",
+    "catalogId": "AKSINU-LIB-253",
+    "isbn": "AKSINU-REF-253",
     "ddc": "005.74"
   },
   {
@@ -5439,8 +5485,8 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1kYIqXs_c599Fn-cOeIzAEsTH5uWMLIIm",
     "localFile": null,
     "callNumber": "DDC 004.068",
-    "catalogId": "AKSINU-LIB-252",
-    "isbn": "AKSINU-REF-252",
+    "catalogId": "AKSINU-LIB-254",
+    "isbn": "AKSINU-REF-254",
     "ddc": "004.068"
   },
   {
@@ -5449,8 +5495,8 @@ const BOOKS_DATA = [
     "author": "Pustaka AKSINU",
     "category": "Java & OOP",
     "callNumber": "DDC 005.133",
-    "catalogId": "AKSINU-LIB-253",
-    "isbn": "AKSINU-REF-253",
+    "catalogId": "AKSINU-LIB-255",
+    "isbn": "AKSINU-REF-255",
     "tags": [
       "java",
       "oop",
@@ -5482,8 +5528,8 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1dVbCIl1iLNU6YNF6Gc3tsKfwFe54HPEY",
     "localFile": null,
     "callNumber": "DDC 005.133",
-    "catalogId": "AKSINU-LIB-254",
-    "isbn": "AKSINU-REF-254",
+    "catalogId": "AKSINU-LIB-256",
+    "isbn": "AKSINU-REF-256",
     "ddc": "005.133"
   },
   {
@@ -5505,8 +5551,8 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1rVRr4XDViz-gbEyljokeaCyGebf1EFh-",
     "localFile": null,
     "callNumber": "DDC 005.74",
-    "catalogId": "AKSINU-LIB-255",
-    "isbn": "AKSINU-REF-255",
+    "catalogId": "AKSINU-LIB-257",
+    "isbn": "AKSINU-REF-257",
     "ddc": "005.74"
   },
   {
@@ -5527,8 +5573,8 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1oB_jMuJvFdpmb5AgXKTgKXN6l9qxOMCn",
     "localFile": null,
     "callNumber": "DDC 004.068",
-    "catalogId": "AKSINU-LIB-256",
-    "isbn": "AKSINU-REF-256",
+    "catalogId": "AKSINU-LIB-258",
+    "isbn": "AKSINU-REF-258",
     "ddc": "004.068"
   },
   {
@@ -5549,8 +5595,8 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1oU080g63q5m6dqhhLzjRh5Jj1vVyC8xI",
     "localFile": null,
     "callNumber": "DDC 006.3",
-    "catalogId": "AKSINU-LIB-257",
-    "isbn": "AKSINU-REF-257",
+    "catalogId": "AKSINU-LIB-259",
+    "isbn": "AKSINU-REF-259",
     "ddc": "006.3"
   },
   {
@@ -5571,8 +5617,8 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1Nob6wak87R8Rr142BcWFKADrtZ4xE_p1",
     "localFile": null,
     "callNumber": "DDC 006.3",
-    "catalogId": "AKSINU-LIB-258",
-    "isbn": "AKSINU-REF-258",
+    "catalogId": "AKSINU-LIB-260",
+    "isbn": "AKSINU-REF-260",
     "ddc": "006.3"
   },
   {
@@ -5581,8 +5627,8 @@ const BOOKS_DATA = [
     "author": "Pustaka AKSINU",
     "category": "Jaringan Komputer",
     "callNumber": "DDC 004.6",
-    "catalogId": "AKSINU-LIB-259",
-    "isbn": "AKSINU-REF-259",
+    "catalogId": "AKSINU-LIB-261",
+    "isbn": "AKSINU-REF-261",
     "tags": [
       "jaringan komputer",
       "networking",
@@ -5615,8 +5661,8 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1CyprM6lL1_CsvOQbkLIKB9NGoxD3YKul",
     "localFile": null,
     "callNumber": "DDC 005.268",
-    "catalogId": "AKSINU-LIB-260",
-    "isbn": "AKSINU-REF-260",
+    "catalogId": "AKSINU-LIB-262",
+    "isbn": "AKSINU-REF-262",
     "ddc": "005.268"
   },
   {
@@ -5625,8 +5671,8 @@ const BOOKS_DATA = [
     "author": "Pustaka AKSINU",
     "category": "Python & Data Science",
     "callNumber": "DDC 005.133",
-    "catalogId": "AKSINU-LIB-261",
-    "isbn": "AKSINU-REF-261",
+    "catalogId": "AKSINU-LIB-263",
+    "isbn": "AKSINU-REF-263",
     "tags": [
       "teknologi",
       "komputer"
@@ -5645,8 +5691,8 @@ const BOOKS_DATA = [
     "author": "Pustaka AKSINU",
     "category": "Sistem Informasi",
     "callNumber": "DDC 004.068",
-    "catalogId": "AKSINU-LIB-262",
-    "isbn": "AKSINU-REF-262",
+    "catalogId": "AKSINU-LIB-264",
+    "isbn": "AKSINU-REF-264",
     "tags": [
       "teknologi",
       "komputer"
@@ -5678,8 +5724,8 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=11QAKpnMhVaUwUua_WsswxktBXkt8MJk8",
     "localFile": null,
     "callNumber": "DDC 005.276",
-    "catalogId": "AKSINU-LIB-263",
-    "isbn": "AKSINU-REF-263",
+    "catalogId": "AKSINU-LIB-265",
+    "isbn": "AKSINU-REF-265",
     "ddc": "005.276"
   },
   {
@@ -5688,8 +5734,8 @@ const BOOKS_DATA = [
     "author": "Eko Subiyantoro",
     "category": "Java & OOP",
     "callNumber": "DDC 005.133",
-    "catalogId": "AKSINU-LIB-264",
-    "isbn": "AKSINU-REF-264",
+    "catalogId": "AKSINU-LIB-266",
+    "isbn": "AKSINU-REF-266",
     "tags": [
       "teknologi",
       "komputer"
@@ -5708,8 +5754,8 @@ const BOOKS_DATA = [
     "author": "Pustaka AKSINU",
     "category": "Mobile Development",
     "callNumber": "DDC 005.268",
-    "catalogId": "AKSINU-LIB-265",
-    "isbn": "AKSINU-REF-265",
+    "catalogId": "AKSINU-LIB-267",
+    "isbn": "AKSINU-REF-267",
     "tags": [
       "mobile dev",
       "aplikasi seluler",
@@ -5730,8 +5776,8 @@ const BOOKS_DATA = [
     "author": "Pustaka AKSINU",
     "category": "Java & OOP",
     "callNumber": "DDC 005.133",
-    "catalogId": "AKSINU-LIB-266",
-    "isbn": "AKSINU-REF-266",
+    "catalogId": "AKSINU-LIB-268",
+    "isbn": "AKSINU-REF-268",
     "tags": [
       "java",
       "oop",
@@ -5764,8 +5810,8 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1iqQSPaRCbHY7dJrlbP07nHxaz2nO1KNY",
     "localFile": null,
     "callNumber": "DDC 005.133",
-    "catalogId": "AKSINU-LIB-267",
-    "isbn": "AKSINU-REF-267",
+    "catalogId": "AKSINU-LIB-269",
+    "isbn": "AKSINU-REF-269",
     "ddc": "005.133"
   },
   {
@@ -5774,8 +5820,8 @@ const BOOKS_DATA = [
     "author": "Pustaka AKSINU",
     "category": "Mobile Development",
     "callNumber": "DDC 005.268",
-    "catalogId": "AKSINU-LIB-268",
-    "isbn": "AKSINU-REF-268",
+    "catalogId": "AKSINU-LIB-270",
+    "isbn": "AKSINU-REF-270",
     "tags": [
       "mobile dev",
       "aplikasi seluler",
@@ -5796,8 +5842,8 @@ const BOOKS_DATA = [
     "author": "Pustaka AKSINU",
     "category": "JavaScript & Web",
     "callNumber": "DDC 005.276",
-    "catalogId": "AKSINU-LIB-269",
-    "isbn": "AKSINU-REF-269",
+    "catalogId": "AKSINU-LIB-271",
+    "isbn": "AKSINU-REF-271",
     "tags": [
       "javascript",
       "web",
@@ -5818,8 +5864,8 @@ const BOOKS_DATA = [
     "author": "Pustaka AKSINU",
     "category": "JavaScript & Web",
     "callNumber": "DDC 005.276",
-    "catalogId": "AKSINU-LIB-270",
-    "isbn": "AKSINU-REF-270",
+    "catalogId": "AKSINU-LIB-272",
+    "isbn": "AKSINU-REF-272",
     "tags": [
       "javascript",
       "web",
@@ -5840,8 +5886,8 @@ const BOOKS_DATA = [
     "author": "UNESCO Education Sector",
     "category": "JavaScript & Web",
     "callNumber": "DDC 005.276",
-    "catalogId": "AKSINU-LIB-271",
-    "isbn": "AKSINU-REF-271",
+    "catalogId": "AKSINU-LIB-273",
+    "isbn": "AKSINU-REF-273",
     "tags": [
       "javascript",
       "web",
@@ -5862,8 +5908,8 @@ const BOOKS_DATA = [
     "author": "Evi Lestari, M.Kom.",
     "category": "JavaScript & Web",
     "callNumber": "DDC 005.276",
-    "catalogId": "AKSINU-LIB-272",
-    "isbn": "AKSINU-REF-272",
+    "catalogId": "AKSINU-LIB-274",
+    "isbn": "AKSINU-REF-274",
     "tags": [
       "javascript",
       "web",
@@ -5884,8 +5930,8 @@ const BOOKS_DATA = [
     "author": "Pustaka AKSINU",
     "category": "JavaScript & Web",
     "callNumber": "DDC 005.276",
-    "catalogId": "AKSINU-LIB-273",
-    "isbn": "AKSINU-REF-273",
+    "catalogId": "AKSINU-LIB-275",
+    "isbn": "AKSINU-REF-275",
     "tags": [
       "javascript",
       "web",
@@ -5904,41 +5950,70 @@ const BOOKS_DATA = [
     "id": "book-1p6okdwkjmdv",
     "title": "Pendidikan Agama Islam di Perguruan Tinggi",
     "author": "Pustaka AKSINU",
-    "category": "Ilmu Komputer",
-    "callNumber": "DDC 004",
-    "catalogId": "AKSINU-LIB-274",
-    "isbn": "AKSINU-REF-274",
+    "category": "Agama & Keislaman",
+    "callNumber": "DDC 297",
+    "catalogId": "AKSINU-LIB-276",
+    "isbn": "AKSINU-REF-276",
     "tags": [
-      "teknologi",
-      "komputer"
+      "agama islam",
+      "pai",
+      "keislaman",
+      "akhlak",
+      "mkdu"
     ],
     "size": "PDF",
-    "description": "Buku panduan dan referensi mengenai Pendidikan Agama Islam di Perguruan Tinggi untuk memperdalam literasi teknologi informasi.",
+    "description": "Buku teks Pendidikan Agama Islam di perguruan tinggi untuk pembinaan akhlak mulia, tauhid, fiqih ibadah, dan moderasi beragama.",
     "googleDriveId": "1p6OkdWkJmdvYd0nrZBJpeEuaTn4GykTE",
     "previewUrl": "https://drive.google.com/file/d/1p6OkdWkJmdvYd0nrZBJpeEuaTn4GykTE/preview",
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1p6OkdWkJmdvYd0nrZBJpeEuaTn4GykTE",
     "localFile": null,
-    "ddc": "004"
+    "ddc": "297"
   },
   {
     "id": "book-1edmnlmadkti",
     "title": "Pendidikan Kewarganegaraan",
     "author": "Pustaka AKSINU",
-    "category": "Ilmu Komputer",
-    "callNumber": "DDC 004",
-    "catalogId": "AKSINU-LIB-275",
-    "isbn": "AKSINU-REF-275",
+    "category": "Pancasila & Kewarganegaraan",
+    "callNumber": "DDC 320",
+    "catalogId": "AKSINU-LIB-277",
+    "isbn": "AKSINU-REF-277",
     "tags": [
-      "teknologi",
-      "komputer"
+      "kewarganegaraan",
+      "pancasila",
+      "pkn",
+      "mkwk",
+      "konstitusi"
     ],
     "size": "PDF",
-    "description": "Buku panduan dan referensi mengenai Buku Modul Mkwk Pendidikan Kewarganegaraan untuk memperdalam literasi teknologi informasi.",
+    "description": "Buku ajar Pendidikan Kewarganegaraan (PKn / MKWK) mengenai wawasan nusantara, ketahanan nasional, hak & kewajiban warga negara, serta konstitusi Indonesia.",
     "googleDriveId": "1eDmNLMADKtIbp71R7Yphqpx22lf4lzo9",
     "previewUrl": "https://drive.google.com/file/d/1eDmNLMADKtIbp71R7Yphqpx22lf4lzo9/preview",
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1eDmNLMADKtIbp71R7Yphqpx22lf4lzo9",
     "localFile": null,
-    "ddc": "004"
+    "ddc": "320"
+  },
+  {
+    "id": "book-1m9kut34vfl-",
+    "title": "Pengajaran Bahasa Inggris dalam Kurikulum Merdeka",
+    "author": "Tim Dosen Bahasa Inggris",
+    "category": "Bahasa & Komunikasi",
+    "callNumber": "DDC 420",
+    "catalogId": "AKSINU-LIB-278",
+    "isbn": "AKSINU-REF-278",
+    "tags": [
+      "bahasa inggris",
+      "english",
+      "kurikulum merdeka",
+      "mkdu",
+      "komunikasi akademik"
+    ],
+    "size": "PDF",
+    "description": "Buku referensi pembelajaran dan pengajaran Bahasa Inggris kontekstual berbasis Kurikulum Merdeka di perguruan tinggi untuk mengasah keterampilan membaca, menulis, dan komunikasi akademik.",
+    "googleDriveId": "1m9KuT34VfLdX_XXNfK0VvY4tz7zOGpXm",
+    "previewUrl": "https://drive.google.com/file/d/1m9KuT34VfLdX_XXNfK0VvY4tz7zOGpXm/preview",
+    "downloadUrl": "https://drive.google.com/uc?export=download&id=1m9KuT34VfLdX_XXNfK0VvY4tz7zOGpXm",
+    "localFile": null,
+    "ddc": "420"
   },
   {
     "id": "book-1hh6bs1b2ppi",
@@ -5946,8 +6021,8 @@ const BOOKS_DATA = [
     "author": "Pustaka AKSINU",
     "category": "Database & SQL",
     "callNumber": "DDC 005.74",
-    "catalogId": "AKSINU-LIB-276",
-    "isbn": "AKSINU-REF-276",
+    "catalogId": "AKSINU-LIB-279",
+    "isbn": "AKSINU-REF-279",
     "tags": [
       "basis data",
       "database",
@@ -5968,8 +6043,8 @@ const BOOKS_DATA = [
     "author": "Pustaka AKSINU",
     "category": "Database & SQL",
     "callNumber": "DDC 005.74",
-    "catalogId": "AKSINU-LIB-277",
-    "isbn": "AKSINU-REF-277",
+    "catalogId": "AKSINU-LIB-280",
+    "isbn": "AKSINU-REF-280",
     "tags": [
       "basis data",
       "database",
@@ -6001,8 +6076,8 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1hzDimM-6NOR7-LiaS-8O3o0YtIN-mk8n",
     "localFile": null,
     "callNumber": "DDC 658.4038",
-    "catalogId": "AKSINU-LIB-278",
-    "isbn": "AKSINU-REF-278",
+    "catalogId": "AKSINU-LIB-281",
+    "isbn": "AKSINU-REF-281",
     "ddc": "658.4038"
   },
   {
@@ -6011,8 +6086,8 @@ const BOOKS_DATA = [
     "author": "Pustaka AKSINU",
     "category": "Python & Data Science",
     "callNumber": "DDC 005.133",
-    "catalogId": "AKSINU-LIB-279",
-    "isbn": "AKSINU-REF-279",
+    "catalogId": "AKSINU-LIB-282",
+    "isbn": "AKSINU-REF-282",
     "tags": [
       "teknologi",
       "komputer"
@@ -6031,8 +6106,8 @@ const BOOKS_DATA = [
     "author": "Pustaka AKSINU",
     "category": "Ilmu Komputer",
     "callNumber": "DDC 004",
-    "catalogId": "AKSINU-LIB-280",
-    "isbn": "AKSINU-REF-280",
+    "catalogId": "AKSINU-LIB-283",
+    "isbn": "AKSINU-REF-283",
     "tags": [
       "teknologi",
       "komputer"
@@ -6063,8 +6138,8 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=13rZE64beDrRbzoHc0tjCCTbmNiXPkCqT",
     "localFile": null,
     "callNumber": "DDC 004.6",
-    "catalogId": "AKSINU-LIB-281",
-    "isbn": "AKSINU-REF-281",
+    "catalogId": "AKSINU-LIB-284",
+    "isbn": "AKSINU-REF-284",
     "ddc": "004.6"
   },
   {
@@ -6084,8 +6159,8 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1xEDQk-yHZHxJdxmeTol2Su5QKYBPLeXy",
     "localFile": null,
     "callNumber": "DDC 004.068",
-    "catalogId": "AKSINU-LIB-282",
-    "isbn": "AKSINU-REF-282",
+    "catalogId": "AKSINU-LIB-285",
+    "isbn": "AKSINU-REF-285",
     "ddc": "004.068"
   },
   {
@@ -6105,8 +6180,8 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1EKSqdGeMPVO5CdEJ_aY3citEX-trJmZS",
     "localFile": null,
     "callNumber": "DDC 658.4038",
-    "catalogId": "AKSINU-LIB-283",
-    "isbn": "AKSINU-REF-283",
+    "catalogId": "AKSINU-LIB-286",
+    "isbn": "AKSINU-REF-286",
     "ddc": "658.4038"
   },
   {
@@ -6115,8 +6190,8 @@ const BOOKS_DATA = [
     "author": "Pustaka AKSINU",
     "category": "Manajemen & Bisnis",
     "callNumber": "DDC 658.4038",
-    "catalogId": "AKSINU-LIB-284",
-    "isbn": "AKSINU-REF-284",
+    "catalogId": "AKSINU-LIB-287",
+    "isbn": "AKSINU-REF-287",
     "tags": [
       "manajemen",
       "bisnis",
@@ -6137,8 +6212,8 @@ const BOOKS_DATA = [
     "author": "Pustaka AKSINU",
     "category": "Struktur Data & Algoritma",
     "callNumber": "DDC 005.13",
-    "catalogId": "AKSINU-LIB-285",
-    "isbn": "AKSINU-REF-285",
+    "catalogId": "AKSINU-LIB-288",
+    "isbn": "AKSINU-REF-288",
     "tags": [
       "teknologi",
       "komputer"
@@ -6157,8 +6232,8 @@ const BOOKS_DATA = [
     "author": "Pustaka AKSINU",
     "category": "Python & Data Science",
     "callNumber": "DDC 005.133",
-    "catalogId": "AKSINU-LIB-286",
-    "isbn": "AKSINU-REF-286",
+    "catalogId": "AKSINU-LIB-289",
+    "isbn": "AKSINU-REF-289",
     "tags": [
       "python",
       "data science",
@@ -6178,8 +6253,8 @@ const BOOKS_DATA = [
     "author": "Pustaka AKSINU",
     "category": "Python & Data Science",
     "callNumber": "DDC 005.133",
-    "catalogId": "AKSINU-LIB-287",
-    "isbn": "AKSINU-REF-287",
+    "catalogId": "AKSINU-LIB-290",
+    "isbn": "AKSINU-REF-290",
     "tags": [
       "python",
       "data science",
@@ -6199,8 +6274,8 @@ const BOOKS_DATA = [
     "author": "Pustaka AKSINU",
     "category": "Database & SQL",
     "callNumber": "DDC 005.74",
-    "catalogId": "AKSINU-LIB-288",
-    "isbn": "AKSINU-REF-288",
+    "catalogId": "AKSINU-LIB-291",
+    "isbn": "AKSINU-REF-291",
     "tags": [
       "basis data",
       "database",
@@ -6221,8 +6296,8 @@ const BOOKS_DATA = [
     "author": "Pustaka AKSINU",
     "category": "Sistem Informasi",
     "callNumber": "DDC 004.068",
-    "catalogId": "AKSINU-LIB-289",
-    "isbn": "AKSINU-REF-289",
+    "catalogId": "AKSINU-LIB-292",
+    "isbn": "AKSINU-REF-292",
     "tags": [
       "teknologi",
       "komputer"
@@ -6252,8 +6327,8 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1gIWzNJ4eIWNuBvaFANQu9F1YKG-0t5KC",
     "localFile": null,
     "callNumber": "DDC 004.068",
-    "catalogId": "AKSINU-LIB-290",
-    "isbn": "AKSINU-REF-290",
+    "catalogId": "AKSINU-LIB-293",
+    "isbn": "AKSINU-REF-293",
     "ddc": "004.068"
   },
   {
@@ -6262,8 +6337,8 @@ const BOOKS_DATA = [
     "author": "Pustaka AKSINU",
     "category": "Sistem Informasi",
     "callNumber": "DDC 004.068",
-    "catalogId": "AKSINU-LIB-291",
-    "isbn": "AKSINU-REF-291",
+    "catalogId": "AKSINU-LIB-294",
+    "isbn": "AKSINU-REF-294",
     "tags": [
       "sistem informasi",
       "analisis sistem",
@@ -6294,8 +6369,8 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1D4ViEQLflUUrqIEnEaBPL31LjdrDcH9p",
     "localFile": null,
     "callNumber": "DDC 005.74",
-    "catalogId": "AKSINU-LIB-292",
-    "isbn": "AKSINU-REF-292",
+    "catalogId": "AKSINU-LIB-295",
+    "isbn": "AKSINU-REF-295",
     "ddc": "005.74"
   },
   {
@@ -6304,8 +6379,8 @@ const BOOKS_DATA = [
     "author": "Pustaka AKSINU",
     "category": "Struktur Data & Algoritma",
     "callNumber": "DDC 005.13",
-    "catalogId": "AKSINU-LIB-293",
-    "isbn": "AKSINU-REF-293",
+    "catalogId": "AKSINU-LIB-296",
+    "isbn": "AKSINU-REF-296",
     "tags": [
       "struktur data",
       "algoritma",
@@ -6326,8 +6401,8 @@ const BOOKS_DATA = [
     "author": "Pustaka AKSINU",
     "category": "Manajemen & Bisnis",
     "callNumber": "DDC 658.4038",
-    "catalogId": "AKSINU-LIB-294",
-    "isbn": "AKSINU-REF-294",
+    "catalogId": "AKSINU-LIB-297",
+    "isbn": "AKSINU-REF-297",
     "tags": [
       "teknologi",
       "komputer"
@@ -6346,8 +6421,8 @@ const BOOKS_DATA = [
     "author": "Pustaka AKSINU",
     "category": "Ilmu Komputer",
     "callNumber": "DDC 004",
-    "catalogId": "AKSINU-LIB-295",
-    "isbn": "AKSINU-REF-295",
+    "catalogId": "AKSINU-LIB-298",
+    "isbn": "AKSINU-REF-298",
     "tags": [
       "computer science",
       "ilmu komputer",
@@ -6367,8 +6442,8 @@ const BOOKS_DATA = [
     "author": "UNESCO Education Sector",
     "category": "Ilmu Komputer",
     "callNumber": "DDC 004",
-    "catalogId": "AKSINU-LIB-296",
-    "isbn": "AKSINU-REF-296",
+    "catalogId": "AKSINU-LIB-299",
+    "isbn": "AKSINU-REF-299",
     "tags": [
       "computer science",
       "ilmu komputer",
@@ -6388,8 +6463,8 @@ const BOOKS_DATA = [
     "author": "Pustaka AKSINU",
     "category": "Ilmu Komputer",
     "callNumber": "DDC 004",
-    "catalogId": "AKSINU-LIB-297",
-    "isbn": "AKSINU-REF-297",
+    "catalogId": "AKSINU-LIB-300",
+    "isbn": "AKSINU-REF-300",
     "tags": [
       "teknologi",
       "komputer"
@@ -6408,8 +6483,8 @@ const BOOKS_DATA = [
     "author": "Pustaka AKSINU",
     "category": "JavaScript & Web",
     "callNumber": "DDC 005.276",
-    "catalogId": "AKSINU-LIB-298",
-    "isbn": "AKSINU-REF-298",
+    "catalogId": "AKSINU-LIB-301",
+    "isbn": "AKSINU-REF-301",
     "tags": [
       "javascript",
       "web",
@@ -6430,8 +6505,8 @@ const BOOKS_DATA = [
     "author": "I. Ali",
     "category": "JavaScript & Web",
     "callNumber": "DDC 005.276",
-    "catalogId": "AKSINU-LIB-299",
-    "isbn": "AKSINU-REF-299",
+    "catalogId": "AKSINU-LIB-302",
+    "isbn": "AKSINU-REF-302",
     "tags": [
       "javascript",
       "web",
@@ -6464,8 +6539,8 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1MFK8R2bDma-CQ5RzF0c0s8RJ3EMzDMm5",
     "localFile": null,
     "callNumber": "DDC 005.276",
-    "catalogId": "AKSINU-LIB-300",
-    "isbn": "AKSINU-REF-300",
+    "catalogId": "AKSINU-LIB-303",
+    "isbn": "AKSINU-REF-303",
     "ddc": "005.276"
   },
   {
@@ -6486,8 +6561,8 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=16PL4CypLyi7HD8qaTqk9S4EDsKdr9XSA",
     "localFile": null,
     "callNumber": "DDC 005.133",
-    "catalogId": "AKSINU-LIB-301",
-    "isbn": "AKSINU-REF-301",
+    "catalogId": "AKSINU-LIB-304",
+    "isbn": "AKSINU-REF-304",
     "ddc": "005.133"
   },
   {
@@ -6508,8 +6583,8 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1zwnGju1fJ84SZcieM151eu6_LXlsOgY3",
     "localFile": null,
     "callNumber": "DDC 005.268",
-    "catalogId": "AKSINU-LIB-302",
-    "isbn": "AKSINU-REF-302",
+    "catalogId": "AKSINU-LIB-305",
+    "isbn": "AKSINU-REF-305",
     "ddc": "005.268"
   },
   {
@@ -6518,8 +6593,8 @@ const BOOKS_DATA = [
     "author": "Pustaka AKSINU",
     "category": "Manajemen & Bisnis",
     "callNumber": "DDC 658.4038",
-    "catalogId": "AKSINU-LIB-303",
-    "isbn": "AKSINU-REF-303",
+    "catalogId": "AKSINU-LIB-306",
+    "isbn": "AKSINU-REF-306",
     "tags": [
       "manajemen",
       "bisnis",
@@ -6551,8 +6626,8 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1YZ_xGG7ja63i3y2YAKyuic0sATlUwuvP",
     "localFile": null,
     "callNumber": "DDC 005.276",
-    "catalogId": "AKSINU-LIB-304",
-    "isbn": "AKSINU-REF-304",
+    "catalogId": "AKSINU-LIB-307",
+    "isbn": "AKSINU-REF-307",
     "ddc": "005.276"
   },
   {
@@ -6572,8 +6647,8 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1BhNla-vCiuLLztQeHYHGV6GD17LL2UOV",
     "localFile": null,
     "callNumber": "DDC 005.268",
-    "catalogId": "AKSINU-LIB-305",
-    "isbn": "AKSINU-REF-305",
+    "catalogId": "AKSINU-LIB-308",
+    "isbn": "AKSINU-REF-308",
     "ddc": "005.268"
   },
   {
@@ -6582,8 +6657,8 @@ const BOOKS_DATA = [
     "author": "Pustaka AKSINU",
     "category": "Python & Data Science",
     "callNumber": "DDC 005.133",
-    "catalogId": "AKSINU-LIB-306",
-    "isbn": "AKSINU-REF-306",
+    "catalogId": "AKSINU-LIB-309",
+    "isbn": "AKSINU-REF-309",
     "tags": [
       "python",
       "data science",
@@ -6615,8 +6690,8 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=17tpCdlj99DDYqixIlZ4IiNm5rKf2Z4nR",
     "localFile": null,
     "callNumber": "DDC 005.133",
-    "catalogId": "AKSINU-LIB-307",
-    "isbn": "AKSINU-REF-307",
+    "catalogId": "AKSINU-LIB-310",
+    "isbn": "AKSINU-REF-310",
     "ddc": "005.133"
   },
   {
@@ -6637,8 +6712,8 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1Nml3BUYmfT0cS0VrJrfRO1sNZsDzdUkh",
     "localFile": null,
     "callNumber": "DDC 005.133",
-    "catalogId": "AKSINU-LIB-308",
-    "isbn": "AKSINU-REF-308",
+    "catalogId": "AKSINU-LIB-311",
+    "isbn": "AKSINU-REF-311",
     "ddc": "005.133"
   },
   {
@@ -6659,8 +6734,8 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1uNjOjIdKgLYJSw80JuniMZM8lkaAu_u4",
     "localFile": null,
     "callNumber": "DDC 005.133",
-    "catalogId": "AKSINU-LIB-309",
-    "isbn": "AKSINU-REF-309",
+    "catalogId": "AKSINU-LIB-312",
+    "isbn": "AKSINU-REF-312",
     "ddc": "005.133"
   },
   {
@@ -6680,8 +6755,8 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=17HWsRcTIbgwuEZVEmEfkRbNGLi1VPo68",
     "localFile": null,
     "callNumber": "DDC 006.3",
-    "catalogId": "AKSINU-LIB-310",
-    "isbn": "AKSINU-REF-310",
+    "catalogId": "AKSINU-LIB-313",
+    "isbn": "AKSINU-REF-313",
     "ddc": "006.3"
   },
   {
@@ -6703,8 +6778,8 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1-76WswwJGNFYdJxf1WGuoQfW_rx-IAip",
     "localFile": null,
     "callNumber": "DDC 006.3",
-    "catalogId": "AKSINU-LIB-311",
-    "isbn": "AKSINU-REF-311",
+    "catalogId": "AKSINU-LIB-314",
+    "isbn": "AKSINU-REF-314",
     "ddc": "006.3"
   },
   {
@@ -6725,8 +6800,8 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1Aa9KCyq-3_Eb8LpU3wmMhQJV4RDT43zh",
     "localFile": null,
     "callNumber": "DDC 005.133",
-    "catalogId": "AKSINU-LIB-312",
-    "isbn": "AKSINU-REF-312",
+    "catalogId": "AKSINU-LIB-315",
+    "isbn": "AKSINU-REF-315",
     "ddc": "005.133"
   },
   {
@@ -6747,8 +6822,8 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=10fJWKYmPrNyF0mW7OjNjXEdU9AxWOa3D",
     "localFile": null,
     "callNumber": "DDC 005.133",
-    "catalogId": "AKSINU-LIB-313",
-    "isbn": "AKSINU-REF-313",
+    "catalogId": "AKSINU-LIB-316",
+    "isbn": "AKSINU-REF-316",
     "ddc": "005.133"
   },
   {
@@ -6769,8 +6844,8 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1wuGtcRoh7MHWhAmTQfhIMPqZPgysKz8Q",
     "localFile": null,
     "callNumber": "DDC 005.133",
-    "catalogId": "AKSINU-LIB-314",
-    "isbn": "AKSINU-REF-314",
+    "catalogId": "AKSINU-LIB-317",
+    "isbn": "AKSINU-REF-317",
     "ddc": "005.133"
   },
   {
@@ -6791,8 +6866,8 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1W9jxSFOwDlc_dWidZDUZTBLBVYK4cfqr",
     "localFile": null,
     "callNumber": "DDC 005.133",
-    "catalogId": "AKSINU-LIB-315",
-    "isbn": "AKSINU-REF-315",
+    "catalogId": "AKSINU-LIB-318",
+    "isbn": "AKSINU-REF-318",
     "ddc": "005.133"
   },
   {
@@ -6813,8 +6888,8 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1LRdkPXNP_HG_W3evLFuQpaJ_3YOu2Cbp",
     "localFile": null,
     "callNumber": "DDC 005.133",
-    "catalogId": "AKSINU-LIB-316",
-    "isbn": "AKSINU-REF-316",
+    "catalogId": "AKSINU-LIB-319",
+    "isbn": "AKSINU-REF-319",
     "ddc": "005.133"
   },
   {
@@ -6834,8 +6909,8 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1_ScGRRwEalaKVU6GoyWBg2XcBkkOHRLp",
     "localFile": null,
     "callNumber": "DDC 005.133",
-    "catalogId": "AKSINU-LIB-317",
-    "isbn": "AKSINU-REF-317",
+    "catalogId": "AKSINU-LIB-320",
+    "isbn": "AKSINU-REF-320",
     "ddc": "005.133"
   },
   {
@@ -6855,8 +6930,8 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1vvhzQmFPlMlVN7LxQiZ1qIWohexkSFQV",
     "localFile": null,
     "callNumber": "DDC 005.133",
-    "catalogId": "AKSINU-LIB-318",
-    "isbn": "AKSINU-REF-318",
+    "catalogId": "AKSINU-LIB-321",
+    "isbn": "AKSINU-REF-321",
     "ddc": "005.133"
   },
   {
@@ -6876,8 +6951,8 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=19LC0Rru_8GNTQAZ_RIdAXgfMTXPB3OGS",
     "localFile": null,
     "callNumber": "DDC 005.133",
-    "catalogId": "AKSINU-LIB-319",
-    "isbn": "AKSINU-REF-319",
+    "catalogId": "AKSINU-LIB-322",
+    "isbn": "AKSINU-REF-322",
     "ddc": "005.133"
   },
   {
@@ -6897,8 +6972,8 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1rsUqBSurhBoULxfATj3qudE6KGwR_jo8",
     "localFile": null,
     "callNumber": "DDC 006.3",
-    "catalogId": "AKSINU-LIB-320",
-    "isbn": "AKSINU-REF-320",
+    "catalogId": "AKSINU-LIB-323",
+    "isbn": "AKSINU-REF-323",
     "ddc": "006.3"
   },
   {
@@ -6919,8 +6994,8 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1Y55bPDih7VESFq0fw9pDeAAFnLLoFNar",
     "localFile": null,
     "callNumber": "DDC 005.133",
-    "catalogId": "AKSINU-LIB-321",
-    "isbn": "AKSINU-REF-321",
+    "catalogId": "AKSINU-LIB-324",
+    "isbn": "AKSINU-REF-324",
     "ddc": "005.133"
   },
   {
@@ -6941,8 +7016,8 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1IGcVaw1molvIhxEFTY3JXCtRjToJwPuG",
     "localFile": null,
     "callNumber": "DDC 006.3",
-    "catalogId": "AKSINU-LIB-322",
-    "isbn": "AKSINU-REF-322",
+    "catalogId": "AKSINU-LIB-325",
+    "isbn": "AKSINU-REF-325",
     "ddc": "006.3"
   },
   {
@@ -6951,8 +7026,8 @@ const BOOKS_DATA = [
     "author": "Pustaka AKSINU",
     "category": "Python & Data Science",
     "callNumber": "DDC 005.133",
-    "catalogId": "AKSINU-LIB-323",
-    "isbn": "AKSINU-REF-323",
+    "catalogId": "AKSINU-LIB-326",
+    "isbn": "AKSINU-REF-326",
     "tags": [
       "python",
       "data science",
@@ -6984,8 +7059,8 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1BNAyJ4ht7vgcMODwCTkeT33l0bRJ2n_Q",
     "localFile": null,
     "callNumber": "DDC 005.276",
-    "catalogId": "AKSINU-LIB-324",
-    "isbn": "AKSINU-REF-324",
+    "catalogId": "AKSINU-LIB-327",
+    "isbn": "AKSINU-REF-327",
     "ddc": "005.276"
   },
   {
@@ -7006,8 +7081,8 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1PRQ4emNseSH27Pa9Mw2xtHoXn_qJxC4D",
     "localFile": null,
     "callNumber": "DDC 005.276",
-    "catalogId": "AKSINU-LIB-325",
-    "isbn": "AKSINU-REF-325",
+    "catalogId": "AKSINU-LIB-328",
+    "isbn": "AKSINU-REF-328",
     "ddc": "005.276"
   },
   {
@@ -7027,8 +7102,8 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1khh5tU6EdibETlYLvB99JfHNP6FO2paW",
     "localFile": null,
     "callNumber": "DDC 005.276",
-    "catalogId": "AKSINU-LIB-326",
-    "isbn": "AKSINU-REF-326",
+    "catalogId": "AKSINU-LIB-329",
+    "isbn": "AKSINU-REF-329",
     "ddc": "005.276"
   },
   {
@@ -7049,8 +7124,8 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1GtHsWfs7Zzzy1AOtxA1IQhnw7MT_LueL",
     "localFile": null,
     "callNumber": "DDC 005.276",
-    "catalogId": "AKSINU-LIB-327",
-    "isbn": "AKSINU-REF-327",
+    "catalogId": "AKSINU-LIB-330",
+    "isbn": "AKSINU-REF-330",
     "ddc": "005.276"
   },
   {
@@ -7059,8 +7134,8 @@ const BOOKS_DATA = [
     "author": "Pustaka Rekayasa",
     "category": "Sistem Informasi",
     "callNumber": "DDC 004.068",
-    "catalogId": "AKSINU-LIB-328",
-    "isbn": "AKSINU-REF-328",
+    "catalogId": "AKSINU-LIB-331",
+    "isbn": "AKSINU-REF-331",
     "tags": [
       "teknologi",
       "komputer"
@@ -7079,8 +7154,8 @@ const BOOKS_DATA = [
     "author": "Mei Lenawati, M.Kom.",
     "category": "Sistem Informasi",
     "callNumber": "DDC 004.068",
-    "catalogId": "AKSINU-LIB-329",
-    "isbn": "AKSINU-REF-329",
+    "catalogId": "AKSINU-LIB-332",
+    "isbn": "AKSINU-REF-332",
     "tags": [
       "sistem informasi",
       "riset",
@@ -7100,8 +7175,8 @@ const BOOKS_DATA = [
     "author": "Pustaka AKSINU",
     "category": "Manajemen & Bisnis",
     "callNumber": "DDC 658.4038",
-    "catalogId": "AKSINU-LIB-330",
-    "isbn": "AKSINU-REF-330",
+    "catalogId": "AKSINU-LIB-333",
+    "isbn": "AKSINU-REF-333",
     "tags": [
       "teknologi",
       "komputer"
@@ -7132,8 +7207,8 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1lBtuIAl-Nv2_M7TDN3aClhfxnnEOlFG2",
     "localFile": null,
     "callNumber": "DDC 005.133",
-    "catalogId": "AKSINU-LIB-331",
-    "isbn": "AKSINU-REF-331",
+    "catalogId": "AKSINU-LIB-334",
+    "isbn": "AKSINU-REF-334",
     "ddc": "005.133"
   },
   {
@@ -7153,8 +7228,8 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1H6w61zR-k3huIoLIVNLGYDkeMbaTLfJ3",
     "localFile": null,
     "callNumber": "DDC 005.276",
-    "catalogId": "AKSINU-LIB-332",
-    "isbn": "AKSINU-REF-332",
+    "catalogId": "AKSINU-LIB-335",
+    "isbn": "AKSINU-REF-335",
     "ddc": "005.276"
   },
   {
@@ -7163,8 +7238,8 @@ const BOOKS_DATA = [
     "author": "Pustaka AKSINU",
     "category": "Database & SQL",
     "callNumber": "DDC 005.74",
-    "catalogId": "AKSINU-LIB-333",
-    "isbn": "AKSINU-REF-333",
+    "catalogId": "AKSINU-LIB-336",
+    "isbn": "AKSINU-REF-336",
     "tags": [
       "basis data",
       "database",
@@ -7197,8 +7272,8 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1P0SAUR_7uagXtvP40mJJeuhAUMVh_ggN",
     "localFile": null,
     "callNumber": "DDC 005.74",
-    "catalogId": "AKSINU-LIB-334",
-    "isbn": "AKSINU-REF-334",
+    "catalogId": "AKSINU-LIB-337",
+    "isbn": "AKSINU-REF-337",
     "ddc": "005.74"
   },
   {
@@ -7207,8 +7282,8 @@ const BOOKS_DATA = [
     "author": "Pustaka AKSINU",
     "category": "Sistem Informasi",
     "callNumber": "DDC 004.068",
-    "catalogId": "AKSINU-LIB-335",
-    "isbn": "AKSINU-REF-335",
+    "catalogId": "AKSINU-LIB-338",
+    "isbn": "AKSINU-REF-338",
     "tags": [
       "sistem informasi",
       "analisis sistem",
@@ -7240,8 +7315,8 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1KskBdO1VuPARnyppb-o4iHYiO6rRwQMW",
     "localFile": null,
     "callNumber": "DDC 004.068",
-    "catalogId": "AKSINU-LIB-336",
-    "isbn": "AKSINU-REF-336",
+    "catalogId": "AKSINU-LIB-339",
+    "isbn": "AKSINU-REF-339",
     "ddc": "004.068"
   },
   {
@@ -7250,8 +7325,8 @@ const BOOKS_DATA = [
     "author": "Pustaka AKSINU",
     "category": "Sistem Informasi",
     "callNumber": "DDC 004.068",
-    "catalogId": "AKSINU-LIB-337",
-    "isbn": "AKSINU-REF-337",
+    "catalogId": "AKSINU-LIB-340",
+    "isbn": "AKSINU-REF-340",
     "tags": [
       "sistem informasi",
       "analisis sistem",
@@ -7283,8 +7358,8 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1x5fJzAKQ6KRMqQAc6Z8U0VgMBFZKms-U",
     "localFile": null,
     "callNumber": "DDC 004.068",
-    "catalogId": "AKSINU-LIB-338",
-    "isbn": "AKSINU-REF-338",
+    "catalogId": "AKSINU-LIB-341",
+    "isbn": "AKSINU-REF-341",
     "ddc": "004.068"
   },
   {
@@ -7293,8 +7368,8 @@ const BOOKS_DATA = [
     "author": "Pustaka AKSINU",
     "category": "Sistem Operasi & Arsitektur",
     "callNumber": "DDC 005.43",
-    "catalogId": "AKSINU-LIB-339",
-    "isbn": "AKSINU-REF-339",
+    "catalogId": "AKSINU-LIB-342",
+    "isbn": "AKSINU-REF-342",
     "tags": [
       "sistem operasi",
       "os",
@@ -7315,8 +7390,8 @@ const BOOKS_DATA = [
     "author": "Pustaka AKSINU",
     "category": "Sistem Operasi & Arsitektur",
     "callNumber": "DDC 005.43",
-    "catalogId": "AKSINU-LIB-340",
-    "isbn": "AKSINU-REF-340",
+    "catalogId": "AKSINU-LIB-343",
+    "isbn": "AKSINU-REF-343",
     "tags": [
       "sistem operasi",
       "os",
@@ -7349,8 +7424,8 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1HYmWzuipuLvz9jqvdqp_i1faFKXS26ie",
     "localFile": null,
     "callNumber": "DDC 005.13",
-    "catalogId": "AKSINU-LIB-341",
-    "isbn": "AKSINU-REF-341",
+    "catalogId": "AKSINU-LIB-344",
+    "isbn": "AKSINU-REF-344",
     "ddc": "005.13"
   },
   {
@@ -7371,8 +7446,8 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1dU4KNhVKV68-_-6tjT3ULoJIiAx_CaxO",
     "localFile": null,
     "callNumber": "DDC 005.74",
-    "catalogId": "AKSINU-LIB-342",
-    "isbn": "AKSINU-REF-342",
+    "catalogId": "AKSINU-LIB-345",
+    "isbn": "AKSINU-REF-345",
     "ddc": "005.74"
   },
   {
@@ -7393,8 +7468,8 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1UVcx16lHmt88jI_RXiZn6RpLGaJ-2JD5",
     "localFile": null,
     "callNumber": "DDC 005.74",
-    "catalogId": "AKSINU-LIB-343",
-    "isbn": "AKSINU-REF-343",
+    "catalogId": "AKSINU-LIB-346",
+    "isbn": "AKSINU-REF-346",
     "ddc": "005.74"
   },
   {
@@ -7403,8 +7478,8 @@ const BOOKS_DATA = [
     "author": "Pustaka AKSINU",
     "category": "Python & Data Science",
     "callNumber": "DDC 005.133",
-    "catalogId": "AKSINU-LIB-344",
-    "isbn": "AKSINU-REF-344",
+    "catalogId": "AKSINU-LIB-347",
+    "isbn": "AKSINU-REF-347",
     "tags": [
       "teknologi",
       "komputer"
@@ -7423,8 +7498,8 @@ const BOOKS_DATA = [
     "author": "Pustaka AKSINU",
     "category": "Python & Data Science",
     "callNumber": "DDC 005.133",
-    "catalogId": "AKSINU-LIB-345",
-    "isbn": "AKSINU-REF-345",
+    "catalogId": "AKSINU-LIB-348",
+    "isbn": "AKSINU-REF-348",
     "tags": [
       "teknologi",
       "komputer"
@@ -7443,8 +7518,8 @@ const BOOKS_DATA = [
     "author": "Pustaka AKSINU",
     "category": "Manajemen & Bisnis",
     "callNumber": "DDC 658.4038",
-    "catalogId": "AKSINU-LIB-346",
-    "isbn": "AKSINU-REF-346",
+    "catalogId": "AKSINU-LIB-349",
+    "isbn": "AKSINU-REF-349",
     "tags": [
       "manajemen",
       "bisnis",
@@ -7478,8 +7553,8 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1TEn0CfOiemt8vQOuQp0050N6MtlXfiX8",
     "localFile": null,
     "callNumber": "DDC 005.13",
-    "catalogId": "AKSINU-LIB-347",
-    "isbn": "AKSINU-REF-347",
+    "catalogId": "AKSINU-LIB-350",
+    "isbn": "AKSINU-REF-350",
     "ddc": "005.13"
   },
   {
@@ -7488,8 +7563,8 @@ const BOOKS_DATA = [
     "author": "Pustaka AKSINU",
     "category": "Struktur Data & Algoritma",
     "callNumber": "DDC 005.13",
-    "catalogId": "AKSINU-LIB-348",
-    "isbn": "AKSINU-REF-348",
+    "catalogId": "AKSINU-LIB-351",
+    "isbn": "AKSINU-REF-351",
     "tags": [
       "teknologi",
       "komputer"
@@ -7521,7 +7596,7 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1pQz6ddp15Znf-QL0tVR8U2N9Hu9P9B0t",
     "localFile": "ebook/SwiftUI-Apprentice-2nd-Edition.pdf",
     "callNumber": "DDC 005.268",
-    "catalogId": "AKSINU-LIB-349",
+    "catalogId": "AKSINU-LIB-352",
     "isbn": "978-1950325764",
     "ddc": "005.268"
   },
@@ -7531,8 +7606,8 @@ const BOOKS_DATA = [
     "author": "Pustaka AKSINU",
     "category": "Sistem Informasi",
     "callNumber": "DDC 004.068",
-    "catalogId": "AKSINU-LIB-350",
-    "isbn": "AKSINU-REF-350",
+    "catalogId": "AKSINU-LIB-353",
+    "isbn": "AKSINU-REF-353",
     "tags": [
       "teknologi",
       "komputer"
@@ -7551,8 +7626,8 @@ const BOOKS_DATA = [
     "author": "Pustaka AKSINU",
     "category": "Manajemen & Bisnis",
     "callNumber": "DDC 658.4038",
-    "catalogId": "AKSINU-LIB-351",
-    "isbn": "AKSINU-REF-351",
+    "catalogId": "AKSINU-LIB-354",
+    "isbn": "AKSINU-REF-354",
     "tags": [
       "manajemen",
       "bisnis",
@@ -7573,8 +7648,8 @@ const BOOKS_DATA = [
     "author": "Pustaka AKSINU",
     "category": "Manajemen & Bisnis",
     "callNumber": "DDC 658.4038",
-    "catalogId": "AKSINU-LIB-352",
-    "isbn": "AKSINU-REF-352",
+    "catalogId": "AKSINU-LIB-355",
+    "isbn": "AKSINU-REF-355",
     "tags": [
       "manajemen",
       "bisnis",
@@ -7595,8 +7670,8 @@ const BOOKS_DATA = [
     "author": "Pustaka AKSINU",
     "category": "Manajemen & Bisnis",
     "callNumber": "DDC 658.4038",
-    "catalogId": "AKSINU-LIB-353",
-    "isbn": "AKSINU-REF-353",
+    "catalogId": "AKSINU-LIB-356",
+    "isbn": "AKSINU-REF-356",
     "tags": [
       "manajemen",
       "bisnis",
@@ -7617,8 +7692,8 @@ const BOOKS_DATA = [
     "author": "Pustaka AKSINU",
     "category": "Manajemen & Bisnis",
     "callNumber": "DDC 658.4038",
-    "catalogId": "AKSINU-LIB-354",
-    "isbn": "AKSINU-REF-354",
+    "catalogId": "AKSINU-LIB-357",
+    "isbn": "AKSINU-REF-357",
     "tags": [
       "manajemen",
       "bisnis",
@@ -7651,8 +7726,8 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=12W_7QfjGgwegE5OHTWryethF13yXqp-V",
     "localFile": null,
     "callNumber": "DDC 006.3",
-    "catalogId": "AKSINU-LIB-355",
-    "isbn": "AKSINU-REF-355",
+    "catalogId": "AKSINU-LIB-358",
+    "isbn": "AKSINU-REF-358",
     "ddc": "006.3"
   },
   {
@@ -7673,8 +7748,8 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1F0RXIlGB4a7GtZ4vIXQGMdjnJPA24yCy",
     "localFile": null,
     "callNumber": "DDC 006.3",
-    "catalogId": "AKSINU-LIB-356",
-    "isbn": "AKSINU-REF-356",
+    "catalogId": "AKSINU-LIB-359",
+    "isbn": "AKSINU-REF-359",
     "ddc": "006.3"
   },
   {
@@ -7695,8 +7770,8 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1y0phIPN6SRy-lrIhYE_Q9kzIhc5uaSsi",
     "localFile": null,
     "callNumber": "DDC 005.276",
-    "catalogId": "AKSINU-LIB-357",
-    "isbn": "AKSINU-REF-357",
+    "catalogId": "AKSINU-LIB-360",
+    "isbn": "AKSINU-REF-360",
     "ddc": "005.276"
   },
   {
@@ -7718,8 +7793,8 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1MhmJZ1nKxXNcJzgUyYUPIBDNC2H-NvTS",
     "localFile": null,
     "callNumber": "DDC 006.3",
-    "catalogId": "AKSINU-LIB-358",
-    "isbn": "AKSINU-REF-358",
+    "catalogId": "AKSINU-LIB-361",
+    "isbn": "AKSINU-REF-361",
     "ddc": "006.3"
   },
   {
@@ -7741,8 +7816,8 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1hh4oquPoqGTuX4avNiok7cIpIJdVegwp",
     "localFile": null,
     "callNumber": "DDC 004.6782",
-    "catalogId": "AKSINU-LIB-359",
-    "isbn": "AKSINU-REF-359",
+    "catalogId": "AKSINU-LIB-362",
+    "isbn": "AKSINU-REF-362",
     "ddc": "004.6782"
   },
   {
@@ -7763,8 +7838,8 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1gRZzo_jCRqDXJwFXzGva2lO7OFmlGFFg",
     "localFile": null,
     "callNumber": "DDC 005.276",
-    "catalogId": "AKSINU-LIB-360",
-    "isbn": "AKSINU-REF-360",
+    "catalogId": "AKSINU-LIB-363",
+    "isbn": "AKSINU-REF-363",
     "ddc": "005.276"
   },
   {
@@ -7785,8 +7860,8 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=14IQVt0p7AIB1Ue2tHIhy1hUciXxs8wJ0",
     "localFile": null,
     "callNumber": "DDC 005.133",
-    "catalogId": "AKSINU-LIB-361",
-    "isbn": "AKSINU-REF-361",
+    "catalogId": "AKSINU-LIB-364",
+    "isbn": "AKSINU-REF-364",
     "ddc": "005.133"
   },
   {
@@ -7807,8 +7882,8 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=10_igu1_q1ohAeYyDBNAGQxxFld7spBu-",
     "localFile": null,
     "callNumber": "DDC 005.276",
-    "catalogId": "AKSINU-LIB-362",
-    "isbn": "AKSINU-REF-362",
+    "catalogId": "AKSINU-LIB-365",
+    "isbn": "AKSINU-REF-365",
     "ddc": "005.276"
   },
   {
@@ -7827,8 +7902,8 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1FjUv26z0hpINd1sXodPIh8le5yNQZ1kj",
     "localFile": null,
     "callNumber": "DDC 004.068",
-    "catalogId": "AKSINU-LIB-363",
-    "isbn": "AKSINU-REF-363",
+    "catalogId": "AKSINU-LIB-366",
+    "isbn": "AKSINU-REF-366",
     "ddc": "004.068"
   },
   {
@@ -7850,8 +7925,8 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=17o2knqhIioDRouLjP6R_J_vZ7zemCbfL",
     "localFile": "ebook/Next-js-eBook.pdf",
     "callNumber": "DDC 005.276",
-    "catalogId": "AKSINU-LIB-364",
-    "isbn": "AKSINU-REF-364",
+    "catalogId": "AKSINU-LIB-367",
+    "isbn": "AKSINU-REF-367",
     "ddc": "005.276"
   },
   {
@@ -7873,8 +7948,8 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1GwY9nekfKXlhwRNysrldPc0f6S7kn-ns",
     "localFile": null,
     "callNumber": "DDC 005.276",
-    "catalogId": "AKSINU-LIB-365",
-    "isbn": "AKSINU-REF-365",
+    "catalogId": "AKSINU-LIB-368",
+    "isbn": "AKSINU-REF-368",
     "ddc": "005.276"
   },
   {
@@ -7895,8 +7970,8 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1EKaKHp6VpMCZsYrKhcQ8FPj940JmdYqO",
     "localFile": null,
     "callNumber": "DDC 005.276",
-    "catalogId": "AKSINU-LIB-366",
-    "isbn": "AKSINU-REF-366",
+    "catalogId": "AKSINU-LIB-369",
+    "isbn": "AKSINU-REF-369",
     "ddc": "005.276"
   },
   {
@@ -7917,8 +7992,8 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1RCisUQ2rAIEaGW09S0_ZWx2Cgkvfzj2g",
     "localFile": null,
     "callNumber": "DDC 005.276",
-    "catalogId": "AKSINU-LIB-367",
-    "isbn": "AKSINU-REF-367",
+    "catalogId": "AKSINU-LIB-370",
+    "isbn": "AKSINU-REF-370",
     "ddc": "005.276"
   },
   {
@@ -7939,8 +8014,8 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1BlUXYhmp1K9QPbXfKQ9-L46Q1y8Qk0t1",
     "localFile": null,
     "callNumber": "DDC 006.3",
-    "catalogId": "AKSINU-LIB-368",
-    "isbn": "AKSINU-REF-368",
+    "catalogId": "AKSINU-LIB-371",
+    "isbn": "AKSINU-REF-371",
     "ddc": "006.3"
   },
   {
@@ -7949,8 +8024,8 @@ const BOOKS_DATA = [
     "author": "Pustaka AKSINU",
     "category": "UI/UX & Desain",
     "callNumber": "DDC 006.6",
-    "catalogId": "AKSINU-LIB-369",
-    "isbn": "AKSINU-REF-369",
+    "catalogId": "AKSINU-LIB-372",
+    "isbn": "AKSINU-REF-372",
     "tags": [
       "ui/ux",
       "user interface",
@@ -7981,8 +8056,8 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1eOlgBLMuBxd5hlk6krGaO0tDWJkJIMKV",
     "localFile": null,
     "callNumber": "DDC 006.3",
-    "catalogId": "AKSINU-LIB-370",
-    "isbn": "AKSINU-REF-370",
+    "catalogId": "AKSINU-LIB-373",
+    "isbn": "AKSINU-REF-373",
     "ddc": "006.3"
   },
   {
@@ -8001,8 +8076,8 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1rF6Cc3jojhp4L7A6VStsVo1zBgNEi8QQ",
     "localFile": null,
     "callNumber": "DDC 006.3",
-    "catalogId": "AKSINU-LIB-371",
-    "isbn": "AKSINU-REF-371",
+    "catalogId": "AKSINU-LIB-374",
+    "isbn": "AKSINU-REF-374",
     "ddc": "006.3"
   },
   {
@@ -8011,8 +8086,8 @@ const BOOKS_DATA = [
     "author": "Pustaka AKSINU",
     "category": "Python & Data Science",
     "callNumber": "DDC 005.133",
-    "catalogId": "AKSINU-LIB-372",
-    "isbn": "AKSINU-REF-372",
+    "catalogId": "AKSINU-LIB-375",
+    "isbn": "AKSINU-REF-375",
     "tags": [
       "teknologi",
       "komputer"
@@ -8031,8 +8106,8 @@ const BOOKS_DATA = [
     "author": "Pustaka AKSINU",
     "category": "JavaScript & Web",
     "callNumber": "DDC 005.276",
-    "catalogId": "AKSINU-LIB-373",
-    "isbn": "AKSINU-REF-373",
+    "catalogId": "AKSINU-LIB-376",
+    "isbn": "AKSINU-REF-376",
     "tags": [
       "javascript",
       "web",
@@ -8065,8 +8140,8 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1aJOcPgvG7Nflex5DBXKffOfgvbASNIdW",
     "localFile": null,
     "callNumber": "DDC 005.276",
-    "catalogId": "AKSINU-LIB-374",
-    "isbn": "AKSINU-REF-374",
+    "catalogId": "AKSINU-LIB-377",
+    "isbn": "AKSINU-REF-377",
     "ddc": "005.276"
   },
   {
@@ -8087,8 +8162,8 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1iQqwKigSB2YLvdTKKVXPRr73kRyO-GtP",
     "localFile": null,
     "callNumber": "DDC 005.276",
-    "catalogId": "AKSINU-LIB-375",
-    "isbn": "AKSINU-REF-375",
+    "catalogId": "AKSINU-LIB-378",
+    "isbn": "AKSINU-REF-378",
     "ddc": "005.276"
   },
   {
@@ -8109,8 +8184,8 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1eKmQ8pG7uTMC6kMaBBQazJQIpwIlQP6d",
     "localFile": null,
     "callNumber": "DDC 005.268",
-    "catalogId": "AKSINU-LIB-376",
-    "isbn": "AKSINU-REF-376",
+    "catalogId": "AKSINU-LIB-379",
+    "isbn": "AKSINU-REF-379",
     "ddc": "005.268"
   },
   {
@@ -8131,8 +8206,8 @@ const BOOKS_DATA = [
     "downloadUrl": "https://drive.google.com/uc?export=download&id=1tF4CBfSqRhNCLoUdWfTpRM_J1McA_hTD",
     "localFile": null,
     "callNumber": "DDC 005.268",
-    "catalogId": "AKSINU-LIB-377",
-    "isbn": "AKSINU-REF-377",
+    "catalogId": "AKSINU-LIB-380",
+    "isbn": "AKSINU-REF-380",
     "ddc": "005.268"
   }
 ];

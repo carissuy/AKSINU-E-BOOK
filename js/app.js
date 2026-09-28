@@ -14,6 +14,52 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // Normalisasi judul otomatis agar bebas angka scraper, watermark, dan hash
+  function sanitizeBookTitle(rawTitle, googleDriveId) {
+    if (!rawTitle) return '';
+    let t = rawTitle.trim();
+    if (googleDriveId === '1vASUtXWpl8X8ceGrCSErqolEGSpQ21h_' || t.includes('296ed435')) {
+      return 'Etika Profesi Teknologi Informasi dan Komunikasi';
+    }
+    if (googleDriveId === '1rN3TRoutoRFVjchTD3NqGvBg3e5_bxDT' || t.includes('80ab2749')) {
+      return 'Pemrograman Berorientasi Objek';
+    }
+    if (t.includes('9786237694854')) {
+      return 'Rekayasa Perangkat Lunak Terapan';
+    }
+    if (t.toLowerCase().startsWith('[clarke]')) {
+      t = t.replace(/^\[clarke\]\s*/i, '');
+    }
+    if (t.toLowerCase().startsWith('[warna]')) {
+      t = t.replace(/^\[warna\]\s*/i, '').replace(/\bcompressed\b/gi, '').replace(/\bb5\s*17x25\b/gi, '').trim();
+    }
+    t = t.replace(/^\d{9,13}\s+/, '');
+    t = t.replace(/^\d+[\s\-_]+/, '');
+    t = t.replace(/^\d{2}\s+\d{2}\s+\d{2}\s+ebook\s+/i, '');
+    t = t.replace(/^\d+\.\s+buku\s+/i, 'Buku ');
+    t = t.replace(/^Salinan\s+/i, '');
+    t = t.replace(/\s+/g, ' ').trim();
+    return t;
+  }
+
+  // Penyesuaian kategori untuk bidang non-IT (Bahasa, Agama, PKn, dsb)
+  function adjustBookCategory(b) {
+    const t = (b.title || '').toLowerCase();
+    if (t.includes('bahasa indonesia') || t.includes('bahasa inggris') || t.includes('english') || t.includes('mkdu bahasa') || t.includes('kurikulum merdeka')) {
+      b.category = 'Bahasa & Komunikasi';
+      b.callNumber = 'DDC 400';
+      b.ddc = '400';
+    } else if (t.includes('agama islam') || t.includes('keislaman') || t.includes('aswaja') || t.includes('fiqih')) {
+      b.category = 'Agama & Keislaman';
+      b.callNumber = 'DDC 297';
+      b.ddc = '297';
+    } else if (t.includes('kewarganegaraan') || t.includes('pancasila') || t.includes('pkn') || t.includes('mkwk')) {
+      b.category = 'Pancasila & Kewarganegaraan';
+      b.callNumber = 'DDC 320';
+      b.ddc = '320';
+    }
+  }
+
   // Fungsi pencegah duplikat buku & pembersih judul kosong
   function deduplicateBooks(bookList) {
     if (!Array.isArray(bookList)) return [];
@@ -23,6 +69,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     for (const b of bookList) {
       if (!b) continue;
+      b.title = sanitizeBookTitle(b.title, b.googleDriveId);
+      adjustBookCategory(b);
       // Validasi mutlak: Buku WAJIB memiliki judul (bukan kosong atau hanya spasi)
       const titleStr = (b.title || '').trim();
       if (!titleStr || titleStr.length < 2) {
@@ -355,6 +403,15 @@ document.addEventListener('DOMContentLoaded', () => {
       'UI/UX & Desain': { bg: 'bg-orange-100 text-orange-900 dark:bg-orange-950 dark:text-orange-300 border-orange-300 dark:border-orange-800' },
       'Manajemen & Bisnis': { bg: 'bg-yellow-100 text-yellow-900 dark:bg-yellow-950 dark:text-yellow-300 border-yellow-300 dark:border-yellow-800' },
       'Metodologi Riset': { bg: 'bg-emerald-50 text-emerald-900 dark:bg-emerald-950 dark:text-emerald-200 border-emerald-400 dark:border-emerald-700' },
+      'Bahasa & Komunikasi': { bg: 'bg-green-100 text-green-900 dark:bg-green-950 dark:text-green-300 border-green-300 dark:border-green-800' },
+      'Agama & Keislaman': { bg: 'bg-emerald-100 text-emerald-900 dark:bg-emerald-950 dark:text-emerald-300 border-emerald-400 dark:border-emerald-700' },
+      'Pancasila & Kewarganegaraan': { bg: 'bg-rose-100 text-rose-900 dark:bg-rose-950 dark:text-rose-300 border-rose-300 dark:border-rose-800' },
+      'Sosial & Humaniora': { bg: 'bg-amber-100 text-amber-900 dark:bg-amber-950 dark:text-amber-300 border-amber-300 dark:border-amber-800' },
+      'Sains & Matematika': { bg: 'bg-sky-100 text-sky-900 dark:bg-sky-950 dark:text-sky-300 border-sky-300 dark:border-sky-800' },
+      'Ekonomi & Akuntansi': { bg: 'bg-yellow-100 text-yellow-900 dark:bg-yellow-950 dark:text-yellow-300 border-yellow-300 dark:border-yellow-800' },
+      'Pendidikan & Keguruan': { bg: 'bg-teal-100 text-teal-900 dark:bg-teal-950 dark:text-teal-300 border-teal-300 dark:border-teal-800' },
+      'Mata Kuliah Umum (MKU)': { bg: 'bg-teal-100 text-teal-900 dark:bg-teal-950 dark:text-teal-300 border-teal-300 dark:border-teal-800' },
+      'Umum & Referensi': { bg: 'bg-slate-100 text-slate-900 dark:bg-slate-800 dark:text-slate-200 border-slate-300 dark:border-slate-700' },
       'Ilmu Komputer': { bg: 'bg-zinc-100 text-zinc-900 dark:bg-zinc-800 dark:text-zinc-200 border-zinc-300 dark:border-zinc-700' },
       'Dasar Pemrograman': { bg: 'bg-slate-100 text-slate-900 dark:bg-slate-800 dark:text-slate-200 border-slate-300 dark:border-slate-700' },
       'Dasar Web & Desain': { bg: 'bg-orange-100 text-orange-900 dark:bg-orange-950 dark:text-orange-300 border-orange-300 dark:border-orange-800' }
